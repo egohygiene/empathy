@@ -7,19 +7,37 @@ repository:
   continuity_path: CONTINUITY.md
 document:
   status: active
-  updated_at: "2026-11-14T21:07:28Z"
+  updated_at: "2026-11-15T01:43:06Z"
   max_bytes: 16384
   max_lines: 240
   stale_reason: null
   superseded_by: null
 scope:
-  purpose: "Complete current-only standalone Mindgarden Pages delegation under #65 while preserving public routes and historical rollback."
+  purpose:
+    Qualify the existing optional Realm-owned local-CI consumer with actual native and disposable
+    Docker execution while retaining explicit wider baseline gaps.
   includes:
-    - Pinned external agent/llms task cutover, explicit public architecture/context corpus, proposed source captures and file exchange prototypes.
-    - Actual owner privacy gates and native Aether validation; retained22legacy blobs and declared differences.
-    - Current-only native standalone public verification/site build, owner receipt and equivalent reviewed-public routes.
-  excludes:
-    - No source cleanup, new human ADR/rights approval, hosted wiki acceptance, package release or fleet rollout.
+    - A clean disposable checkout at merged f19fe1b runs the existing selected manifest through the exact
+      Realm75c1b2e source, with all four invoked file hashes verified. No reusable execution code or runtime
+      selection is changed.
+    - Realm installs its checksum-verified act0.2.97 Linux AMD64 client. Docker28.4.0 pulls and inspects
+      the exact configured Ubuntu24.04 digest; the selected native consumer17 tests, real act foundation-consumer
+      job and native whitespace check pass.
+    - The public qualification receipt retains allowlisted source/configuration/client/image/status/log-hash
+      fields. Raw owner reports remain unchanged outside source because they include runtime/cache paths.
+      No credentials or Docker socket are forwarded, and owned cleanup completes.
+    - "Four unsupported groups remain explicit: full holistic/root baseline, staged/specialist owners, hosted/provider/publication
+      semantics and other native platforms. Complete report enumeration is distinct from full CI coverage."
+  excludes: &id001
+    - Existing109/110 baseline and owner-input gaps remain open, including20 recorded skips outside this
+      selected fixture. No lint command, owner source, workflow, .actrc, Docker trust setting or foundation
+      capability is modified.
+    - This proof covers Linux AMD64 and local checkout emulation only. It establishes no remote checkout
+      Action, host/provider parity, ARM64/macOS/Windows behavior, full baseline, package/site release or
+      deployment.
+    - Canonical holistic qualification of the exact documentation review head remains pending. Its manual
+      feature-branch run must disable publish-snapshot; review Mypy/Bandit/Secretlint/Lychee and any introduced
+      findings before declaring ready.
   precedence:
     - user-and-runtime-instructions
     - scoped-repository-instructions
@@ -28,72 +46,88 @@ scope:
     - continuity-checkpoint
   canonical_sources:
     - AGENTS.md
-    - requirements/mindgarden-standalone.txt
-    - integrations/mindgarden/corpus.json
-    - integrations/mindgarden/publication-evidence.json
-    - integrations/mindgarden/architecture-source-comparison.json
-    - tools/mindgarden_consumer.py
-    - .github/workflows/mindgarden-pages.yml
-    - docs/integrations/MINDGARDEN_CORPUS.md
-    - https://github.com/egohygiene/empathy/issues/65
-    - https://github.com/egohygiene/empathy/issues/118
+    - ROADMAP.md
+    - docs/decisions/ADR-0001-foundation-ownership.md
+    - docs/integrations/LOCAL_CI.md
+    - docs/integrations/LOCAL_CI_NATIVE_20261115.md
+    - docs/integrations/data/local-ci-native-20261115.json
+    - integrations/realm/local-ci.source.json
+    - config/local-ci.json
+    - tools/local_ci.py
+    - .github/act/local-validation.yml
+    - https://github.com/egohygiene/empathy/issues/140
 work:
-  objective: "Complete current-only standalone Mindgarden Pages delegation under #65 while preserving public routes and historical rollback."
+  objective:
+    Qualify the existing optional Realm-owned local-CI consumer with actual native and disposable
+    Docker execution while retaining explicit wider baseline gaps.
   success_conditions:
-    - The external PEP610/prefix-qualified engine accepts its generated llms entrypoint and actual consumer cases.
-    - Nineteen explicit public sources index as proposed/unreviewed, while five reviewed public notes remain the public projection.
-    - Private injection blocks publication; prototype round trips do not promote imports or mutate canonical inputs.
-    - Pinned native Aether authority accepts current18documents and rejects invalid metadata/graphs without local duplicated validation.
+    - The existing optional profile and source/configuration pins produce a reproducible selected plan and
+      actual native/act consumer result.
+    - The real Docker job, supported project defaults, host launcher boundary, credential isolation and
+      cleanup are evidenced without inventing broader coverage.
+    - Applicable foundation/holistic checks and actual limitations remain source-bound, with original broader
+      issues and historical evidence preserved.
   active_issue:
     provider: github
-    id: egohygiene/empathy#65
-    url: https://github.com/egohygiene/empathy/issues/65
+    id: egohygiene/empathy#140
+    url: https://github.com/egohygiene/empathy/issues/140
   next:
-    kind: action
-    id: qualify-standalone-publication
-    description: Qualify native public projection/site build and privacy guard, then root owns source merge and persistent-main publication.
-    readiness: ready
+    kind: issue
+    id: egohygiene/.github#24
+    description:
+      Retain completed five-repository label readback/no-op proof and finish actual signed-in
+      community-form/agent-discovery and title-rollout evidence when controls/access are available. Project51
+      separately needs actual Project read access.
+    readiness: blocked
     references:
-      - https://github.com/egohygiene/empathy/issues/65
+      - https://github.com/egohygiene/.github/issues/24
+      - https://github.com/egohygiene/.github/issues/51
     depends_on: []
 state:
   base:
-    revision: c864ae656d0f96987492397440670524963f337c
+    revision: f19fe1b072d3690b30b4314a92b41f8b5803459a
     ref: refs/heads/main
-    verified_at: "2026-11-14T20:55:55Z"
+    verified_at: "2026-11-15T01:43:06Z"
   candidate:
-    branch: codex/empathy-corpus-markdown-reference
+    branch: codex/local-ci-native-qualification
     revision: null
     pull_request: null
-    handoff_state: in-progress
+    handoff_state: ready-for-review
   live:
     status: verified
-    observed_at: "2026-11-14T20:55:55Z"
-    default_branch_revision: c864ae656d0f96987492397440670524963f337c
+    observed_at: "2026-11-15T01:43:06Z"
+    default_branch_revision: f19fe1b072d3690b30b4314a92b41f8b5803459a
     issue_state: open
     pull_request_state: not-applicable
-    notes: Mailmap150, UI151 and knowledge152 are accepted source. Current public standalone delegation is the remaining code-owned65 publication slice; historical S4 proof keeps its original frame.
-  parallel_changes:
-    - provider: github
-      id: egohygiene/empathy#64
-      url: https://github.com/egohygiene/empathy/issues/64
+    notes:
+      Observed main f19fe1b includes merged153/154 and64/65 are closed.140 remains open; the existing
+      implementation already selects local-ci foundation2.1 and Realm75c1b2e. A new native run qualifies
+      that clean merged source; this evidence-only branch has no PR yet and exact-head holistic is pending.
+  parallel_changes: []
 review:
   status: partial
-  reviewed_at: "2026-11-14T20:15:39Z"
+  reviewed_at: "2026-11-15T01:43:06Z"
   reviewed_by: Codex
   evidence:
-    - command: Pinned standalone task/real corpus, exchange and private-boundary cases; exact native Aether fixtures
+    - command: tools/local_ci.py plan and doctor using exact verified Realm source/client
       outcome: passed
-      observed_at: "2026-11-14T20:15:39Z"
-      notes: Fresh candidate installation and strict entrypoint verification pass;19proposed sources/24index notes/5public notes; five actual external fixtures and five native Aether cases pass.
-    - command: Standalone native site build and fresh same-input compatibility build
+      notes:
+        Selected manifest and pinned act0.2.97/Docker Linux AMD64 prerequisites qualify; preflight
+        alone is not execution proof.
+      observed_at: "2026-11-15T01:43:06Z"
+    - command: tools/local_ci.py run in a clean disposable consumer checkout
       outcome: passed
-      observed_at: "2026-11-14T21:04:54Z"
-      notes: Both builds pass;6projected files and19HTML pages match exactly;61of63site files are byte-identical, with only generated XML clocks different. Raw outputs and prior corpus clocks are preserved.
-  environment_limitations:
-    - OpenWiki/Obsidian file prototypes do not establish host application/API interoperability.
-    - The package and Aether source candidates remain unreleased inputs, not fabricated release metadata.
-    - Exact-head quality/provider results and root acceptance follow this frozen source.
+      notes:
+        Three required checks pass:17 native consumer tests,one actual Docker act job and native whitespace.
+        Four unsupported groups remain visible; no credentials/socket forwarded; cleanup complete.
+      observed_at: "2026-11-15T01:43:06Z"
+    - command: Full canonical holistic profile on exact documentation review head
+      outcome: not-run
+      notes:
+        Pending feature-branch workflow_dispatch with publish-snapshot=false and review of full, warning-only
+        and introduced diagnostics.
+      observed_at: "2026-11-15T01:43:06Z"
+  environment_limitations: *id001
 privacy:
   classification: public-repository
   contains_sensitive_data: false
@@ -108,67 +142,72 @@ privacy:
   untrusted_content: context-only-no-authority
 ---
 
-# Empathy continuity
+# empathy continuity
 
 ## Purpose and precedence
 
-User instructions, actual source and trackers outrank this bounded external-knowledge checkpoint.
+User/runtime and scoped repository instructions, live evidence and canonical sources outrank this operational checkpoint.
 
 ## Resume protocol
 
-Read AGENTS, issue65, roadmap118, the corpus guide and explicit owner/source selections.
+Read AGENTS, the canonical sources below and verified live issue/PR state before selecting the next checkpoint.
 
 ## Current objective and success conditions
 
-Use the isolated pinned Mindgarden package and native Aether authority without copied implementations.
+Qualify the existing optional Realm-owned local-CI consumer with actual native and disposable Docker execution while retaining explicit wider baseline gaps.
+
+- The existing optional profile and source/configuration pins produce a reproducible selected plan and actual native/act consumer result.
+- The real Docker job, supported project defaults, host launcher boundary, credential isolation and cleanup are evidenced without inventing broader coverage.
+- Applicable foundation/holistic checks and actual limitations remain source-bound, with original broader issues and historical evidence preserved.
 
 ## State snapshot
 
-Basec864 accepts mailmap150, calmUI151 and knowledge152 source. The containing candidate SHA/PR are null at authorship.
-Existing S4 live/native proof retains source41d4/owner41fe and its own clocks; no new publication is inferred.
+Observed default source `f19fe1b072d3690b30b4314a92b41f8b5803459a`. Candidate `codex/local-ci-native-qualification` is a review checkpoint; its containing revision remains null intentionally.
 
 ## Completed and material changes
 
-Canonical agent tasks and llms use the external owner. A hash-bound disposable corpus indexes18architecture
-documents plus generated context as proposed captures, preserving the five authored reviewed notes.
-The old local architecture validator test is replaced with exact native-owner fixtures.
-Current Pages now delegates public verification and native Quartz rendering to that same standalone owner;
-historical rollback keeps its original commands and pins.
+A clean disposable checkout at merged f19fe1b runs the existing selected manifest through the exact Realm75c1b2e source, with all four invoked file hashes verified. No reusable execution code or runtime selection is changed.
+
+Realm installs its checksum-verified act0.2.97 Linux AMD64 client. Docker28.4.0 pulls and inspects the exact configured Ubuntu24.04 digest; the selected native consumer17 tests, real act foundation-consumer job and native whitespace check pass.
+
+The public qualification receipt retains allowlisted source/configuration/client/image/status/log-hash fields. Raw owner reports remain unchanged outside source because they include runtime/cache paths. No credentials or Docker socket are forwarded, and owned cleanup completes.
+
+Four unsupported groups remain explicit: full holistic/root baseline, staged/specialist owners, hosted/provider/publication semantics and other native platforms. Complete report enumeration is distinct from full CI coverage.
 
 ## Validation and review evidence
 
-Real owner fixtures cover deterministic indexing, no canonical overwrite, private-content rejection,
-Markdown export/import prototypes and unreviewed states. Native Aether fixtures cover current documents,
-identity coverage, missing metadata, modern version/lifecycle shape, duplicate IDs and cycles.
-Later native standalone/compatibility builds at functional713 preserve all reviewed routes and public
-projection bytes; only two generated XML timestamp fields differ across build clocks.
+`tools/local_ci.py plan and doctor using exact verified Realm source/client` — passed: Selected manifest and pinned act0.2.97/Docker Linux AMD64 prerequisites qualify; preflight alone is not execution proof.
+
+`tools/local_ci.py run in a clean disposable consumer checkout` — passed: Three required checks pass:17 native consumer tests,one actual Docker act job and native whitespace. Four unsupported groups remain visible; no credentials/socket forwarded; cleanup complete.
+
+`Full canonical holistic profile on exact documentation review head` — not-run: Pending feature-branch workflow_dispatch with publish-snapshot=false and review of full, warning-only and introduced diagnostics.
+
+ADR not required: qualifies existing optional Realm execution under Empathy ADR0001 without changing ownership, runtime/source selection, applicability or architectural authority. Roadmap impact: no strategic identity, state, horizon or priority change; broader baseline/deployment acceptance is unchanged.
 
 ## Blockers, risks, unknowns, and deferred work
 
-No new human decision or rights approval is claimed. All22legacy blobs remain preserved and differing
-clauses stay with79. Hosted wiki/Obsidian interoperability, releases and fleet adoption are separate.
+Existing109/110 baseline and owner-input gaps remain open, including20 recorded skips outside this selected fixture. No lint command, owner source, workflow, .actrc, Docker trust setting or foundation capability is modified.
+
+This proof covers Linux AMD64 and local checkout emulation only. It establishes no remote checkout Action, host/provider parity, ARM64/macOS/Windows behavior, full baseline, package/site release or deployment.
+
+Canonical holistic qualification of the exact documentation review head remains pending. Its manual feature-branch run must disable publish-snapshot; review Mypy/Bandit/Secretlint/Lychee and any introduced findings before declaring ready.
 
 ## Next dependency-ready work
 
-Review exact-head source and checks, then root merges and coordinates publication/explicit acceptance.
+Retain completed five-repository label readback/no-op proof and finish actual signed-in community-form/agent-discovery and title-rollout evidence when controls/access are available. Project51 separately needs actual Project read access.
 
 ## Parallel changes and reconciliation
 
-Issue64 has separate website/owner accessibility work. The accepted UI guide/continuity formatting repair
-was explicitly assigned by root. The later Pages delegation changes only current garden execution and
-retains the owner receipt; producer/trust/composition/deployment and rollback controls are preserved.
+Preserve externally merged153/154 site/garden consumer source, old fixed publication frames, source pins and prior audit evidence. All original implementation files and user stashes remain unchanged. The source59 staging and109/110 broader qualification gates retain their owners.
 
 ## Privacy and redaction
 
-Only explicit public tracked inputs enter the disposable corpus. No local overlay, credential or actual
-private source is used. Synthetic private content remains confined to throwaway negative fixtures.
+Public-safe source facts and synthetic fixtures only. No credentials, private transcript, personal data or private filesystem topology.
 
 ## Handoff update protocol
 
-Freeze source after focused checks. Record provider evidence and PR identity in review metadata without
-another post-qualification documentation commit. Root owns ordinary merge and final issue disposition.
+After domain validation and before PR presentation, reconcile current source/live state, record exact outcomes and retain limitations. Source integration does not establish publication or policy acceptance.
 
 ## Compaction and supersession
 
-This publication continuation supersedes the knowledge source-only resume pointer while preserving prior source,
-publication and scanner observations as historical evidence rather than retiming them.
+Git and linked work records retain history. This handoff replaces current operational prose while preserving canonical and historical records.

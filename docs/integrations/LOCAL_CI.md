@@ -1,5 +1,10 @@
 # Selected local CI consumer
 
+[Native qualification on 2026-11-15](LOCAL_CI_NATIVE_20261115.md) records a clean
+merged-source Linux AMD64 execution: 17 native consumer tests, one real act job
+and native whitespace pass. Its receipt preserves all four unsupported groups,
+the exact source/client/image inputs and separate holistic/provider limitations.
+
 Empathy's optional `local-ci` foundation profile selects repository-owned
 `.actrc`, an explicit validation manifest, and a pinned Realm consumer adapter.
 It is a golden-consumer example for [issue #140](https://github.com/egohygiene/empathy/issues/140),
