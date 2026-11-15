@@ -1,5 +1,5 @@
 {
-  "commit": "acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
+  "commit": "a405a7a169c7d6153f889702ed0276e3d04b4ac2",
   "execution": {
     "message": "OpenSSF Scorecard produced valid SARIF output.",
     "state": "success"
@@ -18,21 +18,21 @@
     "total": 8
   },
   "freshness": {
-    "expires_at": "2026-11-23T02:15:13Z",
+    "expires_at": "2026-11-23T02:31:32Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-11-15T02:15:13Z",
+  "generated_at": "2026-11-15T02:31:32Z",
   "links": {
     "detail": "https://scorecard.dev/viewer/?uri=github.com/egohygiene/empathy",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43666706710"
+    "source": "https://github.com/egohygiene/empathy/commit/a405a7a169c7d6153f889702ed0276e3d04b4ac2",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43668056992"
   },
   "producer": "scorecard",
   "provenance": {
     "event": "push",
     "run_attempt": 1,
-    "run_id": "43666706710",
+    "run_id": "43668056992",
     "workflow": "OpenSSF Scorecard"
   },
   "repository": "egohygiene/empathy",
