@@ -16,12 +16,10 @@ Ubuntu 24.04 manifest digest; no mutable image selection was substituted.
 
 The source was exercised in a clean disposable consumer checkout:
 
-| Selected check                | Actual outcome                        |
-| ----------------------------- | ------------------------------------- |
-| Native consumer fixture       | 17 tests passed                       |
-| act `foundation-consumer` job | Passed, exit 0; real Docker execution |
-| Native Git whitespace check   | Passed, exit 0                        |
-| Owned container cleanup       | Complete                              |
+- Native consumer fixture: 17 tests passed.
+- act foundation-consumer job: passed with exit 0 through real Docker execution.
+- Native Git whitespace check: passed with exit 0.
+- Owned container cleanup: complete.
 
 The existing launcher supplied its reviewed host/cache controls and disabled
 container Docker-socket forwarding. No credentials, secret files or broad project
