@@ -1,0 +1,134 @@
+{
+  "record_type": "dated-selected-local-ci-qualification",
+  "issue": "https://github.com/egohygiene/empathy/issues/140",
+  "status": "qualified-selected-local-ci",
+  "started_at": "2026-11-15T01:33:49.043055+00:00",
+  "finished_at": "2026-11-15T01:34:08.235094+00:00",
+  "consumer_revision": "f19fe1b072d3690b30b4314a92b41f8b5803459a",
+  "consumer_dirty": false,
+  "realm_source": {
+    "schema_version": "empathy.realm-local-ci-source/v1",
+    "repository": "egohygiene/realm",
+    "revision": "75c1b2e1475b972a0ce1c8594e8daba2e1cf8686",
+    "act_version": "0.2.97",
+    "files": {
+      "config/act.v1.json": "0cb86eb04ce43b945ed65eaa39afb121ece9a932ef9e8e626e1caa66a1d48dea",
+      "tools/realm_act.py": "1776c5641fdb8a6d08204f70937e42a6b2692146e175402c317f60ed0d4f90be",
+      "tools/realm_act_network.py": "4f97c1ceb78cdf0823f1632effbf122a5ab7700a2397d4d95be8cdd27ae83e33",
+      "tools/realm_local_ci.py": "640e2edcc290a22ccc84f158b70a33ad35cde5dfd68aac3bec3f12a4bcc675ef"
+    }
+  },
+  "configuration_sha256": {
+    "integrations/realm/local-ci.source.json": "416219d4a37afff0efb9adf420953e61e200295a0f1d2277659c565fa3a5e9a2",
+    "config/local-ci.json": "52e8cff2863b684c448b445e89ecd8f7c954e52ae6466661fcf930e0a6c502dc",
+    ".actrc": "da4f7edd36661fb64e07063d9bb49c3f38964fd9bc6d1f357ea97de273e07c5e",
+    "foundation/catalog.json": "b9d7388be197f52757b5f6b82e0b1261c55ce9a194604d41a884f41266bc8f81",
+    "foundation/empathy.manifest.json": "da3faa85cc3f40ac1641357cf4c08ee24caf131562d07b8f200220dd25626839",
+    "tools/local_ci.py": "c62757b5102fd69f5dc41a2dc57f87c701195b47f96aac5b4fc4fae7d693e5be",
+    ".github/act/local-validation.yml": "c9023694eccd186f42dcc5f9570e310972ba7dfdceb9de2ed8e0251174a1c78a"
+  },
+  "manifest_sha256": "52e8cff2863b684c448b445e89ecd8f7c954e52ae6466661fcf930e0a6c502dc",
+  "client": {
+    "version": "0.2.97",
+    "platform": "linux/amd64",
+    "official_archive_sha256": "67b4976a56f33ea7870b798912e738ec44eef38e7578ae7b532f2def1c73a5ad",
+    "installed_executable_sha256": "c4d4728b7375fad11980456249edeb3a4ca48ba4e785cb8100ad14bd53e77056"
+  },
+  "docker": {
+    "version": "28.4.0",
+    "os": "linux",
+    "architecture": "amd64"
+  },
+  "runner": {
+    "selected": "ghcr.io/catthehacker/ubuntu:act-24.04@sha256:19619a010b204f44c5340bff7d39b68551109fe6a56a53f75201ea91e05d4270",
+    "observed_manifest_digest": "sha256:19619a010b204f44c5340bff7d39b68551109fe6a56a53f75201ea91e05d4270",
+    "observed_architecture": "amd64",
+    "observed_os": "linux"
+  },
+  "execution": {
+    "required_checks_passed": 3,
+    "unsupported_groups": 4,
+    "manifest_report_complete": true,
+    "exit_code": 0,
+    "native_consumer_tests": 17,
+    "act_job": "foundation-consumer",
+    "credentials_forwarded": false,
+    "docker_socket_forwarded": false,
+    "cloud_network_adapter_selected": false,
+    "publication": "not-performed"
+  },
+  "checks": [
+    {
+      "id": "consumer-direct",
+      "kind": "direct",
+      "required": true,
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.514,
+      "output_truncated": false,
+      "log_sha256": "7fbb362090faae142de61bcbda407e1251f7492733426263487869495a91c347"
+    },
+    {
+      "id": "consumer-act",
+      "kind": "act",
+      "required": true,
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 17.557,
+      "output_truncated": false,
+      "log_sha256": "ab9c45926ab32f1c5765eba35bce8f5ef348a0f0da1503f1c064d9d01983750a",
+      "owned_cleanup_complete": true
+    },
+    {
+      "id": "native-whitespace",
+      "kind": "direct",
+      "required": true,
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 0.013,
+      "output_truncated": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "holistic-baseline",
+      "kind": "unsupported",
+      "required": false,
+      "status": "unsupported",
+      "reason": "The complete holistic lint/runtime profile and full root suites remain separate qualification under issues109/110; this portable fixture does not satisfy those gates or replace existing linter commands."
+    },
+    {
+      "id": "staging-and-specialist-owners",
+      "kind": "unsupported",
+      "required": false,
+      "status": "unsupported",
+      "reason": "Staged projects, incubated specialist tools, Identity/Relay owner-input scenarios and the existing20 owner-input skips are outside this selected consumer fixture; source and acceptance remain with their named owners."
+    },
+    {
+      "id": "hosted-provider-and-publication",
+      "kind": "unsupported",
+      "required": false,
+      "status": "unsupported",
+      "reason": "Hosted Actions bootstrap, event/permission/service semantics, artifact/cache services, Pages, release, package publishing and remote mutations are unexecuted. Local checkout emulation does not qualify the provider action."
+    },
+    {
+      "id": "native-platforms",
+      "kind": "unsupported",
+      "required": false,
+      "status": "unsupported",
+      "reason": "This selection targets Linux Ubuntu24.04. Native ARM64, macOS, Windows and device-specific qualification remain untested; emulation does not establish native acceptance."
+    }
+  ],
+  "raw_report_sha256": "28e42c8feef8978b47f1caee904f04c3f42dd22032e89df5733458695885ff66",
+  "raw_consumer_receipt_sha256": "88a9b1d4561bbc3fbdaf3c2dd809463fd5fe983a1849e198b245d421c5957ed1",
+  "evidence_retention": "Allowlisted public metadata only. Raw owner reports/logs remain separate because they include runtime/cache paths; they are not rewritten or published here.",
+  "limitations": [
+    "Only the explicit local manifest selection is qualified; complete report enumeration does not mean complete CI coverage.",
+    "The act checkout step is local working-tree emulation, not remote checkout Action/provider qualification.",
+    "Full holistic/root runtime baseline, specialist owner inputs, hosted publication, native ARM64/macOS/Windows and device/platform behavior remain separate.",
+    "Existing issues109/110 and the recorded 20 owner-input skips remain unresolved; no skip or lint command is removed, and no source/tool/runtime migration is performed.",
+    "Required exact-head holistic review for the evidence-only PR is pending; publication must be disabled in its manual feature-branch run."
+  ]
+}
