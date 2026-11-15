@@ -36,11 +36,17 @@ finished reporting, including those unsupported groups; it does not claim full
 hosted-CI coverage. act's checkout emulation copies a local working tree and does
 not qualify the real remote checkout Action.
 
-The held canonical runtime/pin reconciliation under
-[#110](https://github.com/egohygiene/empathy/issues/110), broader golden baseline
-under [#109](https://github.com/egohygiene/empathy/issues/109), and its existing 20
-owner-input skips keep their separate acceptance. No linter, owner pin, fixture,
-workflow, `.actrc` or source implementation is changed by this evidence checkpoint.
+The earlier bounded root-baseline checkpoint
+[#109](https://github.com/egohygiene/empathy/issues/109) is already closed. It
+records both equipped native acceptance and the separate hosted environment's
+20 owner-input skips; those dated outcomes are not a current universal skip
+count. Remaining canonical runtime/pin work belongs to
+[#110](https://github.com/egohygiene/empathy/issues/110), specialist/source
+qualification to [#79](https://github.com/egohygiene/empathy/issues/79), and the
+broader roadmap to [#118](https://github.com/egohygiene/empathy/issues/118).
+The whole-repository holistic/security baseline still has separate debt.
+No linter, owner pin, fixture, workflow, `.actrc` or source implementation is
+changed by this evidence checkpoint.
 
 The evidence-only PR still requires the canonical holistic profile on its exact
 review head, with warning-only Mypy/Bandit/Secretlint/Lychee outcomes reviewed and
