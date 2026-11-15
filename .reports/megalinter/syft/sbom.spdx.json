@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "egohygiene",
- "documentNamespace": "https://anchore.com/syft/dir/egohygiene-5f1ca73e-b213-4554-8a38-60861967407c",
+ "documentNamespace": "https://anchore.com/syft/dir/egohygiene-8fe980de-5dee-46c4-8327-4e0ac1b0abf4",
  "creationInfo": {
   "licenseListVersion": "3.29",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-1.55.0"
   ],
-  "created": "2026-11-15T02:18:13Z"
+  "created": "2026-11-15T02:35:20Z"
  },
  "packages": [
   {

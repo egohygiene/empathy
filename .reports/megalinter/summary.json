@@ -1,5 +1,5 @@
 {
-  "commit": "acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
+  "commit": "a405a7a169c7d6153f889702ed0276e3d04b4ac2",
   "execution": {
     "message": "MegaLinter returned a failing runner status.",
     "state": "failure"
@@ -12,26 +12,26 @@
     "total": 29
   },
   "freshness": {
-    "expires_at": "2026-11-23T02:19:58Z",
+    "expires_at": "2026-11-23T02:37:07Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-11-15T02:19:58Z",
+  "generated_at": "2026-11-15T02:37:07Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34/.reports/megalinter",
+    "detail": "https://github.com/egohygiene/empathy/tree/a405a7a169c7d6153f889702ed0276e3d04b4ac2/.reports/megalinter",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43666706655"
+    "source": "https://github.com/egohygiene/empathy/commit/a405a7a169c7d6153f889702ed0276e3d04b4ac2",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43668057046"
   },
   "megalinter": {
     "diagnostics": {
-      "errors": 74551,
+      "errors": 74555,
       "warnings": 17
     },
     "execution_error_tools": [],
     "finding_tools": [
       {
         "enforcement": "advisory",
-        "errors": 2748,
+        "errors": 2751,
         "id": "COPYPASTE_JSCPD",
         "status": "warning",
         "warnings": 0
@@ -178,7 +178,7 @@
       },
       {
         "enforcement": "blocking",
-        "errors": 184,
+        "errors": 185,
         "id": "SPELL_LYCHEE",
         "status": "error",
         "warnings": 0
@@ -250,7 +250,7 @@
   "provenance": {
     "event": "push",
     "run_attempt": 1,
-    "run_id": "43666706655",
+    "run_id": "43668057046",
     "workflow": "MegaLinter"
   },
   "repository": "egohygiene/empathy",

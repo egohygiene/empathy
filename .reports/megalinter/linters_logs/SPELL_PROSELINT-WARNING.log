@@ -112,7 +112,7 @@ ARCHITECTURE.md:138:29: typography.symbols.curly_quotes: Use curly quotes “”
 ARCHITECTURE.md:139:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:140:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 ARCHITECTURE.md:152:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-CONTINUITY.md:151:4: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+CONTINUITY.md:152:4: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 DECISIONS.md:314:87: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 DESIGN.md:128:1: misc.preferred_forms: 'sans serif' is the preferred form.
 DESIGN_SYSTEM.md:68:38: misc.preferred_forms: 'sans serif' is the preferred form.
