@@ -1,8 +1,8 @@
 # OSV Vulnerability Scan
 
-- Generated: `2026-11-11T11-33-52Z`
+- Generated: `2026-11-15T02-13-15Z`
 - Repository: `egohygiene/empathy`
-- Commit: `18d22e113e87c306b76d24873841249d41358c77`
+- Commit: `acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34`
 - Severity gate: `high`
 - Duration: `13s`
 
@@ -11,11 +11,11 @@
 | Severity | Count |
 | --- | ---: |
 | Critical | 34 |
-| High | 279 |
-| Medium | 272 |
-| Low | 59 |
-| Unknown | 1 |
-| **Total** | **645** |
+| High | 288 |
+| Medium | 282 |
+| Low | 61 |
+| Unknown | 2 |
+| **Total** | **667** |
 
 ## Discovery
 
@@ -129,8 +129,8 @@ Discovered 49 artifact(s) across 7 ecosystem label(s).
 ## OSV Scanner Report
 
 
-Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High, 272 Medium, 59 Low, 1 Unknown) from 2 ecosystems.
-636 vulnerabilities can be fixed.
+Total 192 packages affected by 667 known vulnerabilities (34 Critical, 288 High, 282 Medium, 61 Low, 2 Unknown) from 2 ecosystems.
+657 vulnerabilities can be fixed.
 
 | OSV URL | CVSS | Ecosystem | Package | Version | Fixed Version | Source |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -148,6 +148,7 @@ Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High,
 | https://osv.dev/PYSEC-2026-36<br/>https://osv.dev/GHSA-p423-j2cm-9vmq | 9.8 | PyPI | cryptography | 45.0.4 | 46.0.7 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/GHSA-537c-gmf6-5ccf | 7.5 | PyPI | cryptography | 45.0.4 | 48.0.1 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/GHSA-45c3-73f7-pv4m | 7.5 | PyPI | dnspython | 2.7.0 | 2.9.0 | .staging/devenvironment/containers/services/api/poetry.lock |
+| https://osv.dev/GHSA-vvf4-9x63-8xvv | 7.5 | PyPI | dnspython | 2.7.0 | 2.9.2 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-1374<br/>https://osv.dev/GHSA-qmgc-5h2g-mvrw | 5.3 | PyPI | filelock (dev) | 3.18.0 | 3.20.3 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/PYSEC-2026-1375<br/>https://osv.dev/GHSA-w853-jp5j-5j7f | 6.3 | PyPI | filelock (dev) | 3.18.0 | 3.20.1 | .staging/devenvironment/containers/services/api/poetry.lock |
 | https://osv.dev/GHSA-69hj-f68j-2879 | 6.1 | PyPI | filelock (dev) | 3.18.0 | 4.2.1 | .staging/devenvironment/containers/services/api/poetry.lock |
@@ -258,6 +259,7 @@ Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High,
 | https://osv.dev/GHSA-m64x-33q8-m5h7 | 8.7 | PyPI | gitpython | 3.1.59 | 3.2.0 | egolint/uv.lock |
 | https://osv.dev/GHSA-w8jc-g24h-crhw | 7.5 | PyPI | gitpython | 3.1.59 | 3.2.0 | egolint/uv.lock |
 | https://osv.dev/GHSA-whh4-5q6c-9v3x | 6.5 | PyPI | gitpython | 3.1.59 | 3.1.60 | egolint/uv.lock |
+| https://osv.dev/PYSEC-2023-242 | 7.4 | PyPI | httpie | 3.2.4 | -- | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-4054<br/>https://osv.dev/GHSA-c3mw-737p-c7g2 | 7.1 | PyPI | jupyter-server | 2.20.0 | 2.21.0 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-4055<br/>https://osv.dev/GHSA-3325-v43h-43rv | 5.4 | PyPI | jupyterlab | 4.6.3 | 4.6.4 | egolint/uv.lock |
 | https://osv.dev/PYSEC-2026-4056<br/>https://osv.dev/GHSA-3jqq-pw4j-pqcj | 6.8 | PyPI | jupyterlab | 4.6.3 | 4.6.4 | egolint/uv.lock |
@@ -309,9 +311,16 @@ Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High,
 | https://osv.dev/GHSA-rfgq-q3w2-pmv2 | 6.9 | PyPI | pillow | 12.3.0 | 13.0.0 | egolint/uv.lock |
 | https://osv.dev/GHSA-vx6w-vv9f-6gvg | 6.9 | PyPI | pillow | 12.3.0 | 13.0.0 | egolint/uv.lock |
 | https://osv.dev/GHSA-w889-685w-c8fh | 9.2 | PyPI | pillow | 12.3.0 | 13.0.0 | egolint/uv.lock |
+| https://osv.dev/GHSA-wqgw-9xfh-qf2g |  | PyPI | pillow | 12.3.0 | 13.0.0 | egolint/uv.lock |
+| https://osv.dev/GHSA-xcvg-w56q-r89m | 8.4 | PyPI | pillow | 12.3.0 | 13.0.0 | egolint/uv.lock |
 | https://osv.dev/GHSA-22qq-2fwx-7p67 | 5.4 | PyPI | pylint | 4.0.7 | 4.0.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-xmj3-9gf7-h52w | 1.0 | PyPI | setuptools | 84.0.0 | 84.1.0 | egolint/uv.lock |
+| https://osv.dev/GHSA-4j63-6c4x-wfg4 | 6.3 | PyPI | soupsieve | 2.9.2 | 2.10.0 | egolint/uv.lock |
+| https://osv.dev/GHSA-6655-6qjp-jx7x | 7.5 | PyPI | soupsieve | 2.9.2 | 3.0.2 | egolint/uv.lock |
+| https://osv.dev/GHSA-7g44-g9rc-x53w | 5.3 | PyPI | soupsieve | 2.9.2 | 3.0.2 | egolint/uv.lock |
+| https://osv.dev/GHSA-mmhr-3c5m-f64f | 7.5 | PyPI | soupsieve | 2.9.2 | 4.0.0 | egolint/uv.lock |
 | https://osv.dev/GHSA-3hv7-mjh2-fv65 | 5.3 | PyPI | tornado | 6.5.8 | 6.5.9 | egolint/uv.lock |
+| https://osv.dev/GHSA-5cjw-f85j-cv6r | 3.1 | PyPI | tornado | 6.5.8 | 6.6.1 | egolint/uv.lock |
 | https://osv.dev/GHSA-c2m8-h5v5-343r | 8.2 | PyPI | tornado | 6.5.8 | 6.5.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-chx6-46f5-w4vp | 7.5 | PyPI | tornado | 6.5.8 | 6.5.9 | egolint/uv.lock |
 | https://osv.dev/GHSA-pcg2-g6cj-q92c | 5.3 | PyPI | tornado | 6.5.8 | 6.6 | egolint/uv.lock |
@@ -376,7 +385,9 @@ Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High,
 | https://osv.dev/GHSA-r4gj-5m52-g5wh | 7.0 | npm | axios | 1.19.0 | 1.20.0 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-vh66-26gq-q6x8 | 6.9 | npm | axios | 1.19.0 | 1.20.0 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-x97p-jq2g-jp4f | 8.3 | npm | axios | 1.19.0 | 1.20.0 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-5pm8-86m8-9m6r | 5.3 | npm | basic-ftp | 5.3.1 | 6.2.4 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-c475-qrg2-pj4r | 8.2 | npm | basic-ftp | 5.3.1 | 6.2.1 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-r4jh-29pc-gfqr | 5.9 | npm | basic-ftp | 5.3.1 | 6.2.3 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-27r3-jxmh-p828 | 7.5 | npm | body-parser | 1.20.6 | 1.20.9 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-6j4f-fj2g-mc7p | 7.5 | npm | brace-expansion | 1.1.18 | 1.1.19 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-q2hr-2g5m-vwhr | 5.3 | npm | brace-expansion | 1.1.18 | 1.1.21 | egolint/pnpm-lock.yaml |
@@ -412,6 +423,8 @@ Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High,
 | https://osv.dev/GHSA-8r5x-fm3f-whwj | 9.8 | npm | handlebars | 4.7.9 | 4.7.10 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-p8wg-vrv2-v86f | 9.2 | npm | handlebars | 4.7.9 | 4.7.10 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-xw65-4hp5-5hc7 | 4.7 | npm | handlebars | 4.7.9 | 4.7.10 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-5p2g-fcmc-qvqq | 8.7 | npm | image-size | 2.0.2 | 2.0.3 | egolint/pnpm-lock.yaml |
+| https://osv.dev/GHSA-w3rx-r6r6-pgpr | 8.7 | npm | image-size | 2.0.2 | 2.0.3 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-2vr4-cq9g-pvrc | 6.9 | npm | ip-address | 10.5.0 | 10.5.1 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-h3mg-xc3c-68pw | 6.3 | npm | ip-address | 10.5.0 | 10.7.1 | egolint/pnpm-lock.yaml |
 | https://osv.dev/GHSA-j6r3-76f7-8jcv | 6.3 | npm | ip-address | 10.5.0 | 10.7.1 | egolint/pnpm-lock.yaml |
@@ -533,6 +546,8 @@ Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High,
 | https://osv.dev/GHSA-x8mw-p69m-v3mx | 7.5 | npm | @fastify/busboy | 2.1.1 | 3.2.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-f596-whhp-79r4 | 3.7 | npm | @grpc/grpc-js | 1.14.4 | 1.14.5 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-m9gg-hp2v-232j | 7.4 | npm | @grpc/grpc-js | 1.14.4 | 1.14.5 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-jpvv-r467-5p4w | 5.3 | npm | @hono/node-server | 2.1.1 | 2.1.6 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-qv5m-9pm6-hqp3 | 5.3 | npm | @hono/node-server | 2.1.1 | 2.1.6 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-rmxm-3fg6-px4f | 5.3 | npm | @hono/node-server | 2.1.1 | 2.1.3 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-8988-4f7v-96qf | 5.3 | npm | @opentelemetry/core | 2.0.0 | 2.8.0 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-v5rq-49vh-5v5c | 9.2 | npm | @simple-git/argv-parser | 1.1.1 | 2.0.1 | pnpm-lock.yaml |
@@ -607,11 +622,18 @@ Total 188 packages affected by 645 known vulnerabilities (34 Critical, 279 High,
 | https://osv.dev/GHSA-8r5x-fm3f-whwj | 9.8 | npm | handlebars | 4.7.9 | 4.7.10 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-p8wg-vrv2-v86f | 9.2 | npm | handlebars | 4.7.9 | 4.7.10 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-xw65-4hp5-5hc7 | 4.7 | npm | handlebars | 4.7.9 | 4.7.10 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-3gg2-335m-rxc6 | 3.4 | npm | hono | 4.13.2 | 4.13.16 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-46wx-v44x-9hh2 | 5.3 | npm | hono | 4.13.2 | 4.13.16 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-4h7h-rv7c-7m2v | 5.3 | npm | hono | 4.13.2 | 4.13.16 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-4m76-xfj5-7975 | 5.3 | npm | hono | 4.13.2 | 4.13.16 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-5r4p-p66f-jhc7 | 5.3 | npm | hono | 4.13.2 | 4.13.11 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-crvj-82cr-hjcx | 5.9 | npm | hono | 4.13.2 | 4.13.5 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-g6gw-c38x-mqfc | 5.3 | npm | hono | 4.13.2 | 4.13.5 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-gqvv-2mrq-wpjv | 6.5 | npm | hono | 4.13.2 | 4.13.5 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-h7mg-cq63-vhpq | 5.3 | npm | hono | 4.13.2 | 4.13.16 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-hxh3-vqpv-xpqv | 4.7 | npm | hono | 4.13.2 | 4.13.7 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-5p2g-fcmc-qvqq | 8.7 | npm | image-size | 2.0.2 | 2.0.3 | pnpm-lock.yaml |
+| https://osv.dev/GHSA-w3rx-r6r6-pgpr | 8.7 | npm | image-size | 2.0.2 | 2.0.3 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-2vr4-cq9g-pvrc | 6.9 | npm | ip-address | 10.5.0 | 10.5.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-h3mg-xc3c-68pw | 6.3 | npm | ip-address | 10.5.0 | 10.7.1 | pnpm-lock.yaml |
 | https://osv.dev/GHSA-j6r3-76f7-8jcv | 6.3 | npm | ip-address | 10.5.0 | 10.7.1 | pnpm-lock.yaml |

