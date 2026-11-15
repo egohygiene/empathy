@@ -128,7 +128,7 @@
     "Only the explicit local manifest selection is qualified; complete report enumeration does not mean complete CI coverage.",
     "The act checkout step is local working-tree emulation, not remote checkout Action/provider qualification.",
     "Full holistic/root runtime baseline, specialist owner inputs, hosted publication, native ARM64/macOS/Windows and device/platform behavior remain separate.",
-    "Existing issues109/110 and the recorded 20 owner-input skips remain unresolved; no skip or lint command is removed, and no source/tool/runtime migration is performed.",
+    "Prior bounded root-baseline issue109 is closed. Its dated equipped/hosted outcomes and 20 hosted owner-input skips remain historical evidence, not a current universal skip count. Remaining full-repository debt stays with79/110 and roadmap118; no skip, lint command, source/tool/runtime selection is changed.",
     "Required exact-head holistic review for the evidence-only PR is pending; publication must be disabled in its manual feature-branch run."
   ]
 }
