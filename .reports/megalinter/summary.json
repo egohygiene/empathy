@@ -1,52 +1,256 @@
 {
-  "commit": "e313e00d311397566450fd90ec1b18df8f8f40de",
+  "commit": "acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
   "execution": {
     "message": "MegaLinter returned a failing runner status.",
     "state": "failure"
   },
   "findings": {
-    "advisory": 0,
-    "blocking": 0,
+    "advisory": 8,
+    "blocking": 21,
     "by_severity": {},
-    "state": "clear",
-    "total": 0
+    "state": "blocked",
+    "total": 29
   },
   "freshness": {
-    "expires_at": "2026-11-19T13:01:00Z",
+    "expires_at": "2026-11-23T02:19:58Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-11-11T13:01:00Z",
+  "generated_at": "2026-11-15T02:19:58Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/e313e00d311397566450fd90ec1b18df8f8f40de/.reports/megalinter",
+    "detail": "https://github.com/egohygiene/empathy/tree/acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34/.reports/megalinter",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/e313e00d311397566450fd90ec1b18df8f8f40de",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43024481799"
+    "source": "https://github.com/egohygiene/empathy/commit/acbe9c95a9120938ae0b6f9d1b9e4ea5c2928d34",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43666706655"
   },
   "megalinter": {
     "diagnostics": {
-      "errors": 0,
-      "warnings": 0
+      "errors": 74551,
+      "warnings": 17
     },
     "execution_error_tools": [],
-    "finding_tools": [],
+    "finding_tools": [
+      {
+        "enforcement": "advisory",
+        "errors": 2748,
+        "id": "COPYPASTE_JSCPD",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 330,
+        "id": "CSS_STYLELINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "DOCKERFILE_HADOLINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "EDITORCONFIG_EDITORCONFIG_CHECKER",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 356,
+        "id": "HTML_HTMLHINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "JAVASCRIPT_ES",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "JSON_JSONLINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "JSON_NPM_PACKAGE_JSON_LINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "JSON_PRETTIER",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 67774,
+        "id": "LATEX_CHKTEX",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 403,
+        "id": "MARKDOWN_MARKDOWNLINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "advisory",
+        "errors": 1,
+        "id": "MARKDOWN_MARKDOWN_TABLE_FORMATTER",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 3,
+        "id": "PYTHON_BANDIT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "advisory",
+        "errors": 289,
+        "id": "PYTHON_PYLINT",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 716,
+        "id": "PYTHON_RUFF",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "PYTHON_RUFF_FORMAT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "advisory",
+        "errors": 58,
+        "id": "REPOSITORY_CHECKOV",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "advisory",
+        "errors": 548,
+        "id": "REPOSITORY_GRYPE",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "REPOSITORY_SECRETLINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "advisory",
+        "errors": 1,
+        "id": "REPOSITORY_TRIVY",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "RUST_CLIPPY",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 184,
+        "id": "SPELL_LYCHEE",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "advisory",
+        "errors": 911,
+        "id": "SPELL_PROSELINT",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "advisory",
+        "errors": 1,
+        "id": "SPELL_VALE",
+        "status": "warning",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "TSX_ESLINT",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "TYPESCRIPT_ES",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "TYPESCRIPT_PRETTIER",
+        "status": "error",
+        "warnings": 0
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 1,
+        "id": "YAML_PRETTIER",
+        "status": "error",
+        "warnings": 17
+      },
+      {
+        "enforcement": "blocking",
+        "errors": 215,
+        "id": "YAML_YAMLLINT",
+        "status": "error",
+        "warnings": 0
+      }
+    ],
     "profile": "holistic",
     "return_code": 1,
     "status": "error",
     "tools": {
       "active": 50,
-      "advisory": 0,
-      "blocking": 0,
+      "advisory": 8,
+      "blocking": 21,
       "execution_errors": 0,
-      "passed": 50,
+      "passed": 21,
       "runner_failed": true,
-      "with_findings": 0
+      "with_findings": 29
     }
   },
   "producer": "megalinter",
   "provenance": {
-    "event": "schedule",
+    "event": "push",
     "run_attempt": 1,
-    "run_id": "43024481799",
+    "run_id": "43666706655",
     "workflow": "MegaLinter"
   },
   "repository": "egohygiene/empathy",

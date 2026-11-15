@@ -1,5 +1,5 @@
 Results of bandit linter (version 1.9.4)
-See documentation on https://megalinter.io/10.1.0/descriptors/python_bandit/
+See documentation on https://megalinter.io/10.2.0/descriptors/python_bandit/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -10,151 +10,119 @@ Linter raw log:
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
+[manager]	WARNING	Test in comment: fixtures is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: simulate is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: subprocess is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: outcomes is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: without is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: execution is not a test name or id, ignoring
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_foundation_mailmap.py:70
+[manager]	WARNING	Test in comment: fixed is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: local is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: owner is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: validators is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: no is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shell is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: or is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: supplied is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: command is not a test name or id, ignoring
+[tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_report_publication.py:135
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_report_publication.py:135
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_provenance.py:44
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_provenance.py:44
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_reports.py:46
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_reports.py:46
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_reports.py:293
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_reports.py:293
+[tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_scorecard_caller.py:58
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_scorecard_caller.py:58
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_staging_diff_gate.py:62
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_staging_diff_gate.py:62
+[manager]	WARNING	Test in comment: fixed is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: local is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: Python is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: argv is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: no is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shell is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: or is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: caller is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: command is not a test name or id, ignoring
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tools/repository_intelligence_publication.py:191
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tools/repository_intelligence_publication.py:191
-Run started:2026-11-11 12:58:59.451262+00:00
+[tester]	WARNING	nosec encountered (B607), but no failed test on file ./tools/repository_intelligence_report_artifacts.py:93
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tools/repository_intelligence_report_artifacts.py:93
+[manager]	WARNING	Test in comment: explicit is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: local is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: Task is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: executable is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: fixed is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: argv is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: no is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shell is not a test name or id, ignoring
+Run started:2026-11-15 02:17:10.841238+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_identity_integration.py:12:0
-11	from pathlib import Path
-12	import subprocess
-13	import unittest
+   Location: ./tools/staging_home_audit.py:19:0
+18	import re
+19	import subprocess
+20	import sys
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_identity_integration.py:88:8
-87	    def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-88	        subprocess.run(
-89	            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
-90	            check=True,
-91	        )
-92	        subprocess.run(
+   Location: ./tools/staging_home_audit.py:222:11
+221	    }
+222	    return subprocess.check_output(
+223	        [
+224	            "git", "--no-lazy-fetch", "--no-optional-locks",
+225	            "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false",
+226	            "-c", "protocol.allow=never", *arguments,
+227	        ],
+228	        cwd=repository_root, env=environment, stderr=subprocess.PIPE, timeout=60,
+229	    )
+230	
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_identity_integration.py:88:8
-87	    def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-88	        subprocess.run(
-89	            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
-90	            check=True,
-91	        )
-92	        subprocess.run(
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_identity_integration.py:92:8
-91	        )
-92	        subprocess.run(
-93	            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
-94	            check=True,
-95	        )
-96	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_identity_integration.py:92:8
-91	        )
-92	        subprocess.run(
-93	            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
-94	            check=True,
-95	        )
-96	
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tools/staging_home_audit.py:18:0
-17	import re
-18	import subprocess
-19	import sys
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tools/staging_home_audit.py:212:11
-211	def run_git(repository_root: Path, *arguments: str) -> bytes:
-212	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
-213	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tools/staging_home_audit.py:212:11
-211	def run_git(repository_root: Path, *arguments: str) -> bytes:
-212	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
-213	
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tools/task_catalog.py:14:0
-13	import shutil
-14	import subprocess
-15	import sys
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tools/task_catalog.py:47:16
-46	    """Return public described tasks from Task's canonical JSON output."""
-47	    completed = subprocess.run(
-48	        [task_binary(), "--dir", str(repository_root), "--list", "--json"],
-49	        check=True,
-50	        capture_output=True,
-51	        text=True,
-52	    )
-53	    payload = json.loads(completed.stdout)
+   Location: ./tools/staging_home_audit.py:222:11
+221	    }
+222	    return subprocess.check_output(
+223	        [
+224	            "git", "--no-lazy-fetch", "--no-optional-locks",
+225	            "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false",
+226	            "-c", "protocol.allow=never", *arguments,
+227	        ],
+228	        cwd=repository_root, env=environment, stderr=subprocess.PIPE, timeout=60,
+229	    )
+230	
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 13355
+	Total lines of code: 17499
 	Total lines skipped (#nosec): 1
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 58
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 104
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 10
+		Low: 3
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 10
+		High: 3
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)

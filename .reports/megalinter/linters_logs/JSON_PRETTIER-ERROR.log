@@ -1,5 +1,5 @@
-Results of prettier linter (version 3.9.6)
-See documentation on https://megalinter.io/10.1.0/descriptors/json_prettier/
+Results of prettier linter (version 3.9.10)
+See documentation on https://megalinter.io/10.2.0/descriptors/json_prettier/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -8,7 +8,10 @@ Checking formatting...
 [warn] .devcontainer/devcontainer.json
 [warn] .vscode/cspell.json
 [warn] beacon/contracts/template-manifest.schema.json
+[warn] docs/security/data/attribution-2026-11-13.json
+[warn] docs/security/data/dependency-qualification-2026-11-13.json
 [warn] holon/packs/react-vite/template/apps/storefront/tsconfig.json
 [warn] holon/packs/react-vite/template/test-results/.last-run.json
-[warn] Code style issues found in 5 files. Run Prettier with --write to fix.
+[warn] schemas/staging-removal-receipts.v1.schema.json
+[warn] Code style issues found in 8 files. Run Prettier with --write to fix.
 

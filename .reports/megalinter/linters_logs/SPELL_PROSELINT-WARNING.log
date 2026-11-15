@@ -1,5 +1,5 @@
 Results of proselint linter (version 0.16.0)
-See documentation on https://megalinter.io/10.1.0/descriptors/spell_proselint/
+See documentation on https://megalinter.io/10.2.0/descriptors/spell_proselint/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -100,29 +100,54 @@ reviewed' - a phrase is repeated.
 .garden/projects/repository-intelligence-dashboard.md:102:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:103:5: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 .garden/projects/repository-intelligence-dashboard.md:105:3: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-.github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.lowercase_periods: It's standard to use periods for lowercase 'a.m.' or 'p.m.'.
-.github/security/dependabot-dismissals.md:12:29: dates_times.am_pm.spacing: It's standard to put a space before 'a.m.' or 'p.m.'.
+.github/security/dependabot-dismissals.md:32:35: dates_times.am_pm.lowercase_periods: It's standard to use periods for lowercase 'a.m.' or 'p.m.'.
+.github/security/dependabot-dismissals.md:32:35: dates_times.am_pm.spacing: It's standard to put a space before 'a.m.' or 'p.m.'.
 .github/workflow-profiles/README.md:66:3: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 ARCHITECTURE.md:48:9: lexical_illusions: There's a lexical illusion in 'HN
   HN' - a phrase is repeated.
-ARCHITECTURE.md:127:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:127:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:128:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:129:29: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:130:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:131:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-ARCHITECTURE.md:143:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
-CONTINUITY.md:21:56: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'same exact'.
-CONTINUITY.md:128:4: typography.diacritical_marks: Use diacritical marks in 'résumé'.
-CONTINUITY.md:144:160: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'same exact'.
+ARCHITECTURE.md:136:10: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:136:46: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:137:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:138:29: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:139:30: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:140:32: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+ARCHITECTURE.md:152:29: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+CONTINUITY.md:151:4: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 DECISIONS.md:314:87: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 DESIGN.md:128:1: misc.preferred_forms: 'sans serif' is the preferred form.
 DESIGN_SYSTEM.md:68:38: misc.preferred_forms: 'sans serif' is the preferred form.
 EPISTEMOLOGY.md:109:22: lexical_illusions: There's a lexical illusion in 'Knowledge
 
 Knowledge' - a phrase is repeated.
+LICENSES/Apache-2.0.txt:9:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:12:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:15:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:18:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:23:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:23:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:26:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:30:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:35:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:40:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:48:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:53:65: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:60:75: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:100:7: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
+LICENSES/Apache-2.0.txt:106:34: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:145:53: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:186:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:191:56: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/Apache-2.0.txt:198:55: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 LICENSES/BSD-3-Clause.txt:3:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
 LICENSES/BSD-3-Clause.txt:20:69: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/CC0-1.0.txt:18:43: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/CC0-1.0.txt:19:39: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/CC0-1.0.txt:23:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/CC0-1.0.txt:34:34: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/CC0-1.0.txt:41:59: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/CC0-1.0.txt:50:51: misc.preferred_forms: 'in regard to' is the preferred form.
+LICENSES/CC0-1.0.txt:73:15: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+LICENSES/CC0-1.0.txt:92:1: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 LICENSES/MIT.txt:3:11: typography.symbols.copyright: (c) is a goofy alphabetic approximation, use the symbol ©.
 LICENSES/MIT.txt:6:58: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 LICENSES/MIT.txt:15:26: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -146,10 +171,10 @@ Consent' - a phrase is repeated.
 PILLARS.md:68:38: lexical_illusions: There's a lexical illusion in 'Automation
 
 Automation' - a phrase is repeated.
-README.md:29:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-ROADMAP.md:96:75: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+README.md:30:40: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+ROADMAP.md:118:75: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 SYSTEM.md:73:17: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
-SYSTEM.md:190:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+SYSTEM.md:189:71: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 TASKS.md:14:102: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:15:56: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:16:60: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -157,8 +182,8 @@ TASKS.md:17:50: typography.symbols.sentence_spacing: More than two spaces after 
 TASKS.md:18:72: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:19:69: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 TASKS.md:20:66: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-TASKS.md:312:20: annotations.misc: Annotation left in text.
-TASKS.md:312:46: annotations.misc: Annotation left in text.
+TASKS.md:319:20: annotations.misc: Annotation left in text.
+TASKS.md:319:46: annotations.misc: Annotation left in text.
 audits/empathy-completeness-20261019T132001Z.md:85:42: typography.diacritical_marks: Use diacritical marks in 'résumé'.
 audits/empathy-completeness-20261019T132001Z.md:193:43: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 audits/empathy-completeness-20261019T132001Z.md:447:7: typography.diacritical_marks: Use diacritical marks in 'résumé'.
@@ -435,8 +460,13 @@ beacon/README.md:48:11: typography.symbols.curly_quotes: Use curly quotes “”
 beacon/README.md:49:12: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/templates/research-paper/example/paper.md:2:8: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 beacon/templates/research-paper/example/paper.md:3:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/BASELINE_VALIDATION.md:38:1: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+docs/current-state-backlog.md:19:331: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/current-state-backlog.md:21:304: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/current-state-backlog.md:22:121: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/current-state-backlog.md:22:274: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/ecosystem/CONTEXT.md:8:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/INVENTORY.md:42:26: lexical_illusions: There's a lexical illusion in 'sources
+docs/foundation/INVENTORY.md:48:26: lexical_illusions: There's a lexical illusion in 'sources
 
 Sources' - a phrase is repeated.
 docs/foundation/gitignore/ITERATION-01.md:30:6: typography.diacritical_marks: Use diacritical marks in 'résumé'.
@@ -459,6 +489,9 @@ docs/foundation/gitignore/MIGRATION-03.md:51:142: typography.symbols.sentence_sp
 docs/foundation/gitignore/MIGRATION-03.md:52:210: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/MIGRATION-03.md:53:272: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/MIGRATION-03.md:54:221: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/NESTED-ADOPTION-05.md:18:326: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/NESTED-ADOPTION-05.md:19:296: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/gitignore/NESTED-ADOPTION-05.md:21:167: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:13:103: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:14:99: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/README.md:15:107: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -476,8 +509,8 @@ docs/foundation/gitignore/README.md:63:38: typography.symbols.curly_quotes: Use 
 docs/foundation/gitignore/README.md:65:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/foundation/gitignore/README.md:66:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/foundation/gitignore/README.md:67:9: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:201:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/foundation/gitignore/README.md:202:36: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:207:23: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/foundation/gitignore/README.md:208:36: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/foundation/gitignore/RULE_AUDIT.md:32:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:33:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:34:187: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
@@ -632,13 +665,30 @@ docs/foundation/gitignore/RULE_AUDIT.md:182:218: typography.symbols.sentence_spa
 docs/foundation/gitignore/RULE_AUDIT.md:183:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:184:218: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
 docs/foundation/gitignore/RULE_AUDIT.md:207:230: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
-docs/integrations/REPOSITORY_INTELLIGENCE.md:46:50: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'exact same'.
+docs/foundation/mailmap/README.md:110:123: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/mailmap/README.md:112:151: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/mailmap/README.md:113:126: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/mailmap/README.md:114:161: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/foundation/mailmap/README.md:115:128: typography.symbols.sentence_spacing: More than two spaces after the period; use 1 or 2.
+docs/integrations/IDENTITY_V1.md:22:41: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/integrations/REPOSITORY_INTELLIGENCE.md:65:50: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'exact same'.
 docs/integrations/REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md:24:19: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 docs/integrations/REPOSITORY_INTELLIGENCE_NATIVE_SEARCH.md:24:52: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
-docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md:21:8: redundancy.misc.after_the_deadline: Redundancy. Use 'clock' instead of 'time clock'.
-docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md:30:19: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'same exact'.
+docs/integrations/REPOSITORY_INTELLIGENCE_REVIEWS.md:55:39: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'exact same'.
+docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md:25:8: redundancy.misc.after_the_deadline: Redundancy. Use 'clock' instead of 'time clock'.
+docs/integrations/REPOSITORY_INTELLIGENCE_SOURCES.md:34:19: redundancy.misc.after_the_deadline: Redundancy. Use 'same' instead of 'same exact'.
+docs/integrations/WEBSITE_BASELINE.md:68:63: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/integrations/WEBSITE_BASELINE.md:72:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+docs/integrations/WEBSITE_BASELINE.md:77:54: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+docs/integrations/WEBSITE_BASELINE.md:77:76: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
 docs/migration/MANTLE.md:35:62: annotations.misc: Annotation left in text.
 docs/migration/MANTLE.md:53:37: dates_times.dates.dash_and_from: When specifying a date range, write 'from X to Y'.
+docs/migration/STAGING_RECEIPTS.md:40:17: typography.symbols.ellipsis: '...' is an approximation, use the ellipsis symbol '…'.
+docs/security/attribution-review.md:20:34: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+docs/security/attribution-review.md:20:48: typography.diacritical_marks: Use diacritical marks in 'résumé'.
+docs/security/attribution-review.md:49:174: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+docs/security/dependency-coverage.md:75:53: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
+docs/security/dependency-coverage.md:242:63: misc.phrasal_adjectives.ly: No hyphen is necessary in phrasal adjectives with an adverb ending in -ly, unless the -ly adverb is part of a longer phrase.
 egolint/.agents/agents/architect/AGENT.md:3:7: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:12:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/agents/architect/AGENT.md:13:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".

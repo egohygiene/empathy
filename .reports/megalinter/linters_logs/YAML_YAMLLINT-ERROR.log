@@ -1,5 +1,5 @@
 Results of yamllint linter (version 1.38.0)
-See documentation on https://megalinter.io/10.1.0/descriptors/yaml_yamllint/
+See documentation on https://megalinter.io/10.2.0/descriptors/yaml_yamllint/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -9,6 +9,9 @@ Linter raw log:
 
 .garden/garden.yaml
   2:1       warning  missing document start "---"  (document-start)
+
+.github/act/local-validation.yml
+  3:1       warning  missing document start "---"  (document-start)
 
 .github/workflow-profiles/agent-environment/validate-copilot-setup.yml
   106:1     error    trailing spaces  (trailing-spaces)

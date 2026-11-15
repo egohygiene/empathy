@@ -1,5 +1,5 @@
-Results of ruff linter (version 0.16.5)
-See documentation on https://megalinter.io/10.1.0/descriptors/python_ruff/
+Results of ruff linter (version 0.17.2)
+See documentation on https://megalinter.io/10.2.0/descriptors/python_ruff/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -1504,6 +1504,13 @@ W291 Trailing whitespace
 116 |           - Ignore: ignore and leave the \\change command in the text"""
     |
 help: Remove trailing whitespace
+    |
+113 | 		"""provides three options to the user:
+    - 		  - Accept: erase the \\add command and keep the added text 
+114 + 		  - Accept: erase the \\add command and keep the added text
+115 | 		  - Reject: erase the \\add command together with the added text
+    |
+note: This is an unsafe fix and may change runtime behavior
 
 E101 Indentation contains mixed spaces and tabs
    --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:115:1
@@ -8006,6 +8013,13 @@ T201 `print` found
 165 |         return 1
     |
 help: Remove `print`
+    |
+163 |         for error in errors:
+    -             print(f"ERROR: {error}", file=sys.stderr)
+164 +             pass
+165 |         return 1
+    |
+note: This is an unsafe fix and may change runtime behavior
 
 T201 `print` found
    --> beacon/scripts/validate_templates.py:167:5
@@ -8017,6 +8031,12 @@ T201 `print` found
 168 |     return 0
     |
 help: Remove `print`
+    |
+166 |
+    -     print("Beacon template validation passed.")
+167 |     return 0
+    |
+note: This is an unsafe fix and may change runtime behavior
 
 INP001 File `beacon/tests/test_templates.py` is part of an implicit namespace package. Add an `__init__.py`.
 --> beacon/tests/test_templates.py:1:1
@@ -8057,180 +8077,15 @@ PT018 Assertion should be broken down into multiple parts
 15 | SPEC.loader.exec_module(VALIDATOR)
    |
 help: Break down assertion into multiple parts
+   |
+12 | SPEC = importlib.util.spec_from_file_location("beacon_validate_templates", VALIDATOR_PATH)
+   - assert SPEC is not None and SPEC.loader is not None
+13 + assert SPEC is not None
+14 + assert SPEC.loader is not None
+15 | VALIDATOR = importlib.util.module_from_spec(SPEC)
+   |
+note: This is an unsafe fix and may change runtime behavior
 
-I001 [*] Import block is un-sorted or un-formatted
- --> tests/test_staging_removal_gate.py:4:1
-  |
-2 |   # SPDX-License-Identifier: MIT
-3 |
-4 | / from __future__ import annotations
-5 | |
-6 | | import importlib.util
-7 | | from pathlib import Path
-8 | | import sys
-9 | | import unittest
-  | |_______________^
-help: Organize imports
-   |
-10 |
-   -
-11 | ROOT = Path(__file__).parents[1]
-   |
-
-PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
-  --> tests/test_task_catalog.py:51:14
-   |
-50 |     def test_update_catalog_rejects_missing_markers(self) -> None:
-51 |         with self.assertRaisesRegex(RuntimeError, "exactly one generated region"):
-   |              ^^^^^^^^^^^^^^^^^^^^^^
-52 |             task_catalog.update_catalog("no generated region", "replacement")
-   |
-help: Replace `assertRaisesRegex` with `pytest.raises`
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:21:15
-   |
-19 |     specification = importlib.util.spec_from_file_location("staging_home_audit", path)
-20 |     if specification is None or specification.loader is None:
-21 |         raise RuntimeError(f"cannot load staging audit module: {path}")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-22 |     module = importlib.util.module_from_spec(specification)
-23 |     sys.modules[specification.name] = module
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:31:15
-   |
-29 |     data = json.loads(path.read_text(encoding="utf-8"))
-30 |     if data.get("schema_version") != "1.0.0" or not isinstance(data.get("approvals"), list):
-31 |         raise ValueError("removal approvals must use schema version 1.0.0")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-32 |     approvals: dict[str, dict[str, Any]] = {}
-33 |     for approval in data["approvals"]:
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:36:19
-   |
-34 |         source_path = approval.get("source_path") if isinstance(approval, dict) else None
-35 |         if not isinstance(source_path, str) or not source_path.startswith(".staging/"):
-36 |             raise ValueError("every approval needs a .staging source_path")
-   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-37 |         if source_path in approvals:
-38 |             raise ValueError(f"duplicate removal approval: {source_path}")
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:38:19
-   |
-36 |             raise ValueError("every approval needs a .staging source_path")
-37 |         if source_path in approvals:
-38 |             raise ValueError(f"duplicate removal approval: {source_path}")
-   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-39 |         approvals[source_path] = approval
-40 |     return approvals
-   |
-
-T201 `print` found
-   --> tools/staging_removal_gate.py:98:9
-    |
- 96 |         approvals = load_approvals(approvals_path)
- 97 |     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as error:
- 98 |         print(f"removal gate failed: {error}", file=sys.stderr)
-    |         ^^^^^
- 99 |         return 2
-100 |     errors = validate_removals(rows, approvals, arguments.source_path)
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/staging_removal_gate.py:103:13
-    |
-101 |     if errors:
-102 |         for error in errors:
-103 |             print(f"removal gate failed: {error}", file=sys.stderr)
-    |             ^^^^^
-104 |         return 1
-105 |     print(f"removal gate passed for {len(arguments.source_path)} staged file(s)")
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/staging_removal_gate.py:105:5
-    |
-103 |             print(f"removal gate failed: {error}", file=sys.stderr)
-104 |         return 1
-105 |     print(f"removal gate passed for {len(arguments.source_path)} staged file(s)")
-    |     ^^^^^
-106 |     return 0
-    |
-help: Remove `print`
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/task_catalog.py:41:15
-   |
-39 |     resolved = shutil.which(configured)
-40 |     if resolved is None:
-41 |         raise RuntimeError(f"Task executable is unavailable: {configured}")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-42 |     return resolved
-   |
-
-S603 `subprocess` call: check for execution of untrusted input
-  --> tools/task_catalog.py:47:17
-   |
-45 | def public_tasks(repository_root: Path) -> list[dict[str, object]]:
-46 |     """Return public described tasks from Task's canonical JSON output."""
-47 |     completed = subprocess.run(
-   |                 ^^^^^^^^^^^^^^
-48 |         [task_binary(), "--dir", str(repository_root), "--list", "--json"],
-49 |         check=True,
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/task_catalog.py:89:15
-   |
-87 |     """Replace the generated region in TASKS.md."""
-88 |     if document.count(START_MARKER) != 1 or document.count(END_MARKER) != 1:
-89 |         raise RuntimeError("TASKS.md must contain exactly one generated region")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-90 |     prefix, remainder = document.split(START_MARKER, maxsplit=1)
-91 |     _, suffix = remainder.split(END_MARKER, maxsplit=1)
-   |
-
-T201 `print` found
-   --> tools/task_catalog.py:105:9
-    |
-103 |     if arguments.write:
-104 |         catalog_path.write_text(expected, encoding="utf-8")
-105 |         print(f"Updated {catalog_path.relative_to(repository_root)}")
-    |         ^^^^^
-106 |         return 0
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/task_catalog.py:109:9
-    |
-108 |     if current != expected:
-109 |         print(
-    |         ^^^^^
-110 |             "TASKS.md is stale; run `task taskfile:catalog:write`.",
-111 |             file=sys.stderr,
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/task_catalog.py:115:5
-    |
-113 |         return 1
-114 |
-115 |     print("TASKS.md matches the public Taskfile command surface.")
-    |     ^^^^^
-116 |     return 0
-    |
-help: Remove `print`
-
-Found 731 errors.
-[*] 39 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
+Found 716 errors.
+[*] 38 fixable with `--fix` (4 unsafe fixes available with `--fix --unsafe-fixes`).
 

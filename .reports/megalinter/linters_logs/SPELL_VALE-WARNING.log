@@ -1,5 +1,5 @@
-Results of vale linter (version 3.18.0)
-See documentation on https://megalinter.io/10.1.0/descriptors/spell_vale/
+Results of vale linter (version 3.24.0)
+See documentation on https://megalinter.io/10.2.0/descriptors/spell_vale/
 -----------------------------------------------
 
 ❌ [ERROR] for workspace /github/workspace
@@ -13,5 +13,5 @@ E201 Invalid value [beacon/.staging/latex/Books/kaobook/MANIFEST.md:1:1]:
 yaml: unmarshal errors:
   line 4: cannot unmarshal !!str `MANIFES...` into map[string]interface {}
 
-Execution stopped with code 1.
+Execution stopped with code 2.
 

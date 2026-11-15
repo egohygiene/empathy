@@ -1,64 +1,64 @@
-## ❌[MegaLinter](https://megalinter.io/10.1.0) analysis: Error
+## ❌[MegaLinter](https://megalinter.io/10.2.0) analysis: Error
 
 
 
 |  Descriptor   |                                                Linter                                                |Files|Fixed|Errors|Max errors|Warnings|Elapsed time|
 |---------------|------------------------------------------------------------------------------------------------------|----:|----:|-----:|---------:|-------:|-----------:|
-|✅ ACTION      |[actionlint](https://megalinter.io/10.1.0/descriptors/action_actionlint)                              |   19|     |     0|          |       0|       0.38s|
-|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.1.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       6.58s|
-|✅ BASH        |[bash-exec](https://megalinter.io/10.1.0/descriptors/bash_bash_exec)                                  |   12|     |     0|          |       0|       0.04s|
-|✅ BASH        |[shellcheck](https://megalinter.io/10.1.0/descriptors/bash_shellcheck)                                |   12|     |     0|          |       0|       0.95s|
-|✅ BASH        |[shfmt](https://megalinter.io/10.1.0/descriptors/bash_shfmt)                                          |   12|     |     0|          |       0|       0.07s|
-|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.1.0/descriptors/copypaste_jscpd)                                     |  yes|     |  2927|          |      no|      17.41s|
-|❌ CSS         |[stylelint](https://megalinter.io/10.1.0/descriptors/css_stylelint)                                   |   22|     |   330|          |       0|       1.34s|
-|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.1.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.14s|
-|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.1.0/descriptors/editorconfig_editorconfig_checker)    | 2169|     |     1|          |       0|       1.28s|
-|❌ HTML        |[htmlhint](https://megalinter.io/10.1.0/descriptors/html_htmlhint)                                    |   16|     |   356|          |       0|       0.69s|
-|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       1.15s|
-|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.17s|
-|❌ JSON        |[jsonlint](https://megalinter.io/10.1.0/descriptors/json_jsonlint)                                    |  181|     |     1|          |       0|        0.2s|
-|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.1.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.41s|
-|❌ JSON        |[prettier](https://megalinter.io/10.1.0/descriptors/json_prettier)                                    |  181|     |     1|          |       0|       2.24s|
-|✅ JSON        |[v8r](https://megalinter.io/10.1.0/descriptors/json_v8r)                                              |  181|     |     0|          |       0|      71.16s|
-|❌ LATEX       |[chktex](https://megalinter.io/10.1.0/descriptors/latex_chktex)                                       |  298|     | 67774|          |       0|      98.36s|
-|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.1.0/descriptors/markdown_markdownlint)                        |  314|     |   400|          |       0|       2.21s|
-|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.1.0/descriptors/markdown_markdown_table_formatter)|  314|     |     1|          |       0|        0.3s|
-|✅ PERL        |[perlcritic](https://megalinter.io/10.1.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|       1.81s|
-|✅ POWERSHELL  |[powershell](https://megalinter.io/10.1.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       0.75s|
-|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.1.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.58s|
-|❌ PYTHON      |[bandit](https://megalinter.io/10.1.0/descriptors/python_bandit)                                      |   64|     |    10|          |       0|       3.63s|
-|❌ PYTHON      |[mypy](https://megalinter.io/10.1.0/descriptors/python_mypy)                                          |  yes|     |    36|          |      no|      10.57s|
-|⚠️ PYTHON      |[pylint](https://megalinter.io/10.1.0/descriptors/python_pylint)                                      |   64|     |   266|          |       0|      12.46s|
-|⚠️ PYTHON      |[pyright](https://megalinter.io/10.1.0/descriptors/python_pyright)                                    |  yes|     |  8785|          |      no|      30.41s|
-|❌ PYTHON      |[ruff](https://megalinter.io/10.1.0/descriptors/python_ruff)                                          |   64|     |   731|          |       0|       3.49s|
-|❌ PYTHON      |[ruff-format](https://megalinter.io/10.1.0/descriptors/python_ruff_format)                            |   64|     |     1|          |       0|       0.04s|
-|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.1.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|       1.28s|
-|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.1.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      40.95s|
-|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.1.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|      25.43s|
-|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.1.0/descriptors/repository_grype)                                    |  yes|     |   529|          |      no|      104.7s|
-|❌ REPOSITORY  |[ls-lint](https://megalinter.io/10.1.0/descriptors/repository_ls_lint)                                |  yes|     |     1|          |      no|       1.19s|
-|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.1.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|       9.13s|
-|✅ REPOSITORY  |[syft](https://megalinter.io/10.1.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       3.86s|
-|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.1.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|       9.59s|
-|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.1.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|      49.65s|
-|✅ REPOSITORY  |[trufflehog](https://megalinter.io/10.1.0/descriptors/repository_trufflehog)                          |  yes|     |    no|          |      no|       8.03s|
-|✅ RUBY        |[rubocop](https://megalinter.io/10.1.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       1.34s|
-|❌ RUST        |[clippy](https://megalinter.io/10.1.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|        0.3s|
-|❌ SPELL       |[lychee](https://megalinter.io/10.1.0/descriptors/spell_lychee)                                       |  730|     |   183|          |       0|      97.47s|
-|⚠️ SPELL       |[proselint](https://megalinter.io/10.1.0/descriptors/spell_proselint)                                 |  335|     |   861|          |       0|       7.59s|
-|⚠️ SPELL       |[vale](https://megalinter.io/10.1.0/descriptors/spell_vale)                                           |  335|     |     1|          |       0|       0.66s|
-|❌ TSX         |[eslint](https://megalinter.io/10.1.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       0.85s|
-|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.1.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       0.67s|
-|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.1.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|        1.9s|
-|✅ XML         |[xmllint](https://megalinter.io/10.1.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.11s|
-|❌ YAML        |[prettier](https://megalinter.io/10.1.0/descriptors/yaml_prettier)                                    |  193|     |     1|          |      17|       1.78s|
-|✅ YAML        |[v8r](https://megalinter.io/10.1.0/descriptors/yaml_v8r)                                              |  193|     |     0|          |       0|      46.64s|
-|❌ YAML        |[yamllint](https://megalinter.io/10.1.0/descriptors/yaml_yamllint)                                    |  193|     |   214|          |       0|       8.71s|
+|✅ ACTION      |[actionlint](https://megalinter.io/10.2.0/descriptors/action_actionlint)                              |   19|     |     0|          |       0|       0.57s|
+|✅ ANSIBLE     |[ansible-lint](https://megalinter.io/10.2.0/descriptors/ansible_ansible_lint)                         |  yes|     |    no|          |      no|       6.59s|
+|✅ BASH        |[bash-exec](https://megalinter.io/10.2.0/descriptors/bash_bash_exec)                                  |   12|     |     0|          |       0|       0.06s|
+|✅ BASH        |[shellcheck](https://megalinter.io/10.2.0/descriptors/bash_shellcheck)                                |   12|     |     0|          |       0|       1.47s|
+|✅ BASH        |[shfmt](https://megalinter.io/10.2.0/descriptors/bash_shfmt)                                          |   12|     |     0|          |       0|       0.02s|
+|⚠️ COPYPASTE   |[jscpd](https://megalinter.io/10.2.0/descriptors/copypaste_jscpd)                                     |  yes|     |  2748|          |      no|      24.29s|
+|❌ CSS         |[stylelint](https://megalinter.io/10.2.0/descriptors/css_stylelint)                                   |   23|     |   330|          |       0|       2.22s|
+|❌ DOCKERFILE  |[hadolint](https://megalinter.io/10.2.0/descriptors/dockerfile_hadolint)                              |    2|     |     1|          |       0|       0.15s|
+|❌ EDITORCONFIG|[editorconfig-checker](https://megalinter.io/10.2.0/descriptors/editorconfig_editorconfig_checker)    | 2246|     |     1|          |       0|       2.24s|
+|❌ HTML        |[htmlhint](https://megalinter.io/10.2.0/descriptors/html_htmlhint)                                    |   16|     |   356|          |       0|       0.94s|
+|❌ JAVASCRIPT  |[eslint](https://megalinter.io/10.2.0/descriptors/javascript_eslint)                                  |    2|     |     1|          |       0|       1.02s|
+|✅ JAVASCRIPT  |[prettier](https://megalinter.io/10.2.0/descriptors/javascript_prettier)                              |    2|     |     0|          |       0|       0.22s|
+|❌ JSON        |[jsonlint](https://megalinter.io/10.2.0/descriptors/json_jsonlint)                                    |  212|     |     1|          |       0|       0.26s|
+|❌ JSON        |[npm-package-json-lint](https://megalinter.io/10.2.0/descriptors/json_npm_package_json_lint)          |  yes|     |     1|          |      no|       0.54s|
+|❌ JSON        |[prettier](https://megalinter.io/10.2.0/descriptors/json_prettier)                                    |  212|     |     1|          |       0|       3.05s|
+|✅ JSON        |[v8r](https://megalinter.io/10.2.0/descriptors/json_v8r)                                              |  212|     |     0|          |       0|      88.12s|
+|❌ LATEX       |[chktex](https://megalinter.io/10.2.0/descriptors/latex_chktex)                                       |  298|     | 67774|          |       0|     139.82s|
+|❌ MARKDOWN    |[markdownlint](https://megalinter.io/10.2.0/descriptors/markdown_markdownlint)                        |  333|     |   403|          |       0|       3.16s|
+|⚠️ MARKDOWN    |[markdown-table-formatter](https://megalinter.io/10.2.0/descriptors/markdown_markdown_table_formatter)|  333|     |     1|          |       0|       0.36s|
+|✅ PERL        |[perlcritic](https://megalinter.io/10.2.0/descriptors/perl_perlcritic)                                |    4|     |     0|          |       0|        0.8s|
+|✅ POWERSHELL  |[powershell](https://megalinter.io/10.2.0/descriptors/powershell_powershell)                          |    1|     |     0|          |       0|       0.94s|
+|✅ POWERSHELL  |[powershell_formatter](https://megalinter.io/10.2.0/descriptors/powershell_powershell_formatter)      |    1|     |     0|          |       0|       0.73s|
+|❌ PYTHON      |[bandit](https://megalinter.io/10.2.0/descriptors/python_bandit)                                      |   82|     |     3|          |       0|       3.09s|
+|✅ PYTHON      |[mypy](https://megalinter.io/10.2.0/descriptors/python_mypy)                                          |  yes|     |    no|          |      no|      14.25s|
+|⚠️ PYTHON      |[pylint](https://megalinter.io/10.2.0/descriptors/python_pylint)                                      |   82|     |   289|          |       0|      16.35s|
+|✅ PYTHON      |[pyright](https://megalinter.io/10.2.0/descriptors/python_pyright)                                    |  yes|     |    no|          |      no|       1.06s|
+|❌ PYTHON      |[ruff](https://megalinter.io/10.2.0/descriptors/python_ruff)                                          |   82|     |   716|          |       0|       5.06s|
+|❌ PYTHON      |[ruff-format](https://megalinter.io/10.2.0/descriptors/python_ruff_format)                            |   82|     |     1|          |       0|       0.06s|
+|✅ REPOSITORY  |[betterleaks](https://megalinter.io/10.2.0/descriptors/repository_betterleaks)                        |  yes|     |    no|          |      no|        1.9s|
+|⚠️ REPOSITORY  |[checkov](https://megalinter.io/10.2.0/descriptors/repository_checkov)                                |  yes|     |    58|          |      no|      49.94s|
+|✅ REPOSITORY  |[dustilock](https://megalinter.io/10.2.0/descriptors/repository_dustilock)                            |  yes|     |    no|          |      no|      14.65s|
+|⚠️ REPOSITORY  |[grype](https://megalinter.io/10.2.0/descriptors/repository_grype)                                    |  yes|     |   548|          |      no|     125.32s|
+|✅ REPOSITORY  |[ls-lint](https://megalinter.io/10.2.0/descriptors/repository_ls_lint)                                |  yes|     |    no|          |      no|       1.31s|
+|❌ REPOSITORY  |[secretlint](https://megalinter.io/10.2.0/descriptors/repository_secretlint)                          |  yes|     |     1|          |      no|       12.4s|
+|✅ REPOSITORY  |[syft](https://megalinter.io/10.2.0/descriptors/repository_syft)                                      |  yes|     |    no|          |      no|       4.76s|
+|⚠️ REPOSITORY  |[trivy](https://megalinter.io/10.2.0/descriptors/repository_trivy)                                    |  yes|     |     1|          |      no|      14.56s|
+|✅ REPOSITORY  |[trivy-sbom](https://megalinter.io/10.2.0/descriptors/repository_trivy_sbom)                          |  yes|     |    no|          |      no|       77.8s|
+|✅ REPOSITORY  |[trufflehog](https://megalinter.io/10.2.0/descriptors/repository_trufflehog)                          |  yes|     |    no|          |      no|        8.2s|
+|✅ RUBY        |[rubocop](https://megalinter.io/10.2.0/descriptors/ruby_rubocop)                                      |    1|     |     0|          |       0|       4.06s|
+|❌ RUST        |[clippy](https://megalinter.io/10.2.0/descriptors/rust_clippy)                                        |  yes|     |     1|          |      no|       0.24s|
+|❌ SPELL       |[lychee](https://megalinter.io/10.2.0/descriptors/spell_lychee)                                       |  785|     |   184|          |       0|      89.21s|
+|⚠️ SPELL       |[proselint](https://megalinter.io/10.2.0/descriptors/spell_proselint)                                 |  357|     |   911|          |       0|       9.24s|
+|⚠️ SPELL       |[vale](https://megalinter.io/10.2.0/descriptors/spell_vale)                                           |  357|     |     1|          |       0|       1.11s|
+|❌ TSX         |[eslint](https://megalinter.io/10.2.0/descriptors/tsx_eslint)                                         |   88|     |     1|          |       0|       0.39s|
+|❌ TYPESCRIPT  |[eslint](https://megalinter.io/10.2.0/descriptors/typescript_eslint)                                  |  145|     |     1|          |       0|       0.38s|
+|❌ TYPESCRIPT  |[prettier](https://megalinter.io/10.2.0/descriptors/typescript_prettier)                              |  145|     |     1|          |       0|       2.02s|
+|✅ XML         |[xmllint](https://megalinter.io/10.2.0/descriptors/xml_xmllint)                                       |    5|     |     0|          |       0|       0.17s|
+|❌ YAML        |[prettier](https://megalinter.io/10.2.0/descriptors/yaml_prettier)                                    |  195|     |     1|          |      17|        2.5s|
+|✅ YAML        |[v8r](https://megalinter.io/10.2.0/descriptors/yaml_v8r)                                              |  195|     |     0|          |       0|      57.82s|
+|❌ YAML        |[yamllint](https://megalinter.io/10.2.0/descriptors/yaml_yamllint)                                    |  195|     |   215|          |       0|      12.77s|
 
 ## Detailed Issues
 
 <details>
-<summary>❌ PYTHON / bandit - 10 errors</summary>
+<summary>❌ PYTHON / bandit - 3 errors</summary>
 
 ```
 [_py_warnings]	WARNING	"\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
@@ -67,151 +67,119 @@
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/scripts/validate_megalinter_policy.py:270
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:123
 [tester]	WARNING	nosec encountered (B108), but no failed test on file ./egolint/tests/test_megalinter_policy.py:124
+[manager]	WARNING	Test in comment: fixtures is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: simulate is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: subprocess is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: outcomes is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: without is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: execution is not a test name or id, ignoring
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_foundation_mailmap.py:70
+[manager]	WARNING	Test in comment: fixed is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: local is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: owner is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: validators is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: no is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shell is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: or is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: supplied is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: command is not a test name or id, ignoring
+[tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_report_publication.py:135
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_report_publication.py:135
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_provenance.py:44
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_provenance.py:44
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_reports.py:46
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_reports.py:46
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_reports.py:293
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_reports.py:293
+[tester]	WARNING	nosec encountered (B607), but no failed test on file ./tests/test_repository_intelligence_scorecard_caller.py:58
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_repository_intelligence_scorecard_caller.py:58
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_staging_diff_gate.py:62
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tests/test_staging_diff_gate.py:62
+[manager]	WARNING	Test in comment: fixed is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: local is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: Python is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: argv is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: no is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shell is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: or is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: caller is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: command is not a test name or id, ignoring
 [tester]	WARNING	nosec encountered (B607), but no failed test on file ./tools/repository_intelligence_publication.py:191
 [tester]	WARNING	nosec encountered (B603), but no failed test on file ./tools/repository_intelligence_publication.py:191
-Run started:2026-11-11 12:58:59.451262+00:00
+[tester]	WARNING	nosec encountered (B607), but no failed test on file ./tools/repository_intelligence_report_artifacts.py:93
+[tester]	WARNING	nosec encountered (B603), but no failed test on file ./tools/repository_intelligence_report_artifacts.py:93
+[manager]	WARNING	Test in comment: explicit is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: local is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: Task is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: executable is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: fixed is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: argv is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: no is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: shell is not a test name or id, ignoring
+Run started:2026-11-15 02:17:10.841238+00:00
 
 Test results:
 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tests/test_identity_integration.py:12:0
-11	from pathlib import Path
-12	import subprocess
-13	import unittest
+   Location: ./tools/staging_home_audit.py:19:0
+18	import re
+19	import subprocess
+20	import sys
 
 --------------------------------------------------
 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_identity_integration.py:88:8
-87	    def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-88	        subprocess.run(
-89	            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
-90	            check=True,
-91	        )
-92	        subprocess.run(
+   Location: ./tools/staging_home_audit.py:222:11
+221	    }
+222	    return subprocess.check_output(
+223	        [
+224	            "git", "--no-lazy-fetch", "--no-optional-locks",
+225	            "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false",
+226	            "-c", "protocol.allow=never", *arguments,
+227	        ],
+228	        cwd=repository_root, env=environment, stderr=subprocess.PIPE, timeout=60,
+229	    )
+230	
 
 --------------------------------------------------
 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
    Severity: Low   Confidence: High
    CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
    More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_identity_integration.py:88:8
-87	    def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-88	        subprocess.run(
-89	            ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
-90	            check=True,
-91	        )
-92	        subprocess.run(
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tests/test_identity_integration.py:92:8
-91	        )
-92	        subprocess.run(
-93	            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
-94	            check=True,
-95	        )
-96	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tests/test_identity_integration.py:92:8
-91	        )
-92	        subprocess.run(
-93	            ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
-94	            check=True,
-95	        )
-96	
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tools/staging_home_audit.py:18:0
-17	import re
-18	import subprocess
-19	import sys
-
---------------------------------------------------
->> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
-   Location: ./tools/staging_home_audit.py:212:11
-211	def run_git(repository_root: Path, *arguments: str) -> bytes:
-212	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
-213	
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tools/staging_home_audit.py:212:11
-211	def run_git(repository_root: Path, *arguments: str) -> bytes:
-212	    return subprocess.check_output(["git", *arguments], cwd=repository_root, stderr=subprocess.PIPE)
-213	
-
---------------------------------------------------
->> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
-   Location: ./tools/task_catalog.py:14:0
-13	import shutil
-14	import subprocess
-15	import sys
-
---------------------------------------------------
->> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
-   Severity: Low   Confidence: High
-   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
-   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
-   Location: ./tools/task_catalog.py:47:16
-46	    """Return public described tasks from Task's canonical JSON output."""
-47	    completed = subprocess.run(
-48	        [task_binary(), "--dir", str(repository_root), "--list", "--json"],
-49	        check=True,
-50	        capture_output=True,
-51	        text=True,
-52	    )
-53	    payload = json.loads(completed.stdout)
+   Location: ./tools/staging_home_audit.py:222:11
+221	    }
+222	    return subprocess.check_output(
+223	        [
+224	            "git", "--no-lazy-fetch", "--no-optional-locks",
+225	            "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false",
+226	            "-c", "protocol.allow=never", *arguments,
+227	        ],
+228	        cwd=repository_root, env=environment, stderr=subprocess.PIPE, timeout=60,
+229	    )
+230	
 
 --------------------------------------------------
 
 Code scanned:
-	Total lines of code: 13355
+	Total lines of code: 17499
 	Total lines skipped (#nosec): 1
-	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 58
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 104
 
 Run metrics:
 	Total issues (by severity):
 		Undefined: 0
-		Low: 10
+		Low: 3
 		Medium: 0
 		High: 0
 	Total issues (by confidence):
 		Undefined: 0
 		Low: 0
 		Medium: 0
-		High: 10
+		High: 3
 Files skipped (2):
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/acceptchanges.py (syntax error while parsing AST from file)
 	./beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py (syntax error while parsing AST from file)
@@ -223,7 +191,15 @@ Files skipped (2):
 <summary>❌ LATEX / chktex - 67774 errors</summary>
 
 ```
-of pages) as most theses are printed and bound this way. Switching to one sided printing is as simple as uncommenting the \option{oneside} option of the \code{documentclass} command at the top of the \file{main.tex} file. You may then wish to adjust the margins to suit specifications from your institution.  
+^
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                                                      ^
+    Warning 2 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 64: Non-breaking space (`~') should have been used.
+    If you are familiar with \LaTeX{}, then you should explore the directory structure of the template and then proceed to place your own information into the \emph{THESIS INFORMATION} block of the \file{main.tex} file. You can then modify the rest of this file to your unique specifications based on your degree/university. Section \ref{FillingFile} on page \pageref{FillingFile} will help you do this. Make sure you also read section \ref{ThesisConventions} about thesis conventions to get the most out of this template.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 180: Interword spacing (`\ ') should perhaps be used.
+    This thesis template is designed for double sided printing (i.e. content on the front and back of pages) as most theses are printed and bound this way. Switching to one sided printing is as simple as uncommenting the \option{oneside} option of the \code{documentclass} command at the top of the \file{main.tex} file. You may then wish to adjust the margins to suit specifications from your institution.  
                                                                     ^
     Warning 12 in beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex line 194: Interword spacing (`\ ') should perhaps be used.
     The \code{biblatex} package is used to format the bibliography and inserts references such as this one \parencite{Reference1}. The options used in the \file{main.tex} file mean that the in-text citations of references are formatted with the author(s) listed with the date of the publication. Multiple references are separated by semicolons (e.g. \parencite{Reference2, Reference1}) and references with more than three authors only show the first author with \emph{et al.} indicating there are more authors (e.g. \parencite{Reference3}). This is done automatically for you. To see how you use references, have a look at the \file{Chapter1.tex} source file. Many reference managers allow you to simply drag the reference into the document as you type.  
@@ -349,7 +325,7 @@ of pages) as most theses are printed and bound this way. Switching to one sided 
 
 
 
-(Truncated to last 25000 characters out of 22932245)
+(Truncated to last 27586 characters out of 22932245)
 ```
 
 </details>
@@ -371,783 +347,854 @@ For more information, try '--help'.
 <summary>❌ EDITORCONFIG / editorconfig-checker - 1 error</summary>
 
 ```
-47: Trailing whitespace
-	71: Trailing whitespace
+trailing whitespace
+beacon/.staging/latex/Miscellaneous/cheatsheet/LICENSE:
+	1: trailing whitespace
+beacon/.staging/latex/Miscellaneous/cheatsheet/cheatsheet.tex:
+	wrong line endings or no final newline
+	37-40: trailing whitespace
+	60: trailing whitespace
+	81: trailing whitespace
+	91-92: trailing whitespace
+	94: trailing whitespace
+	108: trailing whitespace
+	126: trailing whitespace
+	150: trailing whitespace
+	153-154: trailing whitespace
+	175: trailing whitespace
+	212: trailing whitespace
+	214: trailing whitespace
+beacon/.staging/latex/Miscellaneous/chemical-equations/chemical_equations.tex:
+	wrong line endings or no final newline
+	16: trailing whitespace
+	29: trailing whitespace
+beacon/.staging/latex/Miscellaneous/code-snippet/Scripts/example.pl:
+	wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/code-snippet/main.tex:
+	wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/conference-booklet/conferencebooklet.cls:
+	10: trailing whitespace
+	175: trailing whitespace
+	177: trailing whitespace
+	179: trailing whitespace
+	181: trailing whitespace
+	191: trailing whitespace
+	194: trailing whitespace
+	216: trailing whitespace
+beacon/.staging/latex/Miscellaneous/conference-booklet/main.tex:
+	10: trailing whitespace
+	48: trailing whitespace
+	50: trailing whitespace
+	102: trailing whitespace
+	125: trailing whitespace
+	145: trailing whitespace
+	178: trailing whitespace
+	205: trailing whitespace
+	224: trailing whitespace
+	235: trailing whitespace
+	238: trailing whitespace
+	294: trailing whitespace
+	302: trailing whitespace
+	306: trailing whitespace
+beacon/.staging/latex/Miscellaneous/contract/contract.tex:
+	wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/contract/structure.tex:
+	wrong line endings or no final newline
+	8: trailing whitespace
+	37: trailing whitespace
+beacon/.staging/latex/Miscellaneous/custom-class/example.cls:
+	wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/custom-class/template.tex:
+	wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/dictionary/dictionary.tex:
+	wrong line endings or no final newline
+beacon/.staging/latex/Miscellaneous/drake-certificate/CSDrakeCertificate.cls:
+	82: trailing whitespace
+	86: trailing whitespace
+beacon/.staging/latex/Miscellaneous/drake-certificate/template.tex:
+	54: trailing whitespace
+	87: trailing whitespace
+	89: trailing whitespace
+	99: trailing whitespace
+beacon/.staging/latex/Miscellaneous/engineering-calculation-paper/EngCalcPaper.tex:
+	wrong line endings or no final newline
+	47: trailing whitespace
+	71: trailing whitespace
 beacon/.staging/latex/Miscellaneous/frequently-asked-questions/faq.tex:
-	Wrong line endings or no final newline
-	141: Trailing whitespace
+	wrong line endings or no final newline
+	141: trailing whitespace
 beacon/.staging/latex/Miscellaneous/memo/memo.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Miscellaneous/memo/texMemo.cls:
-	Wrong line endings or no final newline
-	4: Trailing whitespace
+	wrong line endings or no final newline
+	4: trailing whitespace
 beacon/.staging/latex/Miscellaneous/minimal-memo/CSMinimalMemo.cls:
-	112: Trailing whitespace
-	114: Trailing whitespace
-	116: Trailing whitespace
-	118: Trailing whitespace
-	120: Trailing whitespace
-	127: Trailing whitespace
+	112: trailing whitespace
+	114: trailing whitespace
+	116: trailing whitespace
+	118: trailing whitespace
+	120: trailing whitespace
+	127: trailing whitespace
 beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.bib:
-	23: Trailing whitespace
+	23: trailing whitespace
 beacon/.staging/latex/Miscellaneous/nih-grant-proposal/NIHGrant.tex:
-	Wrong line endings or no final newline
-	64: Trailing whitespace
-	118: Trailing whitespace
-	248: Trailing whitespace
+	wrong line endings or no final newline
+	64: trailing whitespace
+	118: trailing whitespace
+	248: trailing whitespace
 beacon/.staging/latex/Miscellaneous/nih-grant-proposal/nihunsrt.bst:
-	12: Trailing whitespace
-	594: Trailing whitespace
+	12: trailing whitespace
+	594: trailing whitespace
 beacon/.staging/latex/Miscellaneous/poems/poems.tex:
-	Wrong line endings or no final newline
-	Not all lines have the correct end of line character
-	20: Trailing whitespace
-	282: Trailing whitespace
-	289: Trailing whitespace
+	not all lines have the correct end of line character
+	wrong line endings or no final newline
+	20: trailing whitespace
+	282: trailing whitespace
+	289: trailing whitespace
 beacon/.staging/latex/Miscellaneous/press-release/fancyhdr.sty:
-	3: Trailing whitespace
-	30: Trailing whitespace
-	51: Trailing whitespace
-	105: Trailing whitespace
-	228: Trailing whitespace
-	341: Trailing whitespace
-	400: Trailing whitespace
-	474: Trailing whitespace
+	3: trailing whitespace
+	30: trailing whitespace
+	51: trailing whitespace
+	105: trailing whitespace
+	228: trailing whitespace
+	341: trailing whitespace
+	400: trailing whitespace
+	474: trailing whitespace
 beacon/.staging/latex/Miscellaneous/press-release/press_release.tex:
-	Wrong line endings or no final newline
-	Not all lines have the correct end of line character
+	not all lines have the correct end of line character
+	wrong line endings or no final newline
 beacon/.staging/latex/Miscellaneous/press-release/prsrls.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Miscellaneous/professional-table/table.tex:
-	Wrong line endings or no final newline
-	10: Trailing whitespace
-	16: Trailing whitespace
+	wrong line endings or no final newline
+	10: trailing whitespace
+	16: trailing whitespace
 beacon/.staging/latex/Miscellaneous/ryo-menu/CSRyoMenu.cls:
-	103: Trailing whitespace
-	119: Trailing whitespace
-	121: Trailing whitespace
-	123: Trailing whitespace
-	125: Trailing whitespace
-	127: Trailing whitespace
-	129: Trailing whitespace
+	103: trailing whitespace
+	119: trailing whitespace
+	121: trailing whitespace
+	123: trailing whitespace
+	125: trailing whitespace
+	127: trailing whitespace
+	129: trailing whitespace
 beacon/.staging/latex/Miscellaneous/ryo-menu/Fonts/SIL Open Font License.txt:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Newsletters/professional-newsletter/newsletter_2.tex:
-	Wrong line endings or no final newline
-	9: Trailing whitespace
-	60: Trailing whitespace
-	92: Trailing whitespace
-	108: Trailing whitespace
-	129: Trailing whitespace
-	136: Trailing whitespace
-	153: Trailing whitespace
-	157: Trailing whitespace
-	163: Trailing whitespace
-	165: Trailing whitespace
-	183: Trailing whitespace
-	187-188: Trailing whitespace
-	255: Trailing whitespace
-	264: Trailing whitespace
+	wrong line endings or no final newline
+	9: trailing whitespace
+	60: trailing whitespace
+	92: trailing whitespace
+	108: trailing whitespace
+	129: trailing whitespace
+	136: trailing whitespace
+	153: trailing whitespace
+	157: trailing whitespace
+	163: trailing whitespace
+	165: trailing whitespace
+	183: trailing whitespace
+	187-188: trailing whitespace
+	255: trailing whitespace
+	264: trailing whitespace
 beacon/.staging/latex/Newsletters/professional-newsletter/structure.tex:
-	Wrong line endings or no final newline
-	8: Trailing whitespace
+	wrong line endings or no final newline
+	8: trailing whitespace
 beacon/.staging/latex/Newsletters/short-three-column-newsletter/newsletter_1.tex:
-	Wrong line endings or no final newline
-	7: Trailing whitespace
-	10: Trailing whitespace
-	83: Trailing whitespace
-	97: Trailing whitespace
-	126: Trailing whitespace
-	152: Trailing whitespace
-	239: Trailing whitespace
+	wrong line endings or no final newline
+	7: trailing whitespace
+	10: trailing whitespace
+	83: trailing whitespace
+	97: trailing whitespace
+	126: trailing whitespace
+	152: trailing whitespace
+	239: trailing whitespace
 beacon/.staging/latex/Presentations/beamer-presentation/template.tex:
-	Wrong line endings or no final newline
-	175: Trailing whitespace
-	192: Trailing whitespace
-	194: Trailing whitespace
-	196: Trailing whitespace
-	202: Trailing whitespace
-	204: Trailing whitespace
-	213: Trailing whitespace
-	223: Trailing whitespace
-	225: Trailing whitespace
-	228: Trailing whitespace
-	238: Trailing whitespace
-	242: Trailing whitespace
-	246: Trailing whitespace
-	250: Trailing whitespace
-	263: Trailing whitespace
-	288: Trailing whitespace
-	309: Trailing whitespace
-	322: Trailing whitespace
-	326: Trailing whitespace
-	328: Trailing whitespace
-	336: Trailing whitespace
-	338: Trailing whitespace
-	346: Trailing whitespace
-	350: Trailing whitespace
-	354: Trailing whitespace
-	374: Trailing whitespace
-	398: Trailing whitespace
-	400: Trailing whitespace
-	402: Trailing whitespace
-	410: Trailing whitespace
-	413: Trailing whitespace
-	418: Trailing whitespace
-	432: Trailing whitespace
-	446: Trailing whitespace
-	464: Trailing whitespace
-	466: Trailing whitespace
-	473: Trailing whitespace
+	wrong line endings or no final newline
+	175: trailing whitespace
+	192: trailing whitespace
+	194: trailing whitespace
+	196: trailing whitespace
+	202: trailing whitespace
+	204: trailing whitespace
+	213: trailing whitespace
+	223: trailing whitespace
+	225: trailing whitespace
+	228: trailing whitespace
+	238: trailing whitespace
+	242: trailing whitespace
+	246: trailing whitespace
+	250: trailing whitespace
+	263: trailing whitespace
+	288: trailing whitespace
+	309: trailing whitespace
+	322: trailing whitespace
+	326: trailing whitespace
+	328: trailing whitespace
+	336: trailing whitespace
+	338: trailing whitespace
+	346: trailing whitespace
+	350: trailing whitespace
+	354: trailing whitespace
+	374: trailing whitespace
+	398: trailing whitespace
+	400: trailing whitespace
+	402: trailing whitespace
+	410: trailing whitespace
+	413: trailing whitespace
+	418: trailing whitespace
+	432: trailing whitespace
+	446: trailing whitespace
+	464: trailing whitespace
+	466: trailing whitespace
+	473: trailing whitespace
 beacon/.staging/latex/Presentations/fancyslides-presentation/fancyslides.cls:
-	Wrong line endings or no final newline
-	122: Trailing whitespace
-	124: Trailing whitespace
-	162: Trailing whitespace
+	wrong line endings or no final newline
+	122: trailing whitespace
+	124: trailing whitespace
+	162: trailing whitespace
 beacon/.staging/latex/Presentations/fancyslides-presentation/presentation_3.tex:
-	Wrong line endings or no final newline
-	29: Trailing whitespace
+	wrong line endings or no final newline
+	29: trailing whitespace
 beacon/.staging/latex/Presentations/focus-presentation/beamercolorthemefocus.sty:
-	10: Trailing whitespace
-	15: Trailing whitespace
+	10: trailing whitespace
+	15: trailing whitespace
 beacon/.staging/latex/Presentations/focus-presentation/beamerfontthemefocus.sty:
-	10: Trailing whitespace
-	15: Trailing whitespace
+	10: trailing whitespace
+	15: trailing whitespace
 beacon/.staging/latex/Presentations/focus-presentation/beamerinnerthemefocus.sty:
-	10: Trailing whitespace
-	15: Trailing whitespace
-	41: Trailing whitespace
-	49: Trailing whitespace
-	55: Trailing whitespace
-	62: Trailing whitespace
-	67: Trailing whitespace
-	73: Trailing whitespace
-	78: Trailing whitespace
-	80: Trailing whitespace
-	92: Trailing whitespace
-	99: Trailing whitespace
+	10: trailing whitespace
+	15: trailing whitespace
+	41: trailing whitespace
+	49: trailing whitespace
+	55: trailing whitespace
+	62: trailing whitespace
+	67: trailing whitespace
+	73: trailing whitespace
+	78: trailing whitespace
+	80: trailing whitespace
+	92: trailing whitespace
+	99: trailing whitespace
 beacon/.staging/latex/Presentations/focus-presentation/beamerouterthemefocus.sty:
-	10: Trailing whitespace
-	15: Trailing whitespace
-	71: Trailing whitespace
-	74: Trailing whitespace
-	77: Trailing whitespace
-	85: Trailing whitespace
-	111: Trailing whitespace
-	150: Trailing whitespace
+	10: trailing whitespace
+	15: trailing whitespace
+	71: trailing whitespace
+	74: trailing whitespace
+	77: trailing whitespace
+	85: trailing whitespace
+	111: trailing whitespace
+	150: trailing whitespace
 beacon/.staging/latex/Presentations/focus-presentation/beamerthemefocus.sty:
-	10: Trailing whitespace
-	15: Trailing whitespace
-	40: Trailing whitespace
-	43: Trailing whitespace
+	10: trailing whitespace
+	15: trailing whitespace
+	40: trailing whitespace
+	43: trailing whitespace
 beacon/.staging/latex/Presentations/focus-presentation/template.tex:
-	10: Trailing whitespace
-	137: Trailing whitespace
-	158: Trailing whitespace
-	170: Trailing whitespace
+	10: trailing whitespace
+	137: trailing whitespace
+	158: trailing whitespace
+	170: trailing whitespace
 beacon/.staging/latex/Recipes/jacopo-recipe/CSJacopoRecipe.cls:
-	104: Trailing whitespace
-	108: Trailing whitespace
-	111: Trailing whitespace
-	113: Trailing whitespace
-	115: Trailing whitespace
-	117: Trailing whitespace
-	122: Trailing whitespace
-	124: Trailing whitespace
-	131: Trailing whitespace
-	133: Trailing whitespace
-	135: Trailing whitespace
-	139: Trailing whitespace
-	162: Trailing whitespace
-	176: Trailing whitespace
-	179: Trailing whitespace
+	104: trailing whitespace
+	108: trailing whitespace
+	111: trailing whitespace
+	113: trailing whitespace
+	115: trailing whitespace
+	117: trailing whitespace
+	122: trailing whitespace
+	124: trailing whitespace
+	131: trailing whitespace
+	133: trailing whitespace
+	135: trailing whitespace
+	139: trailing whitespace
+	162: trailing whitespace
+	176: trailing whitespace
+	179: trailing whitespace
 beacon/.staging/latex/Recipes/morgana-recipe/CSMorganaRecipe.cls:
-	97: Trailing whitespace
-	100: Trailing whitespace
-	103: Trailing whitespace
-	106: Trailing whitespace
-	108: Trailing whitespace
-	112: Trailing whitespace
-	123: Trailing whitespace
-	125: Trailing whitespace
-	127: Trailing whitespace
-	129: Trailing whitespace
-	142: Trailing whitespace
-	144: Trailing whitespace
-	146: Trailing whitespace
+	97: trailing whitespace
+	100: trailing whitespace
+	103: trailing whitespace
+	106: trailing whitespace
+	108: trailing whitespace
+	112: trailing whitespace
+	123: trailing whitespace
+	125: trailing whitespace
+	127: trailing whitespace
+	129: trailing whitespace
+	142: trailing whitespace
+	144: trailing whitespace
+	146: trailing whitespace
 beacon/.staging/latex/Recipes/morgana-recipe/template.tex:
-	60: Trailing whitespace
-	86: Trailing whitespace
-	88: Trailing whitespace
+	60: trailing whitespace
+	86: trailing whitespace
+	88: trailing whitespace
 beacon/.staging/latex/Signs/arrow-sign/template.tex:
-	33-35: Trailing whitespace
+	33-35: trailing whitespace
 beacon/.staging/latex/Signs/information-sign/Fonts/OFL.txt:
-	22: Trailing whitespace
+	22: trailing whitespace
 beacon/.staging/latex/Signs/information-sign/Fonts/SIL Open Font License.txt:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter01.tex:
-	Wrong line endings or no final newline
-	5: Trailing whitespace
-	24: Trailing whitespace
-	68: Trailing whitespace
-	86: Trailing whitespace
-	91: Trailing whitespace
-	104: Trailing whitespace
-	107: Trailing whitespace
-	121-123: Trailing whitespace
-	126: Trailing whitespace
-	140: Trailing whitespace
-	177: Trailing whitespace
-	184: Trailing whitespace
-	187: Trailing whitespace
-	205: Trailing whitespace
-	208: Trailing whitespace
+	wrong line endings or no final newline
+	5: trailing whitespace
+	24: trailing whitespace
+	68: trailing whitespace
+	86: trailing whitespace
+	91: trailing whitespace
+	104: trailing whitespace
+	107: trailing whitespace
+	121-123: trailing whitespace
+	126: trailing whitespace
+	140: trailing whitespace
+	177: trailing whitespace
+	184: trailing whitespace
+	187: trailing whitespace
+	205: trailing whitespace
+	208: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter02.tex:
-	Wrong line endings or no final newline
-	5: Trailing whitespace
-	79: Trailing whitespace
+	wrong line endings or no final newline
+	5: trailing whitespace
+	79: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter03.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter04.tex:
-	Wrong line endings or no final newline
-	5: Trailing whitespace
+	wrong line endings or no final newline
+	5: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter0A.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/classicthesis-thesis/Chapters/Chapter0B.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-article.tex:
-	Wrong line endings or no final newline
-	12: Trailing whitespace
-	14: Trailing whitespace
-	18: Trailing whitespace
-	20: Trailing whitespace
-	26: Trailing whitespace
-	29: Trailing whitespace
-	33: Trailing whitespace
+	wrong line endings or no final newline
+	12: trailing whitespace
+	14: trailing whitespace
+	18: trailing whitespace
+	20: trailing whitespace
+	26: trailing whitespace
+	29: trailing whitespace
+	33: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-book-xelatex.tex:
-	Wrong line endings or no final newline
-	3: Trailing whitespace
-	14-15: Trailing whitespace
-	25: Trailing whitespace
-	28: Trailing whitespace
-	31: Trailing whitespace
-	41: Trailing whitespace
+	wrong line endings or no final newline
+	3: trailing whitespace
+	14-15: trailing whitespace
+	25: trailing whitespace
+	28: trailing whitespace
+	31: trailing whitespace
+	41: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-book.tex:
-	Wrong line endings or no final newline
-	3: Trailing whitespace
-	12-13: Trailing whitespace
-	23: Trailing whitespace
-	29: Trailing whitespace
-	32: Trailing whitespace
-	42: Trailing whitespace
+	wrong line endings or no final newline
+	3: trailing whitespace
+	12-13: trailing whitespace
+	23: trailing whitespace
+	29: trailing whitespace
+	32: trailing whitespace
+	42: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/Examples/classicthesis-cv.tex:
-	Wrong line endings or no final newline
-	18-21: Trailing whitespace
-	23: Trailing whitespace
-	27: Trailing whitespace
+	wrong line endings or no final newline
+	18-21: trailing whitespace
+	23: trailing whitespace
+	27: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Abstract.tex:
-	Wrong line endings or no final newline
-	13-14: Trailing whitespace
-	19: Trailing whitespace
+	wrong line endings or no final newline
+	13-14: trailing whitespace
+	19: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Acknowledgments.tex:
-	Wrong line endings or no final newline
-	5-7: Trailing whitespace
+	wrong line endings or no final newline
+	5-7: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Bibliography.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Colophon.tex:
-	Wrong line endings or no final newline
-	13: Trailing whitespace
-	19: Trailing whitespace
-	24: Trailing whitespace
+	wrong line endings or no final newline
+	13: trailing whitespace
+	19: trailing whitespace
+	24: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Contents.tex:
-	Wrong line endings or no final newline
-	13: Trailing whitespace
-	20: Trailing whitespace
-	47: Trailing whitespace
-	50: Trailing whitespace
-	53: Trailing whitespace
-	59: Trailing whitespace
-	63: Trailing whitespace
-	80-81: Trailing whitespace
+	wrong line endings or no final newline
+	13: trailing whitespace
+	20: trailing whitespace
+	47: trailing whitespace
+	50: trailing whitespace
+	53: trailing whitespace
+	59: trailing whitespace
+	63: trailing whitespace
+	80-81: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Declaration.tex:
-	12: Trailing whitespace
+	12: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Dedication.tex:
-	Wrong line endings or no final newline
-	13: Trailing whitespace
+	wrong line endings or no final newline
+	13: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Publications.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Titleback.tex:
-	9: Trailing whitespace
-	18: Trailing whitespace
+	9: trailing whitespace
+	18: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/FrontBackMatter/Titlepage.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/classicthesis-thesis/classicthesis-config.tex:
-	Wrong line endings or no final newline
-	59: Trailing whitespace
-	78: Trailing whitespace
-	94: Trailing whitespace
-	97: Trailing whitespace
-	99: Trailing whitespace
-	111: Trailing whitespace
-	123: Trailing whitespace
-	136: Trailing whitespace
-	148: Trailing whitespace
-	154: Trailing whitespace
-	185: Trailing whitespace
-	188: Trailing whitespace
-	207: Trailing whitespace
-	239: Trailing whitespace
-	242: Trailing whitespace
-	259: Trailing whitespace
-	261: Trailing whitespace
+	wrong line endings or no final newline
+	59: trailing whitespace
+	78: trailing whitespace
+	94: trailing whitespace
+	97: trailing whitespace
+	99: trailing whitespace
+	111: trailing whitespace
+	123: trailing whitespace
+	136: trailing whitespace
+	148: trailing whitespace
+	154: trailing whitespace
+	185: trailing whitespace
+	188: trailing whitespace
+	207: trailing whitespace
+	239: trailing whitespace
+	242: trailing whitespace
+	259: trailing whitespace
+	261: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/classicthesis.sty:
-	6-8: Trailing whitespace
-	27: Trailing whitespace
-	33: Trailing whitespace
-	36: Trailing whitespace
-	40: Trailing whitespace
-	51-52: Trailing whitespace
-	64: Trailing whitespace
-	67: Trailing whitespace
-	79-81: Trailing whitespace
-	83-86: Trailing whitespace
-	117: Trailing whitespace
-	147: Trailing whitespace
-	160: Trailing whitespace
-	180: Trailing whitespace
-	184: Trailing whitespace
-	194: Trailing whitespace
-	221: Trailing whitespace
-	229: Trailing whitespace
-	247: Trailing whitespace
-	260: Trailing whitespace
-	267-268: Trailing whitespace
-	293: Trailing whitespace
-	312: Trailing whitespace
-	321: Trailing whitespace
-	339: Trailing whitespace
-	341-342: Trailing whitespace
-	347: Trailing whitespace
-	349: Trailing whitespace
-	359: Trailing whitespace
-	362: Trailing whitespace
-	370-371: Trailing whitespace
-	375: Trailing whitespace
-	382: Trailing whitespace
-	391: Trailing whitespace
-	394: Trailing whitespace
-	397: Trailing whitespace
-	407: Trailing whitespace
-	410: Trailing whitespace
-	412: Trailing whitespace
-	417: Trailing whitespace
-	421: Trailing whitespace
-	426: Trailing whitespace
-	430: Trailing whitespace
-	432: Trailing whitespace
-	434: Trailing whitespace
-	439: Trailing whitespace
-	447: Trailing whitespace
-	461: Trailing whitespace
-	463: Trailing whitespace
-	477-478: Trailing whitespace
-	480: Trailing whitespace
-	483: Trailing whitespace
-	493-494: Trailing whitespace
-	502-505: Trailing whitespace
-	511-514: Trailing whitespace
-	516-518: Trailing whitespace
-	521: Trailing whitespace
-	534-536: Trailing whitespace
-	544: Trailing whitespace
-	552: Trailing whitespace
-	565-566: Trailing whitespace
-	574: Trailing whitespace
-	598: Trailing whitespace
-	601: Trailing whitespace
-	633: Trailing whitespace
-	643: Trailing whitespace
-	652: Trailing whitespace
-	658-660: Trailing whitespace
-	662: Trailing whitespace
-	665: Trailing whitespace
-	667-668: Trailing whitespace
-	670-671: Trailing whitespace
-	681-683: Trailing whitespace
-	690: Trailing whitespace
-	699: Trailing whitespace
-	723: Trailing whitespace
-	730-731: Trailing whitespace
-	736: Trailing whitespace
+	6-8: trailing whitespace
+	27: trailing whitespace
+	33: trailing whitespace
+	36: trailing whitespace
+	40: trailing whitespace
+	51-52: trailing whitespace
+	64: trailing whitespace
+	67: trailing whitespace
+	79-81: trailing whitespace
+	83-86: trailing whitespace
+	117: trailing whitespace
+	147: trailing whitespace
+	160: trailing whitespace
+	180: trailing whitespace
+	184: trailing whitespace
+	194: trailing whitespace
+	221: trailing whitespace
+	229: trailing whitespace
+	247: trailing whitespace
+	260: trailing whitespace
+	267-268: trailing whitespace
+	293: trailing whitespace
+	312: trailing whitespace
+	321: trailing whitespace
+	339: trailing whitespace
+	341-342: trailing whitespace
+	347: trailing whitespace
+	349: trailing whitespace
+	359: trailing whitespace
+	362: trailing whitespace
+	370-371: trailing whitespace
+	375: trailing whitespace
+	382: trailing whitespace
+	391: trailing whitespace
+	394: trailing whitespace
+	397: trailing whitespace
+	407: trailing whitespace
+	410: trailing whitespace
+	412: trailing whitespace
+	417: trailing whitespace
+	421: trailing whitespace
+	426: trailing whitespace
+	430: trailing whitespace
+	432: trailing whitespace
+	434: trailing whitespace
+	439: trailing whitespace
+	447: trailing whitespace
+	461: trailing whitespace
+	463: trailing whitespace
+	477-478: trailing whitespace
+	480: trailing whitespace
+	483: trailing whitespace
+	493-494: trailing whitespace
+	502-505: trailing whitespace
+	511-514: trailing whitespace
+	516-518: trailing whitespace
+	521: trailing whitespace
+	534-536: trailing whitespace
+	544: trailing whitespace
+	552: trailing whitespace
+	565-566: trailing whitespace
+	574: trailing whitespace
+	598: trailing whitespace
+	601: trailing whitespace
+	633: trailing whitespace
+	643: trailing whitespace
+	652: trailing whitespace
+	658-660: trailing whitespace
+	662: trailing whitespace
+	665: trailing whitespace
+	667-668: trailing whitespace
+	670-671: trailing whitespace
+	681-683: trailing whitespace
+	690: trailing whitespace
+	699: trailing whitespace
+	723: trailing whitespace
+	730-731: trailing whitespace
+	736: trailing whitespace
 beacon/.staging/latex/Theses/classicthesis-thesis/main.tex:
-	36-37: Trailing whitespace
+	36-37: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/MANIFEST.md:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/kaobook/README.md:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/kaobook/chapters/figsntabs.tex:
-	11-16: Trailing whitespace
-	19-23: Trailing whitespace
-	32-34: Trailing whitespace
-	37: Trailing whitespace
-	76: Trailing whitespace
-	81-83: Trailing whitespace
-	94-100: Trailing whitespace
-	111: Trailing whitespace
-	116: Trailing whitespace
-	125-127: Trailing whitespace
-	132-133: Trailing whitespace
-	155-156: Trailing whitespace
-	174-177: Trailing whitespace
-	184-190: Trailing whitespace
-	212-217: Trailing whitespace
-	228: Trailing whitespace
+	11-16: trailing whitespace
+	19-23: trailing whitespace
+	32-34: trailing whitespace
+	37: trailing whitespace
+	76: trailing whitespace
+	81-83: trailing whitespace
+	94-100: trailing whitespace
+	111: trailing whitespace
+	116: trailing whitespace
+	125-127: trailing whitespace
+	132-133: trailing whitespace
+	155-156: trailing whitespace
+	174-177: trailing whitespace
+	184-190: trailing whitespace
+	212-217: trailing whitespace
+	228: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/chapters/introduction.tex:
-	7-11: Trailing whitespace
-	14-17: Trailing whitespace
-	20-25: Trailing whitespace
-	28-38: Trailing whitespace
-	41-42: Trailing whitespace
-	48-53: Trailing whitespace
-	59-60: Trailing whitespace
-	62-63: Trailing whitespace
-	65-67: Trailing whitespace
-	69-73: Trailing whitespace
-	75-77: Trailing whitespace
-	79-81: Trailing whitespace
-	83-84: Trailing whitespace
-	86-89: Trailing whitespace
-	91-94: Trailing whitespace
-	100: Trailing whitespace
-	105-107: Trailing whitespace
-	113-118: Trailing whitespace
-	122-123: Trailing whitespace
-	125: Trailing whitespace
-	127-131: Trailing whitespace
-	133-134: Trailing whitespace
-	136-139: Trailing whitespace
-	141: Trailing whitespace
-	143-144: Trailing whitespace
-	148-149: Trailing whitespace
-	152-156: Trailing whitespace
-	161-171: Trailing whitespace
-	174: Trailing whitespace
-	187-189: Trailing whitespace
+	7-11: trailing whitespace
+	14-17: trailing whitespace
+	20-25: trailing whitespace
+	28-38: trailing whitespace
+	41-42: trailing whitespace
+	48-53: trailing whitespace
+	59-60: trailing whitespace
+	62-63: trailing whitespace
+	65-67: trailing whitespace
+	69-73: trailing whitespace
+	75-77: trailing whitespace
+	79-81: trailing whitespace
+	83-84: trailing whitespace
+	86-89: trailing whitespace
+	91-94: trailing whitespace
+	100: trailing whitespace
+	105-107: trailing whitespace
+	113-118: trailing whitespace
+	122-123: trailing whitespace
+	125: trailing whitespace
+	127-131: trailing whitespace
+	133-134: trailing whitespace
+	136-139: trailing whitespace
+	141: trailing whitespace
+	143-144: trailing whitespace
+	148-149: trailing whitespace
+	152-156: trailing whitespace
+	161-171: trailing whitespace
+	174: trailing whitespace
+	187-189: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/chapters/layout.tex:
-	8-15: Trailing whitespace
-	18-21: Trailing whitespace
-	24-32: Trailing whitespace
-	35: Trailing whitespace
-	44-47: Trailing whitespace
-	49-53: Trailing whitespace
-	63: Trailing whitespace
-	68-74: Trailing whitespace
-	78: Trailing whitespace
-	83: Trailing whitespace
-	89-99: Trailing whitespace
-	102-106: Trailing whitespace
-	125-129: Trailing whitespace
-	132-136: Trailing whitespace
-	149: Trailing whitespace
-	174: Trailing whitespace
-	188-191: Trailing whitespace
-	194-197: Trailing whitespace
-	200-202: Trailing whitespace
-	205: Trailing whitespace
-	214-217: Trailing whitespace
-	233-234: Trailing whitespace
-	250: Trailing whitespace
-	255: Trailing whitespace
-	264: Trailing whitespace
-	273: Trailing whitespace
-	282-285: Trailing whitespace
-	290: Trailing whitespace
+	8-15: trailing whitespace
+	18-21: trailing whitespace
+	24-32: trailing whitespace
+	35: trailing whitespace
+	44-47: trailing whitespace
+	49-53: trailing whitespace
+	63: trailing whitespace
+	68-74: trailing whitespace
+	78: trailing whitespace
+	83: trailing whitespace
+	89-99: trailing whitespace
+	102-106: trailing whitespace
+	125-129: trailing whitespace
+	132-136: trailing whitespace
+	149: trailing whitespace
+	174: trailing whitespace
+	188-191: trailing whitespace
+	194-197: trailing whitespace
+	200-202: trailing whitespace
+	205: trailing whitespace
+	214-217: trailing whitespace
+	233-234: trailing whitespace
+	250: trailing whitespace
+	255: trailing whitespace
+	264: trailing whitespace
+	273: trailing whitespace
+	282-285: trailing whitespace
+	290: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/chapters/mathematics.tex:
-	8-14: Trailing whitespace
-	19-21: Trailing whitespace
-	25-26: Trailing whitespace
-	30-31: Trailing whitespace
-	36-37: Trailing whitespace
-	41: Trailing whitespace
-	45-47: Trailing whitespace
-	51-53: Trailing whitespace
-	57-58: Trailing whitespace
-	67-69: Trailing whitespace
-	83-85: Trailing whitespace
-	90-92: Trailing whitespace
-	96-97: Trailing whitespace
-	101: Trailing whitespace
-	112-126: Trailing whitespace
-	130-132: Trailing whitespace
-	135-138: Trailing whitespace
-	145: Trailing whitespace
-	154-155: Trailing whitespace
-	165-169: Trailing whitespace
-	180-181: Trailing whitespace
+	8-14: trailing whitespace
+	19-21: trailing whitespace
+	25-26: trailing whitespace
+	30-31: trailing whitespace
+	36-37: trailing whitespace
+	41: trailing whitespace
+	45-47: trailing whitespace
+	51-53: trailing whitespace
+	57-58: trailing whitespace
+	67-69: trailing whitespace
+	83-85: trailing whitespace
+	90-92: trailing whitespace
+	96-97: trailing whitespace
+	101: trailing whitespace
+	112-126: trailing whitespace
+	130-132: trailing whitespace
+	135-138: trailing whitespace
+	145: trailing whitespace
+	154-155: trailing whitespace
+	165-169: trailing whitespace
+	180-181: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/chapters/options.tex:
-	5-7: Trailing whitespace
-	12-16: Trailing whitespace
-	19-23: Trailing whitespace
-	28-31: Trailing whitespace
-	34-36: Trailing whitespace
-	40-44: Trailing whitespace
-	48-49: Trailing whitespace
-	54: Trailing whitespace
-	66-68: Trailing whitespace
-	81-83: Trailing whitespace
-	86-87: Trailing whitespace
-	92-102: Trailing whitespace
-	105-113: Trailing whitespace
-	115-123: Trailing whitespace
+	5-7: trailing whitespace
+	12-16: trailing whitespace
+	19-23: trailing whitespace
+	28-31: trailing whitespace
+	34-36: trailing whitespace
+	40-44: trailing whitespace
+	48-49: trailing whitespace
+	54: trailing whitespace
+	66-68: trailing whitespace
+	81-83: trailing whitespace
+	86-87: trailing whitespace
+	92-102: trailing whitespace
+	105-113: trailing whitespace
+	115-123: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/chapters/preface.tex:
-	4-9: Trailing whitespace
-	13-15: Trailing whitespace
-	17-18: Trailing whitespace
-	23-27: Trailing whitespace
-	30: Trailing whitespace
-	32-33: Trailing whitespace
+	4-9: trailing whitespace
+	13-15: trailing whitespace
+	17-18: trailing whitespace
+	23-27: trailing whitespace
+	30: trailing whitespace
+	32-33: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/chapters/references.tex:
-	9-15: Trailing whitespace
-	18-25: Trailing whitespace
-	41-42: Trailing whitespace
-	45-50: Trailing whitespace
-	59-63: Trailing whitespace
-	76-79: Trailing whitespace
-	100-101: Trailing whitespace
-	113-119: Trailing whitespace
-	122-126: Trailing whitespace
-	135: Trailing whitespace
-	139-142: Trailing whitespace
-	145-146: Trailing whitespace
-	155: Trailing whitespace
-	164-167: Trailing whitespace
-	170-173: Trailing whitespace
-	176-177: Trailing whitespace
-	184-188: Trailing whitespace
-	190-191: Trailing whitespace
-	214-218: Trailing whitespace
-	221-222: Trailing whitespace
-	225-229: Trailing whitespace
-	232-233: Trailing whitespace
-	236-240: Trailing whitespace
-	243-253: Trailing whitespace
-	255-256: Trailing whitespace
-	262-264: Trailing whitespace
-	272-273: Trailing whitespace
-	299-302: Trailing whitespace
-	306-309: Trailing whitespace
-	311-314: Trailing whitespace
+	9-15: trailing whitespace
+	18-25: trailing whitespace
+	41-42: trailing whitespace
+	45-50: trailing whitespace
+	59-63: trailing whitespace
+	76-79: trailing whitespace
+	100-101: trailing whitespace
+	113-119: trailing whitespace
+	122-126: trailing whitespace
+	135: trailing whitespace
+	139-142: trailing whitespace
+	145-146: trailing whitespace
+	155: trailing whitespace
+	164-167: trailing whitespace
+	170-173: trailing whitespace
+	176-177: trailing whitespace
+	184-188: trailing whitespace
+	190-191: trailing whitespace
+	214-218: trailing whitespace
+	221-222: trailing whitespace
+	225-229: trailing whitespace
+	232-233: trailing whitespace
+	236-240: trailing whitespace
+	243-253: trailing whitespace
+	255-256: trailing whitespace
+	262-264: trailing whitespace
+	272-273: trailing whitespace
+	299-302: trailing whitespace
+	306-309: trailing whitespace
+	311-314: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/chapters/textnotes.tex:
-	4-7: Trailing whitespace
-	12-16: Trailing whitespace
-	23-25: Trailing whitespace
-	28-30: Trailing whitespace
-	37: Trailing whitespace
-	42-51: Trailing whitespace
-	59-61: Trailing whitespace
-	65-77: Trailing whitespace
-	82-89: Trailing whitespace
-	94-97: Trailing whitespace
-	100-102: Trailing whitespace
-	105-106: Trailing whitespace
-	114-119: Trailing whitespace
-	134-138: Trailing whitespace
-	159: Trailing whitespace
-	162: Trailing whitespace
+	4-7: trailing whitespace
+	12-16: trailing whitespace
+	23-25: trailing whitespace
+	28-30: trailing whitespace
+	37: trailing whitespace
+	42-51: trailing whitespace
+	59-61: trailing whitespace
+	65-77: trailing whitespace
+	82-89: trailing whitespace
+	94-97: trailing whitespace
+	100-102: trailing whitespace
+	105-106: trailing whitespace
+	114-119: trailing whitespace
+	134-138: trailing whitespace
+	159: trailing whitespace
+	162: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/kao.sty:
-	63-66: Trailing whitespace
-	333: Trailing whitespace
-	863: Trailing whitespace
-	1045: Trailing whitespace
-	1302: Trailing whitespace
-	1348-1349: Trailing whitespace
+	63-66: trailing whitespace
+	333: trailing whitespace
+	863: trailing whitespace
+	1045: trailing whitespace
+	1302: trailing whitespace
+	1348-1349: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/kaobiblio.sty:
-	19: Trailing whitespace
-	403: Trailing whitespace
+	19: trailing whitespace
+	403: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/kaobook.cls:
-	45: Trailing whitespace
-	262: Trailing whitespace
+	45: trailing whitespace
+	262: trailing whitespace
 beacon/.staging/latex/Theses/kaobook/main.bib:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/kaobook/main.tex:
-	122: Trailing whitespace
-	124: Trailing whitespace
-	127: Trailing whitespace
-	129: Trailing whitespace
-	131: Trailing whitespace
-	134: Trailing whitespace
-	136: Trailing whitespace
-	138: Trailing whitespace
-	140: Trailing whitespace
-	270: Trailing whitespace
-	273: Trailing whitespace
+	122: trailing whitespace
+	124: trailing whitespace
+	127: trailing whitespace
+	129: trailing whitespace
+	131: trailing whitespace
+	134: trailing whitespace
+	136: trailing whitespace
+	138: trailing whitespace
+	140: trailing whitespace
+	270: trailing whitespace
+	273: trailing whitespace
 beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/chapter1.tex:
-	11: Trailing whitespace
-	35: Trailing whitespace
+	11: trailing whitespace
+	35: trailing whitespace
 beacon/.staging/latex/Theses/maggi-memoir-thesis/Chapters/introduction.tex:
-	Wrong line endings or no final newline
-	17: Trailing whitespace
-	66: Trailing whitespace
+	wrong line endings or no final newline
+	17: trailing whitespace
+	66: trailing whitespace
 beacon/.staging/latex/Theses/maggi-memoir-thesis/acronyms.tex:
-	Wrong line endings or no final newline
-	84: Trailing whitespace
+	wrong line endings or no final newline
+	84: trailing whitespace
 beacon/.staging/latex/Theses/maggi-memoir-thesis/bibliography.bib:
-	5: Trailing whitespace
+	5: trailing whitespace
 beacon/.staging/latex/Theses/maggi-memoir-thesis/structure.tex:
-	Wrong line endings or no final newline
-	40: Trailing whitespace
+	wrong line endings or no final newline
+	40: trailing whitespace
 beacon/.staging/latex/Theses/maggi-memoir-thesis/thesis.tex:
-	Wrong line endings or no final newline
-	22-23: Trailing whitespace
-	26: Trailing whitespace
+	wrong line endings or no final newline
+	22-23: trailing whitespace
+	26: trailing whitespace
 beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixA.tex:
-	19: Trailing whitespace
+	19: trailing whitespace
 beacon/.staging/latex/Theses/masters-doctoral-thesis/Appendices/AppendixTemplate.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/Chapter1.tex:
-	5: Trailing whitespace
-	9: Trailing whitespace
-	38-39: Trailing whitespace
-	55: Trailing whitespace
-	57: Trailing whitespace
-	110: Trailing whitespace
+	5: trailing whitespace
+	9: trailing whitespace
+	38-39: trailing whitespace
+	55: trailing whitespace
+	57: trailing whitespace
+	110: trailing whitespace
 beacon/.staging/latex/Theses/masters-doctoral-thesis/Chapters/ChapterTemplate.tex:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 beacon/.staging/latex/Theses/masters-doctoral-thesis/MastersDoctoralThesis.cls:
-	2: Trailing whitespace
-	58: Trailing whitespace
-	134: Trailing whitespace
-	227: Trailing whitespace
-	298-299: Trailing whitespace
+	2: trailing whitespace
+	58: trailing whitespace
+	134: trailing whitespace
+	227: trailing whitespace
+	298-299: trailing whitespace
 beacon/.staging/latex/Theses/masters-doctoral-thesis/main.tex:
-	2: Trailing whitespace
-	110: Trailing whitespace
-	120: Trailing whitespace
-	123: Trailing whitespace
-	129: Trailing whitespace
-	134: Trailing whitespace
-	147: Trailing whitespace
-	155: Trailing whitespace
-	158: Trailing whitespace
-	247: Trailing whitespace
-	261: Trailing whitespace
-	263-264: Trailing whitespace
-	287: Trailing whitespace
+	2: trailing whitespace
+	110: trailing whitespace
+	120: trailing whitespace
+	123: trailing whitespace
+	129: trailing whitespace
+	134: trailing whitespace
+	147: trailing whitespace
+	155: trailing whitespace
+	158: trailing whitespace
+	247: trailing whitespace
+	261: trailing whitespace
+	263-264: trailing whitespace
+	287: trailing whitespace
 beacon/.staging/latex/Title Pages/academic-title-page/main.tex:
-	15: Trailing whitespace
-	17-18: Trailing whitespace
-	20-21: Trailing whitespace
-	25: Trailing whitespace
-	50: Trailing whitespace
-	52: Trailing whitespace
-	56: Trailing whitespace
-	58: Trailing whitespace
-	60: Trailing whitespace
-	62: Trailing whitespace
-	66: Trailing whitespace
-	68: Trailing whitespace
-	70: Trailing whitespace
-	72: Trailing whitespace
-	76: Trailing whitespace
-	92: Trailing whitespace
-	96: Trailing whitespace
-	100: Trailing whitespace
-	102: Trailing whitespace
-	104: Trailing whitespace
-	108: Trailing whitespace
-	111: Trailing whitespace
-	113: Trailing whitespace
-	115: Trailing whitespace
+	15: trailing whitespace
+	17-18: trailing whitespace
+	20-21: trailing whitespace
+	25: trailing whitespace
+	50: trailing whitespace
+	52: trailing whitespace
+	56: trailing whitespace
+	58: trailing whitespace
+	60: trailing whitespace
+	62: trailing whitespace
+	66: trailing whitespace
+	68: trailing whitespace
+	70: trailing whitespace
+	72: trailing whitespace
+	76: trailing whitespace
+	92: trailing whitespace
+	96: trailing whitespace
+	100: trailing whitespace
+	102: trailing whitespace
+	104: trailing whitespace
+	108: trailing whitespace
+	111: trailing whitespace
+	113: trailing whitespace
+	115: trailing whitespace
 beacon/.staging/latex/Title Pages/formal-book-title-page/main.tex:
-	15: Trailing whitespace
-	24: Trailing whitespace
-	46: Trailing whitespace
-	51: Trailing whitespace
-	53: Trailing whitespace
-	55: Trailing whitespace
-	59: Trailing whitespace
-	62: Trailing whitespace
-	64: Trailing whitespace
-	66: Trailing whitespace
-	68: Trailing whitespace
-	71: Trailing whitespace
-	73: Trailing whitespace
-	77: Trailing whitespace
-	79: Trailing whitespace
-	81: Trailing whitespace
-	85: Trailing whitespace
-	87: Trailing whitespace
-	89: Trailing whitespace
-	91: Trailing whitespace
-	93: Trailing whitespace
-	95: Trailing whitespace
-	97: Trailing whitespace
-	101: Trailing whitespace
-	103: Trailing whitespace
-	105: Trailing whitespace
-	107: Trailing whitespace
+	15: trailing whitespace
+	24: trailing whitespace
+	46: trailing whitespace
+	51: trailing whitespace
+	53: trailing whitespace
+	55: trailing whitespace
+	59: trailing whitespace
+	62: trailing whitespace
+	64: trailing whitespace
+	66: trailing whitespace
+	68: trailing whitespace
+	71: trailing whitespace
+	73: trailing whitespace
+	77: trailing whitespace
+	79: trailing whitespace
+	81: trailing whitespace
+	85: trailing whitespace
+	87: trailing whitespace
+	89: trailing whitespace
+	91: trailing whitespace
+	93: trailing whitespace
+	95: trailing whitespace
+	97: trailing whitespace
+	101: trailing whitespace
+	103: trailing whitespace
+	105: trailing whitespace
+	107: trailing whitespace
 beacon/.staging/latex/Title Pages/minimalist-book-title-page/main.tex:
-	15: Trailing whitespace
-	24: Trailing whitespace
-	44: Trailing whitespace
-	53: Trailing whitespace
-	55: Trailing whitespace
-	59: Trailing whitespace
-	61: Trailing whitespace
-	63: Trailing whitespace
-	67: Trailing whitespace
-	69: Trailing whitespace
-	71: Trailing whitespace
-	73: Trailing whitespace
-	75: Trailing whitespace
-	79: Trailing whitespace
-	81: Trailing whitespace
+	15: trailing whitespace
+	24: trailing whitespace
+	44: trailing whitespace
+	53: trailing whitespace
+	55: trailing whitespace
+	59: trailing whitespace
+	61: trailing whitespace
+	63: trailing whitespace
+	67: trailing whitespace
+	69: trailing whitespace
+	71: trailing whitespace
+	73: trailing whitespace
+	75: trailing whitespace
+	79: trailing whitespace
+	81: trailing whitespace
 beacon/.staging/latex/Title Pages/multi-purpose-large-font-title-page/main.tex:
-	23: Trailing whitespace
-	52: Trailing whitespace
-	56: Trailing whitespace
-	63: Trailing whitespace
-	67: Trailing whitespace
-	72: Trailing whitespace
-	74: Trailing whitespace
-	78: Trailing whitespace
-	86: Trailing whitespace
-	89: Trailing whitespace
+	23: trailing whitespace
+	52: trailing whitespace
+	56: trailing whitespace
+	63: trailing whitespace
+	67: trailing whitespace
+	72: trailing whitespace
+	74: trailing whitespace
+	78: trailing whitespace
+	86: trailing whitespace
+	89: trailing whitespace
 beacon/.staging/latex/Title Pages/stylish-title-page/main.tex:
-	15: Trailing whitespace
-	24: Trailing whitespace
-	46: Trailing whitespace
-	55: Trailing whitespace
-	59: Trailing whitespace
-	61: Trailing whitespace
-	63: Trailing whitespace
-	65: Trailing whitespace
-	67: Trailing whitespace
-	69: Trailing whitespace
-	71: Trailing whitespace
-	75: Trailing whitespace
-	77: Trailing whitespace
-	79: Trailing whitespace
-	83: Trailing whitespace
-	85: Trailing whitespace
+	15: trailing whitespace
+	24: trailing whitespace
+	46: trailing whitespace
+	55: trailing whitespace
+	59: trailing whitespace
+	61: trailing whitespace
+	63: trailing whitespace
+	65: trailing whitespace
+	67: trailing whitespace
+	69: trailing whitespace
+	71: trailing whitespace
+	75: trailing whitespace
+	77: trailing whitespace
+	79: trailing whitespace
+	83: trailing whitespace
+	85: trailing whitespace
 beacon/.staging/nih-grant-proposal/NIHGrant.bib:
-	23: Trailing whitespace
+	23: trailing whitespace
 beacon/.staging/nih-grant-proposal/NIHGrant.tex:
-	Wrong line endings or no final newline
-	64: Trailing whitespace
-	118: Trailing whitespace
-	248: Trailing whitespace
+	wrong line endings or no final newline
+	64: trailing whitespace
+	118: trailing whitespace
+	248: trailing whitespace
 beacon/.staging/nih-grant-proposal/nihunsrt.bst:
-	12: Trailing whitespace
-	594: Trailing whitespace
+	12: trailing whitespace
+	594: trailing whitespace
 holon/packs/react-vite/template/test-results/.last-run.json:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 notebooks/jupyter/.gitignore:
-	Wrong line endings or no final newline
+	wrong line endings or no final newline
 
 2785 errors found
 
-(Truncated to last 25000 characters out of 102682)
+(Truncated to last 27586 characters out of 102682)
 ```
 
 </details>
@@ -1158,20 +1205,20 @@ notebooks/jupyter/.gitignore:
 ```
 Oops! Something went wrong! :(
 
-ESLint: 10.9.1
+ESLint: 10.13.0
 
 Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - egolint/.config/lint/javascript/eslint.config.mjs
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)
-    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)
-    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)
-    at Module._load (node:internal/modules/cjs/loader:1346:5)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1603:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1145:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1169:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1196:12)
+    at Module._load (node:internal/modules/cjs/loader:1370:5)
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
-    at Module.require (node:internal/modules/cjs/loader:1679:12)
-    at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1794401841226:25:21
+    at Module.require (node:internal/modules/cjs/loader:1713:12)
+    at require (node:internal/modules/helpers:318:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1794708918747:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1199,20 +1246,20 @@ Resolutions:
 ```
 Oops! Something went wrong! :(
 
-ESLint: 10.9.1
+ESLint: 10.13.0
 
 Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - egolint/.config/lint/javascript/eslint.config.mjs
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)
-    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)
-    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)
-    at Module._load (node:internal/modules/cjs/loader:1346:5)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1603:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1145:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1169:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1196:12)
+    at Module._load (node:internal/modules/cjs/loader:1370:5)
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
-    at Module.require (node:internal/modules/cjs/loader:1679:12)
-    at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1794401841226:25:21
+    at Module.require (node:internal/modules/cjs/loader:1713:12)
+    at require (node:internal/modules/helpers:318:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1794708918747:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1239,20 +1286,20 @@ Resolutions:
 ```
 Oops! Something went wrong! :(
 
-ESLint: 10.9.1
+ESLint: 10.13.0
 
 Error: Cannot find module 'eslint-plugin-react'
 Require stack:
 - egolint/.config/lint/javascript/eslint.config.mjs
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)
-    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)
-    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)
-    at Module._load (node:internal/modules/cjs/loader:1346:5)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1603:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1145:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1169:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1196:12)
+    at Module._load (node:internal/modules/cjs/loader:1370:5)
     at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
-    at Module.require (node:internal/modules/cjs/loader:1679:12)
-    at require (node:internal/modules/helpers:196:16)
-    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1794401841226:25:21
+    at Module.require (node:internal/modules/cjs/loader:1713:12)
+    at require (node:internal/modules/helpers:318:16)
+    at file://egolint/.config/lint/javascript/eslint.config.mjs?mtime=1794708918747:25:21
     at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
 
 
@@ -1286,7 +1333,39 @@ holon/packs/react-vite/template/infra/docker/Dockerfile:9 DL3025 warning: Use ar
 <summary>❌ HTML / htmlhint - 356 errors</summary>
 
 ```
-href="web_credits.html">CREDITS</a></span>
+E html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri...
+          ^ Invalid doctype. Use: "<!DOCTYPE html>" (doctype-html5)
+      L30 |</body>
+           ^ Tag must be paired, no start tag: [ </body> ] (tag-pair)
+      L31 |<div id="nav_bar">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L32 |  <div id="nav_bar_decor_1"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L33 |  <div id="nav_bar_decor_2"></div>
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L34 |  <div id="nav_bar_body">
+                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L37 |<span class="index_main"><a href="index.html">MAIN</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L38 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L42 |<span class="index_main"><a href="web_preview.html">PREVIEW</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L43 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L47 |<span class="index_main"><a href="web_download.html">DOWNLOAD</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L48 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L52 |<span class="index_main"><a href="help.html">DOCS</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L53 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L59 |<span class="index_main"><a href="web_contact.html">CONTACT</a></span>
+                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L60 |<div class="index_indent">
+               ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
+      L64 |<span class="index_main"><a href="web_credits.html">CREDITS</a></span>
                 ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
       L65 |<div class="index_indent">
                ^ The id and class attribute values must be in lowercase and split by a dash. (id-class-value)
@@ -1595,9 +1674,9 @@ href="web_credits.html">CREDITS</a></span>
 
    Config loaded: egolint/.config/lint/html/htmlhint.json
 
-Scanned 16 files, found 356 errors in 11 files (73 ms)
+Scanned 16 files, found 356 errors in 11 files (91 ms)
 
-(Truncated to last 25000 characters out of 66943)
+(Truncated to last 27586 characters out of 66943)
 ```
 
 </details>
@@ -1718,19 +1797,26 @@ Unexpected token "/"
 </details>
 
 <details>
-<summary>❌ REPOSITORY / ls-lint - 1 error</summary>
+<summary>❌ SPELL / lychee - 184 errors</summary>
 
 ```
-Cargo.toml failed for `.toml` rules: kebabcase | snakecase
-```
-
-</details>
-
-<details>
-<summary>❌ SPELL / lychee - 183 errors</summary>
-
-```
-n/packs/readme/templates/profile/%7B%7BPROFESSIONAL_PROFILE_URL%7D%7D (at 40:61) | File not found. Check if file exists and path is correct
+Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BFEATURED_PROJECT_THREE_PROOF_URL%7D%7D (at 108:118) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BFEATURED_PROJECT_THREE_URL%7D%7D (at 100:5) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BFEATURED_PROJECT_TWO_ARCHITECTURE_URL%7D%7D (at 98:1) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BFEATURED_PROJECT_TWO_DOCS_URL%7D%7D (at 98:61) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BFEATURED_PROJECT_TWO_PROOF_URL%7D%7D (at 98:114) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BFEATURED_PROJECT_TWO_URL%7D%7D (at 90:5) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BIMPACT_EVIDENCE_URL_FOUR%7D%7D (at 74:83) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BIMPACT_EVIDENCE_URL_ONE%7D%7D (at 71:80) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BIMPACT_EVIDENCE_URL_THREE%7D%7D (at 73:86) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BIMPACT_EVIDENCE_URL_TWO%7D%7D (at 72:80) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BLAYER_ONE_EVIDENCE_URL%7D%7D (at 126:55) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BLAYER_THREE_EVIDENCE_URL%7D%7D (at 128:59) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BLAYER_TWO_EVIDENCE_URL%7D%7D (at 127:55) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BPLATFORM_EVIDENCE_URL%7D%7D (at 138:64) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BPORTFOLIO_URL%7D%7D (at 40:1) | File not found. Check if file exists and path is correct
+[ERROR] file://holon/packs/readme/templates/profile/%7B%7BPROFESSIONAL_PROFILE_URL%7D%7D (at 40:61) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/profile/%7B%7BQUALITY_EVIDENCE_URL%7D%7D (at 143:65) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/profile/%7B%7BREPRODUCIBILITY_EVIDENCE_URL%7D%7D (at 141:68) | File not found. Check if file exists and path is correct
 [ERROR] file://holon/packs/readme/templates/profile/%7B%7BRESUME_URL%7D%7D (at 40:34) | File not found. Check if file exists and path is correct
@@ -1787,18 +1873,8 @@ Errors in mindgarden/contracts/publish-profile.schema.json
 [ERROR] https://github/ (at 42:20) | Connection failed. Check network connectivity and firewall settings
 
 Errors in package.json
-[404] https://egohygiene.io/ (at 17:16) | Rejected status code: 404 Not Found
-[404] https://egohygiene.io/ (at 30:13) | Rejected status code: 404 Not Found
-
-Redirects in package.json
-https://github.com/egohygiene/empathy.git --[301]--> https://github.com/egohygiene/empathy
-
-
-Errors in PURPOSE.md
-[ERROR] file://.staging/github/README.md (at 100:48) | File not found. Check if file exists and path is correct
-
-Errors in README.md
-[ERROR] file://.staging/github/README.md (at 55:35) | File not found. Check if file exists and path is correct
+[404] https://egohygiene.io/ (at 17:16) | Error (cached)
+[404] https://egohygiene.io/ (at 30:13) | Error (cached)
 
 Errors in schemas/repository-foundation-catalog.v1.schema.json
 [404] https://egohygiene.io/schemas/empathy/repository-foundation-catalog.v1.schema.json (at 3:11) | Rejected status code: 404 Not Found
@@ -1809,29 +1885,32 @@ Errors in schemas/repository-foundation-manifest.v1.schema.json
 Errors in schemas/staging-removal-approvals.v1.schema.json
 [404] https://egohygiene.io/schemas/empathy/staging-removal-approvals.v1.schema.json (at 3:11) | Rejected status code: 404 Not Found
 
+Errors in schemas/staging-removal-receipts.v1.schema.json
+[404] https://egohygiene.io/schemas/empathy/staging-removal-receipts.v1.schema.json (at 3:11) | Rejected status code: 404 Not Found
+
 📊 Per-host Statistics
 ---------------------
 
 Host: github.com
-  Total requests: 345
-  Successful: 330 (95.7%)
-  Client errors (4xx): 15
-  Median response time: 446ms
-  Cache hit rate: 26.1%
-  Cache hits: 90, misses: 255
+  Total requests: 458
+  Successful: 442 (96.5%)
+  Client errors (4xx): 16
+  Median response time: 377ms
+  Cache hit rate: 33.2%
+  Cache hits: 152, misses: 306
 
 Host: json.schemastore.org
-  Total requests: 98
-  Successful: 98 (100.0%)
-  Median response time: 147ms
-  Cache hit rate: 88.8%
-  Cache hits: 87, misses: 11
+  Total requests: 99
+  Successful: 99 (100.0%)
+  Median response time: 90ms
+  Cache hit rate: 88.9%
+  Cache hits: 88, misses: 11
 
 Host: megalinter.io
   Total requests: 75
   Successful: 74 (98.7%)
   Client errors (4xx): 1
-  Median response time: 73ms
+  Median response time: 55ms
   Cache hit rate: 5.3%
   Cache hits: 4, misses: 71
 
@@ -1846,163 +1925,176 @@ Host: raw.githubusercontent.com
 Host: img.shields.io
   Total requests: 21
   Successful: 21 (100.0%)
-  Median response time: 119ms
+  Median response time: 142ms
   Cache hit rate: 4.8%
   Cache hits: 1, misses: 20
 
 Host: json-schema.org
-  Total requests: 18
-  Successful: 18 (100.0%)
-  Median response time: 437ms
-  Cache hit rate: 94.4%
-  Cache hits: 17, misses: 1
+  Total requests: 19
+  Successful: 19 (100.0%)
+  Median response time: 117ms
+  Cache hit rate: 94.7%
+  Cache hits: 18, misses: 1
 
 Host: egohygiene.github.io
-  Total requests: 18
-  Successful: 11 (61.1%)
+  Total requests: 19
+  Successful: 12 (63.2%)
   Client errors (4xx): 7
-  Median response time: 114ms
-  Cache hit rate: 50.0%
-  Cache hits: 9, misses: 9
+  Median response time: 134ms
+  Cache hit rate: 52.6%
+  Cache hits: 10, misses: 9
 
 Host: creativecommons.org
   Total requests: 15
   Successful: 14 (93.3%)
   Client errors (4xx): 1
-  Median response time: 204ms
+  Median response time: 110ms
   Cache hit rate: 66.7%
   Cache hits: 10, misses: 5
+
+Host: egohygiene.io
+  Total requests: 13
+  Successful: 7 (53.8%)
+  Client errors (4xx): 6
+  Median response time: 72ms
+  Cache hit rate: 53.8%
+  Cache hits: 7, misses: 6
 
 Host: taskfile.dev
   Total requests: 12
   Successful: 12 (100.0%)
-  Median response time: 88ms
+  Median response time: 175ms
   Cache hit rate: 75.0%
   Cache hits: 9, misses: 3
-
-Host: egohygiene.io
-  Total requests: 12
-  Successful: 7 (58.3%)
-  Client errors (4xx): 5
-  Median response time: 68ms
-  Cache hit rate: 58.3%
-  Cache hits: 7, misses: 5
 
 Host: www.schemastore.org
   Total requests: 11
   Successful: 11 (100.0%)
-  Median response time: 15ms
+  Median response time: 11ms
   Cache hit rate: 36.4%
   Cache hits: 4, misses: 7
 
 Host: www.overleaf.com
   Total requests: 11
   Successful: 11 (100.0%)
-  Median response time: 105ms
+  Median response time: 82ms
   Cache hit rate: 9.1%
   Cache hits: 1, misses: 10
 
-Host: scripts.sil.org
-  Total requests: 9
-  Successful: 9 (100.0%)
-  Median response time: 949ms
-  Cache hit rate: 88.9%
-  Cache hits: 8, misses: 1
+Host: docs.github.com
+  Total requests: 10
+  Successful: 8 (80.0%)
+  Client errors (4xx): 2
+  Median response time: 28ms
+  Cache hit rate: 20.0%
+  Cache hits: 2, misses: 8
 
 Host: sourceforge.net
   Total requests: 9
   Successful: 9 (100.0%)
-  Median response time: 361ms
+  Median response time: 367ms
   Cache hit rate: 55.6%
   Cache hits: 5, misses: 4
+
+Host: scripts.sil.org
+  Total requests: 9
+  Successful: 9 (100.0%)
+  Median response time: 549ms
+  Cache hit rate: 88.9%
+  Cache hits: 8, misses: 1
 
 Host: i.creativecommons.org
   Total requests: 8
   Successful: 8 (100.0%)
-  Median response time: 146ms
+  Median response time: 243ms
   Cache hit rate: 87.5%
   Cache hits: 7, misses: 1
 
 Host: www.latextemplates.com
   Total requests: 7
   Successful: 7 (100.0%)
-  Median response time: 195ms
+  Median response time: 230ms
   Cache hit rate: 42.9%
   Cache hits: 3, misses: 4
 
 Host: sflogo.sourceforge.net
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 126ms
+  Median response time: 209ms
   Cache hit rate: 66.7%
   Cache hits: 4, misses: 2
 
 Host: jdujava.github.io
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 221ms
+  Median response time: 274ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
-
-Host: docs.github.com
-  Total requests: 6
-  Successful: 4 (66.7%)
-  Client errors (4xx): 2
-  Median response time: 77ms
 
 Host: www.latex-project.org
   Total requests: 6
   Successful: 6 (100.0%)
-  Median response time: 374ms
+  Median response time: 500ms
   Cache hit rate: 50.0%
   Cache hits: 3, misses: 3
+
+Host: git-scm.com
+  Total requests: 5
+  Successful: 4 (80.0%)
+  Client errors (4xx): 1
+  Median response time: 88ms
+  Cache hit rate: 40.0%
+  Cache hits: 2, misses: 3
+
+Host: registry.npmjs.org
+  Total requests: 4
+  Successful: 3 (75.0%)
+  Client errors (4xx): 1
+  Median response time: 114ms
+  Cache hit rate: 25.0%
+  Cache hits: 1, misses: 3
+
+Host: www.fontawesome.io
+  Total requests: 4
+  Successful: 4 (100.0%)
+  Median response time: 175ms
+  Cache hit rate: 75.0%
+  Cache hits: 3, misses: 1
 
 Host: api.github.com
   Total requests: 4
   Successful: 3 (75.0%)
   Client errors (4xx): 1
-  Median response time: 100ms
-
-Host: www.fontawesome.io
-  Total requests: 4
-  Successful: 4 (100.0%)
-  Median response time: 270ms
-  Cache hit rate: 75.0%
-  Cache hits: 3, misses: 1
-
-Host: www.ctan.org
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 668ms
-
-Host: api.star-history.com
-  Total requests: 3
-  Successful: 3 (100.0%)
-  Median response time: 1360ms
-  Cache hit rate: 33.3%
-  Cache hits: 1, misses: 2
+  Median response time: 71ms
 
 Host: www.checkov.io
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 71ms
+  Median response time: 119ms
   Cache hit rate: 33.3%
   Cache hits: 1, misses: 2
 
 Host: dart.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 13ms
+  Median response time: 20ms
+
+Host: api.star-history.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 555ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
 
 Host: vite.dev
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 38ms
+  Median response time: 20ms
 
-Host: i.imgur.com
+Host: www.ctan.org
   Total requests: 3
   Successful: 3 (100.0%)
-  Median response time: 227ms
+  Median response time: 695ms
 
 Host: www.apostrophiclab.com
   Total requests: 3
@@ -2010,468 +2102,219 @@ Host: www.apostrophiclab.com
   Cache hit rate: 75.0%
   Cache hits: 3, misses: 1
 
-Host: commons.wikimedia.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 71ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+Host: pypi.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 49ms
 
-Host: www.mff.cuni.cz
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 977ms
+Host: i.imgur.com
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 31ms
 
-Host: tex.stackexchange.com
-  Total requests: 2
-  Successful: 0 (0.0%)
-  Client errors (4xx): 2
-  Median response time: 148ms
-
-Host: registry.npmjs.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 61ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: arxiv.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 45ms
+Host: www.apache.org
+  Total requests: 3
+  Successful: 3 (100.0%)
+  Median response time: 75ms
+  Cache hit rate: 33.3%
+  Cache hits: 1, misses: 2
 
 Host: clang.llvm.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 185ms
+  Median response time: 223ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
-
-Host: web.archive.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 1134ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: yamllint.readthedocs.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 106ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: www.cyrius.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 339ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: unpkg.com
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 148ms
 
 Host: en.wikipedia.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 189ms
+  Median response time: 174ms
 
-Host: info.arxiv.org
+Host: eslint.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 158ms
-
-Host: reuse.software
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 816ms
-
-Host: www.amazon.ca
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 78ms
-
-Host: developer.salesforce.com
-  Total requests: 2
-  Successful: 1 (50.0%)
-  Client errors (4xx): 1
-  Median response time: 53ms
+  Median response time: 153ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: femto-physique.fr
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 501ms
+  Median response time: 512ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
+
+Host: arxiv.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 39ms
+
+Host: reuse.software
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 813ms
+
+Host: typedoc.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 68ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: yamllint.readthedocs.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 120ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.amazon.ca
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 99ms
+
+Host: web.archive.org
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 461ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: www.sharelatex.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 194ms
+
+Host: aquasecurity.github.io
+  Total requests: 2
+  Successful: 1 (50.0%)
+  Client errors (4xx): 1
+  Median response time: 140ms
+
+Host: oss.anchore.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 162ms
 
 Host: www.vel.nz
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 753ms
+  Median response time: 546ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: prettier.io
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 198ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
 Host: docs.ansible.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 60ms
+  Median response time: 165ms
 
-Host: www.sharelatex.com
+Host: info.arxiv.org
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 233ms
+  Median response time: 108ms
 
-Host: oss.anchore.com
+Host: www.cyrius.com
   Total requests: 2
   Successful: 2 (100.0%)
-  Median response time: 198ms
-
-Host: prettier.io
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 225ms
+  Median response time: 356ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: typedoc.org
+Host: www.mff.cuni.cz
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 425ms
+
+Host: unpkg.com
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 117ms
+
+Host: paypal.me
+  Total requests: 2
+  Successful: 2 (100.0%)
+  Median response time: 744ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
+
+Host: commons.wikimedia.org
   Total requests: 2
   Successful: 2 (100.0%)
   Median response time: 95ms
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: paypal.me
+Host: tex.stackexchange.com
   Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 775ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 2
+  Median response time: 120ms
 
-Host: eslint.org
-  Total requests: 2
-  Successful: 2 (100.0%)
-  Median response time: 177ms
-  Cache hit rate: 50.0%
-  Cache hits: 1, misses: 1
-
-Host: aquasecurity.github.io
+Host: developer.salesforce.com
   Total requests: 2
   Successful: 1 (50.0%)
   Client errors (4xx): 1
-  Median response time: 119ms
-
-Host: realm.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 97ms
-
-Host: dev.to
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 81ms
-
-Host: pmd.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 102ms
-
-Host: turborepo.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 200ms
-
-Host: trivy.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 197ms
-
-Host: rubocop.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 112ms
-
-Host: zizmor.sh
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 85ms
-
-Host: enhancv.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 170ms
-
-Host: semver.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 120ms
-
-Host: www.smashingmagazine.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 177ms
-
-Host: biomejs.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 179ms
-
-Host: cyclonedx.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 209ms
-
-Host: www.indeed.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 75ms
-
-Host: www.linkedin.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Median response time: 212ms
-
-Host: www.tilburgsciencehub.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1852ms
-
-Host: install.python-poetry.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 140ms
-
-Host: www.latofonts.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 618ms
-
-Host: developercertificate.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 131ms
-
-Host: www.chrisbehr.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 379ms
-
-Host: git-lfs.github.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 145ms
-
-Host: docs.stoplight.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 285ms
-
-Host: humanstxt.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 604ms
-
-Host: rubystyle.guide
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 153ms
-
-Host: raku.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 949ms
-
-Host: osv.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 178ms
-
-Host: clearlydefined.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 282ms
-
-Host: hemingwayapp.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 147ms
-
-Host: checkstyle.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 224ms
-
-Host: www.hadilaksono.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 155ms
-
-Host: micahrich.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 478ms
-
-Host: autofix.ci
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 175ms
-
-Host: kiwiirc.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 490ms
-
-Host: www.rubyschema.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 243ms
-
-Host: psalm.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
   Median response time: 213ms
+  Cache hit rate: 50.0%
+  Cache hits: 1, misses: 1
 
-Host: ansible.readthedocs.io
+Host: www.wnd.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 276ms
-
-Host: protobuf.dev
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 136ms
-
-Host: ls-lint.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 327ms
-
-Host: www.tylerfinck.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 1265ms
-
-Host: licensebuttons.net
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 16ms
-
-Host: trufflesecurity.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 501ms
-
-Host: sahiljhawar.in
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 147ms
-
-Host: prowritingaid.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 217ms
-
-Host: debarghyadas.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 392ms
+  Median response time: 134ms
 
 Host: agentskills.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 178ms
-
-Host: goss.rocks
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 219ms
-
-Host: www.apache.org
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 453ms
-
-Host: fonts.google.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 717ms
-
-Host: latexindentpl.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 317ms
-
-Host: htmlhint.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 174ms
-
-Host: stylelint.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 365ms
-
-Host: golangci-lint.run
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 68ms
-
-Host: www.reddit.com
-  Total requests: 1
-  Successful: 0 (0.0%)
-  Client errors (4xx): 1
-  Median response time: 100ms
-
-Host: scancode-toolkit.readthedocs.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 237ms
-
-Host: chris48s.github.io
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 135ms
-
-Host: www.grammarly.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 250ms
-
-Host: img.youtube.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 143ms
-
-Host: docker.com
-  Total requests: 1
-  Successful: 1 (100.0%)
-  Median response time: 139ms
+  Median response time: 186ms
 
 Host: v3.tailwindcss.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 195ms
+  Median response time: 230ms
 
-Host: recodehive.github.io
+Host: enhancv.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 104ms
+  Median response time: 202ms
 
-Host: www.ssw.com.au
+Host: semver.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 2119ms
+  Median response time: 154ms
 
-Host: www.writelatex.com
+Host: ansible.readthedocs.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 261ms
+  Median response time: 211ms
+
+Host: micahrich.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 364ms
+
+Host: biomejs.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 165ms
+
+Host: docker.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 134ms
+
+Host: www.nongnu.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 174ms
 
 Host: apostrophiclab.pedroreina.net
   Total requests: 1
@@ -2479,109 +2322,360 @@ Host: apostrophiclab.pedroreina.net
   Cache hit rate: 50.0%
   Cache hits: 1, misses: 1
 
-Host: phpstan.org
+Host: www.reddit.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 93ms
+
+Host: stylelint.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 86ms
+  Median response time: 372ms
+
+Host: thetechresume.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 336ms
+
+Host: www.hadilaksono.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 164ms
+
+Host: img.youtube.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 128ms
+
+Host: osv.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 137ms
+
+Host: psalm.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 162ms
+
+Host: chris48s.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 156ms
+
+Host: cyclonedx.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 201ms
+
+Host: git-lfs.github.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 185ms
+
+Host: latexindentpl.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 223ms
+
+Host: humanstxt.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 485ms
+
+Host: google.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 131ms
+
+Host: pmd.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 109ms
 
 Host: api.clearlydefined.io
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 191ms
+  Median response time: 1357ms
 
-Host: securityscorecards.dev
+Host: www.ssw.com.au
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 121ms
+  Median response time: 1693ms
 
-Host: www.paypal.me
+Host: rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 912ms
+  Median response time: 162ms
 
-Host: fontawesome.com
+Host: autofix.ci
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 50ms
+  Median response time: 498ms
 
-Host: www.businessinsider.com
+Host: checkstyle.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 117ms
+  Median response time: 180ms
+
+Host: trufflesecurity.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 282ms
+
+Host: recodehive.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 147ms
+
+Host: www.tilburgsciencehub.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1735ms
+
+Host: docs.stoplight.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 254ms
+
+Host: fonts.google.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 287ms
+
+Host: prowritingaid.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 215ms
+
+Host: rubystyle.guide
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 257ms
+
+Host: realm.github.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 105ms
+
+Host: protobuf.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 154ms
 
 Host: resumake.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 434ms
+  Median response time: 456ms
 
 Host: pnpm.io
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 125ms
+  Median response time: 139ms
+
+Host: kiwiirc.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 546ms
+
+Host: github.blog
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 69ms
+
+Host: securityscorecards.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 151ms
+
+Host: www.latofonts.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 674ms
+
+Host: clearlydefined.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 346ms
+
+Host: openapi.vercel.sh
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 120ms
+
+Host: dev.to
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 79ms
+
+Host: www.paypal.me
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 518ms
+
+Host: trivy.dev
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 156ms
 
 Host: intellij-support.jetbrains.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 139ms
+  Median response time: 113ms
 
-Host: google.github.io
+Host: zizmor.sh
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 89ms
+  Median response time: 160ms
 
-Host: github.blog
+Host: docs.rubocop.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 62ms
+  Median response time: 144ms
 
-Host: tug.ctan.org
+Host: hemingwayapp.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 208ms
+
+Host: www.rubyschema.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 243ms
+
+Host: htmlhint.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 201ms
+
+Host: mirrors.ctan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 568ms
+
+Host: scancode-toolkit.readthedocs.io
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 283ms
+
+Host: raku.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 853ms
+
+Host: www.smashingmagazine.com
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 215ms
+  Median response time: 242ms
+
+Host: sahiljhawar.in
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 209ms
+
+Host: ls-lint.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 345ms
+
+Host: www.businessinsider.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 109ms
+
+Host: debarghyadas.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 338ms
+
+Host: licensebuttons.net
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 25ms
+
+Host: www.writelatex.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 220ms
 
 Host: api.scorecard.dev
   Total requests: 1
   Successful: 0 (0.0%)
   Client errors (4xx): 1
-  Median response time: 122ms
+  Median response time: 78ms
 
-Host: openapi.vercel.sh
+Host: www.indeed.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 84ms
+
+Host: www.linkedin.com
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Median response time: 268ms
+
+Host: fontawesome.com
   Total requests: 1
   Successful: 1 (100.0%)
   Median response time: 85ms
 
-Host: thetechresume.com
+Host: turborepo.com
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 296ms
+  Median response time: 242ms
 
-Host: docs.rubocop.org
+Host: install.python-poetry.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 137ms
+  Median response time: 165ms
 
-Host: www.wnd.com
+Host: developercertificate.org
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 134ms
+  Median response time: 161ms
 
-Host: git-scm.com
+Host: goss.rocks
   Total requests: 1
   Successful: 1 (100.0%)
-  Median response time: 73ms
+  Median response time: 181ms
 
-Host: www.nongnu.org
-  Total requests: 0
-  Successful: 0 (100.0%)
+Host: www.chrisbehr.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 208ms
 
-Host: www.businessinsider.my
-  Total requests: 0
-  Successful: 0 (100.0%)
+Host: tug.ctan.org
+  Total requests: 1
+  Successful: 0 (0.0%)
+  Client errors (4xx): 1
+  Median response time: 203ms
 
-Host: x-access-token
+Host: www.grammarly.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 247ms
+
+Host: phpstan.org
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 102ms
+
+Host: golangci-lint.run
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 292ms
+
+Host: www.tylerfinck.com
+  Total requests: 1
+  Successful: 1 (100.0%)
+  Median response time: 1389ms
+
+Host: texdoc.net
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2589,7 +2683,11 @@ Host: egohygiene.dev
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: 2by22.blog
+Host: github
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+Host: x-access-token
   Total requests: 0
   Successful: 0 (100.0%)
 
@@ -2597,32 +2695,43 @@ Host: www.youtube.com
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: texdoc.net
-  Total requests: 0
-  Successful: 0 (100.0%)
-
-Host: github
-  Total requests: 0
-  Successful: 0 (100.0%)
-
 Host: 3d.bk.tudelft.nl
   Total requests: 0
   Successful: 0 (100.0%)
 
-Host: mirrors.ctan.org
+Host: www.businessinsider.my
   Total requests: 0
   Successful: 0 (100.0%)
 
-(Truncated to last 25000 characters out of 218076)
+Host: 2by22.blog
+  Total requests: 0
+  Successful: 0 (100.0%)
+
+(Truncated to last 27586 characters out of 236773)
 ```
 
 </details>
 
 <details>
-<summary>❌ MARKDOWN / markdownlint - 400 errors</summary>
+<summary>❌ MARKDOWN / markdownlint - 403 errors</summary>
 
 ```
-ultiple consecutive blank lines [Expected: 1; Actual: 2]
+2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:70:3 error MD049/emphasis-style Emphasis style [Expected: asterisk; Actual: underscore]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:70:9 error MD049/emphasis-style Emphasis style [Expected: asterisk; Actual: underscore]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:72 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:75 error MD001/heading-increment Heading levels should only increment by one level at a time [Expected: h3; Actual: h4]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:86 error MD046/code-block-style Code block style [Expected: indented; Actual: fenced]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:92 error MD046/code-block-style Code block style [Expected: indented; Actual: fenced]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:98 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:109 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:114:132 error MD059/descriptive-link-text Link text should be descriptive [Context: "[here]"]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:118 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:119 error MD022/blanks-around-headings Headings should be surrounded by blank lines [Expected: 1; Actual: 0; Below] [Context: "## Maintainers"]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:120:1 error MD004/ul-style Unordered list style [Expected: asterisk; Actual: dash]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:120 error MD032/blanks-around-lists Lists should be surrounded by blank lines [Context: "- [posquit0](https://github.co..."]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:121:1 error MD004/ul-style Unordered list style [Expected: asterisk; Actual: dash]
+beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md:123 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
 beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:5:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.overleaf.com/latex..."]
 beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:7:249 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/CVs and Resumes/data-science-tech-resume-template/README.md:12:1 error MD034/no-bare-urls Bare URL used [Context: "https://www.overleaf.com/latex..."]
@@ -2806,189 +2915,10 @@ beacon/.staging/latex/Theses/kaobook/README.md:225:72 error MD009/no-trailing-sp
 beacon/.staging/latex/Theses/kaobook/README.md:226:68 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:236:67 error MD009/no-trailing-spaces Trailing spaces [Expected: 0 or 2; Actual: 1]
 beacon/.staging/latex/Theses/kaobook/README.md:239:48 error MD047/single-trailing-newline Files should end with a single newline character
+docs/security/dependency-coverage.md:192 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+docs/security/dependency-coverage.md:209:1 error MD018/no-missing-space-atx No space after hash on atx style heading [Context: "#113/#79/#51 references, plus ..."]
 
-(Truncated to last 25000 characters out of 54345)
-```
-
-</details>
-
-<details>
-<summary>❌ PYTHON / mypy - 36 errors</summary>
-
-```
-WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
-Collecting types-PyYAML
-  Downloading types_pyyaml-6.0.12.20261111-py3-none-any.whl.metadata (1.8 kB)
-Downloading types_pyyaml-6.0.12.20261111-py3-none-any.whl (21 kB)
-Installing collected packages: types-PyYAML
-Successfully installed types-PyYAML-6.0.12.20261111
-tools/staging_removal_gate.py: note: In function "load_audit_module":
-tools/staging_removal_gate.py:17:1: error: Function is missing a return type
-annotation  [no-untyped-def]
-    def load_audit_module(repository_root: Path):
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tools/staging_removal_gate.py: note: In function "validate_removals":
-tools/staging_removal_gate.py:43:1: error: Function is missing a type
-annotation for one or more arguments  [no-untyped-def]
-    def validate_removals(rows, approvals, source_paths: list[str]) -> lis...
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~...
-tools/staging_removal_gate.py: note: In function "main":
-tools/staging_removal_gate.py:102:9: error: Assignment to variable "error"
-outside except: block  [misc]
-            for error in errors:
-            ^
-tools/staging_removal_gate.py:103:42: error: Trying to read deleted variable
-"error"  [misc]
-                print(f"removal gate failed: {error}", file=sys.stderr)
-                                             ^~~~~~
-tools/task_catalog.py: note: In function "render_catalog":
-tools/task_catalog.py:75:71: error: "object" has no attribute "__iter__"; maybe
-"__dir__" or "__str__"? (not iterable)  [attr-defined]
-    ...alias_text = ", ".join(f"`{escape_cell(alias)}`" for alias in aliases)
-                                                                     ^~~~~~~
-tests/test_staging_removal_gate.py: note: In function "load_module":
-tests/test_staging_removal_gate.py:15:1: error: Function is missing a return
-type annotation  [no-untyped-def]
-    def load_module(name: str, path: Path):
-    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "setUpClass" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:32:9: error: "type[StagingRemovalGateTests]"
-has no attribute "rows"  [attr-defined]
-            cls.rows = audit.build_rows(ROOT)
-            ^~~~~~~~
-tests/test_staging_removal_gate.py:33:9: error: "type[StagingRemovalGateTests]"
-has no attribute "row"  [attr-defined]
-            cls.row = next(row for row in cls.rows if row.source_path == "...
-            ^~~~~~~
-tests/test_staging_removal_gate.py:33:39: error:
-"type[StagingRemovalGateTests]" has no attribute "rows"  [attr-defined]
-            cls.row = next(row for row in cls.rows if row.source_path == "...
-                                          ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_missing_approval_blocks_removal" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:36:41: error: "StagingRemovalGateTests" has
-no attribute "rows"  [attr-defined]
-            errors = gate.validate_removals(self.rows, {}, [self.row.sourc...
-                                            ^~~~~~~~~
-tests/test_staging_removal_gate.py:36:57: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-    ... errors = gate.validate_removals(self.rows, {}, [self.row.source_path]...
-                                                        ^~~~~~~~
-tests/test_staging_removal_gate.py:37:56: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-    ...  self.assertEqual([f"missing removal approval: {self.row.source_path}...
-                                                        ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_exact_complete_approval_allows_removal" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:41:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "source_path": self.row.source_path,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:42:25: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "git_blob": self.row.git_blob,
-                            ^~~~~~~~
-tests/test_staging_removal_gate.py:43:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "destination": self.row.canonical_home,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:52:13: error: "StagingRemovalGateTests" has
-no attribute "rows"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                ^~~~~~~~~
-tests/test_staging_removal_gate.py:52:25: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                            ^~~~~~~~
-tests/test_staging_removal_gate.py: note: In member "test_blob_change_invalidates_approval" of class "StagingRemovalGateTests":
-tests/test_staging_removal_gate.py:58:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "source_path": self.row.source_path,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:60:28: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                "destination": self.row.canonical_home,
-                               ^~~~~~~~
-tests/test_staging_removal_gate.py:69:13: error: "StagingRemovalGateTests" has
-no attribute "rows"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                ^~~~~~~~~
-tests/test_staging_removal_gate.py:69:25: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                self.rows, {self.row.source_path: approval}, [self.row.sou...
-                            ^~~~~~~~
-tests/test_staging_removal_gate.py:72:16: error: "StagingRemovalGateTests" has
-no attribute "row"  [attr-defined]
-                f"{self.row.source_path} approval blob does not match curr...
-                   ^~~~~~~~
-tests/test_staging_home_audit.py: note: In member "setUpClass" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:24:9: error: "type[StagingHomeAuditTests]" has
-no attribute "rows"  [attr-defined]
-            cls.rows = staging_home_audit.build_rows(REPOSITORY_ROOT)
-            ^~~~~~~~
-tests/test_staging_home_audit.py:25:9: error: "type[StagingHomeAuditTests]" has
-no attribute "by_path"  [attr-defined]
-            cls.by_path = {row.source_path: row for row in cls.rows}
-            ^~~~~~~~~~~
-tests/test_staging_home_audit.py:25:56: error: "type[StagingHomeAuditTests]"
-has no attribute "rows"  [attr-defined]
-            cls.by_path = {row.source_path: row for row in cls.rows}
-                                                           ^~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_every_staged_file_has_a_concrete_home" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:34:30: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            self.assertEqual(set(self.by_path), tracked_staging_paths)
-                                 ^~~~~~~~~~~~
-tests/test_staging_home_audit.py:35:75: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-    ...sertNotIn("manual-review", {row.canonical_owner for row in self.rows})
-                                                                  ^~~~~~~~~
-tests/test_staging_home_audit.py:36:64: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-    ...    self.assertNotIn("TBD", {row.canonical_home for row in self.rows})
-                                                                  ^~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_remaining_devcontainer_features_have_realm_destinations" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:46:23: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-                    row = self.by_path[path]
-                          ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_product_fixture_is_kept_out_of_realm" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:51:15: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            api = self.by_path[".staging/devenvironment/containers/service...
-                  ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_cross_cutting_sources_follow_capability_ownership" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:67:34: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-                    self.assertEqual(self.by_path[path].canonical_owner, e...
-                                     ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_community_instructions_remain_quarantined" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:70:42: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-            community_rows = [row for row in self.rows if row.collection.s...
-                                             ^~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_emoji_cache_is_classified_as_generated_renderflow_intake" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:82:24: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-                for row in self.rows
-                           ^~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_ledger_records_deletion_gate_fields" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:94:15: error: "StagingHomeAuditTests" has no
-attribute "by_path"  [attr-defined]
-            row = self.by_path[".staging/misc/ROADMAP.md"]
-                  ^~~~~~~~~~~~
-tests/test_staging_home_audit.py: note: In member "test_summary_json_covers_the_file_ledger" of class "StagingHomeAuditTests":
-tests/test_staging_home_audit.py:102:59: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-            rendered = staging_home_audit.render_summary_json(self.rows)
-                                                              ^~~~~~~~~
-tests/test_staging_home_audit.py:104:47: error: "StagingHomeAuditTests" has no
-attribute "rows"  [attr-defined]
-            self.assertIn(f'"tracked_files": {len(self.rows)}', rendered)
-                                                  ^~~~~~~~~
-Installing missing stub packages:
-/venvs/mypy/bin/python3 -m pip install types-PyYAML
-
-
-Found 36 errors in 4 files (checked 54 source files)
+(Truncated to last 27586 characters out of 54773)
 ```
 
 </details>
@@ -3032,9 +2962,12 @@ Checking formatting...
 [warn] .devcontainer/devcontainer.json
 [warn] .vscode/cspell.json
 [warn] beacon/contracts/template-manifest.schema.json
+[warn] docs/security/data/attribution-2026-11-13.json
+[warn] docs/security/data/dependency-qualification-2026-11-13.json
 [warn] holon/packs/react-vite/template/apps/storefront/tsconfig.json
 [warn] holon/packs/react-vite/template/test-results/.last-run.json
-[warn] Code style issues found in 5 files. Run Prettier with --write to fix.
+[warn] schemas/staging-removal-receipts.v1.schema.json
+[warn] Code style issues found in 8 files. Run Prettier with --write to fix.
 ```
 
 </details>
@@ -3157,10 +3090,218 @@ Checking formatting...
 </details>
 
 <details>
-<summary>❌ PYTHON / ruff - 731 errors</summary>
+<summary>❌ PYTHON / ruff - 716 errors</summary>
 
 ```
-ChangesThread(QtCore.QThread):
+tusText('Resuming.')
+490 |            
+    | ^^^^^^^^^^^
+491 |         self.tex_new = ui_central_widget.text_main.toPlainText()
+    |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:492:1
+    |
+491 |         self.tex_new = ui_central_widget.text_main.toPlainText()
+492 |             
+    | ^^^^^^^^^^^^
+493 |         self.current_action = 'resume'
+    |
+help: Remove whitespace from blank line
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:499:68
+    |
+498 |     def textChangeByUser(self, selection_start, selection_end, length_diff):
+499 |         # For the time being I am treating the TrackChangesTextEdit 
+    |                                                                    ^
+500 |         # panel mostly as a black box.
+501 |         # When an edit is done it will return the section before
+    |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:502:72
+    |
+500 |         # panel mostly as a black box.
+501 |         # When an edit is done it will return the section before
+502 |         # and after the edit as well and the change in document length.  
+    |                                                                        ^^
+503 |         #
+504 |         # From this I can figure out where the new search positon needs to be.
+    |
+help: Remove trailing whitespace
+
+W293 Blank line contains whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:505:1
+    |
+503 |         #
+504 |         # From this I can figure out where the new search positon needs to be.
+505 |         
+    | ^^^^^^^^
+506 |         self.doc_saved = False
+    |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:524:1
+    |
+522 |                 new_position = selection_end[0]
+523 |             self.search_position = new_position
+524 |             
+    | ^^^^^^^^^^^^
+525 |
+526 |     # ------------------------------------------------------------------
+    |
+help: Remove whitespace from blank line
+
+W293 Blank line contains whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:560:1
+    |
+558 |         self.tex_new = ui_central_widget.text_main.toPlainText()
+559 |         self.text_wait.wakeAll()
+560 |         
+    | ^^^^^^^^
+561 |
+562 |     def addText(self, location, added_text):
+    |
+help: Remove whitespace from blank line
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:605:33
+    |
+604 |         self.tex_new = ui_central_widget.text_main.toPlainText()
+605 |         self.text_wait.wakeAll()   
+    |                                 ^^^
+606 |
+607 |     def doneDeciding(self):
+    |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:636:27
+    |
+634 |     # ------------------------------------------------------------------
+635 |
+636 |     def handleError(self): 
+    |                           ^
+637 |         # This should pop up a dialog letting the user know that a general error
+638 |         # was found and asking what action to take.
+    |
+help: Remove trailing whitespace
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:642:15
+    |
+640 |         self.setStatusText('Error.')
+641 |
+642 |         print 'Encountered error.'
+    |               ^^^^^^^^^^^^^^^^^^^^
+643 |
+644 |         result = self.messageBoxError()
+    |
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:653:42
+    |
+651 |         raise Error
+652 |
+653 |     def handleTexSyntaxError(self, span): 
+    |                                          ^
+654 |         # This should pop up a dialog letting the user know that a syntax error
+655 |         # was found and asking what action to take.
+    |
+help: Remove trailing whitespace
+
+invalid-syntax: Simple statements must be separated by newlines or semicolons
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:659:15
+    |
+657 |         self.setStatusText('TeX Syntax Error.')
+658 |
+659 |         print 'Parsing error encountered.' 
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+660 |
+661 |         self.setTextHighlight(span)
+    |
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:659:43
+    |
+657 |         self.setStatusText('TeX Syntax Error.')
+658 |
+659 |         print 'Parsing error encountered.' 
+    |                                           ^
+660 |
+661 |         self.setTextHighlight(span)
+    |
+help: Remove trailing whitespace
+
+W293 Blank line contains whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:670:1
+    |
+668 |         else:
+669 |             result = self.messageBoxSyntaxError()
+670 |                 
+    | ^^^^^^^^^^^^^^^^
+671 |
+672 |         self.current_action = 'cancel'
+    |
+help: Remove whitespace from blank line
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:694:22
+    |
+692 |         result = messageBox.exec_()
+693 |
+694 |         return result  
+    |                      ^^
+695 |
+696 |     def messageBoxSyntaxErrorSave(self):
+    |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:736:38
+    |
+734 |     # ------------------------------------------------------------------
+735 |     #
+736 |     # These routines control the gui. 
+    |                                      ^
+737 |     # They can be called either from the main program or from the
+738 |     # from the search/edit thread (using signals).
+    |
+help: Remove trailing whitespace
+
+W293 Blank line contains whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:858:1
+    |
+856 |         ui_central_widget.text_main.setTextCursor(cursor)
+857 |
+858 |         
+    | ^^^^^^^^
+859 |
+860 | #=======================================================================
+    |
+help: Remove whitespace from blank line
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:864:32
+    |
+862 | # This is the thread where the main work is done
+863 | #
+864 | # This needs a little clean up.  
+    |                                ^^
+865 | # Right now this is one big long script.
+866 | # I should add some functions and stuff to make it easyer to read.
+    |
+help: Remove trailing whitespace
+
+W291 Trailing whitespace
+   --> beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/trackchanges.py:868:60
+    |
+866 | # I should add some functions and stuff to make it easyer to read.
+867 | class DecideChangesThread(QtCore.QThread):
 868 |     """This is the main thread where searching, editing and 
     |                                                            ^
 869 |     accepting/rejecting of comments is done.
@@ -3605,6 +3746,13 @@ T201 `print` found
 165 |         return 1
     |
 help: Remove `print`
+    |
+163 |         for error in errors:
+    -             print(f"ERROR: {error}", file=sys.stderr)
+164 +             pass
+165 |         return 1
+    |
+note: This is an unsafe fix and may change runtime behavior
 
 T201 `print` found
    --> beacon/scripts/validate_templates.py:167:5
@@ -3616,6 +3764,12 @@ T201 `print` found
 168 |     return 0
     |
 help: Remove `print`
+    |
+166 |
+    -     print("Beacon template validation passed.")
+167 |     return 0
+    |
+note: This is an unsafe fix and may change runtime behavior
 
 INP001 File `beacon/tests/test_templates.py` is part of an implicit namespace package. Add an `__init__.py`.
 --> beacon/tests/test_templates.py:1:1
@@ -3656,184 +3810,19 @@ PT018 Assertion should be broken down into multiple parts
 15 | SPEC.loader.exec_module(VALIDATOR)
    |
 help: Break down assertion into multiple parts
+   |
+12 | SPEC = importlib.util.spec_from_file_location("beacon_validate_templates", VALIDATOR_PATH)
+   - assert SPEC is not None and SPEC.loader is not None
+13 + assert SPEC is not None
+14 + assert SPEC.loader is not None
+15 | VALIDATOR = importlib.util.module_from_spec(SPEC)
+   |
+note: This is an unsafe fix and may change runtime behavior
 
-I001 [*] Import block is un-sorted or un-formatted
- --> tests/test_staging_removal_gate.py:4:1
-  |
-2 |   # SPDX-License-Identifier: MIT
-3 |
-4 | / from __future__ import annotations
-5 | |
-6 | | import importlib.util
-7 | | from pathlib import Path
-8 | | import sys
-9 | | import unittest
-  | |_______________^
-help: Organize imports
-   |
-10 |
-   -
-11 | ROOT = Path(__file__).parents[1]
-   |
+Found 716 errors.
+[*] 38 fixable with `--fix` (4 unsafe fixes available with `--fix --unsafe-fixes`).
 
-PT027 Use `pytest.raises` instead of unittest-style `assertRaisesRegex`
-  --> tests/test_task_catalog.py:51:14
-   |
-50 |     def test_update_catalog_rejects_missing_markers(self) -> None:
-51 |         with self.assertRaisesRegex(RuntimeError, "exactly one generated region"):
-   |              ^^^^^^^^^^^^^^^^^^^^^^
-52 |             task_catalog.update_catalog("no generated region", "replacement")
-   |
-help: Replace `assertRaisesRegex` with `pytest.raises`
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:21:15
-   |
-19 |     specification = importlib.util.spec_from_file_location("staging_home_audit", path)
-20 |     if specification is None or specification.loader is None:
-21 |         raise RuntimeError(f"cannot load staging audit module: {path}")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-22 |     module = importlib.util.module_from_spec(specification)
-23 |     sys.modules[specification.name] = module
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:31:15
-   |
-29 |     data = json.loads(path.read_text(encoding="utf-8"))
-30 |     if data.get("schema_version") != "1.0.0" or not isinstance(data.get("approvals"), list):
-31 |         raise ValueError("removal approvals must use schema version 1.0.0")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-32 |     approvals: dict[str, dict[str, Any]] = {}
-33 |     for approval in data["approvals"]:
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:36:19
-   |
-34 |         source_path = approval.get("source_path") if isinstance(approval, dict) else None
-35 |         if not isinstance(source_path, str) or not source_path.startswith(".staging/"):
-36 |             raise ValueError("every approval needs a .staging source_path")
-   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-37 |         if source_path in approvals:
-38 |             raise ValueError(f"duplicate removal approval: {source_path}")
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/staging_removal_gate.py:38:19
-   |
-36 |             raise ValueError("every approval needs a .staging source_path")
-37 |         if source_path in approvals:
-38 |             raise ValueError(f"duplicate removal approval: {source_path}")
-   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-39 |         approvals[source_path] = approval
-40 |     return approvals
-   |
-
-T201 `print` found
-   --> tools/staging_removal_gate.py:98:9
-    |
- 96 |         approvals = load_approvals(approvals_path)
- 97 |     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as error:
- 98 |         print(f"removal gate failed: {error}", file=sys.stderr)
-    |         ^^^^^
- 99 |         return 2
-100 |     errors = validate_removals(rows, approvals, arguments.source_path)
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/staging_removal_gate.py:103:13
-    |
-101 |     if errors:
-102 |         for error in errors:
-103 |             print(f"removal gate failed: {error}", file=sys.stderr)
-    |             ^^^^^
-104 |         return 1
-105 |     print(f"removal gate passed for {len(arguments.source_path)} staged file(s)")
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/staging_removal_gate.py:105:5
-    |
-103 |             print(f"removal gate failed: {error}", file=sys.stderr)
-104 |         return 1
-105 |     print(f"removal gate passed for {len(arguments.source_path)} staged file(s)")
-    |     ^^^^^
-106 |     return 0
-    |
-help: Remove `print`
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/task_catalog.py:41:15
-   |
-39 |     resolved = shutil.which(configured)
-40 |     if resolved is None:
-41 |         raise RuntimeError(f"Task executable is unavailable: {configured}")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-42 |     return resolved
-   |
-
-S603 `subprocess` call: check for execution of untrusted input
-  --> tools/task_catalog.py:47:17
-   |
-45 | def public_tasks(repository_root: Path) -> list[dict[str, object]]:
-46 |     """Return public described tasks from Task's canonical JSON output."""
-47 |     completed = subprocess.run(
-   |                 ^^^^^^^^^^^^^^
-48 |         [task_binary(), "--dir", str(repository_root), "--list", "--json"],
-49 |         check=True,
-   |
-
-TRY003 Avoid specifying long messages outside the exception class
-  --> tools/task_catalog.py:89:15
-   |
-87 |     """Replace the generated region in TASKS.md."""
-88 |     if document.count(START_MARKER) != 1 or document.count(END_MARKER) != 1:
-89 |         raise RuntimeError("TASKS.md must contain exactly one generated region")
-   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-90 |     prefix, remainder = document.split(START_MARKER, maxsplit=1)
-91 |     _, suffix = remainder.split(END_MARKER, maxsplit=1)
-   |
-
-T201 `print` found
-   --> tools/task_catalog.py:105:9
-    |
-103 |     if arguments.write:
-104 |         catalog_path.write_text(expected, encoding="utf-8")
-105 |         print(f"Updated {catalog_path.relative_to(repository_root)}")
-    |         ^^^^^
-106 |         return 0
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/task_catalog.py:109:9
-    |
-108 |     if current != expected:
-109 |         print(
-    |         ^^^^^
-110 |             "TASKS.md is stale; run `task taskfile:catalog:write`.",
-111 |             file=sys.stderr,
-    |
-help: Remove `print`
-
-T201 `print` found
-   --> tools/task_catalog.py:115:5
-    |
-113 |         return 1
-114 |
-115 |     print("TASKS.md matches the public Taskfile command surface.")
-    |     ^^^^^
-116 |     return 0
-    |
-help: Remove `print`
-
-Found 731 errors.
-[*] 39 fixable with the `--fix` option (11 hidden fixes can be enabled with the `--unsafe-fixes` option).
-
-(Truncated to last 25000 characters out of 352206)
+(Truncated to last 27586 characters out of 346950)
 ```
 
 </details>
@@ -3842,7 +3831,120 @@ Found 731 errors.
 <summary>❌ PYTHON / ruff-format - 1 error</summary>
 
 ```
-command together with the added text
+16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:3:1
+    |
+2   | Provides class ConsoleControlledOutput is intended for console-based user interaction.
+    - 	It is intended that other classes are used for GUI-controlled user interaction etc.
+3   +         It is intended that other classes are used for GUI-controlled user interaction etc.
+4   | """
+5   |
+6   | # ConsoleControlledOutput.py, Copyright (C) 2006 Felix Salfner (salfner@informatik.hu-berlin.de)
+7   | #
+    - # This program is free software; you can redistribute it and/or modify it under the terms 
+    - # of the GNU General Public License as published by the Free Software Foundation; either 
+8   + # This program is free software; you can redistribute it and/or modify it under the terms
+9   + # of the GNU General Public License as published by the Free Software Foundation; either
+10  | # version 2 of the License, or (at your option) any later version.
+11  | #
+    - # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+    - # without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+12  + # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+13  + # without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+14  | # See the GNU General Public License for more details.
+15  | #
+    - # You should have received a copy of the GNU General Public License along with this program; 
+    - # if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, 
+16  + # You should have received a copy of the GNU General Public License along with this program;
+17  + # if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+18  | # MA 02111-1307 USA
+--------------------------------------------------------------------------------
+30  |
+31  +
+32  | class ConsoleControlledOutput:
+    - 	def __init__(self, outfile, options):
+    - 		"""parameters:
+    - 		   - outfile: an output Stream object such as a file object or sys.stdout ...
+    - 			- options: an object containing the following flags:
+    - 			    - options.interactive: are user interactions required
+    - 				 - options.notes: should \\annote commands be processed
+    - 				 - options.changes: should \\change commands be processed"""
+    - 		self.outfile = outfile
+    - 		self.interactive = options.interactive
+    - 		self.processNotes = options.notes
+    - 		self.processChanges = options.changes
+    - 		self.document = []
+    - 	
+    - 	def addSegment(self, line, fromIndex, toIndex, type):
+    - 		"""adds a LineSegment to self.document"""
+    - 		self.document.append( LineSegment(line,fromIndex, toIndex, type) )
+    - 		
+    - 	def printBuffer(self,segments):
+    - 		"""prints the given list of line segments to stderr ..."""
+    - 		for s in segments:
+    - 			s.output(sys.stderr)
+    - 		sys.stderr.write("\n")	
+    - 	
+    - 	def eraseNote(self, noteSegments):
+    - 		"""erase segments that belong to the note:
+    - 		   - if it is a \note command -> erase all
+    - 			- if it is an \annote command -> erase all but the annoted text"""
+    - 		if noteSegments[0].type == "noteCommand":
+    - 			for s in noteSegments:
+    - 				s.hide()
+    - 		elif noteSegments[0].type == "annoteCommand":
+    - 			for s in noteSegments:
+    - 				if s.type != "annotedText":
+    - 					s.hide()
+    - 	
+    - 	def keepAddedText(self, addSegments):
+    - 		"""keeps the added text of an \add command:
+    - 		   hide all elements except for newText"""
+    - 		for s in addSegments:
+    - 			if s.type in ("addCommand", "initials", "startBrace", "endBrace"):
+    - 				s.hide()
+    - 	
+    - 	def removeAddedText(self, addSegments):
+    - 		"""removes the added text of an \add command: hide all elements"""
+    - 		for s in addSegments:
+    - 			s.hide()
+    - 	
+    - 	def removeRemovedText(self, removeSegments):
+    - 		"""removes the text -> remove all segments ..."""
+    - 		for s in removeSegments:
+    - 			s.hide()
+    - 	
+    - 	def keepRemovedText(self, removeSegments):
+    - 		"""removes the command but leaves the element removedText ..."""
+    - 		for s in removeSegments:
+    - 			if s.type in ("removeCommand", "initials", "startBrace", "endBrace"):
+    - 				s.hide()
+    - 	
+    - 	def keepNewText(self, changeSegments):
+    - 		"""keeps only the new text of a change command: removes all but the newText segment"""
+    - 		for s in changeSegments:
+    - 			if s.type in ("changeCommand", "initials", "originalText", "startBrace", "endBrace"):
+    - 				s.hide()
+    - 	
+    - 	def keepOriginalText(self, changeSegments):
+    - 		"""keeps only the original text of a change command: removes all but the originalText segment"""
+    - 		for s in changeSegments:
+    - 			if s.type in ("changeCommand", "initials", "newText", "startBrace", "endBrace"):
+    - 				s.hide()
+    - 	
+    - 	def noteInteraction(self, noteSegments):
+    - 		"""asks the user, if the note should be erased or not and hides the corresponding
+    - 		LineSegments if requested ..."""
+    - 		self.printBuffer(noteSegments)
+    - 		sys.stderr.write("\nErase? [Y|n] ")
+    - 		inputStr = raw_input("")
+    - 		if inputStr.lower() != "n":
+    - 			self.eraseNote(noteSegments)
+    - 		sys.stderr.write("\n")
+    - 	
+    - 	def addInteraction(self, addSegments):
+    - 		"""provides three options to the user:
+    - 		  - Accept: erase the \\add command and keep the added text 
+    - 		  - Reject: erase the \\add command together with the added text
     - 		  - Ignore: ignore and leave the \\change command in the text"""
     - 		self.printBuffer(addSegments)
     - 		sys.stderr.write("Accept added text, Reject added text or Ignore? [A|r|i] ")
@@ -4285,92 +4387,34 @@ unformatted: File would be reformatted
    |
 
 unformatted: File would be reformatted
-   --> tests/test_identity_integration.py:45:26
+   --> tools/staging_home_audit.py:224:19
     |
-44  |         layers = self.project["layers"]
-    -         self.assertEqual([layer["kind"] for layer in layers], ["organization-defaults", "product-override"])
-45  +         self.assertEqual(
-46  +             [layer["kind"] for layer in layers], ["organization-defaults", "product-override"]
-47  +         )
-48  |         self.assertEqual(layers[0]["sha256"], ORGANIZATION_DEFAULT_SHA256)
-49  |         self.assertEqual(
-    -             hashlib.sha256(
-    -                 (REPOSITORY_ROOT / layers[0]["tokens"]).read_bytes()
-    -             ).hexdigest(),
-50  +             hashlib.sha256((REPOSITORY_ROOT / layers[0]["tokens"]).read_bytes()).hexdigest(),
-51  |             ORGANIZATION_DEFAULT_SHA256,
-    -         )
-    -         overrides = json.loads(
-    -             (REPOSITORY_ROOT / layers[1]["tokens"]).read_text(encoding="utf-8")
-52  |         )
-53  +         overrides = json.loads((REPOSITORY_ROOT / layers[1]["tokens"]).read_text(encoding="utf-8"))
-54  |         primary = overrides["color"]["brand"]["primary"]
---------------------------------------------------------------------------------
-78  |     def test_generated_package_snapshot_preserves_the_reviewed_calm_violet(self) -> None:
-    -         css = (
-    -             REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css"
-    -         ).read_text(encoding="utf-8")
-79  +         css = (REPOSITORY_ROOT / "assets/identity/packages/tokens/tokens.css").read_text(
-80  +             encoding="utf-8"
-81  +         )
-82  |         self.assertIn("--identity-color-brand-primary: #6e5ebe;", css)
-83  |
-    -     @unittest.skipUnless((IDENTITY_ROOT / "Cargo.toml").is_file(), "Identity submodule is not initialized")
-84  +     @unittest.skipUnless(
-85  +         (IDENTITY_ROOT / "Cargo.toml").is_file(), "Identity submodule is not initialized"
-86  +     )
-87  |     def test_pinned_v1_validator_and_compiler_detect_no_generated_state_drift(self) -> None:
-88  |         subprocess.run(
-    -             ["python3", str(IDENTITY_ROOT / "scripts/validate_identity.py"), "--repository-root", str(REPOSITORY_ROOT)],
-89  +             [
-90  +                 "python3",
-91  +                 str(IDENTITY_ROOT / "scripts/validate_identity.py"),
-92  +                 "--repository-root",
-93  +                 str(REPOSITORY_ROOT),
-94  +             ],
-95  |             check=True,
-96  |         )
-97  |         subprocess.run(
-    -             ["cargo", "run", "--quiet", "--manifest-path", str(IDENTITY_ROOT / "Cargo.toml"), "--", "v1-verify", "--repository-root", str(REPOSITORY_ROOT)],
-98  +             [
-99  +                 "cargo",
-100 +                 "run",
-101 +                 "--quiet",
-102 +                 "--manifest-path",
-103 +                 str(IDENTITY_ROOT / "Cargo.toml"),
-104 +                 "--",
-105 +                 "v1-verify",
-106 +                 "--repository-root",
-107 +                 str(REPOSITORY_ROOT),
-108 +             ],
-109 |             check=True,
+223 |         [
+    -             "git", "--no-lazy-fetch", "--no-optional-locks",
+    -             "-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false",
+    -             "-c", "protocol.allow=never", *arguments,
+224 +             "git",
+225 +             "--no-lazy-fetch",
+226 +             "--no-optional-locks",
+227 +             "-c",
+228 +             "core.hooksPath=/dev/null",
+229 +             "-c",
+230 +             "core.fsmonitor=false",
+231 +             "-c",
+232 +             "protocol.allow=never",
+233 +             *arguments,
+234 |         ],
+    -         cwd=repository_root, env=environment, stderr=subprocess.PIPE, timeout=60,
+235 +         cwd=repository_root,
+236 +         env=environment,
+237 +         stderr=subprocess.PIPE,
+238 +         timeout=60,
+239 |     )
     |
 
-unformatted: File would be reformatted
-  --> tests/test_staging_home_audit.py:89:26
-   |
-88 |         self.assertEqual({row.migration_state for row in rows}, {"quarantined"})
-   -         self.assertEqual(
-   -             {row.provenance_state for row in rows}, {"needs-source-license-review"}
-   -         )
-89 +         self.assertEqual({row.provenance_state for row in rows}, {"needs-source-license-review"})
-90 |
-   |
+5 files would be reformatted, 75 files already formatted
 
-unformatted: File would be reformatted
-  --> tests/test_staging_removal_gate.py:71:23
-   |
-70 |         )
-   -         self.assertIn(
-   -             f"{self.row.source_path} approval blob does not match current source", errors
-   -         )
-71 +         self.assertIn(f"{self.row.source_path} approval blob does not match current source", errors)
-72 |
-   |
-
-7 files would be reformatted, 55 files already formatted
-
-(Truncated to last 25000 characters out of 30677)
+(Truncated to last 27586 characters out of 27705)
 ```
 
 </details>
@@ -4391,7 +4435,22 @@ unformatted: File would be reformatted
 <summary>❌ CSS / stylelint - 330 errors</summary>
 
 ```
-selector-class-pattern
+05:1   ✖  Expected selector ".section-heading > a" to come before selector ".primary-navigation a:hover", at line 108                   no-descending-specificity
+  319:39  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  319:39  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  319:59  ✖  Expected "0.055" to be "5.5%"                                                                                                 alpha-value-notation
+  319:67  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  319:67  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  319:87  ✖  Expected "0.015" to be "1.5%"                                                                                                 alpha-value-notation
+  326:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
+  326:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
+  326:37  ✖  Expected "0.5" to be "50%"                                                                                                    alpha-value-notation
+  330:1   ✖  Expected class selector ".product-card__image-link" to be kebab-case                                                          selector-class-pattern
+  337:1   ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
+  344:21  ✖  Expected class selector ".product-card__image" to be kebab-case                                                               selector-class-pattern
+  348:1   ✖  Expected class selector ".product-card__placeholder" to be kebab-case                                                         selector-class-pattern
+  355:1   ✖  Expected class selector ".product-card__body" to be kebab-case                                                                selector-class-pattern
+  359:1   ✖  Expected class selector ".product-card__meta" to be kebab-case                                                                selector-class-pattern
   379:1   ✖  Expected class selector ".status-badge--accent" to be kebab-case                                                              selector-class-pattern
   380:17  ✖  Expected "rgba" to be "rgb"                                                                                                   color-function-alias-notation
   380:17  ✖  Expected modern color-function notation                                                                                       color-function-notation
@@ -4608,13 +4667,13 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 ✖ 330 problems (330 errors, 0 warnings)
   151 errors potentially fixable with the "--fix" option.
 
-(Truncated to last 25000 characters out of 42163)
+(Truncated to last 27586 characters out of 42163)
 ```
 
 </details>
 
 <details>
-<summary>❌ YAML / yamllint - 214 errors</summary>
+<summary>❌ YAML / yamllint - 215 errors</summary>
 
 ```
 .garden/context-packs/agent-default.yaml
@@ -4622,6 +4681,9 @@ notebooks/jupyter/themes/@jupyterlab/theme-light-extension/index.css
 
 .garden/garden.yaml
   2:1       warning  missing document start "---"  (document-start)
+
+.github/act/local-validation.yml
+  3:1       warning  missing document start "---"  (document-start)
 
 .github/workflow-profiles/agent-environment/validate-copilot-setup.yml
   106:1     error    trailing spaces  (trailing-spaces)
@@ -5008,97 +5070,96 @@ pnpm-workspace.yaml
 <summary>⚠️ REPOSITORY / checkov - 58 errors</summary>
 
 ```
-inThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+ages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-11-15 02:16:12,602 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-11-15 02:16:12,602 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-11-15 02:16:12,602 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-11-15 02:16:12,602 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:17,991 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-11 12:58:18,168 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-11-11 12:58:18,169 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-11-11 12:58:18,169 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-11-11 12:58:18,169 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-11-11 12:58:18,171 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-11-11 12:58:18,179 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-11-11 12:58:18,189 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-11-11 12:58:18,200 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-11-11 12:58:18,236 [MainThread  ] [INFO ]  Creating ARM graph
-2026-11-11 12:58:18,237 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-11-11 12:58:18,286 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-11-11 12:58:18,292 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-11-11 12:58:18,319 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-11-11 12:58:18,328 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-11-11 12:58:18,346 [MainThread  ] [INFO ]  Creating vertices
-2026-11-11 12:58:18,360 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-11-11 12:58:18,360 [MainThread  ] [INFO ]  Creating edges
-2026-11-11 12:58:18,360 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-11-11 12:58:18,482 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-11-11 12:58:18,482 [MainThread  ] [INFO ]  Creating vertices
-2026-11-11 12:58:18,483 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-11-11 12:58:18,484 [MainThread  ] [INFO ]  Creating edges
-2026-11-11 12:58:18,486 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-11-11 12:58:18,488 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-11-11 12:58:18,506 [MainThread  ] [INFO ]  Building cross variable edges
-2026-11-11 12:58:18,510 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-11-11 12:58:18,510 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-11-11 12:58:18,510 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-11-11 12:58:36,354 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-11-11 12:58:36,355 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
-2026-11-11 12:58:37,729 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-11-11 12:58:37,733 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-11-11 12:58:37,733 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-11-11 12:58:37,733 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-11-11 12:58:37,733 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-11-11 12:58:37,734 [MainThread  ] [INFO ]  Successfully created Ansible graph
-terraform scan results:
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-Passed checks: 9, Failed checks: 6, Skipped checks: 0
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
-Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
-Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
-Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
-Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61
-Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
-	FAILED for resource: aws_s3_bucket.fixture
-	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
-	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-buckets-are-encrypted-with-kms-by-default
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-11-15 02:16:12,603 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-11-15 02:16:12,608 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-11-15 02:16:12,609 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-11-15 02:16:12,609 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-11-15 02:16:12,609 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-11-15 02:16:12,609 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+  excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
+
+2026-11-15 02:16:12,767 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-11-15 02:16:12,767 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-11-15 02:16:12,785 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-11-15 02:16:12,915 [MainThread  ] [INFO ]  Creating vertices
+2026-11-15 02:16:12,915 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-11-15 02:16:12,915 [MainThread  ] [INFO ]  Creating edges
+2026-11-15 02:16:12,916 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-11-15 02:16:12,941 [MainThread  ] [INFO ]  Creating ARM graph
+2026-11-15 02:16:12,942 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-11-15 02:16:12,950 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-11-15 02:16:12,952 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-11-15 02:16:12,953 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-11-15 02:16:12,953 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-11-15 02:16:12,959 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-11-15 02:16:13,026 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-11-15 02:16:13,032 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-11-15 02:16:13,093 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-11-15 02:16:13,095 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-11-15 02:16:13,548 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-11-15 02:16:13,548 [MainThread  ] [INFO ]  Creating vertices
+2026-11-15 02:16:13,548 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-11-15 02:16:13,550 [MainThread  ] [INFO ]  Creating edges
+2026-11-15 02:16:13,556 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-11-15 02:16:13,557 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-11-15 02:16:13,604 [MainThread  ] [INFO ]  Building cross variable edges
+2026-11-15 02:16:13,604 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-11-15 02:16:13,604 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-11-15 02:16:13,604 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-11-15 02:16:33,443 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-11-15 02:16:33,444 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-11-15 02:16:34,045 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-11-15 02:16:34,046 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-11-15 02:16:34,047 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-11-15 02:16:34,047 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-11-15 02:16:34,047 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-11-15 02:16:34,049 [MainThread  ] [INFO ]  Successfully created Ansible graph
 cloudformation scan results:
 
 Passed checks: 7, Failed checks: 2, Skipped checks: 0
@@ -5305,6 +5366,34 @@ Check: CKV_DOCKER_3: "Ensure that a user for the container has been created"
 	FAILED for resource: /holon/packs/react-vite/template/infra/docker/Dockerfile.
 	File: /holon/packs/react-vite/template/infra/docker/Dockerfile:1-9
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-a-user-for-the-container-has-been-created
+terraform scan results:
+
+Passed checks: 9, Failed checks: 6, Skipped checks: 0
+
+Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-62
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-bucket-has-cross-region-replication-enabled
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-that-s3-buckets-are-encrypted-with-kms-by-default
+Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
+	FAILED for resource: aws_s3_bucket.fixture
+	File: /egolint/tests/fixtures/kics/terraform/main.tf:12-14
+	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61
 openapi scan results:
 
 Passed checks: 6, Failed checks: 4, Skipped checks: 0
@@ -5326,22 +5415,37 @@ Check: CKV_OPENAPI_4: "Ensure that the global security field has rules defined"
 	File: /egolint/tests/fixtures/vacuum/openapi.yml:2-35
 	Guide: https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-the-global-security-field-has-rules-defined
 
-(Truncated to last 25000 characters out of 36683)
+(Truncated to last 27586 characters out of 36683)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ REPOSITORY / grype - 529 errors</summary>
+<summary>⚠️ REPOSITORY / grype - 548 errors</summary>
 
 ```
-5.28.4                                    6.28.0      npm            GHSA-8xcm-r25x-g524  Medium    0.3% (21st)   0.1           
+0.2% (11th)   0.2           
+virtualenv                   21.7.4                                    21.7.12     python         GHSA-x78j-v8h9-3j2q  High      0.2% (11th)   0.2           
+step-security/harden-runner  1d88384fd173af6ecb012dfd0264a306b711241a  2.16.0      github-action  GHSA-46g3-37rh-v698  Medium    0.3% (24th)   0.2           
+step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.16.0      github-action  GHSA-46g3-37rh-v698  Medium    0.3% (24th)   0.2           
+undici                       5.28.4                                    6.24.0      npm            GHSA-4992-7rv2-5pvq  Medium    0.3% (24th)   0.2           
+virtualenv                   20.31.2                                   21.7.12     python         GHSA-94p9-xgh2-xp45  High      0.2% (9th)    0.1           
+virtualenv                   21.7.4                                    21.7.12     python         GHSA-94p9-xgh2-xp45  High      0.2% (9th)    0.1           
+python-dotenv                1.1.1                                     1.2.2       python         GHSA-mf9w-mj56-hr94  Medium    0.3% (16th)   0.1           
+cryptography                 45.0.4                                    49.0.0      python         CVE-2026-69248       Medium    0.2% (15th)   0.1           
+cryptography                 45.0.4                                    49.0.0      python         GHSA-m2h6-j472-rp4c  Medium    0.2% (15th)   0.1           
+markdown-it                  14.3.0                                    14.3.3      npm            GHSA-vfgh-jcmw-g37q  Low       0.4% (37th)   0.1           
+undici                       7.29.0                                    7.30.1      npm            GHSA-55wc-3pg8-jfw6  Medium    0.3% (17th)   0.1           
+undici                       8.10.0                                    8.12.2      npm            GHSA-55wc-3pg8-jfw6  Medium    0.3% (17th)   0.1           
+undici                       5.28.4                                    6.28.0      npm            GHSA-8xcm-r25x-g524  Medium    0.3% (21st)   0.1           
 handlebars                   4.7.9                                     4.7.10      npm            GHSA-xw65-4hp5-5hc7  Medium    0.3% (21st)   0.1           
 undici                       5.28.4                                    6.29.1      npm            GHSA-qrxm-fqhp-jwvm  High      0.2% (8th)    0.1           
 undici                       6.28.0                                    6.29.1      npm            GHSA-qrxm-fqhp-jwvm  High      0.2% (8th)    0.1           
 undici                       7.29.0                                    7.30.1      npm            GHSA-qrxm-fqhp-jwvm  High      0.2% (8th)    0.1           
 undici                       8.10.0                                    8.12.2      npm            GHSA-qrxm-fqhp-jwvm  High      0.2% (8th)    0.1           
 undici                       5.28.4                                    6.27.0      npm            GHSA-p88m-4jfj-68fv  Medium    0.3% (17th)   0.1           
+undici                       7.29.0                                    7.29.1      npm            GHSA-w293-vg96-wgc3  High      0.2% (8th)    0.1           
+undici                       8.10.0                                    8.10.2      npm            GHSA-w293-vg96-wgc3  High      0.2% (8th)    0.1           
 fast-uri                     3.1.5                                     3.1.9       npm            GHSA-w74x-v6f9-j3xg  Medium    0.2% (16th)   0.1           
 filelock                     3.32.2                                    4.2.1       python         GHSA-v4x8-3wr5-3wq8  High      0.2% (8th)    0.1           
 undici                       7.29.0                                    7.30.1      npm            GHSA-f72v-6w45-q472  Medium    0.3% (16th)   0.1           
@@ -5354,21 +5458,19 @@ undici                       5.28.4                                    6.28.0   
 protobufjs                   6.11.6                                    7.5.6       npm            GHSA-fx83-v9x8-x52w  Medium    0.3% (18th)   0.1           
 protobufjs                   6.11.6                                    7.5.8       npm            GHSA-jggg-4jg4-v7c6  Medium    0.3% (18th)   0.1           
 pyjwt                        2.10.1                                    2.13.0      python         GHSA-fhv5-28vv-h8m8  Low       0.4% (34th)   0.1           
-undici                       7.29.0                                    7.29.1      npm            GHSA-w293-vg96-wgc3  High      0.2% (7th)    0.1           
-undici                       8.10.0                                    8.10.2      npm            GHSA-w293-vg96-wgc3  High      0.2% (7th)    0.1           
 aiohttp                      3.14.3                                    3.14.4      python         GHSA-494j-54xm-rwp3  Medium    0.2% (14th)   0.1           
 joi                          17.13.4                                   17.13.6     npm            GHSA-6w3j-5fw6-r9vr  Low       0.4% (33rd)   0.1           
 joi                          17.13.4                                   17.13.5     npm            GHSA-gg4h-3hg2-grpc  Low       0.4% (33rd)   0.1           
 joi                          18.2.3                                    18.2.5      npm            GHSA-6w3j-5fw6-r9vr  Low       0.4% (33rd)   0.1           
 joi                          18.2.3                                    18.2.4      npm            GHSA-gg4h-3hg2-grpc  Low       0.4% (33rd)   0.1           
 filelock                     3.32.2                                    4.0.9       python         GHSA-j8f7-rjxc-mr56  Medium    0.2% (14th)   0.1           
+step-security/harden-runner  1d88384fd173af6ecb012dfd0264a306b711241a  2.16.0      github-action  GHSA-g699-3x6g-wm3g  Medium    0.3% (18th)   0.1           
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.16.0      github-action  GHSA-g699-3x6g-wm3g  Medium    0.3% (18th)   0.1           
-step-security/harden-runner  ccd8616d44fd3846e67624a50d5aad6d37bf2d25  2.16.0      github-action  GHSA-g699-3x6g-wm3g  Medium    0.3% (18th)   0.1           
 virtualenv                   20.31.2                                   21.7.13     python         GHSA-p58f-9548-mpm2  High      0.2% (5th)    0.1           
 virtualenv                   21.7.4                                    21.7.13     python         GHSA-p58f-9548-mpm2  High      0.2% (5th)    0.1           
 fast-uri                     3.1.5                                     3.1.9       npm            GHSA-wjr9-j795-jxcr  Medium    0.3% (17th)   0.1           
+step-security/harden-runner  1d88384fd173af6ecb012dfd0264a306b711241a  2.12.0      github-action  GHSA-mxr3-8whj-j74r  Medium    0.2% (13th)   0.1           
 step-security/harden-runner  bf7454d06d71f1098171f2acdf0cd4708d7b5920  2.12.0      github-action  GHSA-mxr3-8whj-j74r  Medium    0.2% (13th)   0.1           
-step-security/harden-runner  ccd8616d44fd3846e67624a50d5aad6d37bf2d25  2.12.0      github-action  GHSA-mxr3-8whj-j74r  Medium    0.2% (13th)   0.1           
 fast-uri                     3.1.5                                     3.1.8       npm            GHSA-hrr3-gc8f-f4qj  Medium    0.3% (16th)   0.1           
 undici                       8.10.0                                    8.10.2      npm            GHSA-vp8m-p9jh-q5pm  High      0.2% (5th)    0.1           
 filelock                     3.18.0                                    4.2.1       python         GHSA-69hj-f68j-2879  Medium    0.2% (12th)   0.1           
@@ -5377,7 +5479,7 @@ undici                       5.28.4                                    6.28.0   
 pyjwt                        2.10.1                                    2.14.0      python         GHSA-9v7f-9g4p-ffgj  High      0.2% (5th)    0.1           
 tornado                      6.5.8                                     6.6         python         GHSA-pw9p-v7r6-gx4p  Low       0.5% (40th)   0.1           
 pyjwt                        2.10.1                                    2.14.0      python         GHSA-jwrc-g2q2-pq5p  Medium    0.2% (15th)   0.1           
-python-multipart             0.0.20                                    0.0.31      python         GHSA-v9pg-7xvm-68hf  Low       0.3% (27th)   0.1           
+python-multipart             0.0.20                                    0.0.31      python         GHSA-v9pg-7xvm-68hf  Low       0.3% (28th)   0.1           
 filelock                     3.32.2                                    4.2.1       python         GHSA-cwqr-hh33-gh44  Medium    0.2% (12th)   0.1           
 nx                           23.1.1                                    23.1.2      npm            GHSA-w3vv-58gj-gw77  High      0.1% (3rd)    0.1           
 filelock                     3.18.0                                    3.20.1      python         GHSA-w853-jp5j-5j7f  Medium    0.2% (9th)    0.1           
@@ -5388,10 +5490,10 @@ hono                         4.13.2                                    4.13.7   
 pyjwt                        2.10.1                                    2.14.0      python         GHSA-hxm8-2xgr-2p9m  Medium    0.2% (13th)   0.1           
 starlette                    0.46.2                                    1.1.0       python         GHSA-x746-7m8f-x49c  Medium    0.2% (11th)   0.1           
 jupyterlab                   4.6.3                                     4.6.4       python         GHSA-3325-v43h-43rv  Medium    0.2% (10th)   0.1           
-undici                       5.28.4                                    6.28.1      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (23rd)   0.1           
-undici                       6.28.0                                    6.28.1      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (23rd)   0.1           
-undici                       7.29.0                                    7.29.1      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (23rd)   0.1           
-undici                       8.10.0                                    8.10.2      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (23rd)   0.1           
+undici                       5.28.4                                    6.28.1      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (24th)   0.1           
+undici                       6.28.0                                    6.28.1      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (24th)   0.1           
+undici                       7.29.0                                    7.29.1      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (24th)   0.1           
+undici                       8.10.0                                    8.10.2      npm            GHSA-r53p-7pc4-xj5r  Low       0.3% (24th)   0.1           
 undici                       5.28.4                                    5.29.0      npm            GHSA-cxrh-j4jr-qwg3  Low       0.3% (27th)   0.1           
 pyjwt                        2.10.1                                    2.13.0      python         GHSA-993g-76c3-p5m4  Medium    0.2% (12th)   0.1           
 aiohttp                      3.14.3                                    3.14.4      python         GHSA-gx76-c99x-2c96  Low       0.4% (32nd)   0.1           
@@ -5407,11 +5509,13 @@ pyjwt                        2.10.1                                    2.15.0   
 nx                           23.1.1                                    23.2.1      npm            GHSA-hrvq-x7jp-36xv  Medium    0.2% (6th)    < 0.1         
 anyio                        4.9.0                                     4.14.2      python         GHSA-5p39-cfhj-2xmp  Medium    0.2% (4th)    < 0.1         
 starlette                    0.46.2                                    1.3.0       python         GHSA-jp82-jpqv-5vv3  Low       0.3% (19th)   < 0.1         
+requests                     2.32.4                                    2.33.0      python         GHSA-gc5v-m9x4-r6x2  Medium    0.2% (9th)    < 0.1         
 pytest                       8.4.1                                     9.0.3       python         GHSA-6w46-j5rx-g56g  Medium    0.2% (4th)    < 0.1         
-requests                     2.32.4                                    2.33.0      python         GHSA-gc5v-m9x4-r6x2  Medium    0.2% (8th)    < 0.1         
+hono                         4.13.2                                    4.13.16     npm            GHSA-46wx-v44x-9hh2  Medium    0.2% (7th)    < 0.1         
 asteval                      1.0.6                                     1.0.9       python         GHSA-89v8-rhwq-hf77  Medium    0.2% (7th)    < 0.1         
 python-multipart             0.0.20                                    0.0.30      python         GHSA-6jv3-5f52-599m  Low       0.3% (17th)   < 0.1         
 @grpc/grpc-js                1.14.4                                    1.14.5      npm            GHSA-f596-whhp-79r4  Low       0.3% (16th)   < 0.1         
+hono                         4.13.2                                    4.13.16     npm            GHSA-3gg2-335m-rxc6  Low       0.3% (18th)   < 0.1         
 filelock                     3.32.2                                    4.2.1       python         GHSA-9c4x-gm8v-wgc4  Medium    0.1% (4th)    < 0.1         
 filelock                     3.18.0                                    4.2.1       python         GHSA-8mx5-7m5m-r77g  Medium    0.2% (5th)    < 0.1         
 filelock                     3.32.2                                    4.2.1       python         GHSA-8mx5-7m5m-r77g  Medium    0.2% (5th)    < 0.1         
@@ -5448,6 +5552,7 @@ virtualenv                   20.31.2                                   21.14.9  
 virtualenv                   21.7.4                                    21.14.9     python         GHSA-qmx5-4p3x-wvqf  Low       0.2% (15th)   < 0.1         
 pylint                       4.0.7                                     4.0.9       python         GHSA-22qq-2fwx-7p67  Medium    0.1% (1st)    < 0.1         
 filelock                     3.32.2                                    4.2.1       python         GHSA-m462-7rxw-wvpg  Medium    0.1% (1st)    < 0.1         
+tornado                      6.5.8                                     6.6.1       python         GHSA-5cjw-f85j-cv6r  Low       0.2% (5th)    < 0.1         
 virtualenv                   20.31.2                                   20.36.1     python         GHSA-597g-3phw-6986  Medium    0.1% (0th)    < 0.1         
 pygments                     2.19.2                                    2.20.0      python         GHSA-5239-wwwm-4pmq  Low       0.2% (5th)    < 0.1         
 undici                       7.29.0                                    7.29.1      npm            GHSA-8436-99hf-9mmv  Low       0.1% (1st)    < 0.1         
@@ -5458,6 +5563,7 @@ certifi                      2025.6.15                                 2026.10.1
 certifi                      2026.7.22                                 2026.10.18  python         GHSA-6q48-6c7w-9gw2  Critical  N/A           N/A           
 actions/download-artifact    v4                                        4.1.3       github-action  GHSA-cxww-7g56-2vh6  High      N/A           N/A           
 cryptography                 45.0.4                                    48.0.1      python         GHSA-537c-gmf6-5ccf  High      N/A           N/A           
+dnspython                    2.7.0                                     2.9.2       python         GHSA-vvf4-9x63-8xvv  High      N/A           N/A           
 gitpython                    3.1.59                                    3.2.0       python         GHSA-23mf-xhv8-69c2  High      N/A           N/A           
 gitpython                    3.1.59                                    3.2.0       python         GHSA-f9j4-qggq-h239  High      N/A           N/A           
 gitpython                    3.1.59                                    3.2.0       python         GHSA-m64x-33q8-m5h7  High      N/A           N/A           
@@ -5493,28 +5599,18 @@ tornado                      6.5.8                                     6.5.9    
 deepmerge                    4.3.1                                                 npm            GHSA-gcqx-w48m-w2h4  Low       N/A           N/A           
 esbuild                      0.27.7                                    0.28.1      npm            GHSA-g7r4-m6w7-qqqr  Low       N/A           N/A           
 setuptools                   84.0.0                                    84.1.0      python         GHSA-xmj3-9gf7-h52w  Low       N/A           N/A
-[0104] ERROR discovered vulnerabilities at or above the severity threshold
+[0124] ERROR discovered vulnerabilities at or above the severity threshold
 
-(Truncated to last 25000 characters out of 83948)
+(Truncated to last 27586 characters out of 86950)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ COPYPASTE / jscpd - 2927 errors</summary>
+<summary>⚠️ COPYPASTE / jscpd - 2748 errors</summary>
 
 ```
-67:13] (12 lines, 59 tokens)
-   egolint/.config/megalinter/tool-matrix.json [1992:90 - 2003:13]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [65:1 - 106:5] (42 lines, 124 tokens)
-   egolint/.config/megalinter/v10-catalog.json [2721:1 - 2762:5]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [404:23 - 421:5] (18 lines, 50 tokens)
-   egolint/.config/megalinter/v10-catalog.json [2761:43 - 2778:5]
-Clone found (json)
- - egolint/.config/megalinter/v10-catalog.json [1146:41 - 1166:5] (21 lines, 59 tokens)
-   egolint/.config/megalinter/v10-catalog.json [2833:41 - 2853:5]
+talog.json [2833:41 - 2853:5]
 Clone found (json)
  - egolint/.config/megalinter/v10-catalog.json [1185:52 - 1202:5] (18 lines, 50 tokens)
    egolint/.config/megalinter/v10-catalog.json [2852:28 - 2869:5]
@@ -5545,12 +5641,21 @@ Clone found (json)
 Clone found (json)
  - egolint/.config/toolchain/tool-matrix.json [272:25 - 286:11] (15 lines, 51 tokens)
    egolint/.config/toolchain/tool-matrix.json [494:24 - 508:11]
+Clone found (editorconfig)
+ - egolint/.editorconfig [1:1 - 88:15] (88 lines, 257 tokens)
+   holon/packs/react-vite/template/.editorconfig [1:1 - 88:15]
+Clone found (editorconfig)
+ - egolint/.editorconfig [91:1 - 147:33] (57 lines, 143 tokens)
+   holon/packs/react-vite/template/.editorconfig [91:1 - 147:33]
 Clone found (yaml)
  - egolint/.mega-linter.yml [1237:37 - 1249:5] (13 lines, 53 tokens)
    egolint/.mega-linter.yml [1266:32 - 1278:5]
 Clone found (json)
  - egolint/package.json [26:26 - 37:3] (12 lines, 52 tokens)
    holon/packs/react-vite/template/package.json [29:19 - 40:3]
+Clone found (json)
+ - egolint/package.json [27:11 - 41:21] (15 lines, 71 tokens)
+   package.json [27:11 - 41:21]
 Clone found (json)
  - egolint/package.json [41:35 - 66:5] (26 lines, 117 tokens)
    package.json [41:35 - 66:5]
@@ -5576,14 +5681,26 @@ Clone found (java)
  - egolint/tests/fixtures/checkstyle/GreetingService.java [27:1 - 34:2] (8 lines, 62 tokens)
    egolint/tests/fixtures/pmd/GreetingService.java [13:1 - 20:2]
 Clone found (json)
- - foundation/catalog.json [215:35 - 223:22] (9 lines, 50 tokens)
-   foundation/catalog.json [227:49 - 235:22]
+ - foundation/catalog.json [222:35 - 230:22] (9 lines, 50 tokens)
+   foundation/catalog.json [234:49 - 242:22]
 Clone found (json)
- - foundation/catalog.json [323:56 - 331:22] (9 lines, 50 tokens)
-   foundation/catalog.json [335:45 - 343:22]
+ - foundation/catalog.json [330:56 - 338:22] (9 lines, 50 tokens)
+   foundation/catalog.json [342:45 - 350:22]
 Clone found (json)
- - foundation/catalog.json [359:46 - 367:22] (9 lines, 50 tokens)
-   foundation/catalog.json [371:43 - 379:22]
+ - foundation/catalog.json [366:46 - 374:22] (9 lines, 50 tokens)
+   foundation/catalog.json [378:43 - 386:22]
+Clone found (json)
+ - foundation/catalog.json [502:23 - 510:22] (9 lines, 50 tokens)
+   foundation/catalog.json [514:37 - 522:22]
+Clone found (json)
+ - foundation/catalog.json [502:23 - 510:22] (9 lines, 50 tokens)
+   foundation/catalog.json [526:56 - 534:22]
+Clone found (json)
+ - foundation/catalog.json [502:23 - 510:22] (9 lines, 50 tokens)
+   foundation/catalog.json [538:34 - 546:22]
+Clone found (json)
+ - foundation/catalog.json [502:23 - 510:22] (9 lines, 50 tokens)
+   foundation/catalog.json [550:49 - 558:22]
 Clone found (yaml)
  - holon/packs/react-vite/template/.github/workflows/ci.yml [20:1 - 46:15] (27 lines, 159 tokens)
    holon/packs/react-vite/template/.github/workflows/ci.yml [54:1 - 80:15]
@@ -5618,8 +5735,8 @@ Clone found (typescript)
  - holon/packs/react-vite/template/apps/web/vite.config.ts [1:1 - 10:13] (10 lines, 60 tokens)
    holon/packs/react-vite/template/docs/tooling/vite.md:typescript [48:1 - 57:13]
 Clone found (json)
- - holon/packs/react-vite/template/package.json [28:1 - 44:3] (17 lines, 82 tokens)
-   package.json [25:1 - 41:21]
+ - holon/packs/react-vite/template/package.json [28:1 - 40:3] (13 lines, 60 tokens)
+   package.json [25:1 - 37:3]
 Clone found (json)
  - holon/packs/react-vite/template/packages/api-client/package.json [2:35 - 13:2] (12 lines, 51 tokens)
    holon/packs/react-vite/template/packages/utilities/package.json [2:34 - 13:2]
@@ -5635,6 +5752,15 @@ Clone found (json)
 Clone found (json)
  - holon/packs/react-vite/template/packages/i18n/package.json [2:29 - 16:2] (15 lines, 64 tokens)
    holon/packs/react-vite/template/packages/icons/package.json [2:30 - 16:2]
+Clone found (json)
+ - integrations/website/generic.manifest.json [1:1 - 14:17] (14 lines, 72 tokens)
+   integrations/website/launchkit.manifest.json [1:1 - 14:17]
+Clone found (json)
+ - integrations/website/generic.manifest.json [14:34 - 22:5] (9 lines, 54 tokens)
+   integrations/website/launchkit.manifest.json [14:36 - 22:5]
+Clone found (json)
+ - integrations/website/generic.manifest.json [27:60 - 89:2] (63 lines, 283 tokens)
+   integrations/website/launchkit.manifest.json [145:6 - 207:2]
 Clone found (python)
  - mindgarden/scripts/garden_agent.py [58:75 - 67:5] (10 lines, 63 tokens)
    mindgarden/scripts/publish_garden.py [85:52 - 94:5]
@@ -5654,26 +5780,44 @@ Clone found (python)
  - mindgarden/tests/test_garden_agent.py [257:58 - 262:13] (6 lines, 57 tokens)
    mindgarden/tests/test_garden_agent.py [272:46 - 277:13]
 Clone found (python)
- - mindgarden/tests/test_garden_agent.py [257:58 - 270:45] (14 lines, 125 tokens)
-   mindgarden/tests/test_garden_agent.py [288:58 - 301:13]
+ - mindgarden/tests/test_garden_agent.py [257:58 - 262:13] (6 lines, 57 tokens)
+   mindgarden/tests/test_garden_agent.py [288:58 - 293:13]
+Clone found (python)
+ - mindgarden/tests/test_garden_agent.py [272:60 - 285:13] (14 lines, 117 tokens)
+   mindgarden/tests/test_garden_agent.py [288:72 - 301:13]
 Clone found (python)
  - mindgarden/tests/test_publish_garden.py [90:1 - 95:48] (6 lines, 53 tokens)
    mindgarden/tests/test_validate_garden.py [71:1 - 76:48]
 Clone found (json)
- - schemas/repository-foundation-catalog.v1.schema.json [70:42 - 83:10] (14 lines, 63 tokens)
-   schemas/repository-foundation-catalog.v1.schema.json [89:53 - 102:10]
+ - schemas/repository-foundation-catalog.v1.schema.json [96:42 - 109:10] (14 lines, 63 tokens)
+   schemas/repository-foundation-catalog.v1.schema.json [115:53 - 128:10]
 Clone found (python)
- - tests/test_repository_intelligence_provenance.py [62:53 - 67:5] (6 lines, 53 tokens)
-   tests/test_staging_removal_gate.py [15:39 - 20:5]
+ - tests/test_attribution.py [32:67 - 37:17] (6 lines, 57 tokens)
+   tests/test_attribution.py [49:72 - 53:51]
+Clone found (python)
+ - tests/test_foundation_mailmap.py [49:59 - 56:9] (8 lines, 81 tokens)
+   tests/test_foundation_mailmap.py [231:82 - 238:9]
+Clone found (python)
+ - tests/test_gitignore_adoption.py [14:1 - 21:5] (8 lines, 50 tokens)
+   tests/test_mindgarden_standalone_consumer.py [14:1 - 20:5]
+Clone found (python)
+ - tests/test_repository_intelligence_provenance.py [62:1 - 67:5] (6 lines, 73 tokens)
+   tests/test_staging_removal_gate.py [18:1 - 23:5]
 Clone found (python)
  - tests/test_repository_intelligence_provenance.py [145:17 - 153:60] (9 lines, 55 tokens)
    tests/test_repository_intelligence_provenance.py [217:18 - 225:60]
 Clone found (python)
- - tests/test_repository_intelligence_workflows.py [191:1 - 198:68] (8 lines, 58 tokens)
-   tests/test_repository_intelligence_workflows.py [636:1 - 643:68]
+ - tests/test_repository_intelligence_publication.py [63:1 - 68:5] (6 lines, 51 tokens)
+   tests/test_website_baseline.py [22:1 - 26:9]
 Clone found (python)
- - tests/test_staging_removal_gate.py [47:84 - 54:14] (8 lines, 54 tokens)
-   tests/test_staging_removal_gate.py [64:49 - 71:14]
+ - tests/test_repository_intelligence_workflows.py [197:1 - 204:68] (8 lines, 58 tokens)
+   tests/test_repository_intelligence_workflows.py [755:1 - 762:68]
+Clone found (python)
+ - tests/test_staging_diff_gate.py [127:1 - 132:9] (6 lines, 57 tokens)
+   tests/test_staging_diff_gate.py [134:1 - 139:9]
+Clone found (python)
+ - tests/test_staging_removal_gate.py [53:84 - 60:14] (8 lines, 54 tokens)
+   tests/test_staging_removal_gate.py [70:49 - 77:14]
 Clone found (python)
  - tests/test_validate_automation.py [45:53 - 57:32] (13 lines, 66 tokens)
    tests/test_validate_automation.py [108:47 - 120:32]
@@ -5681,144 +5825,153 @@ Clone found (python)
  - tests/test_validate_automation.py [46:9 - 57:32] (12 lines, 56 tokens)
    tests/test_validate_automation.py [64:16 - 75:32]
 Clone found (python)
- - tools/repository_intelligence_publication.py [361:80 - 366:19] (6 lines, 55 tokens)
+ - tools/repository_intelligence_publication.py [396:80 - 401:19] (6 lines, 55 tokens)
    tools/verify_repository_intelligence_rollback.py [79:38 - 84:19]
 Clone found (python)
- - tools/staging_home_audit.py [1345:5 - 1352:9] (8 lines, 54 tokens)
-   tools/staging_removal_gate.py [72:25 - 79:9]
+ - tools/staging_diff_gate.py [50:60 - 58:9] (9 lines, 54 tokens)
+   tools/staging_home_audit.py [212:51 - 220:9]
+Clone found (python)
+ - tools/staging_home_audit.py [1362:5 - 1369:9] (8 lines, 54 tokens)
+   tools/staging_removal_gate.py [94:25 - 101:9]
 ┌──────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
 │ Format       │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ apex         │ 65             │ 31231       │ 402696       │ 411          │ 9964 (31.90%)    │ 147234 (36.56%)   │
+│ apex         │ 65             │ 30529       │ 402696       │ 426          │ 10526 (34.48%)   │ 143080 (35.53%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bash         │ 230            │ 60562       │ 106408       │ 61           │ 3106 (5.13%)     │ 11507 (10.81%)    │
+│ bash         │ 238            │ 16403       │ 107976       │ 65           │ 2717 (16.56%)    │ 11703 (10.84%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ batch        │ 1              │ 90          │ 97           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ batch        │ 3              │ 144         │ 1753         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ bicep        │ 5              │ 1154        │ 1640         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ bicep        │ 5              │ 322         │ 1640         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ c            │ 2              │ 274         │ 346          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ c            │ 2              │ 59          │ 346          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ clojure      │ 5              │ 1006        │ 2862         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ clojure      │ 5              │ 506         │ 2862         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ cpp          │ 4              │ 1550        │ 1658         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ cpp          │ 4              │ 199         │ 1658         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ csharp       │ 56             │ 14917       │ 43793        │ 22           │ 479 (3.21%)      │ 1936 (4.42%)      │
+│ csharp       │ 56             │ 5645        │ 43793        │ 24           │ 237 (4.20%)      │ 2034 (4.64%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ css          │ 29             │ 5884        │ 19407        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ css          │ 30             │ 2355        │ 19666        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ csv          │ 1              │ 5           │ 60           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ csv          │ 4              │ 1038        │ 94032        │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ dart         │ 1              │ 15          │ 67           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ diff         │ 2              │ 618         │ 4347         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ diff         │ 2              │ 417         │ 4347         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ editorconfig │ 1              │ 49          │ 63           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ docker       │ 26             │ 5332        │ 29900        │ 33           │ 770 (14.44%)     │ 4902 (16.39%)     │
+├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ editorconfig │ 4              │ 331         │ 993          │ 2            │ 145 (43.81%)     │ 400 (40.28%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ gherkin      │ 1              │ 13          │ 155          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ glsl         │ 1              │ 449         │ 117          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ glsl         │ 1              │ 9           │ 117          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ go           │ 11             │ 3436        │ 7697         │ 4            │ 63 (1.83%)       │ 232 (3.01%)       │
+│ go           │ 11             │ 1019        │ 7697         │ 4            │ 31 (3.04%)       │ 232 (3.01%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ graphql      │ 8              │ 1278        │ 1738         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ graphql      │ 8              │ 287         │ 1738         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ groovy       │ 2              │ 120         │ 129          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ groovy       │ 2              │ 32          │ 129          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ haxe         │ 3              │ 723         │ 3092         │ 1            │ 5 (0.69%)        │ 53 (1.71%)        │
+│ haxe         │ 3              │ 288         │ 3092         │ 1            │ 5 (1.74%)        │ 53 (1.71%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ hcl          │ 6              │ 680         │ 1720         │ 1            │ 5 (0.74%)        │ 91 (5.29%)        │
+│ hcl          │ 6              │ 199         │ 1720         │ 1            │ 6 (3.02%)        │ 91 (5.29%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ hlsl         │ 2              │ 1401        │ 2883         │ 1            │ 31 (2.21%)       │ 63 (2.19%)        │
+│ hlsl         │ 2              │ 376         │ 2883         │ 1            │ 9 (2.39%)        │ 63 (2.19%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ http         │ 1              │ 195         │ 180          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ http         │ 1              │ 35          │ 296          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ ignore       │ 1              │ 45          │ 126          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ ini          │ 7              │ 1818        │ 3571         │ 1            │ 8 (0.44%)        │ 52 (1.46%)        │
+│ ini          │ 7              │ 317         │ 3571         │ 1            │ 8 (2.52%)        │ 52 (1.46%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ java         │ 34             │ 10376       │ 32325        │ 12           │ 152 (1.46%)      │ 843 (2.61%)       │
+│ java         │ 34             │ 3947        │ 32325        │ 12           │ 111 (2.81%)      │ 843 (2.61%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ javascript   │ 70             │ 22962       │ 63622        │ 58           │ 1321 (5.75%)     │ 5555 (8.73%)      │
+│ javascript   │ 70             │ 10434       │ 63809        │ 72           │ 777 (7.45%)      │ 6241 (9.78%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ json         │ 238            │ 70576       │ 211342       │ 69           │ 1235 (1.75%)     │ 5351 (2.53%)      │
+│ json         │ 272            │ 54926       │ 240675       │ 91           │ 1672 (3.04%)     │ 7229 (3.00%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ jsx          │ 33             │ 6077        │ 18160        │ 12           │ 163 (2.68%)      │ 720 (3.96%)       │
+│ jsx          │ 33             │ 2381        │ 18202        │ 12           │ 104 (4.37%)      │ 720 (3.96%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ kotlin       │ 9              │ 4037        │ 6546         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ kotlin       │ 9              │ 1059        │ 6546         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ kusto        │ 1              │ 542         │ 306          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ kusto        │ 2              │ 59          │ 551          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ latex        │ 303            │ 44381       │ 847496       │ 895          │ 13119 (29.56%)   │ 242039 (28.56%)   │
+│ latex        │ 303            │ 44223       │ 847496       │ 665          │ 11210 (25.35%)   │ 190436 (22.47%)   │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ liquid       │ 2              │ 597         │ 835          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ liquid       │ 2              │ 105         │ 835          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ makefile     │ 1              │ 399         │ 997          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ makefile     │ 6              │ 340         │ 2930         │ 1            │ 6 (1.76%)        │ 71 (2.42%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markdown     │ 1720           │ 330002      │ 4282679      │ 683          │ 11413 (3.46%)    │ 170309 (3.98%)    │
+│ markdown     │ 1740           │ 332645      │ 3982209      │ 522          │ 9758 (2.93%)     │ 96958 (2.43%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ markup       │ 98             │ 29764       │ 115689       │ 43           │ 911 (3.06%)      │ 7024 (6.07%)      │
+│ markup       │ 98             │ 10536       │ 115689       │ 55           │ 1111 (10.54%)    │ 7828 (6.77%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ mermaid      │ 13             │ 3156        │ 6074         │ 12           │ 135 (4.28%)      │ 1061 (17.47%)     │
+│ mermaid      │ 13             │ 656         │ 6074         │ 14           │ 149 (22.71%)     │ 1159 (19.08%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ pascal       │ 1              │ 410         │ 419          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ nasm         │ 2              │ 64          │ 270          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ perl         │ 4              │ 80          │ 330          │ 2            │ 42 (52.50%)      │ 168 (50.91%)      │
+│ pascal       │ 1              │ 77          │ 419          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ php          │ 9              │ 3948        │ 17117        │ 8            │ 77 (1.95%)       │ 486 (2.84%)       │
+│ perl         │ 4              │ 80          │ 330          │ 2            │ 44 (55.00%)      │ 168 (50.91%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ plant-uml    │ 1              │ 198         │ 555          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ php          │ 9              │ 1944        │ 17117        │ 8            │ 63 (3.24%)       │ 486 (2.84%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ powerquery   │ 2              │ 774         │ 591          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ plant-uml    │ 1              │ 88          │ 555          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ powershell   │ 37             │ 9686        │ 32735        │ 7            │ 69 (0.71%)       │ 688 (2.10%)       │
+│ powerquery   │ 2              │ 55          │ 591          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ properties   │ 3              │ 834         │ 520          │ 2            │ 30 (3.60%)       │ 135 (25.96%)      │
+│ powershell   │ 37             │ 3838        │ 32735        │ 7            │ 76 (1.98%)       │ 688 (2.10%)       │
+├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ properties   │ 3              │ 52          │ 520          │ 2            │ 17 (32.69%)      │ 135 (25.96%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
 │ protobuf     │ 1              │ 31          │ 99           │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ python       │ 288            │ 68036       │ 424322       │ 123          │ 1220 (1.79%)     │ 11644 (2.74%)     │
+│ python       │ 322            │ 56427       │ 472901       │ 134          │ 1264 (2.24%)     │ 12532 (2.65%)     │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ r            │ 2              │ 129         │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ r            │ 2              │ 28          │ 289          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ razor        │ 5              │ 726         │ 1887         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ razor        │ 5              │ 242         │ 1887         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ regex        │ 3              │ 1747        │ 909          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ regex        │ 3              │ 73          │ 909          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ ruby         │ 5              │ 1948        │ 6943         │ 1            │ 11 (0.56%)       │ 52 (0.75%)        │
+│ rest         │ 2              │ 42          │ 286          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ rust         │ 9              │ 2557        │ 11862        │ 14           │ 161 (6.30%)      │ 1203 (10.14%)     │
+│ ruby         │ 5              │ 1185        │ 6943         │ 1            │ 7 (0.59%)        │ 52 (0.75%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ scala        │ 5              │ 1507        │ 6077         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ rust         │ 9              │ 1455        │ 11862        │ 14           │ 133 (9.14%)      │ 1181 (9.96%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ sql          │ 18             │ 2534        │ 6363         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ scala        │ 5              │ 721         │ 6077         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ swift        │ 4              │ 1313        │ 6312         │ 3            │ 21 (1.60%)       │ 192 (3.04%)       │
+│ sql          │ 18             │ 771         │ 6363         │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ text         │ 369            │ 84470       │ 197250       │ 32           │ 781 (0.92%)      │ 3098 (1.57%)      │
+│ swift        │ 4              │ 890         │ 6312         │ 3            │ 24 (2.70%)       │ 192 (3.04%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ toml         │ 36             │ 6588        │ 13486        │ 6            │ 154 (2.34%)      │ 471 (3.49%)       │
+│ text         │ 360            │ 14373       │ 185064       │ 38           │ 259 (1.80%)      │ 3380 (1.83%)      │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ tsx          │ 88             │ 4825        │ 18013        │ 1            │ 15 (0.31%)       │ 60 (0.33%)        │
+│ toml         │ 37             │ 3481        │ 13651        │ 6            │ 160 (4.60%)      │ 471 (3.45%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ twig         │ 1              │ 573         │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ tsx          │ 88             │ 3051        │ 17927        │ 1            │ 16 (0.52%)       │ 60 (0.33%)        │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ txt          │ 32             │ 6466        │ 84996        │ 78           │ 1955 (30.24%)    │ 23695 (27.88%)    │
+│ twig         │ 1              │ 56          │ 429          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ typescript   │ 113            │ 15342       │ 44030        │ 9            │ 196 (1.28%)      │ 687 (1.56%)       │
+│ txt          │ 34             │ 6427        │ 94222        │ 51           │ 1857 (28.89%)    │ 23644 (25.09%)    │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ vue          │ 3              │ 1190        │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
+│ typescript   │ 112            │ 6952        │ 43959        │ 9            │ 115 (1.65%)      │ 687 (1.56%)       │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ yaml         │ 554            │ 57744       │ 324671       │ 355          │ 9399 (16.28%)    │ 105908 (32.62%)   │
+│ vue          │ 3              │ 32          │ 392          │ 0            │ 0 (0.00%)        │ 0 (0.00%)         │
 ├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
-│ Total:       │ 4560           │ 924038      │ 7391520      │ 2927         │ 56241 (6.09%)    │ 742557 (10.05%)   │
+│ yaml         │ 555            │ 43198       │ 330232       │ 470          │ 10118 (23.42%)   │ 111175 (33.67%)   │
+├──────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ Total:       │ 4695           │ 672859      │ 7302935      │ 2748         │ 53505 (7.95%)    │ 628946 (8.61%)    │
 └──────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
-Found 2927 clones.
+Found 2748 clones.
 HTML report saved to .reports/megalinter/copy-paste/jscpd-report.html
-ERROR: jscpd found too many duplicates (6.1%) over threshold (3.0%)
-time: 11.29s
+ERROR: jscpd found too many duplicates (8.0%) over threshold (3.0%)
+time: 13.65s
 
-(Truncated to last 25000 characters out of 665430)
+(Truncated to last 27586 characters out of 624090)
 ```
 
 </details>
@@ -5827,7 +5980,7 @@ time: 11.29s
 <summary>⚠️ MARKDOWN / markdown-table-formatter - 1 error</summary>
 
 ```
-58 files contain markdown tables to format:
+68 files contain markdown tables to format:
 - .audits/2026-08-15-staging-deduplication.md
 - .audits/2026-08-15-staging-home-audit.md
 - .audits/2026-08-16-misc-promotion.md
@@ -5855,13 +6008,23 @@ time: 11.29s
 - TASKS.md
 - audits/empathy-completeness-20261019T132001Z.md
 - beacon/.staging/latex/CVs and Resumes/Awesome-CV/README.md
+- docs/current-state-backlog.md
 - docs/decisions/ADR-0001-foundation-ownership.md
 - docs/foundation/INVENTORY.md
 - docs/foundation/gitignore/ITERATION-01.md
 - docs/foundation/gitignore/MIGRATION-03.md
+- docs/foundation/gitignore/NESTED-ADOPTION-05.md
 - docs/foundation/gitignore/README.md
 - docs/foundation/gitignore/RULE_AUDIT.md
+- docs/foundation/gitignore/SHARED-INTEGRATION-04.md
+- docs/foundation/mailmap/README.md
 - docs/integrations/REPOSITORY_INTELLIGENCE.md
+- docs/integrations/REPOSITORY_INTELLIGENCE_ARTIFACT_REPORTS.md
+- docs/integrations/REPOSITORY_INTELLIGENCE_REPORT_SOURCES.md
+- docs/integrations/WEBSITE_BASELINE.md
+- docs/migration/STAGING_RECEIPTS.md
+- docs/security/attribution-review.md
+- docs/security/dependency-coverage.md
 - egolint/.agents/agents/AGENT-CONTRACT.md
 - egolint/.agents/skills/SKILL-CONTRACT.md
 - egolint/.agents/specs/SCHEMA.md
@@ -5891,10 +6054,27 @@ time: 11.29s
 </details>
 
 <details>
-<summary>⚠️ SPELL / proselint - 861 errors</summary>
+<summary>⚠️ SPELL / proselint - 911 errors</summary>
 
 ```
-t/.agents/skills/architecture/create-manifesto-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+not straight quotes "".
+egolint/.agents/skills/architecture/create-design-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-design-system-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-epistemology-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-foundations-document/references/authoring-guide.md:21:40: redundancy.misc.after_the_deadline: Redundancy. Use 'evolve' instead of 'evolve over time'.
+egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
+egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:9:17: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:10:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-manifesto-document/SKILL.md:11:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 egolint/.agents/skills/architecture/create-meta-architecture-document/SKILL.md:7:18: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
@@ -6095,19 +6275,16 @@ mindgarden/profiles/agent/README.md:91:11: typography.symbols.curly_quotes: Use 
 mindgarden/profiles/agent/README.md:94:11: typography.symbols.curly_quotes: Use curly quotes “”, not straight quotes "".
 mindgarden/profiles/agent/README.md:118:50: needless_variants: Needless variant. 'oversize' is the preferred form.
 
-(Truncated to last 25000 characters out of 122923)
+(Truncated to last 27586 characters out of 129010)
 ```
 
 </details>
 
 <details>
-<summary>⚠️ PYTHON / pylint - 266 errors</summary>
+<summary>⚠️ PYTHON / pylint - 289 errors</summary>
 
 ```
-ckchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:165:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:169:0: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:170:56: C0303: Trailing whitespace (trailing-whitespace)
-beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:170:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
+1: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:171:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:172:0: W0311: Bad indentation. Found 2 spaces, expected 8 (bad-indentation)
 beacon/.staging/latex/Academic Journals/american-geophysical-union/April 16 2019/trackchanges-0.7.0/PythonPackage/AcceptChanges/consoleoutput.py:173:0: W0311: Bad indentation. Found 3 spaces, expected 12 (bad-indentation)
@@ -6221,334 +6398,89 @@ egolint/scripts/validate_megalinter_policy.py:452:0: R0914: Too many local varia
 mindgarden/scripts/garden_agent.py:938:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 ************* Module scripts.publish_garden
 mindgarden/scripts/publish_garden.py:123:0: R0912: Too many branches (13/12) (too-many-branches)
+************* Module browser.website_baseline
+tests/browser/website_baseline.py:21:0: E0401: Unable to import 'playwright.sync_api' (import-error)
+tests/browser/website_baseline.py:39:4: W0221: Number of parameters was 3 in 'BaseHTTPRequestHandler.log_message' and is now 3 in overriding 'QuietHandler.log_message' method (arguments-differ)
+tests/browser/website_baseline.py:72:0: R0914: Too many local variables (26/20) (too-many-locals)
+************* Module test_attribution
+tests/test_attribution.py:24:8: E0401: Unable to import 'reuse.project' (import-error)
+tests/test_attribution.py:24:8: C0415: Import outside toplevel (reuse.project.Project) (import-outside-toplevel)
 ************* Module test_gitignore_baseline
 tests/test_gitignore_baseline.py:27:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_local_ci_consumer
+tests/test_local_ci_consumer.py:63:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module test_repository_intelligence_provenance
 tests/test_repository_intelligence_provenance.py:120:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module test_repository_intelligence_publication
-tests/test_repository_intelligence_publication.py:43:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
-tests/test_repository_intelligence_publication.py:297:57: W0212: Access to a protected member _git of a client class (protected-access)
-tests/test_repository_intelligence_publication.py:298:53: W0212: Access to a protected member _git of a client class (protected-access)
-tests/test_repository_intelligence_publication.py:41:0: R0904: Too many public methods (32/25) (too-many-public-methods)
+tests/test_repository_intelligence_publication.py:64:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+tests/test_repository_intelligence_publication.py:318:57: W0212: Access to a protected member _git of a client class (protected-access)
+tests/test_repository_intelligence_publication.py:319:53: W0212: Access to a protected member _git of a client class (protected-access)
+tests/test_repository_intelligence_publication.py:41:0: R0904: Too many public methods (33/25) (too-many-public-methods)
+************* Module test_repository_intelligence_report_artifacts
+tests/test_repository_intelligence_report_artifacts.py:18:0: E0401: Unable to import 'yaml' (import-error)
+tests/test_repository_intelligence_report_artifacts.py:31:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module test_repository_intelligence_reports
 tests/test_repository_intelligence_reports.py:67:20: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module test_repository_intelligence_rollback
 tests/test_repository_intelligence_rollback.py:33:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_repository_intelligence_scorecard_caller
+tests/test_repository_intelligence_scorecard_caller.py:23:0: E0401: Unable to import 'yaml' (import-error)
 ************* Module test_repository_intelligence_workflows
-tests/test_repository_intelligence_workflows.py:28:0: E0401: Unable to import 'yaml' (import-error)
-tests/test_repository_intelligence_workflows.py:109:4: R0911: Too many return statements (7/6) (too-many-return-statements)
-tests/test_repository_intelligence_workflows.py:139:0: R0913: Too many arguments (8/7) (too-many-arguments)
+tests/test_repository_intelligence_workflows.py:30:0: E0401: Unable to import 'yaml' (import-error)
+tests/test_repository_intelligence_workflows.py:115:4: R0911: Too many return statements (7/6) (too-many-return-statements)
+tests/test_repository_intelligence_workflows.py:145:0: R0913: Too many arguments (8/7) (too-many-arguments)
+tests/test_repository_intelligence_workflows.py:474:4: R0914: Too many local variables (23/20) (too-many-locals)
+************* Module test_staging_diff_gate
+tests/test_staging_diff_gate.py:22:0: E0401: Unable to import 'yaml' (import-error)
+tests/test_staging_diff_gate.py:38:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+************* Module test_website_baseline
+tests/test_website_baseline.py:23:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
 ************* Module foundation
-tools/foundation.py:69:0: R0914: Too many local variables (34/20) (too-many-locals)
-tools/foundation.py:69:0: R0912: Too many branches (53/12) (too-many-branches)
-tools/foundation.py:69:0: R0915: Too many statements (133/60) (too-many-statements)
-tools/foundation.py:258:0: R0914: Too many local variables (25/20) (too-many-locals)
-tools/foundation.py:258:0: R0912: Too many branches (26/12) (too-many-branches)
-tools/foundation.py:258:0: R0915: Too many statements (71/60) (too-many-statements)
-tools/foundation.py:556:0: R0911: Too many return statements (21/6) (too-many-return-statements)
-tools/foundation.py:556:0: R0912: Too many branches (24/12) (too-many-branches)
+tools/foundation.py:98:0: R0914: Too many local variables (36/20) (too-many-locals)
+tools/foundation.py:98:0: R0912: Too many branches (65/12) (too-many-branches)
+tools/foundation.py:98:0: R0915: Too many statements (164/60) (too-many-statements)
+tools/foundation.py:360:0: R0914: Too many local variables (25/20) (too-many-locals)
+tools/foundation.py:360:0: R0912: Too many branches (29/12) (too-many-branches)
+tools/foundation.py:360:0: R0915: Too many statements (77/60) (too-many-statements)
+tools/foundation.py:684:0: R0911: Too many return statements (26/6) (too-many-return-statements)
+tools/foundation.py:684:0: R0912: Too many branches (30/12) (too-many-branches)
+tools/foundation.py:684:0: R0915: Too many statements (72/60) (too-many-statements)
+************* Module foundation_ignore
+tools/foundation_ignore.py:109:8: R0916: Too many boolean expressions in if statement (6/5) (too-many-boolean-expressions)
+************* Module local_ci
+tools/local_ci.py:111:8: R0916: Too many boolean expressions in if statement (9/5) (too-many-boolean-expressions)
+************* Module mindgarden_consumer
+tools/mindgarden_consumer.py:49:8: R0916: Too many boolean expressions in if statement (6/5) (too-many-boolean-expressions)
+tools/mindgarden_consumer.py:92:0: R0914: Too many local variables (26/20) (too-many-locals)
 ************* Module repository_intelligence_publication
-tools/repository_intelligence_publication.py:411:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
-tools/repository_intelligence_publication.py:468:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+tools/repository_intelligence_publication.py:371:8: R0916: Too many boolean expressions in if statement (7/5) (too-many-boolean-expressions)
+tools/repository_intelligence_publication.py:446:4: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+tools/repository_intelligence_publication.py:503:0: R0917: Too many positional arguments (6/5) (too-many-positional-arguments)
+************* Module repository_intelligence_report_artifacts
+tools/repository_intelligence_report_artifacts.py:82:20: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)
+tools/repository_intelligence_report_artifacts.py:146:53: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)
+tools/repository_intelligence_report_artifacts.py:202:16: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)
+************* Module staging_diff_gate
+tools/staging_diff_gate.py:410:0: R0914: Too many local variables (29/20) (too-many-locals)
 ************* Module staging_home_audit
-tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1397/1000) (too-many-lines)
-tools/staging_home_audit.py:64:0: R0902: Too many instance attributes (24/12) (too-many-instance-attributes)
-tools/staging_home_audit.py:227:0: R0911: Too many return statements (15/6) (too-many-return-statements)
-tools/staging_home_audit.py:227:0: R0912: Too many branches (14/12) (too-many-branches)
-tools/staging_home_audit.py:279:0: R0911: Too many return statements (7/6) (too-many-return-statements)
-tools/staging_home_audit.py:279:22: W0613: Unused argument 'path' (unused-argument)
-tools/staging_home_audit.py:413:0: R0912: Too many branches (16/12) (too-many-branches)
-tools/staging_home_audit.py:413:0: R0915: Too many statements (70/60) (too-many-statements)
-tools/staging_home_audit.py:669:0: R0911: Too many return statements (44/6) (too-many-return-statements)
-tools/staging_home_audit.py:669:0: R0912: Too many branches (44/12) (too-many-branches)
-tools/staging_home_audit.py:669:0: R0915: Too many statements (66/60) (too-many-statements)
-tools/staging_home_audit.py:1175:0: R0911: Too many return statements (8/6) (too-many-return-statements)
-tools/staging_home_audit.py:1234:0: R0914: Too many local variables (22/20) (too-many-locals)
+tools/staging_home_audit.py:1:0: C0302: Too many lines in module (1414/1000) (too-many-lines)
+tools/staging_home_audit.py:65:0: R0902: Too many instance attributes (24/12) (too-many-instance-attributes)
+tools/staging_home_audit.py:244:0: R0911: Too many return statements (15/6) (too-many-return-statements)
+tools/staging_home_audit.py:244:0: R0912: Too many branches (14/12) (too-many-branches)
+tools/staging_home_audit.py:296:0: R0911: Too many return statements (7/6) (too-many-return-statements)
+tools/staging_home_audit.py:296:22: W0613: Unused argument 'path' (unused-argument)
+tools/staging_home_audit.py:430:0: R0912: Too many branches (16/12) (too-many-branches)
+tools/staging_home_audit.py:430:0: R0915: Too many statements (70/60) (too-many-statements)
+tools/staging_home_audit.py:686:0: R0911: Too many return statements (44/6) (too-many-return-statements)
+tools/staging_home_audit.py:686:0: R0912: Too many branches (44/12) (too-many-branches)
+tools/staging_home_audit.py:686:0: R0915: Too many statements (66/60) (too-many-statements)
+tools/staging_home_audit.py:1192:0: R0911: Too many return statements (8/6) (too-many-return-statements)
+tools/staging_home_audit.py:1251:0: R0914: Too many local variables (22/20) (too-many-locals)
 
 -----------------------------------
-Your code has been rated at 9.61/10
+Your code has been rated at 9.66/10
 
-(Truncated to last 25000 characters out of 52790)
-```
-
-</details>
-
-<details>
-<summary>⚠️ PYTHON / pyright - 8785 errors</summary>
-
-```
-ault: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:173:9 - error: Type of "artifact_profiles" is partially unknown
-    Type of "artifact_profiles" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:173:29 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:176:13 - error: Type of "unknown" is partially unknown
-    Type of "unknown" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:176:27 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:183:9 - error: Type of "markers" is partially unknown
-    Type of "markers" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:183:19 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:187:12 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:187:43 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:189:27 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:189:68 - error: Type of "strip" is unknown (reportUnknownMemberType)
-  tools/foundation.py:192:23 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:200:55 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:213:9 - error: Type of "field_ids" is partially unknown
-    Type of "field_ids" is "list[Unknown | None]" (reportUnknownVariableType)
-  tools/foundation.py:213:22 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:213:42 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:214:16 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:214:34 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:214:49 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:214:67 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "set[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:214:71 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown | None]" (reportUnknownArgumentType)
-  tools/foundation.py:216:20 - error: Type of "field" is unknown (reportUnknownVariableType)
-  tools/foundation.py:216:39 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:217:47 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:219:59 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:227:20 - error: Type of "output" is unknown (reportUnknownVariableType)
-  tools/foundation.py:227:40 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:228:63 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:228:63 - error: Argument type is partially unknown
-    Argument corresponds to parameter "value" in function "_safe_path"
-    Argument type is "Unknown | None" (reportUnknownArgumentType)
-  tools/foundation.py:231:33 - error: Argument type is unknown
-    Argument corresponds to parameter "object" in function "append" (reportUnknownArgumentType)
-  tools/foundation.py:276:69 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation.py:277:72 - error: Argument type is partially unknown
-    Argument corresponds to parameter "selected" in function "_resolve_profiles"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:306:16 - error: Type of "override" is unknown (reportUnknownVariableType)
-  tools/foundation.py:306:38 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__new__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:307:50 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:310:9 - error: Type of "identifier" is partially unknown
-    Type of "identifier" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:310:22 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:315:12 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:329:5 - error: Type of "unknown_fields" is partially unknown
-    Type of "unknown_fields" is "set[Unknown]" (reportUnknownVariableType)
-  tools/foundation.py:331:76 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:333:9 - error: Type of "value" is partially unknown
-    Type of "value" is "Unknown | None" (reportUnknownVariableType)
-  tools/foundation.py:333:17 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/foundation.py:351:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation.py:365:5 - error: Type of "resolved" is partially unknown
-    Type of "resolved" is "dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None]" (reportUnknownVariableType)
-  tools/foundation.py:372:61 - error: Type of "key" is unknown (reportUnknownVariableType)
-  tools/foundation.py:372:75 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation.py:378:12 - error: Return type, "tuple[dict[str, str | Any | list[str] | list[Any] | dict[Unknown, Unknown] | None], list[str]]", is partially unknown (reportUnknownVariableType)
-tools/foundation_ignore.py
-  tools/foundation_ignore.py:50:5 - error: Type of "fields" is partially unknown
-    Type of "fields" is "set[str] | set[str | Unknown]" (reportUnknownVariableType)
-  tools/foundation_ignore.py:51:44 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:52:69 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "sorted"
-    Argument type is "set[str] | set[str | Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:55:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:57:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:59:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:61:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:62:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:67:48 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:71:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:72:5 - error: Type of "extend" is partially unknown
-    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:75:9 - error: Type of "overlay" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:76:9 - error: Type of "extend" is partially unknown
-    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:78:9 - error: Type of "sources" is partially unknown
-    Type of "sources" is "list[Unknown]" (reportUnknownVariableType)
-  tools/foundation_ignore.py:80:13 - error: Type of "values" is partially unknown
-    Type of "values" is "list[Unknown]" (reportUnknownVariableType)
-  tools/foundation_ignore.py:80:23 - error: Type of "casefold" is unknown (reportUnknownMemberType)
-  tools/foundation_ignore.py:80:52 - error: Type of "source" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:81:20 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:81:35 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:81:39 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:82:17 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:83:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:87:43 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:91:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:94:5 - error: Type of "selected" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:95:76 - error: Type of "item" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:96:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:98:16 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:98:33 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:98:37 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:99:13 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:100:13 - error: Type of "identifier" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:102:17 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:104:17 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:107:5 - error: Type of "local" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:114:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:117:12 - error: Return type, "list[Unknown]", is partially unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:124:47 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "dict[Unknown, Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:126:5 - error: Type of "scopes" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:131:9 - error: Type of "scope" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:132:9 - error: Type of "extend" is partially unknown
-    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:134:9 - error: Type of "roots" is partially unknown
-    Type of "roots" is "list[Unknown]" (reportUnknownVariableType)
-  tools/foundation_ignore.py:134:18 - error: Type of "casefold" is unknown (reportUnknownMemberType)
-  tools/foundation_ignore.py:134:47 - error: Type of "scope" is unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:135:16 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:135:30 - error: Argument type is partially unknown
-    Argument corresponds to parameter "obj" in function "len"
-    Argument type is "set[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:135:34 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:136:13 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:138:13 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:139:23 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:154:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:156:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:159:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:161:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:164:12 - error: Return type, "tuple[Any, list[Unknown]]", is partially unknown (reportUnknownVariableType)
-  tools/foundation_ignore.py:182:9 - error: Type of "extend" is partially unknown
-    Type of "extend" is "(iterable: Iterable[Unknown], /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:184:33 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "__init__"
-    Argument type is "list[Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:192:13 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:193:27 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "extend"
-    Argument type is "list[str | Unknown]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:195:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:198:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-  tools/foundation_ignore.py:200:13 - error: Argument type is partially unknown
-    Argument corresponds to parameter "iterable" in function "extend"
-    Argument type is "list[Unknown | str]" (reportUnknownArgumentType)
-  tools/foundation_ignore.py:206:9 - error: Type of "append" is partially unknown
-    Type of "append" is "(object: Unknown, /) -> None" (reportUnknownMemberType)
-tools/repository_intelligence_publication.py
-  tools/repository_intelligence_publication.py:160:5 - error: Type of "records" is partially unknown
-    Type of "records" is "list[Unknown]" (reportUnknownVariableType)
-  tools/repository_intelligence_publication.py:332:12 - warning: Unnecessary isinstance call; "str" is always an instance of "str" (reportUnnecessaryIsInstance)
-tools/staging_home_audit.py
-  tools/staging_home_audit.py:1304:25 - error: Argument of type "dict[str, Any]" cannot be assigned to parameter "rowdict" of type "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]" in function "writerow"
-    "dict[str, Any]" is not assignable to "Mapping[Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes'], Any]"
-      Type parameter "_KT@Mapping" is invariant, but "str" is not the same as "Literal['source_path', 'bytes', 'git_mode', 'git_blob', 'kind', 'collection', 'canonical_owner', 'incubation_home', 'canonical_home', 'disposition', 'merge_group', 'trust_class', 'sensitivity', 'confidence', 'duplicate_of', 'duplicate_action', 'flags', 'migration_state', 'provenance_state', 'exit_criteria', 'destination_evidence', 'deletion_approved_by', 'deletion_approved_at', 'notes']" (reportArgumentType)
-tools/staging_removal_gate.py
-  tools/staging_removal_gate.py:34:9 - error: Type of "source_path" is partially unknown
-    Type of "source_path" is "Unknown | None" (reportUnknownVariableType)
-  tools/staging_removal_gate.py:34:23 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/staging_removal_gate.py:43:23 - error: Type of parameter "rows" is unknown (reportUnknownParameterType)
-  tools/staging_removal_gate.py:43:23 - error: Type annotation is missing for parameter "rows" (reportMissingParameterType)
-  tools/staging_removal_gate.py:43:29 - error: Type of parameter "approvals" is unknown (reportUnknownParameterType)
-  tools/staging_removal_gate.py:43:29 - error: Type annotation is missing for parameter "approvals" (reportMissingParameterType)
-  tools/staging_removal_gate.py:44:5 - error: Type of "by_path" is partially unknown
-    Type of "by_path" is "dict[Unknown, Unknown]" (reportUnknownVariableType)
-  tools/staging_removal_gate.py:44:16 - error: Type of "source_path" is unknown (reportUnknownMemberType)
-  tools/staging_removal_gate.py:44:41 - error: Type of "row" is unknown (reportUnknownVariableType)
-  tools/staging_removal_gate.py:57:9 - error: Type of "row" is partially unknown
-    Type of "row" is "Unknown | None" (reportUnknownVariableType)
-  tools/staging_removal_gate.py:57:15 - error: Type of "get" is partially unknown
-    Type of "get" is "Overload[(key: Unknown, default: None = None, /) -> (Unknown | None), (key: Unknown, default: Unknown, /) -> Unknown, (key: Unknown, default: _T@get, /) -> (Unknown | _T@get)]" (reportUnknownMemberType)
-  tools/staging_removal_gate.py:61:9 - error: Type of "approval" is unknown (reportUnknownVariableType)
-  tools/staging_removal_gate.py:61:20 - error: Type of "get" is unknown (reportUnknownMemberType)
-  tools/staging_removal_gate.py:65:55 - error: Type of "get" is unknown (reportUnknownMemberType)
-  tools/staging_removal_gate.py:68:12 - error: Type of "get" is unknown (reportUnknownMemberType)
-  tools/staging_removal_gate.py:68:40 - error: Type of "git_blob" is unknown (reportUnknownMemberType)
-  tools/staging_removal_gate.py:70:12 - error: Type of "get" is unknown (reportUnknownMemberType)
-  tools/staging_removal_gate.py:70:43 - error: Type of "canonical_home" is unknown (reportUnknownMemberType)
-tools/task_catalog.py
-  tools/task_catalog.py:75:48 - error: Argument type is unknown
-    Argument corresponds to parameter "value" in function "escape_cell" (reportUnknownArgumentType)
-  tools/task_catalog.py:75:62 - error: Type of "alias" is unknown (reportUnknownVariableType)
-  tools/task_catalog.py:75:71 - error: "object" is not iterable
-    "__iter__" method not defined (reportGeneralTypeIssues)
-8785 errors, 425 warnings, 0 informations
-
-(Truncated to last 25000 characters out of 1652872)
+(Truncated to last 27586 characters out of 56072)
 ```
 
 </details>
@@ -6557,18 +6489,101 @@ tools/task_catalog.py
 <summary>⚠️ REPOSITORY / trivy - 1 error</summary>
 
 ```
-2026-11-11T12:58:38Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
-2026-11-11T12:58:38Z	INFO	[vulndb] Need to update DB
-2026-11-11T12:58:38Z	INFO	[vulndb] Downloading vulnerability DB...
-2026-11-11T12:58:38Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
-10.05 MiB / 133.02 MiB [---->________________________________________________________] 7.55% ? p/s ?41.09 MiB / 133.02 MiB [------------------>_________________________________________] 30.89% ? p/s ?70.36 MiB / 133.02 MiB [------------------------------->____________________________] 52.89% ? p/s ?101.09 MiB / 133.02 MiB [---------------------------------->__________] 76.00% 151.30 MiB p/s ETA 0s126.94 MiB / 133.02 MiB [------------------------------------------>__] 95.43% 151.30 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 151.30 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 144.98 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 144.98 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 144.98 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 135.63 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 135.63 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 135.63 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 126.88 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 126.88 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 126.88 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 118.69 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 118.69 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 118.69 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 111.03 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 111.03 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 111.03 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 103.87 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 103.87 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [------------------------------------------->] 100.00% 103.87 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 97.17 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 97.17 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 97.17 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 90.90 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 90.90 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 90.90 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 85.04 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 85.04 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 85.04 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 79.55 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 79.55 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 79.55 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 74.42 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 74.42 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 74.42 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 69.62 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 69.62 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 69.62 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 65.13 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-------------------------------------------->] 100.00% 65.13 MiB p/s ETA 0s133.02 MiB / 133.02 MiB [-----------------------------------------------] 100.00% 15.17 MiB p/s 9.0s2026-11-11T12:58:48Z	FATAL	Fatal error	run error: init error: DB error: failed to download vulnerability DB: OCI artifact error: failed to download vulnerability DB: failed to download artifact from mirror.gcr.io/aquasec/trivy-db:2: oci download error: download error: failed to download /tmp/trivy-2462444636/oci-download-791360415/db.tar.gz: chmod .cache/trivy/db/trivy.db: no such file or directory
+2026-11-15T02:16:42Z	INFO	Loaded	file_path="egolint/.config/security/trivy/trivy.yaml"
+2026-11-15T02:16:42Z	INFO	[vulndb] Need to update DB
+2026-11-15T02:16:42Z	INFO	[vulndb] Downloading vulnerability DB...
+2026-11-15T02:16:42Z	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+11.13 MiB / 134.37 MiB [----->_______________________________________________________] 8.28% ? p/s ?37.87 MiB / 134.37 MiB [---------------->___________________________________________] 28.18% ? p/s ?64.00 MiB / 134.37 MiB [---------------------------->_______________________________] 47.63% ? p/s ?92.36 MiB / 134.37 MiB [------------------------------->______________] 68.73% 135.52 MiB p/s ETA 0s126.73 MiB / 134.37 MiB [------------------------------------------>__] 94.31% 135.52 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 135.52 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 131.29 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 131.29 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 131.29 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 122.82 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 122.82 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 122.82 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 114.90 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 114.90 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 114.90 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 107.48 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 107.48 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 107.48 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 100.55 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 100.55 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [------------------------------------------->] 100.00% 100.55 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 94.06 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 94.06 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 94.06 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 87.99 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 87.99 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 87.99 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 82.32 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 82.32 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 82.32 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-------------------------------------------->] 100.00% 77.01 MiB p/s ETA 0s134.37 MiB / 134.37 MiB [-----------------------------------------------] 100.00% 21.82 MiB p/s 6.4s2026-11-15T02:16:49Z	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2026-11-15T02:16:49Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-11-15T02:16:49Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-11-15T02:16:49Z	INFO	[checks-client] Need to update the checks bundle
+2026-11-15T02:16:49Z	INFO	[checks-client] Downloading the checks bundle...
+234.57 KiB / 234.57 KiB [--------------------------------------------------------->] 100.00% ? p/s ?234.57 KiB / 234.57 KiB [-----------------------------------------------] 100.00% 1.92 MiB p/s 300ms2026-11-15T02:16:56Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/kics/terraform"
+2026-11-15T02:16:56Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/negative/terraform-fmt"
+2026-11-15T02:16:56Z	INFO	[terraform scanner] Scanning root module	file_path="egolint/tests/fixtures/tflint"
+2026-11-15T02:16:57Z	ERROR	[dockerfile scanner] Failed to parse file	file_path=".devcontainer/Dockerfile" err="dockerfile parse error: file with no instructions"
 
+📣 Notices:
+  - Version 0.76.2 of Trivy is now available, current version is 0.76.1
 
-[REPOSITORY_TRIVY_ERROR_DB_DOWNLOAD_FAILED] trivy could not download or refresh its vulnerability database from the configured registry.
-Workarounds:
-  - Retry the run; this is often transient.
-  - Set `TRIVY_DB_REPOSITORY` to an alternative mirror (e.g. an internal registry or AWS ECR Public Gallery).
-  - Pre-populate `~/.cache/trivy` in CI.
+To suppress version checks, run Trivy scans with the --skip-version-check flag
+
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x251265c]
+
+goroutine 1 [running]:
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfig(0x0, 0xc9002371d0)
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.34.0/frontend/dockerfile/linter/linter.go:74 +0x3c
+github.com/moby/buildkit/frontend/dockerfile/linter.(*Linter).WithMergedConfigFromComments(0x0, {0xc8fc986b80?, 0x0?, 0x20?})
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.34.0/frontend/dockerfile/linter/linter.go:118 +0x12e
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstructionWithLinter(0xc901ee0c80, 0xc8fd310f10?)
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.34.0/frontend/dockerfile/instructions/parse.go:73 +0x57
+github.com/moby/buildkit/frontend/dockerfile/instructions.ParseInstruction(...)
+	/home/runner/go/pkg/mod/github.com/moby/buildkit@v0.34.0/frontend/dockerfile/instructions/parse.go:68
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).parseInstruction(0xc900f6fd68, 0xc901ee0c80)
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:118 +0x3b
+github.com/aquasecurity/trivy/pkg/iac/scanners/dockerfile/parser.(*Parser).Parse(0xc900f6fd68, {0x9839fe8?, 0xc8ffb78953?}, {0xa7bc960?, 0xc8fd310f10?}, {0xc900474d70, 0x43})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/dockerfile/parser/parser.go:55 +0x225
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS.func1({0xa8164d8, 0xc900236fa0}, {0x0, 0x0})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:167 +0x243
+io/fs.walkDir({0xa7bd400, 0xc8ff2592c0}, {0xc900474d70, 0x43}, {0xa8164d8, 0xc900236fa0}, 0xc9007dcd98)
+	/opt/hostedtoolcache/go/1.27.3/x64/src/io/fs/walk.go:73 +0x6c
+io/fs.walkDir({0xa7bd400, 0xc8ff2592c0}, {0xc8ffb78930, 0x2d}, {0xa8164d8, 0xc901a3d068}, 0xc9007dcd98)
+	/opt/hostedtoolcache/go/1.27.3/x64/src/io/fs/walk.go:95 +0x2a9
+io/fs.walkDir({0xa7bd400, 0xc8ff2592c0}, {0xc8ff5c51a0, 0x22}, {0xa8164d8, 0xc8ff8cd888}, 0xc9007dcd98)
+	/opt/hostedtoolcache/go/1.27.3/x64/src/io/fs/walk.go:95 +0x2a9
+io/fs.walkDir({0xa7bd400, 0xc8ff2592c0}, {0xc9008de6d8, 0x17}, {0xa8164d8, 0xc8ff8cd4c8}, 0xc9007dcd98)
+	/opt/hostedtoolcache/go/1.27.3/x64/src/io/fs/walk.go:95 +0x2a9
+io/fs.walkDir({0xa7bd400, 0xc8ff2592c0}, {0xc8ffb505b0, 0x8}, {0xa8164d8, 0xc8ff8cd388}, 0xc9007dcd98)
+	/opt/hostedtoolcache/go/1.27.3/x64/src/io/fs/walk.go:95 +0x2a9
+io/fs.walkDir({0xa7bd400, 0xc8ff2592c0}, {0x5a64210, 0x1}, {0xa815e10, 0xc8fdf43260}, 0xc9007dcd98)
+	/opt/hostedtoolcache/go/1.27.3/x64/src/io/fs/walk.go:95 +0x2a9
+io/fs.WalkDir({0xa7bd400, 0xc8ff2592c0}, {0x5a64210, 0x1}, 0xc9007dcd98)
+	/opt/hostedtoolcache/go/1.27.3/x64/src/io/fs/walk.go:122 +0x9a
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).parseFS(0x5acbe00, {0xa815ba8, 0xc900f15710}, {0xa7bd400, 0xc8ff2592c0}, {0x5a64210, 0x1})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:176 +0xd8
+github.com/aquasecurity/trivy/pkg/iac/scanners/generic.(*GenericScanner[...]).ScanFS(0x5acbe00, {0xa815ba8, 0xc900f15710}, {0xa7bd400, 0xc8ff2592c0}, {0x5a64210, 0x1?})
+	/home/runner/work/trivy/trivy/pkg/iac/scanners/generic/scanner.go:107 +0x5e
+github.com/aquasecurity/trivy/pkg/misconf.(*Scanner).Scan(0xc90129fc80, {0xa815c50, 0xc8fb311b20}, {0xa7bd400, 0xc8ff258fc0})
+	/home/runner/work/trivy/trivy/pkg/misconf/scanner.go:159 +0x2a3
+github.com/aquasecurity/trivy/pkg/fanal/analyzer/config.(*Analyzer).PostAnalyze(0xc9012a52e0, {0xa815c50?, 0xc8fb311b20?}, {{0xa7bd400, 0xc8ff258fc0}, {0x0, 0x0, 0x0}, {0x0, 0x0, ...}})
+	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/config/config.go:44 +0x45
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.postAnalyze({0xc90129a7a0, {0xc9012ae600, 0x20, 0x20}, {0xc9012ae800, 0x19, 0x20}, 0xc9012a1440, {0xc8fc77e8a7, 0x7}}, ...)
+	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:362 +0x72
+github.com/aquasecurity/trivy/pkg/fanal/analyzer.AnalyzerGroup.PostAnalyze({0xc90129a7a0, {0xc9012ae600, 0x20, 0x20}, {0xc9012ae800, 0x19, 0x20}, 0xc9012a1440, {0xc8fc77e8a7, 0x7}}, ...)
+	/home/runner/work/trivy/trivy/pkg/fanal/analyzer/analyzer.go:592 +0x576
+github.com/aquasecurity/trivy/pkg/fanal/artifact/local.Artifact.Inspect({{0x7ffeec1ae104, 0x1}, 0xc90129b050, {0x7f1c8bf7ed58, 0xc8fe5d10e0}, {0xa7bd360, 0xac23a80}, {0xc90129a7a0, {0xc9012ae600, 0x20, ...}, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/fanal/artifact/local/fs.go:241 +0xa49
+github.com/aquasecurity/trivy/pkg/scan.Service.ScanArtifact({{_, _}, {_, _}}, {_, _}, {{0xc8fbe6dee0, 0x2, 0x2}, {0xc8fc479e00, ...}, ...})
+	/home/runner/work/trivy/trivy/pkg/scan/service.go:52 +0xf9
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan(_, {_, _}, {{{0x7ffeec1adf31, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:710 +0x4de
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact(_, {_, _}, {{{0x7ffeec1adf31, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:302 +0xb7
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanFS(_, {_, _}, {{{0x7ffeec1adf31, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:247 +0xc6
+github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).ScanFilesystem(_, {_, _}, {{{0x7ffeec1adf31, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...})
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:227 +0x205
+github.com/aquasecurity/trivy/pkg/commands/artifact.run({_, _}, {{{0x7ffeec1adf31, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:450 +0x76e
+github.com/aquasecurity/trivy/pkg/commands/artifact.Run({_, _}, {{{0x7ffeec1adf31, 0x29}, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8bb2c97000, ...}, ...}, ...)
+	/home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:409 +0x1ff
+github.com/aquasecurity/trivy/pkg/commands.NewFilesystemCommand.func2(0xc8fc1e8608, {0xc8fc782008, 0x1, 0x31})
+	/home/runner/work/trivy/trivy/pkg/commands/app.go:399 +0x17f
+github.com/spf13/cobra.(*Command).execute(0xc8fc1e8608, {0xc8fc433c08, 0x31, 0x31})
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb3c
+github.com/spf13/cobra.(*Command).ExecuteC(0xc8fc135b08)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x450
+github.com/spf13/cobra.(*Command).Execute(...)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
+github.com/spf13/cobra.(*Command).ExecuteContext(...)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1064
+github.com/aquasecurity/trivy/pkg/commands.Run({0xa815f60, 0xc8fc2e8e00})
+	/home/runner/work/trivy/trivy/pkg/commands/run.go:23 +0x67
+main.run()
+	/home/runner/work/trivy/trivy/cmd/trivy/main.go:48 +0x17b
+main.main()
+	/home/runner/work/trivy/trivy/cmd/trivy/main.go:19 +0x1f
 ```
 
 </details>
@@ -6586,7 +6601,7 @@ E201 Invalid value [beacon/.staging/latex/Books/kaobook/MANIFEST.md:1:1]:
 yaml: unmarshal errors:
   line 4: cannot unmarshal !!str `MANIFES...` into map[string]interface {}
 
-Execution stopped with code 1.
+Execution stopped with code 2.
 ```
 
 </details>
