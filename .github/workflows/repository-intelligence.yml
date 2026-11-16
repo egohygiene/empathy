@@ -95,7 +95,7 @@ jobs:
       - name: Capture public Work, Health and Releases sources
         id: public_sources
         if: github.event_name == 'workflow_dispatch'
-        uses: egohygiene/relay/actions/repository-intelligence-github-sources@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           github-token: "${{ github.token }}"
           include-titles: "true"
@@ -115,7 +115,7 @@ jobs:
         id: review_feed
         if: github.event_name == 'workflow_dispatch'
         # Reviewed typed feed source; original report times and human authority remain separate.
-        uses: egohygiene/relay/actions/repository-intelligence-review-feed@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence-review-feed@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           source-root: "."
           plan: "${{ inputs.review-plan || '.config/repository-intelligence/review-plan.json' }}"
