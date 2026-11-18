@@ -4,185 +4,185 @@ See documentation on https://megalinter.io/10.2.0/descriptors/repository_checkov
 
 ❌ [ERROR] for workspace /github/workspace
 Linter raw log:
-2026-11-15 02:33:18,541 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
-2026-11-15 02:33:18,917 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
-2026-11-15 02:33:18,917 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
-2026-11-15 02:33:18,919 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
-2026-11-15 02:33:18,919 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
-2026-11-15 02:33:19,232 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
-2026-11-15 02:33:19,232 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
-2026-11-15 02:33:19,232 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
-2026-11-15 02:33:19,232 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
-2026-11-15 02:33:19,251 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
-2026-11-15 02:33:19,255 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
-2026-11-15 02:33:19,257 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
+2026-11-18 14:32:51,069 [MainThread  ] [INFO ]  Checking necessary system dependencies for helm checks.
+2026-11-18 14:32:51,378 [MainThread  ] [INFO ]  Found working version of helm dependencies: v3.19.0
+2026-11-18 14:32:51,378 [MainThread  ] [INFO ]  Checking necessary system dependencies for kustomize checks.
+2026-11-18 14:32:51,379 [MainThread  ] [INFO ]  Could not find usable tools locally to process kustomize checks. Framework will be disabled for this run.
+2026-11-18 14:32:51,380 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: kustomize
+2026-11-18 14:32:52,110 [MainThread  ] [INFO ]  The framework "sca_image" is part of the "SCA" module, which is not enabled in the platform
+2026-11-18 14:32:52,118 [MainThread  ] [INFO ]  The framework "sca_package" is part of the "SCA" module, which is not enabled in the platform
+2026-11-18 14:32:52,118 [MainThread  ] [INFO ]  The framework "sast" is part of the "SAST" module, which is not enabled in the platform
+2026-11-18 14:32:52,118 [MainThread  ] [INFO ]  The framework "cdk" is part of the "SAST" module, which is not enabled in the platform
+2026-11-18 14:32:52,160 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2026-11-18 14:32:52,160 [MainThread  ] [INFO ]  Parsing HCL files in source dir to graph
+2026-11-18 14:32:52,182 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 9
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,257 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
+2026-11-18 14:32:52,182 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 10
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,257 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
+2026-11-18 14:32:52,182 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 31
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,260 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
+2026-11-18 14:32:52,182 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 32
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 49
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 50
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 83
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 84
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 101
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 102
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 123
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 124
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
+2026-11-18 14:32:52,183 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 141
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
+2026-11-18 14:32:52,192 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 142
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 165
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 166
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 183
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,261 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 184
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 201
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 202
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 219
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 220
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
+2026-11-18 14:32:52,193 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 245
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 246
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 263
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 264
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 283
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 284
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 301
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,262 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 302
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
+2026-11-18 14:32:52,194 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 319
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 320
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 337
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 338
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 363
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 364
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 381
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 382
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,263 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 409
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,266 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 410
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,266 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
+2026-11-18 14:32:52,195 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 427
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,267 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
+2026-11-18 14:32:52,205 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 428
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,267 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
+2026-11-18 14:32:52,205 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 457
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,267 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
+2026-11-18 14:32:52,205 [MainThread  ] [WARNI]  /venvs/checkov/lib/python3.14/site-packages/checkov/terraform/module_loading/module_finder.py:63: FutureWarning: Possible set union at position 458
   excluded_paths_regex = re.compile('|'.join(f"({excluded_paths})")) if excluded_paths else None
 
-2026-11-15 02:33:19,426 [MainThread  ] [INFO ]  Starting download of modules of length 0
-2026-11-15 02:33:19,442 [MainThread  ] [INFO ]  Creating Serverless graph
-2026-11-15 02:33:19,443 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
-2026-11-15 02:33:19,544 [MainThread  ] [INFO ]  Creating ARM graph
-2026-11-15 02:33:19,545 [MainThread  ] [INFO ]  Successfully created ARM graph
-2026-11-15 02:33:19,615 [MainThread  ] [INFO ]  creating CloudFormation graph
-2026-11-15 02:33:19,622 [MainThread  ] [INFO ]  Creating Dockerfile graph
-2026-11-15 02:33:19,629 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
-2026-11-15 02:33:19,630 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
-2026-11-15 02:33:19,630 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
-2026-11-15 02:33:19,632 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
-2026-11-15 02:33:19,643 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
-2026-11-15 02:33:19,671 [MainThread  ] [INFO ]  creating Kubernetes graph
-2026-11-15 02:33:19,674 [MainThread  ] [INFO ]  Building graph from parsed module
-2026-11-15 02:33:19,674 [MainThread  ] [INFO ]  Creating vertices
-2026-11-15 02:33:19,674 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
-2026-11-15 02:33:19,674 [MainThread  ] [INFO ]  Creating edges
-2026-11-15 02:33:19,684 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
-2026-11-15 02:33:19,684 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
-2026-11-15 02:33:19,692 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
-2026-11-15 02:33:19,701 [MainThread  ] [INFO ]  Creating vertices
-2026-11-15 02:33:19,701 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
-2026-11-15 02:33:19,701 [MainThread  ] [INFO ]  Creating edges
-2026-11-15 02:33:19,701 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
-2026-11-15 02:33:19,710 [MainThread  ] [INFO ]  Building cross variable edges
-2026-11-15 02:33:19,714 [MainThread  ] [INFO ]  Found 0 cross variable edges
-2026-11-15 02:33:19,715 [MainThread  ] [INFO ]  Building S3 edges name references
-2026-11-15 02:33:19,715 [MainThread  ] [INFO ]  Found 0 S3 name references edges
-2026-11-15 02:33:41,093 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
-2026-11-15 02:33:41,097 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
-2026-11-15 02:33:41,097 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
-2026-11-15 02:33:41,097 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
-2026-11-15 02:33:41,097 [MainThread  ] [INFO ]  Creating Ansible graph
-2026-11-15 02:33:41,097 [MainThread  ] [INFO ]  Successfully created Ansible graph
-2026-11-15 02:33:41,504 [MainThread  ] [INFO ]  Creating GitHubActions graph
-2026-11-15 02:33:41,505 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
+2026-11-18 14:32:52,487 [MainThread  ] [INFO ]  Creating Serverless graph
+2026-11-18 14:32:52,487 [MainThread  ] [INFO ]  Successfully created Serverless graph (0 vertices)
+2026-11-18 14:32:52,508 [MainThread  ] [INFO ]  Creating Dockerfile graph
+2026-11-18 14:32:52,534 [MainThread  ] [INFO ]  Successfully created Dockerfile graph
+2026-11-18 14:32:52,535 [MainThread  ] [INFO ]  Starting download of modules of length 0
+2026-11-18 14:32:52,633 [MainThread  ] [INFO ]  Creating ARM graph
+2026-11-18 14:32:52,639 [MainThread  ] [INFO ]  Successfully created ARM graph
+2026-11-18 14:32:52,661 [MainThread  ] [INFO ]  creating CloudFormation graph
+2026-11-18 14:32:52,666 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 1 vertices
+2026-11-18 14:32:52,675 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2026-11-18 14:32:52,675 [MainThread  ] [INFO ]  Rendering variables, graph has 1 vertices and 0 edges
+2026-11-18 14:32:52,681 [MainThread  ] [INFO ]  creating Kubernetes graph
+2026-11-18 14:32:52,684 [MainThread  ] [INFO ]  Successfully created CloudFormation graph
+2026-11-18 14:32:52,710 [MainThread  ] [INFO ]  Successfully created Kubernetes graph
+2026-11-18 14:32:52,907 [MainThread  ] [INFO ]  Creating vertices
+2026-11-18 14:32:52,907 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 vertices
+2026-11-18 14:32:52,907 [MainThread  ] [INFO ]  Creating edges
+2026-11-18 14:32:52,907 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 0 edges
+2026-11-18 14:32:53,467 [MainThread  ] [INFO ]  Building graph from parsed module
+2026-11-18 14:32:53,467 [MainThread  ] [INFO ]  Creating vertices
+2026-11-18 14:32:53,467 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 12 vertices
+2026-11-18 14:32:53,467 [MainThread  ] [INFO ]  Creating edges
+2026-11-18 14:32:53,471 [MainThread  ] [INFO ]  [TerraformLocalGraph] created 4 edges
+2026-11-18 14:32:53,486 [MainThread  ] [INFO ]  Rendering variables, graph has 12 vertices and 4 edges
+2026-11-18 14:32:53,576 [MainThread  ] [INFO ]  Building cross variable edges
+2026-11-18 14:32:53,581 [MainThread  ] [INFO ]  Found 0 cross variable edges
+2026-11-18 14:32:53,584 [MainThread  ] [INFO ]  Building S3 edges name references
+2026-11-18 14:32:53,600 [MainThread  ] [INFO ]  Found 0 S3 name references edges
+2026-11-18 14:33:13,330 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/kubernetes/valid-deployment.yml has the wrong type <class 'dict'>
+2026-11-18 14:33:13,331 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/tekton-lint/task.yaml has the wrong type <class 'dict'>
+2026-11-18 14:33:13,331 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/negative/kubernetes/privileged-pod.yml has the wrong type <class 'dict'>
+2026-11-18 14:33:13,331 [MainThread  ] [INFO ]  File ./egolint/tests/fixtures/vacuum/openapi.yml has the wrong type <class 'dict'>
+2026-11-18 14:33:13,331 [MainThread  ] [INFO ]  Creating Ansible graph
+2026-11-18 14:33:13,332 [MainThread  ] [INFO ]  Successfully created Ansible graph
+2026-11-18 14:33:13,481 [MainThread  ] [INFO ]  Creating GitHubActions graph
+2026-11-18 14:33:13,484 [MainThread  ] [INFO ]  Successfully created GitHubActions graph
 cloudformation scan results:
 
 Passed checks: 7, Failed checks: 2, Skipped checks: 0

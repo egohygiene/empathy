@@ -1,5 +1,5 @@
 {
-  "commit": "a405a7a169c7d6153f889702ed0276e3d04b4ac2",
+  "commit": "6744f340fec7b0e95da7096d0d4298e65c230c67",
   "execution": {
     "message": "MegaLinter returned a failing runner status.",
     "state": "failure"
@@ -12,19 +12,19 @@
     "total": 29
   },
   "freshness": {
-    "expires_at": "2026-11-23T02:37:07Z",
+    "expires_at": "2026-11-26T14:36:41Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-11-15T02:37:07Z",
+  "generated_at": "2026-11-18T14:36:41Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/a405a7a169c7d6153f889702ed0276e3d04b4ac2/.reports/megalinter",
+    "detail": "https://github.com/egohygiene/empathy/tree/6744f340fec7b0e95da7096d0d4298e65c230c67/.reports/megalinter",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/a405a7a169c7d6153f889702ed0276e3d04b4ac2",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/43668057046"
+    "source": "https://github.com/egohygiene/empathy/commit/6744f340fec7b0e95da7096d0d4298e65c230c67",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/44324784778"
   },
   "megalinter": {
     "diagnostics": {
-      "errors": 74555,
+      "errors": 74565,
       "warnings": 17
     },
     "execution_error_tools": [],
@@ -150,7 +150,7 @@
       },
       {
         "enforcement": "advisory",
-        "errors": 548,
+        "errors": 559,
         "id": "REPOSITORY_GRYPE",
         "status": "warning",
         "warnings": 0
@@ -178,7 +178,7 @@
       },
       {
         "enforcement": "blocking",
-        "errors": 185,
+        "errors": 184,
         "id": "SPELL_LYCHEE",
         "status": "error",
         "warnings": 0
@@ -248,9 +248,9 @@
   },
   "producer": "megalinter",
   "provenance": {
-    "event": "push",
+    "event": "schedule",
     "run_attempt": 1,
-    "run_id": "43668057046",
+    "run_id": "44324784778",
     "workflow": "MegaLinter"
   },
   "repository": "egohygiene/empathy",
