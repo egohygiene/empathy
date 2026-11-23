@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.22.4; observe egress before enforcing.
-        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a
+        uses: step-security/harden-runner@aebdcf6156ab6691adf63218240e476564a1ed4c
         with:
           egress-policy: audit
 
@@ -82,7 +82,7 @@ jobs:
       - name: Normalize repository-intelligence summary
         id: normalize
         if: always()
-        uses: egohygiene/relay/actions/normalize-repository-report@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b # reviewed finalized-report parser
+        uses: egohygiene/relay/actions/normalize-repository-report@5de708368b42601e140c58f4ab8f305fe2dc5c82 # reviewed finalized-report parser
         with:
           producer: megalinter
           input: .reports/megalinter/mega-linter-report.json
@@ -169,7 +169,7 @@ jobs:
     steps:
       - name: Harden Runner
         # step-security/harden-runner v2.22.4; observe egress before enforcing.
-        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a
+        uses: step-security/harden-runner@aebdcf6156ab6691adf63218240e476564a1ed4c
         with:
           egress-policy: audit
 
