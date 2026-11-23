@@ -75,7 +75,7 @@ jobs:
       - name: Harden Runner
         id: harden
         # step-security/harden-runner v2.22.4; preserve existing audit policy.
-        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a
+        uses: step-security/harden-runner@aebdcf6156ab6691adf63218240e476564a1ed4c
         with:
           egress-policy: audit
 
@@ -229,7 +229,7 @@ jobs:
       - name: Capture consumer routes before composition
         id: baseline
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           operation: capture-baseline
           site-directory: .cache/mindgarden/site
@@ -247,7 +247,7 @@ jobs:
       - name: Capture public Work, Health and Releases sources
         id: public_sources
         if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-        uses: egohygiene/relay/actions/repository-intelligence-github-sources@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence-github-sources@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           github-token: "${{ github.token }}"
           include-titles: "true"
@@ -274,7 +274,7 @@ jobs:
         id: review_feed
         if: matrix.mode == 'current' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
         # Reviewed typed feed source; original report times and human authority remain separate.
-        uses: egohygiene/relay/actions/repository-intelligence-review-feed@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence-review-feed@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           source-root: "."
           plan: "${{ inputs.review-plan || '.config/repository-intelligence/review-plan.json' }}"
@@ -372,7 +372,7 @@ jobs:
       - name: Verify current provenance and Quartz non-clobber boundary
         id: composition
         if: matrix.mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           operation: verify-composition
           site-directory: .cache/mindgarden/site
@@ -631,7 +631,7 @@ jobs:
       - name: Record current deployment receipt
         id: receipt
         if: needs.build.outputs.deployment-mode == 'current'
-        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@41fe97bc69e44fdaff6b6c34ae28e4d2af22e41b
+        uses: egohygiene/relay/actions/repository-intelligence-deployment-provenance@5de708368b42601e140c58f4ab8f305fe2dc5c82
         with:
           operation: record-receipt
           site-directory: .cache/mindgarden/site
