@@ -1,32 +1,32 @@
 {
-  "commit": "363c6a01ceb2c5d97a3db3f1028f85f74de658a1",
+  "commit": "adc0a2953eb3a3223d4938d06a19f75b73d3f45b",
   "execution": {
     "message": "Canonical OSV JSON and SARIF outputs were validated.",
     "state": "success"
   },
   "findings": {
-    "advisory": 342,
-    "blocking": 340,
+    "advisory": 343,
+    "blocking": 334,
     "by_severity": {
       "critical": 34,
-      "high": 306,
+      "high": 300,
       "low": 58,
-      "medium": 282,
+      "medium": 283,
       "unknown": 2
     },
     "state": "blocked",
-    "total": 682
+    "total": 677
   },
   "freshness": {
-    "expires_at": "2026-11-26T12:28:54Z",
+    "expires_at": "2026-12-03T13:43:35Z",
     "stale_after_days": 8
   },
-  "generated_at": "2026-11-18T12:28:54Z",
+  "generated_at": "2026-11-25T13:43:35Z",
   "links": {
-    "detail": "https://github.com/egohygiene/empathy/tree/363c6a01ceb2c5d97a3db3f1028f85f74de658a1/.reports/osv",
+    "detail": "https://github.com/egohygiene/empathy/tree/adc0a2953eb3a3223d4938d06a19f75b73d3f45b/.reports/osv",
     "security": "https://github.com/egohygiene/empathy/security/code-scanning",
-    "source": "https://github.com/egohygiene/empathy/commit/363c6a01ceb2c5d97a3db3f1028f85f74de658a1",
-    "workflow": "https://github.com/egohygiene/empathy/actions/runs/44304208765"
+    "source": "https://github.com/egohygiene/empathy/commit/adc0a2953eb3a3223d4938d06a19f75b73d3f45b",
+    "workflow": "https://github.com/egohygiene/empathy/actions/runs/45626395527"
   },
   "osv": {
     "discovery": {
@@ -100,7 +100,7 @@
       "sarif": ".reports/osv/latest.sarif"
     },
     "scan": {
-      "affected_packages": 196,
+      "affected_packages": 191,
       "files_scanned": [
         ".staging/.github/skills/winmd-api-search/scripts/cache-generator/CacheGenerator.csproj",
         ".staging/devenvironment/containers/services/api/poetry.lock",
@@ -156,13 +156,13 @@
       ],
       "severity": {
         "critical": 34,
-        "high": 306,
+        "high": 300,
         "low": 58,
-        "medium": 282,
-        "total": 682,
+        "medium": 283,
+        "total": 677,
         "unknown": 2
       },
-      "vulnerabilities": 682
+      "vulnerabilities": 677
     },
     "scan_duration_seconds": 17,
     "scanner": {
@@ -180,7 +180,7 @@
   "provenance": {
     "event": "schedule",
     "run_attempt": 1,
-    "run_id": "44304208765",
+    "run_id": "45626395527",
     "workflow": "\ud83d\udd0d OSV Vulnerability Scan"
   },
   "repository": "egohygiene/empathy",
